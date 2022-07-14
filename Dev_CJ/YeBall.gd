@@ -1,13 +1,17 @@
 extends RigidBody2D
 var framecount = 0
-
+var velocity = Vector2()
 func _ready():
 	pass
 
 
-func _process(delta):
+func _process(_delta):
 	if mode == RigidBody2D.MODE_STATIC:
-		position.y = 0
 		mode = RigidBody2D.MODE_RIGID
-	if position.y <= -300 or position.y >= 600:
-		mode = RigidBody2D.MODE_STATIC
+		print("bro it wont work")
+	if position.y < 0 or position.y > 600:
+		position.y = 75
+	if position.x > 1025:
+		position.x = 0
+	if position.x < 0:
+		position.x = 1025
