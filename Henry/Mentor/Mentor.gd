@@ -5,6 +5,7 @@ func _input(event):
 		find_and_use_dialogue()
 	if event.is_action_pressed("return"):
 		return
+		print("yes")
 func find_and_use_dialogue():
 	var dialogue_player = get_node_or_null("Dialogueplayer")
 	if dialogue_player:
