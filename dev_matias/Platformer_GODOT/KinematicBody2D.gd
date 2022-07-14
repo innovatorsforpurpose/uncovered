@@ -3,6 +3,7 @@ extends KinematicBody2D
 signal health_updated(health)
 signal kill()
 
+const bulletpath = preload("res://dev_matias/Platformer_GODOT/Bullet.tscn")
 const UP = Vector2(0, -1)
 const GRAVITY = 20
 const MAXFALLSPEED = 200
@@ -41,6 +42,8 @@ func _ready():
 	pass
 	
 func _process(delta):
+	if Input.is_action_pressed("Shoot"):
+		shoot()
 #	for index in get_slide_collision():
 #		var collision = get_slide_collision(index)
 		
@@ -95,6 +98,10 @@ func _process(delta):
 		
 	motion = move_and_slide(motion, UP)
 	
+func shoot():
+	var bullet = bulletpath.instance()
+	get_parent().addchild(bullet)
+	bullet.position = $Position2D.global_position
 #	for index in get_slide_collision():
 #		var collision = get_slide_collision(index)
 		
