@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Henry/Dialogue/DialoguePlayer.gd" type="Script" id=1]
+[ext_resource path="res://Henry/School/icon.png" type="Texture" id=2]
+
+[node name="Dialogueplayer" type="CanvasLayer"]
+script = ExtResource( 1 )
+dialogue_file = "res://dialogue/jsons/Mc.json"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+anchor_right = 0.0898438
+anchor_bottom = 0.07
+margin_right = 161.0
+margin_bottom = 68.0
+texture = ExtResource( 2 )
+region_rect = Rect2( 70, 10, 50, 50 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Message" type="RichTextLabel" parent="NinePatchRect"]
+anchor_top = -0.0046729
+anchor_right = 0.264822
+anchor_bottom = -0.0046729
+margin_left = 23.0
+margin_top = 14.0
+margin_right = 162.0
+margin_bottom = 66.0
+text = "Message"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Name" type="RichTextLabel" parent="NinePatchRect"]
+margin_right = 161.0
+margin_bottom = 16.0
+text = "Name"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.05
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
