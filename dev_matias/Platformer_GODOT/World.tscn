@@ -163,3 +163,9 @@ anims/Power = SubResource( 11 )
 anims/RESET = SubResource( 6 )
 anims/Run = SubResource( 7 )
 anims/Superpower = SubResource( 8 )
+
+[node name="Node2D" type="Node2D" parent="KinematicBody2D"]
+position = Vector2( -2, 0 )
+
+[node name="shot" type="Position2D" parent="KinematicBody2D/Node2D"]
+position = Vector2( 59, 2 )

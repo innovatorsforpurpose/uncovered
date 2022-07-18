@@ -44,6 +44,7 @@ func _ready():
 func _process(delta):
 	if Input.is_action_pressed("Shoot"):
 		shoot()
+	$Node2D.look_at(get_global_mouse_position())
 #	for index in get_slide_collision():
 #		var collision = get_slide_collision(index)
 		
@@ -100,8 +101,9 @@ func _process(delta):
 	
 func shoot():
 	var bullet = bulletpath.instance()
-	get_parent().addchild(bullet)
-	bullet.position = $Position2D.global_position
+	get_parent().add_child(bullet)
+	bullet.position = $Node2D/shot.global_position
+	bullet.velocity = $Node2D/shot.get_global_mouse_position() - bullet.position
 #	for index in get_slide_collision():
 #		var collision = get_slide_collision(index)
 		
