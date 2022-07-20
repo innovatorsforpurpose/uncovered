@@ -169,3 +169,5 @@ position = Vector2( -2, 0 )
 
 [node name="shot" type="Position2D" parent="KinematicBody2D/Node2D"]
 position = Vector2( 59, 2 )
+
+[node name="Timer" type="Timer" parent="KinematicBody2D/Node2D"]

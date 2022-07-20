@@ -10,6 +10,7 @@ const MAXFALLSPEED = 200
 const MAXSPEED = 80
 const JUMP = 400
 const ACCELERATION = 10
+var bullet_counter = 0
 #onready var timer = $Sprite/Timer
 """
 #export (float) var max_health = 100
@@ -43,7 +44,10 @@ func _ready():
 	
 func _process(delta):
 	if Input.is_action_pressed("Shoot"):
-		shoot()
+		bullet_counter += delta
+		if bullet_counter >= 0.2:
+			bullet_counter = 0
+			shoot()
 	$Node2D.look_at(get_global_mouse_position())
 #	for index in get_slide_collision():
 #		var collision = get_slide_collision(index)
