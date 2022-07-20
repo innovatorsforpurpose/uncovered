@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/iconZ.png-9d6dd831ce54fc8d087ab5f5120f36ed.stex"
+path="res://.import/iconZ.png-0f4119b84eb1e4b563b1649c42bc60dc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Henry/dialogue/iconZ.png"
-dest_files=[ "res://.import/iconZ.png-9d6dd831ce54fc8d087ab5f5120f36ed.stex" ]
+source_file="res://Henry/Dialogue/iconZ.png"
+dest_files=[ "res://.import/iconZ.png-0f4119b84eb1e4b563b1649c42bc60dc.stex" ]
 
 [params]
 

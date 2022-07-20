@@ -1,46 +1,115 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Henry/Dialogue/DialoguePlayer.gd" type="Script" id=1]
-[ext_resource path="res://Henry/School/icon.png" type="Texture" id=2]
+[ext_resource path="res://A_black_image.jpg.png" type="Texture" id=2]
+
+[sub_resource type="CanvasItemMaterial" id=8]
+
+[sub_resource type="GDScript" id=9]
+
+[sub_resource type="StreamTexture" id=7]
+flags = 7
+load_path = "res://.import/grass-green-color-solid-background-1920x1080.png-49e02a6e9818515c8d4e1ed52de06e8e.s3tc.stex"
+
+[sub_resource type="VisualShaderNodeTexture" id=10]
+texture = SubResource( 7 )
+
+[sub_resource type="VisualShaderNodeScalarConstant" id=11]
+constant = 3.508
+
+[sub_resource type="VisualShader" id=12]
+code = "shader_type spatial;
+render_mode specular_schlick_ggx;
+
+
+
+
+void vertex() {
+// Output:0
+
+}
+
+void fragment() {
+// Scalar:4
+	float n_out4p0 = 3.508000;
+
+// Output:0
+	ALPHA = n_out4p0;
+
+}
+
+void light() {
+// Output:0
+
+}
+"
+graph_offset = Vector2( -327.667, 70.5978 )
+nodes/fragment/2/node = SubResource( 10 )
+nodes/fragment/2/position = Vector2( -420, 380 )
+nodes/fragment/4/node = SubResource( 11 )
+nodes/fragment/4/position = Vector2( -120, 240 )
+nodes/fragment/connections = PoolIntArray( 4, 0, 0, 1 )
+
+[sub_resource type="ShaderMaterial" id=6]
+next_pass = SubResource( 8 )
+shader = SubResource( 12 )
+script = SubResource( 9 )
 
 [node name="Dialogueplayer" type="CanvasLayer"]
 script = ExtResource( 1 )
-dialogue_file = "res://dialogue/jsons/Mc.json"
+dialogue_file = "res://Henry/Dialogue/jsons/Mc.json"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.05
+one_shot = true
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
+material = SubResource( 6 )
 anchor_right = 0.0898438
 anchor_bottom = 0.07
 margin_right = 161.0
 margin_bottom = 68.0
-texture = ExtResource( 2 )
-region_rect = Rect2( 70, 10, 50, 50 )
-__meta__ = {
-"_edit_use_anchors_": true
-}
-
-[node name="Message" type="RichTextLabel" parent="NinePatchRect"]
-anchor_top = -0.0046729
-anchor_right = 0.264822
-anchor_bottom = -0.0046729
-margin_left = 23.0
-margin_top = 14.0
-margin_right = 162.0
-margin_bottom = 66.0
-text = "Message"
+region_rect = Rect2( 1529, 746, 1, 0 )
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
 [node name="Name" type="RichTextLabel" parent="NinePatchRect"]
+anchor_left = 0.0513834
+anchor_top = 0.118182
+anchor_right = 0.0513834
+anchor_bottom = 0.118182
 margin_right = 161.0
 margin_bottom = 16.0
+custom_colors/default_color = Color( 1, 1, 1, 1 )
 text = "Name"
+scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.05
-one_shot = true
+[node name="Message" type="RichTextLabel" parent="NinePatchRect"]
+anchor_left = 0.0158103
+anchor_top = 0.145455
+anchor_right = 0.280632
+anchor_bottom = 0.145455
+margin_left = 23.0
+margin_top = 14.0
+margin_right = 162.0
+margin_bottom = 66.0
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+text = "Message"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Background" type="NinePatchRect" parent="NinePatchRect"]
+modulate = Color( 0.0666667, 0.0627451, 0.0627451, 0.564706 )
+self_modulate = Color( 0.0862745, 0.0823529, 0.0823529, 1 )
+show_behind_parent = true
+margin_right = 253.0
+margin_bottom = 111.0
+texture = ExtResource( 2 )
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
