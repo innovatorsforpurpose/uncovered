@@ -1,6 +1,6 @@
 extends Node2D
 
-const LAYERS = 10
+const LAYERS = 5
 const BUTTON_MARGIN = 55
 
 func _ready():
