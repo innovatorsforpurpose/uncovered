@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Dialogueplayer I.gd" type="Script" id=1]
-[ext_resource path="res://A_black_image.jpg.png" type="Texture" id=2]
+[ext_resource path="res://Dialogue/Dialogueplayer I.gd" type="Script" id=1]
+[ext_resource path="res://scenes/A_black_image.jpg.png" type="Texture" id=2]
 
 [sub_resource type="CanvasItemMaterial" id=8]
 

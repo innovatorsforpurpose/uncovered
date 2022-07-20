@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Henry/Dialogue/DialoguePlayer.gd" type="Script" id=1]
-[ext_resource path="res://A_black_image.jpg.png" type="Texture" id=2]
+[ext_resource path="res://Dialogue/DialoguePlayer.gd" type="Script" id=1]
+[ext_resource path="res://scenes/A_black_image.jpg.png" type="Texture" id=2]
 
 [sub_resource type="CanvasItemMaterial" id=8]
 
@@ -9,7 +9,6 @@
 
 [sub_resource type="StreamTexture" id=7]
 flags = 7
-load_path = "res://.import/grass-green-color-solid-background-1920x1080.png-49e02a6e9818515c8d4e1ed52de06e8e.s3tc.stex"
 
 [sub_resource type="VisualShaderNodeTexture" id=10]
 texture = SubResource( 7 )
