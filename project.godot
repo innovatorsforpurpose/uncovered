@@ -11,6 +11,7 @@ config_version=4
 [application]
 
 config/name="ifp_uncover"
+run/main_scene="res://dev_Uri/GraphicDesign/Scenes/CreationScene.tscn"
 config/icon="res://icon.png"
 
 [gdnative]
