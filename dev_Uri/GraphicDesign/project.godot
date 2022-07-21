@@ -26,7 +26,8 @@ config/icon="res://icon.png"
 
 [autoload]
 
-LayerButton="*res://Scripts/LayerButton.gd"
+Settings="*res://Scripts/Settings.gd"
+Main="*res://Scripts/CreationScene.gd"
 
 [gdnative]
 

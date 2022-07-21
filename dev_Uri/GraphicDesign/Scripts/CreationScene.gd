@@ -1,13 +1,16 @@
 extends Node2D
 
-const LAYERS = 5
-const BUTTON_MARGIN = 55
 
+# Declare member variables here. Examples:
+# var a = 2
+# var b = "text"
+
+
+# Called when the node enters the scene tree for the first time.
 func _ready():
-	var button = get_node("LayerButton")
-	for i in range(LAYERS):
-		var clone = button.duplicate()
-		clone.margin_top += i * BUTTON_MARGIN
-		clone.margin_bottom += i * BUTTON_MARGIN
-		clone.get_children()[0].text = "Layer "+str(i+1)
-		add_child(clone)
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
