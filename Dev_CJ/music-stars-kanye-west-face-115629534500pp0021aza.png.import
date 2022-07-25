@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/music-stars-kanye-west-face-115629534500pp0021aza.png-b84e34fc4611d239e75c98fe2a9d9626.stex"
+path="res://.import/music-stars-kanye-west-face-115629534500pp0021aza.png-7ad9b7baa2df959ba5841f208ae58451.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://music-stars-kanye-west-face-115629534500pp0021aza.png"
-dest_files=[ "res://.import/music-stars-kanye-west-face-115629534500pp0021aza.png-b84e34fc4611d239e75c98fe2a9d9626.stex" ]
+source_file="res://Dev_CJ/music-stars-kanye-west-face-115629534500pp0021aza.png"
+dest_files=[ "res://.import/music-stars-kanye-west-face-115629534500pp0021aza.png-7ad9b7baa2df959ba5841f208ae58451.stex" ]
 
 [params]
 
