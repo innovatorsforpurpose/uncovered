@@ -5,6 +5,14 @@ onready var main = get_node("/root/Main")
 var grabbed_right = KinematicBody2D.new()
 var grabbed_left = KinematicBody2D.new()
 
+const PICKUP_DELAY = 10
+
+var right_timer = PICKUP_DELAY
+var left_timer = PICKUP_DELAY
+
+var right_size = Vector2()
+var left_size = Vector2()
+
 func _process(delta):
 	var velocity = Vector2.ZERO
 	if Input.is_key_pressed(KEY_UP):
@@ -32,6 +40,13 @@ func _process(delta):
 	if Input.is_key_pressed(KEY_D):
 		grab(false, collision)
 	boundry()
+	
+	if left_timer > 0:
+		left_timer -= 1
+	if right_timer > 0:
+		right_timer -= 1
+	print("LEFT: "+str(left_timer))
+	print("RIGHT: "+str(right_timer))
 
 # Make sure the player can't go out of bounds by teleporting
 # them to the other side of the map.
@@ -75,23 +90,30 @@ func move_grabbed(var pos: String):
 
 func grab(left: bool, collision: KinematicCollision2D):
 	# If grabbed right has no children, it means it's empty.
-	if grabbed_right.get_child_count() != 0:
+	print("Grab Right Timer: "+str(right_timer))
+	if grabbed_right.get_child_count() != 0 and !left and right_timer == 0:
 		grabbed_right.scale *= 2
 		grabbed_right.get_children()[0].disabled = false
 		grabbed_right = KinematicBody2D.new()
-	if grabbed_left.get_child_count() != 0:
+		right_timer = PICKUP_DELAY
+	print("Grab Left Timer: "+str(left_timer))
+	print("left child count: "+str(grabbed_left.get_child_count()))
+	if grabbed_left.get_child_count() != 0 and left and left_timer == 0:
 		grabbed_left.scale *= 2
 		grabbed_left.get_children()[0].disabled = false
 		grabbed_left = KinematicBody2D.new()
+		left_timer = PICKUP_DELAY
 	# If the collider exists, pick it up.
 	if collision != null:
 		if collision.collider != null:
 			var collider = collision.collider
-			if left and grabbed_right != collider:
-				collider.get_children()[0].disabled = true
-				collider.scale /= 2
-				grabbed_left = collider
-			elif grabbed_left != collider:
+			if !left and grabbed_right != collider and right_timer==0:
 				collider.get_children()[0].disabled = true
 				collider.scale /= 2
 				grabbed_right = collider
+				right_timer = PICKUP_DELAY
+			elif left and grabbed_left != collider and left_timer==0:
+				collider.get_children()[0].disabled = true
+				collider.scale /= 2
+				grabbed_left = collider
+				left_timer = PICKUP_DELAY
