@@ -1,13 +1,12 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Main Componet scenes/School/Enviorment scene/Ground.gd" type="Script" id=1]
-[ext_resource path="res://Dialogue/Dialogue I/Dialogueplayer I.tscn" type="PackedScene" id=2]
+[ext_resource path="res://entities/Objects/Classroom/Classroom_levelblockout_csstart.glb" type="PackedScene" id=2]
 [ext_resource path="res://GC/GC.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Mentor/Mentor/Mentor.tscn" type="PackedScene" id=4]
 [ext_resource path="res://MC/MC.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Dialogue/Dialogue/Dialogue.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Laura/Laura.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Dialogue/Dialogue II/Dialogueplayer II.tscn" type="PackedScene" id=8]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 50, 1, 50 )
@@ -44,22 +43,31 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00904, 0 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 
 [node name="Mentor" parent="Node2D/Enviroment" instance=ExtResource( 4 )]
-transform = Transform( 0.999141, 0, 0, 0, 0.999141, 0, 0, 0, 0.999141, -0.00934792, 1, -16.1839 )
+transform = Transform( 0.999141, 0, 0, 0, 0.999141, 0, 0, 0, 0.999141, 0.843781, 1, -10.9055 )
 
 [node name="Dialogueplayer" parent="Node2D/Enviroment/Mentor" instance=ExtResource( 6 )]
 follow_viewport_enable = true
 
 [node name="GC" parent="Node2D/Enviroment" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.02326, -33.4095 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -44.3484, 1.023, -40.2664 )
 
-[node name="Dialogueplayer I" parent="Node2D/Enviroment/GC" instance=ExtResource( 2 )]
+[node name="Dialogueplayer" parent="Node2D/Enviroment/GC" instance=ExtResource( 6 )]
+follow_viewport_enable = true
+dialogue_file = "res://Dialogue/jsons/GC/GC.json"
 
 [node name="Laura" parent="Node2D/Enviroment" instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.03196, -48.6641 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.03196, -79.4887 )
 
-[node name="Dialogueplayer II" parent="Node2D/Enviroment/Laura" instance=ExtResource( 8 )]
+[node name="Dialogueplayer" parent="Node2D/Enviroment/Laura" instance=ExtResource( 6 )]
+follow_viewport_enable = true
+dialogue_file = "res://Dialogue/jsons/Laura/Laura.json"
+
+[node name="Classroom_levelblockout_csstart" parent="." instance=ExtResource( 2 )]
+transform = Transform( 2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 70.5128, 5, -30.818 )
 
 [connection signal="body_entered" from="Node2D/Enviroment/Mentor" to="Node2D/Enviroment/Mentor/Dialogueplayer" method="_on_Mentor_body_entered"]
 [connection signal="ready" from="Node2D/Enviroment/Mentor/Dialogueplayer" to="Node2D/Enviroment/Mentor/Dialogueplayer" method="_on_Dialogueplayer_ready"]
-[connection signal="ready" from="Node2D/Enviroment/Laura" to="Node2D/Enviroment/Laura" method="_on_Laura_ready"]
-[connection signal="ready" from="Node2D/Enviroment/Laura/Dialogueplayer II" to="Node2D/Enviroment/Laura/Dialogueplayer II" method="_on_Dialogueplayer_II_ready"]
+[connection signal="body_entered" from="Node2D/Enviroment/GC" to="Node2D/Enviroment/GC/Dialogueplayer" method="_on_GC_body_entered"]
+[connection signal="ready" from="Node2D/Enviroment/GC/Dialogueplayer" to="Node2D/Enviroment/GC/Dialogueplayer" method="_on_Dialogueplayer_ready"]
+[connection signal="body_entered" from="Node2D/Enviroment/Laura" to="Node2D/Enviroment/Laura/Dialogueplayer" method="_on_Laura_body_entered"]
+[connection signal="ready" from="Node2D/Enviroment/Laura/Dialogueplayer" to="Node2D/Enviroment/Laura/Dialogueplayer" method="_on_Dialogueplayer_ready"]
