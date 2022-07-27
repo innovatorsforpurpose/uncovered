@@ -1,6 +1,7 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Material_063.material" type="Material" id=1]
+[ext_resource path="res://Material_053.material" type="Material" id=2]
 
 [sub_resource type="ConvexPolygonShape" id=6]
 points = PoolVector3Array( -0.0416725, -0.0424003, -0.0100031, -0.041703, -0.0552031, -0.0100031, -0.041703, -0.0401969, -0.0100031, -0.0415993, -0.0507538, -0.0100031, -0.0415993, -0.0499415, -0.0100031, -0.0416908, -0.0405157, -0.0100031 )
@@ -112,7 +113,7 @@ material/0 = null
 [node name="Cube325" type="MeshInstance" parent="RootNode"]
 transform = Transform( 207.575, 0, 0, 0, -7.42344e-05, 207.574, 0, -207.574, -7.42344e-05, -29.2123, -0.00120258, -11.5808 )
 mesh = SubResource( 4 )
-material/0 = null
+material/0 = ExtResource( 2 )
 __meta__ = {
 "_edit_lock_": true
 }
