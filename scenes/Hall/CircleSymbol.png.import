@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CircleSymbol.png-249025eaa44dced07cacb733686f1874.stex"
+path="res://.import/CircleSymbol.png-c412bf9525ea7efe953a90f34219b3b8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://CircleSymbol.png"
-dest_files=[ "res://.import/CircleSymbol.png-249025eaa44dced07cacb733686f1874.stex" ]
+source_file="res://scenes/Hall/CircleSymbol.png"
+dest_files=[ "res://.import/CircleSymbol.png-c412bf9525ea7efe953a90f34219b3b8.stex" ]
 
 [params]
 

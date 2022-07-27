@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Classroom_office.fbx-c86ff0860f3f676f819d84a84ad6afb1.scn"
+path="res://.import/Classroom_office.fbx-49383355bbbd21294d06faec79ff1a3e.scn"
 
 [deps]
 
-source_file="res://Classroom_office.fbx"
-dest_files=[ "res://.import/Classroom_office.fbx-c86ff0860f3f676f819d84a84ad6afb1.scn" ]
+source_file="res://scenes/Hall/Classroom_office.fbx"
+dest_files=[ "res://.import/Classroom_office.fbx-49383355bbbd21294d06faec79ff1a3e.scn" ]
 
 [params]
 

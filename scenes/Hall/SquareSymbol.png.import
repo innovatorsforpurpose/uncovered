@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/SquareSymbol.png-4bae6f7bb734867a7118c04746a828a4.stex"
+path="res://.import/SquareSymbol.png-60e5f84a9ce07423f98a449e110c7387.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SquareSymbol.png"
-dest_files=[ "res://.import/SquareSymbol.png-4bae6f7bb734867a7118c04746a828a4.stex" ]
+source_file="res://scenes/Hall/SquareSymbol.png"
+dest_files=[ "res://.import/SquareSymbol.png-60e5f84a9ce07423f98a449e110c7387.stex" ]
 
 [params]
 

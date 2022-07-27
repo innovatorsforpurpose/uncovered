@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Classroom_levelblockout_csstart.glb-ead446857ec25a894d760a4ab19f6e6f.scn"
+path="res://.import/Classroom_levelblockout_csstart.glb-da71339b95a1505a9f33d0c75bc540f5.scn"
 
 [deps]
 
-source_file="res://Classroom_levelblockout_csstart.glb"
-dest_files=[ "res://.import/Classroom_levelblockout_csstart.glb-ead446857ec25a894d760a4ab19f6e6f.scn" ]
+source_file="res://scenes/Hall/Classroom_levelblockout_csstart.glb"
+dest_files=[ "res://.import/Classroom_levelblockout_csstart.glb-da71339b95a1505a9f33d0c75bc540f5.scn" ]
 
 [params]
 

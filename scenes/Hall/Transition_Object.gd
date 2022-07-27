@@ -30,8 +30,8 @@ func _on_Area_input_event(camera, event, position, normal, shape_idx):
 
 
 func _on_Timer_timeout():
-	var success = ProjectSettings.load_resource_pack("res://UncoveredMinigame.pck")
+	var success = ProjectSettings.load_resource_pack("res://scenes/Hall/UncoveredMinigame.pck")
 	
 	if success:
-		var imported_scene = load("res://CreationScene.tscn")
+		var imported_scene = load("res://scenes/Hall/CreationScene.tscn")
 	#get_tree().change_scene("res://CreationScene.tscn")

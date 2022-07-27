@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/PlayerArms.png-f3a822022777c09f8a5b6da8d1c1a45d.stex"
+path="res://.import/PlayerArms.png-6d669b2a394662daa106fc271390dc99.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PlayerArms.png"
-dest_files=[ "res://.import/PlayerArms.png-f3a822022777c09f8a5b6da8d1c1a45d.stex" ]
+source_file="res://scenes/Hall/PlayerArms.png"
+dest_files=[ "res://.import/PlayerArms.png-6d669b2a394662daa106fc271390dc99.stex" ]
 
 [params]
 

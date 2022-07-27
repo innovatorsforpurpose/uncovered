@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/StarSymbol.png-fe6ee698d64175c037320a92b436dad7.stex"
+path="res://.import/StarSymbol.png-8bfaf69753f4a2d62a3b9d4b1455175b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://StarSymbol.png"
-dest_files=[ "res://.import/StarSymbol.png-fe6ee698d64175c037320a92b436dad7.stex" ]
+source_file="res://scenes/Hall/StarSymbol.png"
+dest_files=[ "res://.import/StarSymbol.png-8bfaf69753f4a2d62a3b9d4b1455175b.stex" ]
 
 [params]
 

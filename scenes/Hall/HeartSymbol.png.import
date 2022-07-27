@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/HeartSymbol.png-9b79d9fdb010a24c5059b60c2a1c6344.stex"
+path="res://.import/HeartSymbol.png-0b9f5752f7d2905940b93931e8e0018d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HeartSymbol.png"
-dest_files=[ "res://.import/HeartSymbol.png-9b79d9fdb010a24c5059b60c2a1c6344.stex" ]
+source_file="res://scenes/Hall/HeartSymbol.png"
+dest_files=[ "res://.import/HeartSymbol.png-0b9f5752f7d2905940b93931e8e0018d.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/TriangleSymbol.png-ce1cb0aa9f614406b88ba5356141f942.stex"
+path="res://.import/TriangleSymbol.png-fa66f24ad511752f422d1cddb64c2ed2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TriangleSymbol.png"
-dest_files=[ "res://.import/TriangleSymbol.png-ce1cb0aa9f614406b88ba5356141f942.stex" ]
+source_file="res://scenes/Hall/TriangleSymbol.png"
+dest_files=[ "res://.import/TriangleSymbol.png-fa66f24ad511752f422d1cddb64c2ed2.stex" ]
 
 [params]
 

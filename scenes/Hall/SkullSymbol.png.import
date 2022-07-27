@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/SkullSymbol.png-4430f3dca8c4e73eb80b6a32f3fb969c.stex"
+path="res://.import/SkullSymbol.png-049b371c0476c38ac76ace63e7338850.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SkullSymbol.png"
-dest_files=[ "res://.import/SkullSymbol.png-4430f3dca8c4e73eb80b6a32f3fb969c.stex" ]
+source_file="res://scenes/Hall/SkullSymbol.png"
+dest_files=[ "res://.import/SkullSymbol.png-049b371c0476c38ac76ace63e7338850.stex" ]
 
 [params]
 
