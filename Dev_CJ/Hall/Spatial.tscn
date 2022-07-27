@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Classroom_HALLWAY.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Hallway Door.tscn" type="PackedScene" id=3]
+
+[node name="Spatial" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 18.9819 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.177686, 0, 0.984087, 0, 1, 0, -0.984087, 0, 0.177686, -25.0346, 7.07883, -50.3954 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, -32.4448, 12.9626, 17.9151 )
+
+[node name="Classroom_HALLWAY" parent="." instance=ExtResource( 2 )]
+
+[node name="Spatial" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.444, 6.612, -42.2857 )
+
+[node name="Classroom_HALLWAY_door" parent="Spatial" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0855885, 0.413721, 1.28493 )
