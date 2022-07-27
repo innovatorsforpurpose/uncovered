@@ -16,4 +16,4 @@ func _process(_delta):
 		var dialogue_player = get_node_or_null("Dialogueplayer")
 		if dialogue_player:
 			dialogue_player.reset()
-			print("=se")
+
