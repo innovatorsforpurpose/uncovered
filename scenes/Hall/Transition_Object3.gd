@@ -29,3 +29,4 @@ func _on_Area_input_event(camera, event, position, normal, shape_idx):
 
 func _on_Timer_timeout():
 	get_tree().change_scene("res://CreationScene.tscn")
+#switch to a different game
