@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/american-psycho-4-min.jpeg-3455dfa5e56d0b34a68c249370dfdeb9.stex"
+path="res://.import/american-psycho-4-min.jpeg-c33609e4805f18cc4534d23de736101e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://american-psycho-4-min.jpeg"
-dest_files=[ "res://.import/american-psycho-4-min.jpeg-3455dfa5e56d0b34a68c249370dfdeb9.stex" ]
+source_file="res://scenes/Hall/american-psycho-4-min.jpeg"
+dest_files=[ "res://.import/american-psycho-4-min.jpeg-c33609e4805f18cc4534d23de736101e.stex" ]
 
 [params]
 

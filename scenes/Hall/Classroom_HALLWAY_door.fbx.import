@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Classroom_HALLWAY_door.fbx-ff6f29cfe70ce6680a67579c14c09199.scn"
+path="res://.import/Classroom_HALLWAY_door.fbx-18785bd1ef2e87ab9c39f89351420ddf.scn"
 
 [deps]
 
-source_file="res://Classroom_HALLWAY_door.fbx"
-dest_files=[ "res://.import/Classroom_HALLWAY_door.fbx-ff6f29cfe70ce6680a67579c14c09199.scn" ]
+source_file="res://scenes/Hall/Classroom_HALLWAY_door.fbx"
+dest_files=[ "res://.import/Classroom_HALLWAY_door.fbx-18785bd1ef2e87ab9c39f89351420ddf.scn" ]
 
 [params]
 
