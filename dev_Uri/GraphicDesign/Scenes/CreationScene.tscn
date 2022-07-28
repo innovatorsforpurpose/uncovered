@@ -146,4 +146,11 @@ visible = false
 scale = Vector2( 200, 200 )
 mesh = SubResource( 7 )
 
+[node name="SubmitButton" type="Button" parent="GoalHolder"]
+margin_left = 117.0
+margin_top = -56.0
+margin_right = 252.0
+margin_bottom = -16.0
+text = "Submit"
+
 [connection signal="pressed" from="ResetCanvasButton" to="ResetCanvasButton" method="click"]
