@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/logo-godot.svg-32ee472569553deb7867717754a319bb.s3tc.stex"
-path.etc2="res://.import/logo-godot.svg-32ee472569553deb7867717754a319bb.etc2.stex"
+path.s3tc="res://.import/logo-godot.svg-2dad2043c0318338f906c42d68a59865.s3tc.stex"
+path.etc2="res://.import/logo-godot.svg-2dad2043c0318338f906c42d68a59865.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Main Componet scenes/images/icons/logo-godot.svg"
-dest_files=[ "res://.import/logo-godot.svg-32ee472569553deb7867717754a319bb.s3tc.stex", "res://.import/logo-godot.svg-32ee472569553deb7867717754a319bb.etc2.stex" ]
+source_file="res://Scenes/Main Componet scenes/images/icons/logo-godot.svg"
+dest_files=[ "res://.import/logo-godot.svg-2dad2043c0318338f906c42d68a59865.s3tc.stex", "res://.import/logo-godot.svg-2dad2043c0318338f906c42d68a59865.etc2.stex" ]
 
 [params]
 

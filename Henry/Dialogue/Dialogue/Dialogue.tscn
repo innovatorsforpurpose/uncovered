@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Dialogue/Dialogue Player/DialoguePlayer.gd" type="Script" id=1]
-[ext_resource path="res://Main Componet scenes/images/A_black_image.jpg.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Main Componet scenes/images/A_black_image.jpg.png" type="Texture" id=2]
 [ext_resource path="res://Font/Cairo/static/Cairo-ExtraLight.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Font/Cairo/new_dynamicfont.tres" type="DynamicFont" id=4]
 
@@ -86,10 +86,11 @@ __meta__ = {
 }
 
 [node name="Name" type="RichTextLabel" parent="NinePatchRect"]
-margin_left = 6.2971
-margin_top = -23.7934
-margin_right = 259.297
-margin_bottom = -1.79337
+anchor_bottom = 0.211
+margin_left = 12.2971
+margin_top = -55.885
+margin_right = 194.297
+margin_bottom = -48.095
 rect_scale = Vector2( 1.32745, 1.33231 )
 size_flags_stretch_ratio = 0.0
 custom_colors/default_color = Color( 1, 1, 1, 1 )
@@ -103,10 +104,10 @@ scroll_active = false
 [node name="Message" type="RichTextLabel" parent="NinePatchRect"]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -109.0
-margin_top = 13.2871
-margin_right = 109.5
-margin_bottom = 86.2871
+margin_left = -104.5
+margin_top = -16.0
+margin_right = 107.5
+margin_bottom = 78.0
 rect_scale = Vector2( 1, 1.28138 )
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -122,6 +123,8 @@ __meta__ = {
 modulate = Color( 0.0666667, 0.0627451, 0.0627451, 0.564706 )
 self_modulate = Color( 0.0862745, 0.0823529, 0.0823529, 1 )
 show_behind_parent = true
+anchor_top = -0.409091
+anchor_bottom = -0.109091
 margin_top = -25.0
 margin_right = 253.0
 margin_bottom = 86.0
