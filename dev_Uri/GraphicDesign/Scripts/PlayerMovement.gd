@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 onready var settings = get_node("/root/CreationScene/Settings")
-onready var main = get_node("/root/Main")
+onready var main = get_node("/root/CreationScene")
 var grabbed_right = KinematicBody2D.new()
 var grabbed_left = KinematicBody2D.new()
 

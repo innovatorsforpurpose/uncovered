@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Scripts/PlayerMovement.gd" type="Script" id=1]
 [ext_resource path="res://Resources/PlayerArms.png" type="Texture" id=2]
@@ -7,13 +7,22 @@
 [ext_resource path="res://Scripts/CreationScene.gd" type="Script" id=5]
 [ext_resource path="res://Resources/SquareSymbol.png" type="Texture" id=6]
 [ext_resource path="res://Resources/TriangleSymbol.png" type="Texture" id=7]
+[ext_resource path="res://Resources/MatiasSymbol.png" type="Texture" id=8]
 [ext_resource path="res://Resources/SkullSymbol.png" type="Texture" id=9]
 [ext_resource path="res://Scripts/Symbol.gd" type="Script" id=10]
 [ext_resource path="res://Scripts/Symbols.gd" type="Script" id=11]
 [ext_resource path="res://Resources/CircleSymbol.png" type="Texture" id=12]
+[ext_resource path="res://Scripts/GoalHolder.gd" type="Script" id=13]
 [ext_resource path="res://Scripts/ResetCanvasButton.gd" type="Script" id=14]
 [ext_resource path="res://Resources/StarSymbol.png" type="Texture" id=15]
 [ext_resource path="res://Scripts/GridSquare.gd" type="Script" id=16]
+[ext_resource path="res://Scripts/SkullSymbol.gd" type="Script" id=17]
+[ext_resource path="res://Scripts/MatiasSymbol.gd" type="Script" id=18]
+[ext_resource path="res://Scenes/CircleSymbol.gd" type="Script" id=19]
+[ext_resource path="res://Scripts/SquareSymbol.gd" type="Script" id=20]
+[ext_resource path="res://Scripts/StarSymbol.gd" type="Script" id=21]
+[ext_resource path="res://Scripts/HeartSymbol.gd" type="Script" id=22]
+[ext_resource path="res://Scripts/TriangleSymbol.gd" type="Script" id=23]
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 8.625, 8.375 )
@@ -27,6 +36,8 @@ extents = Vector2( 97, 21 )
 [sub_resource type="QuadMesh" id=5]
 
 [sub_resource type="QuadMesh" id=6]
+
+[sub_resource type="QuadMesh" id=7]
 
 [node name="CreationScene" type="Node2D"]
 position = Vector2( 1, -1 )
@@ -62,31 +73,44 @@ script = ExtResource( 11 )
 visible = false
 scale = Vector2( 4, 4 )
 texture = ExtResource( 9 )
+script = ExtResource( 17 )
 
 [node name="TriangleSymbol" type="Sprite" parent="Symbols"]
 visible = false
 scale = Vector2( 4, 4 )
 texture = ExtResource( 7 )
+script = ExtResource( 23 )
 
 [node name="HeartSymbol" type="Sprite" parent="Symbols"]
 visible = false
 scale = Vector2( 4, 4 )
 texture = ExtResource( 4 )
+script = ExtResource( 22 )
 
 [node name="CircleSymbol" type="Sprite" parent="Symbols"]
 visible = false
 scale = Vector2( 4, 4 )
 texture = ExtResource( 12 )
+script = ExtResource( 19 )
 
 [node name="SquareSymbol" type="Sprite" parent="Symbols"]
 visible = false
 scale = Vector2( 4, 4 )
 texture = ExtResource( 6 )
+script = ExtResource( 20 )
 
 [node name="StarSymbol" type="Sprite" parent="Symbols"]
 visible = false
 scale = Vector2( 4, 4 )
 texture = ExtResource( 15 )
+script = ExtResource( 21 )
+
+[node name="MatiasSymbol" type="Sprite" parent="Symbols"]
+visible = false
+position = Vector2( -16, 2 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 8 )
+script = ExtResource( 18 )
 
 [node name="ResetCanvasButton" type="Button" parent="."]
 margin_left = 473.0
@@ -113,5 +137,20 @@ position = Vector2( 510.625, 531.125 )
 scale = Vector2( 990.75, 85 )
 z_index = -1
 mesh = SubResource( 6 )
+
+[node name="GoalHolder" type="Node" parent="."]
+script = ExtResource( 13 )
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="GoalHolder"]
+visible = false
+scale = Vector2( 200, 200 )
+mesh = SubResource( 7 )
+
+[node name="SubmitButton" type="Button" parent="GoalHolder"]
+margin_left = 117.0
+margin_top = -56.0
+margin_right = 252.0
+margin_bottom = -16.0
+text = "Submit"
 
 [connection signal="pressed" from="ResetCanvasButton" to="ResetCanvasButton" method="click"]
