@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-export(String, FILE, "Mc.json") var dialogue_file
+export(String, FILE, "*.json") var dialogue_file
 
 
 func _on_Dialogueplayer_ready():
@@ -42,10 +42,11 @@ func next_line():
 		$Timer.start()
 		$NinePatchRect.visible = false
 		toggle_the_player(true)
-		return
+		return false 
 	$NinePatchRect/Name.text = dialogues[current_dialogue_id]['name']
 	$NinePatchRect/Message.text = dialogues[current_dialogue_id]['text']
-	
+	return true
+
 func load_dialogue():
 	var file = File.new()
 	if file.file_exists(dialogue_file):
@@ -64,4 +65,37 @@ func toggle_the_player(on):
 		player.set_active(on)
 
 func _on_Mentor_body_entered(_body):
+	_ready()
+
+
+func _on_GC_body_entered(body):
+	_ready()
+
+
+func _on_Laura_body_entered(body):
+	_ready()
+
+
+
+func _on_Student_body_entered(body):
+	_ready()
+
+
+func _on_StudentI_body_entered(body):
+	_ready()
+
+
+func _on_StudentII_body_entered(body):
+	_ready()
+
+
+func _on_IDesk_body_entered(body):
+	_ready()
+
+
+func _on_Bulletin_Board_body_entered(body):
+	_ready()
+
+
+func _on_Bully_body_entered(body):
 	_ready()

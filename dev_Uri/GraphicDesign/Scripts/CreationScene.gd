@@ -6,8 +6,8 @@ onready var settings = get_node("/root/CreationScene/Settings")
 onready var square = get_node("/root/CreationScene/GridSquare")
 
 func _ready():
-	create_grid()
-	place_symbols()
+	call_deferred("create_grid")
+	call_deferred("place_symbols")
 
 func create_grid():
 	for i in range(settings.GRID_LENGTH):
@@ -20,9 +20,9 @@ func create_grid():
 
 func place_symbols():
 	var count = 0
-	for icon in symbol_holder.get_children():
+	for i in symbol_holder.get_children():
+		var icon = i.duplicate()
 		icon.visible = true
-		symbol_holder.remove_child(icon)
 		var clone = symbol_body.duplicate()
 		icon.position = Vector2.ZERO
 		clone.add_child(icon)

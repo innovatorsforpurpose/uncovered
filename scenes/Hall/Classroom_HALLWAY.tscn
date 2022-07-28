@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scenes/Hall/Material_063.material" type="Material" id=1]
 [ext_resource path="res://scenes/Hall/Material_053.material" type="Material" id=2]
@@ -46,7 +46,6 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 168,
-"material": ExtResource( 1 ),
 "name": "Material.063",
 "primitive": 4,
 "skeleton_aabb": [  ],
