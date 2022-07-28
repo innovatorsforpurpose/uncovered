@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/logo-godot.svg-e1a25ff8ff7cbd0b13affc7a30bd00af.stex"
+path="res://.import/icon.png-630f5c6fc94673d21dfab3f63ea2803a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Mentor/Images/logo-godot.svg"
-dest_files=[ "res://.import/logo-godot.svg-e1a25ff8ff7cbd0b13affc7a30bd00af.stex" ]
+source_file="res://Scenes/Main Componet scenes/images/icons/icon.png"
+dest_files=[ "res://.import/icon.png-630f5c6fc94673d21dfab3f63ea2803a.stex" ]
 
 [params]
 
