@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 onready var settings = get_node("/root/CreationScene/Settings")
 onready var main = get_node("/root/CreationScene")
+onready var goals = get_node("/root/CreationScene/GoalHolder")
 var grabbed_right = KinematicBody2D.new()
 var grabbed_left = KinematicBody2D.new()
 
@@ -87,6 +88,7 @@ func move_grabbed(var pos: String):
 	grabbed_left.rotation_degrees = rotation
 
 func grab(left: bool, collision: KinematicCollision2D):
+	var reduction_scale = goals.reduction_scale
 	# If grabbed right has no children, it means it's empty.
 	if grabbed_right.get_child_count() != 0 and !left and right_timer == 0:
 		grabbed_right.scale *= 2
