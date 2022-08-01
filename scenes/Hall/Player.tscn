@@ -1,7 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/Hall/Player.gd" type="Script" id=1]
-[ext_resource path="res://scenes/Hall/WjyRHKUtP4Wjb5fuHbR6sewfuLEYmxpqgGqZJ6Tx6H8.jpg.webp" type="Texture" id=2]
 
 [sub_resource type="CubeMesh" id=1]
 
