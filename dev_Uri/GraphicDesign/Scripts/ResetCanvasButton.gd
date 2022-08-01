@@ -12,4 +12,5 @@ func click():
 
 func clear_canvas():
 	for clone in player.clones:
-		scene.remove_child(clone)
+		scene.remove_child(player.clones[clone])
+	player.clones = {}

@@ -11,7 +11,7 @@ onready var left_timer = settings.PICKUP_DELAY
 var right_size = Vector2()
 var left_size = Vector2()
 
-var clones = []
+var clones = {}
 
 func _process(delta):
 	var velocity = Vector2.ZERO
@@ -92,14 +92,12 @@ func grab(left: bool, collision: KinematicCollision2D):
 		grabbed_right.scale *= 2
 		grabbed_right.z_index = -10
 		grabbed_right.position = get_snapped_position(false)
-		clones.append(grabbed_right)
 		grabbed_right = KinematicBody2D.new()
 		right_timer = settings.PICKUP_DELAY
 	if grabbed_left.get_child_count() != 0 and left and left_timer == 0:
 		grabbed_left.scale *= 2
 		grabbed_left.z_index = -10
 		grabbed_left.position = get_snapped_position(true)
-		clones.append(grabbed_left)
 		grabbed_left = KinematicBody2D.new()
 		left_timer = settings.PICKUP_DELAY
 	# If the collider exists, pick it up.
@@ -125,9 +123,11 @@ func get_snapped_position(left: bool) -> Vector2:
 		var placement_x = int(((grabbed_left.position.x-settings.GRID_MARGIN)) / settings.GRID_SQUARE_MARGIN)
 		var placement_y = int(((grabbed_left.position.y-settings.GRID_MARGIN)) / settings.GRID_SQUARE_MARGIN)
 		var pos = Vector2(settings.GRID_MARGIN+half_length+((settings.GRID_SQUARE_MARGIN)*placement_x), settings.GRID_MARGIN+half_length+((settings.GRID_SQUARE_MARGIN)*placement_y))
+		clones[(placement_x+1) + (placement_y*settings.GRID_LENGTH)] = grabbed_left
 		return pos
 	else:
 		var placement_x = int((grabbed_right.position.x-settings.GRID_MARGIN) / settings.GRID_SQUARE_MARGIN)
 		var placement_y = int((grabbed_right.position.y-settings.GRID_MARGIN) / settings.GRID_SQUARE_MARGIN)
 		var pos = Vector2(settings.GRID_MARGIN+half_length+(settings.GRID_SQUARE_MARGIN*placement_x), settings.GRID_MARGIN+half_length+(settings.GRID_SQUARE_MARGIN*placement_y))
+		clones[(placement_x+1) + (placement_y*settings.GRID_LENGTH)] = grabbed_right
 		return pos
