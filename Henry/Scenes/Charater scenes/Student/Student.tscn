@@ -3,7 +3,7 @@
 [ext_resource path="res://Scenes/Charater scenes/Student/Student.gd" type="Script" id=1]
 
 [sub_resource type="BoxShape" id=2]
-extents = Vector3( 5.45215, 1.30142, 4.77371 )
+extents = Vector3( 1.84643, 1.30142, 1.92436 )
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -21,4 +21,6 @@ mesh = SubResource( 1 )
 material/0 = null
 
 [node name="VisibilityNotifier" type="VisibilityNotifier" parent="."]
-aabb = AABB( -5.56889, -1, -5.0753, 11.1378, 2, 10.1506 )
+aabb = AABB( -1.85498, -1, -1.63598, 3.70999, 2, 3.27197 )
+
+[connection signal="body_exited" from="." to="." method="_on_Student_body_exited"]
