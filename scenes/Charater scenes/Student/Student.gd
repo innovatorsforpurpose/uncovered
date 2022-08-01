@@ -29,7 +29,7 @@ func _process(_delta):
 
 func _physics_process(_delta):
 	if target == 0 and path.size() == 0:
-		path = [Vector3(-20,1,-43),Vector3(-17,1,-34),Vector3(11,1,-36),Vector3(-10,1,-35)]
+		path = [Vector3(-20,13.259,-8),Vector3(-27,13.259,-5),Vector3(-23,13.259,-1),Vector3(-25,13.259,-3)]
 	if path.size() > 0:
 		velocity = Vector3(path[0].x - transform.origin.x, path[0].y - transform.origin.y, path[0].z - transform.origin.z)
 		var distance =  velocity.length()

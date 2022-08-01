@@ -28,7 +28,7 @@ func _process(_delta):
 			dialogue_player.reset()
 func _physics_process(_delta):
 	if target == 0 and path.size() == 0:
-		path = [Vector3(-17,1,-33),Vector3(5,1,-36),Vector3(-10,1,-29),Vector3(1,1,-46)]
+		path = [Vector3(-27,13.259,-4),Vector3(-20,13.259,-6),Vector3(-23,13.259,-29),Vector3(-22,13.259,-2)]
 	if path.size() > 0:
 		velocity = Vector3(path[0].x - transform.origin.x, path[0].y - transform.origin.y, path[0].z - transform.origin.z)
 		var distance =  velocity.length()

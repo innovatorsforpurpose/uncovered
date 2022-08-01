@@ -175,7 +175,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00904, 0 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.4927, 13.2731, 51.6871 )
 
 [node name="Mentor" parent="Node2D/Enviroment" instance=ExtResource( 8 )]
-transform = Transform( 0.999141, 0, 0, 0, 0.999141, 0, 0, 0, 0.999141, -23.6603, 13.2857, 40.795 )
+transform = Transform( 0.999141, 0, 0, 0, 0.999141, 0, 0, 0, 0.999141, -40, 13.286, -5 )
 
 [node name="Dialogueplayer" parent="Node2D/Enviroment/Mentor" instance=ExtResource( 10 )]
 follow_viewport_enable = true
@@ -230,7 +230,7 @@ follow_viewport_enable = true
 dialogue_file = "res://Scenes/Charater scenes/Student/jsons/Bulletin Board.json"
 
 [node name="Bully" parent="Node2D/Enviroment" instance=ExtResource( 17 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29.8953, 13.2595, -8.32 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28.4105, 13.259, -0.0933437 )
 
 [node name="Dialogueplayer" parent="Node2D/Enviroment/Bully" instance=ExtResource( 10 )]
 follow_viewport_enable = true
