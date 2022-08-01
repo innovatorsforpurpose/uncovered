@@ -26,12 +26,13 @@ func _on_Area_input_event(camera, event, position, normal, shape_idx):
 			$CSGSphere.visible = false
 			print("I am here sir i have done it ")
 			get_node("/root/RootScene/Door1/AnimationPlayer").play("open")
-			get_node("/root/RootScene/Timer").start(3)
+			get_node("/root/RootScene/Timer").start(2)
 
 
 func _on_Timer_timeout():
-	var success = ProjectSettings.load_resource_pack("res://scenes/Hall/UncoveredMinigame.pck")
-	
+	print("transition")
+	var success = ProjectSettings.load_resource_pack("res://packs/UncoveredMinigame.zip")
 	if success:
-		var imported_scene = load("res://scenes/Hall/CreationScene.tscn")
-	#get_tree().change_scene("res://CreationScene.tscn")
+		get_tree().change_scene("res://Scenes/CreationScene.tscn")
+	else:
+		print("could not load uncovered minigame")
