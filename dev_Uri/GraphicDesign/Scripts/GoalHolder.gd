@@ -24,17 +24,29 @@ var designs = [["Heart","Heart","NONE","Heart","Heart",
 				"NONE","Square","Skull","Square","NONE",
 				"Square","NONE","NONE","NONE","Square"],
 				
-				["NONE","NONE","NONE","NONE","NONE",
-				"NONE","Star","Triangle","Star","NONE",
+				["NONE",  "NONE",  "NONE",  "NONE",  "NONE",
+				"NONE", "Star", "Triangle", "Star",  "NONE",
 				"NONE","Triangle","Circle","Triangle","NONE",
 				"NONE","Star","Triangle","Star","NONE",
 				"NONE","NONE","NONE","NONE","NONE"],
 				
 				["NONE","Circle","Circle","Circle","NONE",
-				"Circle","NONE","NONE","NONE","Circle",
-				"Circle","NONE","NONE","NONE","Circle",
-				"Circle","NONE","NONE","NONE","Circle",
-				"NONE","Circle","Circle","Circle","NONE"]]
+				"Circle", "NONE", "NONE","NONE","Circle",
+				"Circle", "NONE", "NONE", "NONE","Circle",
+				"Circle", "NONE", "NONE", "NONE","Circle",
+				"NONE","Circle","Circle","Circle","NONE"],
+				
+				["NONE",    "NONE",     "NONE",     "NONE",     "NONE",
+				"NONE",    "NONE",    "Triangle",    "NONE",    "NONE",
+				"NONE",  "Triangle",  "Triangle",  "Triangle",  "NONE",
+				"Triangle","Triangle","Triangle","Triangle","Triangle",
+				"NONE",     "NONE",     "NONE",     "NONE",     "NONE"],
+				
+				["Square","Square","Square","Square","Square",
+				"Square", "NONE",  "NONE",  "NONE",  "Square",
+				"Square", "NONE",  "NONE",  "NONE",  "Square",
+				"Square", "NONE",  "NONE",  "NONE",  "Square",
+				"Square","Square","Square","Square","Square"]]
 
 var returned_pos = Vector2()
 
