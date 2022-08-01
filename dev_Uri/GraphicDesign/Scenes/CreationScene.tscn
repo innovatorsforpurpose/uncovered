@@ -23,15 +23,13 @@
 [ext_resource path="res://Scripts/StarSymbol.gd" type="Script" id=21]
 [ext_resource path="res://Scripts/HeartSymbol.gd" type="Script" id=22]
 [ext_resource path="res://Scripts/TriangleSymbol.gd" type="Script" id=23]
+[ext_resource path="res://Scenes/SubmitButton.gd" type="Script" id=24]
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 8.625, 8.375 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 10, 4 )
-
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 97, 21 )
 
 [sub_resource type="QuadMesh" id=5]
 
@@ -57,6 +55,7 @@ shape = SubResource( 3 )
 [node name="PlayerBody" type="KinematicBody2D" parent="."]
 position = Vector2( 600, 100 )
 scale = Vector2( 4, 4 )
+z_index = 2
 script = ExtResource( 1 )
 
 [node name="PlayerShape" type="CollisionShape2D" parent="PlayerBody"]
@@ -120,12 +119,6 @@ margin_bottom = 455.0
 text = "Reset Canvas (R)"
 script = ExtResource( 14 )
 
-[node name="ButtonBox" type="StaticBody2D" parent="ResetCanvasButton"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ResetCanvasButton/ButtonBox"]
-position = Vector2( 97, 21 )
-shape = SubResource( 4 )
-
 [node name="GridSquare" type="MeshInstance2D" parent="."]
 position = Vector2( 42, -35 )
 scale = Vector2( 50, 50 )
@@ -146,11 +139,28 @@ visible = false
 scale = Vector2( 200, 200 )
 mesh = SubResource( 7 )
 
-[node name="SubmitButton" type="Button" parent="GoalHolder"]
-margin_left = 117.0
-margin_top = -56.0
-margin_right = 252.0
-margin_bottom = -16.0
+[node name="StaticBody2D" type="StaticBody2D" parent="GoalHolder"]
+visible = false
+z_index = -21
+
+[node name="SubmitButton" type="Button" parent="GoalHolder/StaticBody2D"]
+margin_left = 470.0
+margin_top = 166.0
+margin_right = 616.0
+margin_bottom = 193.0
 text = "Submit"
+script = ExtResource( 24 )
+
+[node name="ScoreLabel" type="Label" parent="."]
+margin_left = 474.0
+margin_top = 211.0
+margin_right = 651.0
+margin_bottom = 244.0
+size_flags_vertical = 2
+size_flags_stretch_ratio = 0.0
+text = "Score: 0/25
+
+Total Score: 0"
 
 [connection signal="pressed" from="ResetCanvasButton" to="ResetCanvasButton" method="click"]
+[connection signal="pressed" from="GoalHolder/StaticBody2D/SubmitButton" to="GoalHolder/StaticBody2D/SubmitButton" method="click"]

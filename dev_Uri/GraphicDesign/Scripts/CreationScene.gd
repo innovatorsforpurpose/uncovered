@@ -27,6 +27,6 @@ func place_symbols():
 		icon.position = Vector2.ZERO
 		clone.add_child(icon)
 		clone.position.y = 530
-		clone.position.x = 65+(85*count)
+		clone.position.x = 65+(150*count)
 		add_child(clone)
 		count += 1
