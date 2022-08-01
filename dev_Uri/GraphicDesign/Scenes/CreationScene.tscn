@@ -115,13 +115,13 @@ script = ExtResource( 18 )
 [node name="ResetCanvasButton" type="Button" parent="."]
 margin_left = 473.0
 margin_top = 412.0
-margin_right = 721.0
+margin_right = 733.0
 margin_bottom = 455.0
 text = "Reset Canvas (R)"
 script = ExtResource( 14 )
 
 [node name="GoBackButton" type="Button" parent="."]
-margin_left = 734.0
+margin_left = 744.0
 margin_top = 411.0
 margin_right = 1004.0
 margin_bottom = 454.0
