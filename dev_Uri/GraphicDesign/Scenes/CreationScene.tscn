@@ -204,5 +204,4 @@ text = "Time Left: 5s"
 script = ExtResource( 26 )
 
 [connection signal="pressed" from="ResetCanvasButton" to="ResetCanvasButton" method="click"]
-[connection signal="pressed" from="GoBackButton" to="GoBackButton" method="click"]
 [connection signal="pressed" from="GoalHolder/StaticBody2D/SubmitButton" to="GoalHolder/StaticBody2D/SubmitButton" method="click"]
