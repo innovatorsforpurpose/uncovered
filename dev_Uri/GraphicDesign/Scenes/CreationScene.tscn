@@ -1,7 +1,7 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Scripts/PlayerMovement.gd" type="Script" id=1]
-[ext_resource path="res://Resources/PlayerArms.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Player.PNG" type="Texture" id=2]
 [ext_resource path="res://Scripts/Settings.gd" type="Script" id=3]
 [ext_resource path="res://Resources/HeartSymbol.png" type="Texture" id=4]
 [ext_resource path="res://Scripts/CreationScene.gd" type="Script" id=5]
@@ -24,6 +24,7 @@
 [ext_resource path="res://Scripts/HeartSymbol.gd" type="Script" id=22]
 [ext_resource path="res://Scripts/TriangleSymbol.gd" type="Script" id=23]
 [ext_resource path="res://Scenes/SubmitButton.gd" type="Script" id=24]
+[ext_resource path="res://Scenes/TimerLabel.gd" type="Script" id=26]
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 8.625, 8.375 )
@@ -53,7 +54,7 @@ scale = Vector2( 4, 4 )
 shape = SubResource( 3 )
 
 [node name="PlayerBody" type="KinematicBody2D" parent="."]
-position = Vector2( 600, 100 )
+position = Vector2( 235, 230 )
 scale = Vector2( 4, 4 )
 z_index = 2
 script = ExtResource( 1 )
@@ -114,9 +115,17 @@ script = ExtResource( 18 )
 [node name="ResetCanvasButton" type="Button" parent="."]
 margin_left = 473.0
 margin_top = 412.0
-margin_right = 660.0
+margin_right = 721.0
 margin_bottom = 455.0
 text = "Reset Canvas (R)"
+script = ExtResource( 14 )
+
+[node name="GoBackButton" type="Button" parent="."]
+margin_left = 734.0
+margin_top = 411.0
+margin_right = 1004.0
+margin_bottom = 454.0
+text = "Go Back To School"
 script = ExtResource( 14 )
 
 [node name="GridSquare" type="MeshInstance2D" parent="."]
@@ -162,5 +171,38 @@ text = "Score: 0/25
 
 Total Score: 0"
 
+[node name="ControlsLabel" type="Label" parent="."]
+margin_left = 636.0
+margin_top = 208.0
+margin_right = 1000.0
+margin_bottom = 375.0
+text = "CONTROLS:
+Move Player: Arrow Keys
+Pick Up Symbols (From Bottom): A & D
+Place Symbols: A & D
+
+Once you have a design, press submit to check it against
+the designs on the top right.
+Your score is displayed to the left of this text.
+
+Reset Canvas: R"
+
+[node name="CompletedLabel" type="Label" parent="."]
+visible = false
+margin_left = 478.0
+margin_top = 94.0
+margin_right = 691.0
+margin_bottom = 108.0
+text = "You completed all of the designs!"
+
+[node name="TimerLabel" type="Label" parent="."]
+margin_left = 474.0
+margin_top = 289.0
+margin_right = 557.0
+margin_bottom = 303.0
+text = "Time Left: 5s"
+script = ExtResource( 26 )
+
 [connection signal="pressed" from="ResetCanvasButton" to="ResetCanvasButton" method="click"]
+[connection signal="pressed" from="GoBackButton" to="GoBackButton" method="click"]
 [connection signal="pressed" from="GoalHolder/StaticBody2D/SubmitButton" to="GoalHolder/StaticBody2D/SubmitButton" method="click"]
