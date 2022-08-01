@@ -10,6 +10,9 @@ var reduction_scale = 3
 var last_score = 0
 var total_score = 0
 
+var time = 0
+var last_time = 0
+
 # Name of symbol or NONE for nothing
 
 var designs = [["Heart","Heart","NONE","Heart","Heart",
