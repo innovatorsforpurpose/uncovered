@@ -80,7 +80,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.2927, 1, -41.0017 )
 
 [node name="Dialogueplayer" parent="Node2D/Enviroment/StudentI" instance=ExtResource( 6 )]
 follow_viewport_enable = true
-dialogue_file = "res://Scenes/Charater scenes/Student/jsons/Student.json"
+dialogue_file = "res://Scenes/Charater scenes/Student/jsons/studentI.json"
 
 [node name="StudentII" parent="Node2D/Enviroment" instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5822, 1, -32.3166 )
@@ -90,7 +90,7 @@ follow_viewport_enable = true
 dialogue_file = "res://Scenes/Charater scenes/Student/jsons/StudentII.json"
 
 [node name="IDesk" parent="Node2D/Enviroment" instance=ExtResource( 11 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.846, 1.23246, -38.302 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.846, 1.08575, -37.9372 )
 
 [node name="Dialogueplayer" parent="Node2D/Enviroment/IDesk" instance=ExtResource( 6 )]
 follow_viewport_enable = true
@@ -127,7 +127,6 @@ transform = Transform( 2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 70.5128, 5, -30.818 )
 [connection signal="ready" from="Node2D/Enviroment/StudentII/Dialogueplayer" to="Node2D/Enviroment/StudentII/Dialogueplayer" method="_on_Dialogueplayer_ready"]
 [connection signal="body_entered" from="Node2D/Enviroment/IDesk" to="Node2D/Enviroment/StudentII/Dialogueplayer" method="_on_IDesk_body_entered"]
 [connection signal="ready" from="Node2D/Enviroment/IDesk/Dialogueplayer" to="Node2D/Enviroment/IDesk/Dialogueplayer" method="_on_Dialogueplayer_ready"]
-[connection signal="body_entered" from="Node2D/Enviroment/Bulletin Board" to="Node2D/Enviroment/Mentor/Dialogueplayer" method="_on_Bulletin_Board_body_entered"]
+[connection signal="ready" from="Node2D/Enviroment/Bulletin Board" to="Node2D/Enviroment/Bulletin Board" method="_on_Bulletin_Board_ready"]
 [connection signal="ready" from="Node2D/Enviroment/Bulletin Board/Dialogueplayer" to="Node2D/Enviroment/Bulletin Board/Dialogueplayer" method="_on_Dialogueplayer_ready"]
-[connection signal="body_entered" from="Node2D/Enviroment/Bully" to="Node2D/Enviroment/Mentor/Dialogueplayer" method="_on_Bully_body_entered"]
 [connection signal="ready" from="Node2D/Enviroment/Bully/Dialogueplayer" to="Node2D/Enviroment/Bully/Dialogueplayer" method="_on_Dialogueplayer_ready"]
