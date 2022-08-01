@@ -32,12 +32,12 @@ func click():
 	print(goals.holders)
 	if goals.holders.size()==0:
 		completed_label.visible = true
-	timer.last_time = timer.time*1000
+	goals.last_time = goals.time*1000
 	goals.last_score = score
-	goals.last_score -= timer.time/5
+	goals.last_score -= goals.time/5
 	goals.total_score += goals.last_score
 	update_score()
 
 func update_score():
-	score.text = "Score: "+str(goals.last_score)+"/25 ("+str(int(timer.last_time/1000))+"s)\n\n"
+	score.text = "Score: "+str(goals.last_score)+"/25 ("+str(int(goals.last_time/1000))+"s)\n\n"
 	score.text += "Total Score: "+str(goals.total_score)
