@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://scenes/Hall/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Hall/Classroom_HALLWAY.tscn" type="PackedScene" id=2]
@@ -17,6 +17,9 @@
 [ext_resource path="res://Scenes/Charater scenes/Student/IDesk.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/Charater scenes/Student/Bulletin Board.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Scenes/Charater scenes/Student/Bully.tscn" type="PackedScene" id=17]
+[ext_resource path="res://other parts of the hallway/Classroom.fbx" type="PackedScene" id=18]
+[ext_resource path="res://other parts of the hallway/Classroom_office.fbx" type="PackedScene" id=19]
+[ext_resource path="res://other parts of the hallway/atrium.fbx" type="PackedScene" id=20]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -169,7 +172,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00904, 0 )
 [node name="Enviroment" type="CanvasLayer" parent="Node2D"]
 
 [node name="MC" parent="Node2D/Enviroment" instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.5041, 13.2857, 51.7005 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.4927, 13.2731, 51.6871 )
 
 [node name="Mentor" parent="Node2D/Enviroment" instance=ExtResource( 8 )]
 transform = Transform( 0.999141, 0, 0, 0, 0.999141, 0, 0, 0, 0.999141, -23.6603, 13.2857, 40.795 )
@@ -227,7 +230,7 @@ follow_viewport_enable = true
 dialogue_file = "res://Scenes/Charater scenes/Student/jsons/Bulletin Board.json"
 
 [node name="Bully" parent="Node2D/Enviroment" instance=ExtResource( 17 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29.9201, 13.2857, -8.32146 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29.8953, 13.2595, -8.32 )
 
 [node name="Dialogueplayer" parent="Node2D/Enviroment/Bully" instance=ExtResource( 10 )]
 follow_viewport_enable = true
@@ -239,6 +242,15 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.58, 2.9513, -0.483139 )
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.82414, -1.45742, -1.71461 )
 shape = SubResource( 7 )
+
+[node name="Classroom" parent="." instance=ExtResource( 18 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.478912, 8.00668, 2.93122 )
+
+[node name="Classroom_office" parent="." instance=ExtResource( 19 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -74.0359, 7.89988, -19.851 )
+
+[node name="atrium" parent="." instance=ExtResource( 20 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.27474, 8.23984, -40.8071 )
 
 [connection signal="timeout" from="Timer" to="Knob1" method="_on_Timer_timeout"]
 [connection signal="body_entered" from="Node2D/Enviroment/Mentor" to="Node2D/Enviroment/Mentor/Dialogueplayer" method="_on_Mentor_body_entered"]

@@ -24,7 +24,7 @@ func _on_Area_input_event(camera, event, position, normal, shape_idx):
 			$CSGSphere.visible = false
 			print("I am here sir i have done it ")
 			get_node("/root/RootScene/Door3/AnimationPlayer").play("open")
-			get_node("/root/RootScene/Timer").start(3)
+			get_node("/root/RootScene/Timer").start(300000)
 
 
 func _on_Timer_timeout():
