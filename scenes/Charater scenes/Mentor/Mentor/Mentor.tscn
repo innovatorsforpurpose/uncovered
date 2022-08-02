@@ -8,8 +8,12 @@
 points = PoolVector3Array( -1, -1, -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, -1, 1, 1, 1, -1, -1, -1, -1, 1, -1, 1, -1 )
 
 [node name="Mentor" type="Area"]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
 collision_mask = 2
 script = ExtResource( 2 )
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="Spatial" type="MeshInstance" parent="."]
 mesh = SubResource( 1 )
@@ -17,9 +21,11 @@ skeleton = NodePath("../X")
 material/0 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 2.00884, 0, 0, 0, 1, 0, 0, 0, 2.00884, 0, 0, 0 )
 shape = SubResource( 2 )
 
 [node name="X" type="Spatial" parent="."]
 
 [node name="VisibilityNotifier" type="VisibilityNotifier" parent="."]
+transform = Transform( 0.449288, 0, 0, 0, 1, 0, 0, 0, 0.449288, 0, 0, 0 )
 aabb = AABB( -5.56889, -1, -5.0753, 11.1378, 2, 10.1506 )

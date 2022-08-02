@@ -17,7 +17,9 @@ func find_and_use_dialogue():
 			print("now changing target")
 			target = 1
 			
-func _on_Mentor_body_exited(_body):
+
+
+func _on_Bulletin_Board_body_exited(body):
 	dialogue_player = get_node_or_null("Dialogueplayer")
 	if dialogue_player:
 		dialogue_player.reset()
@@ -26,3 +28,4 @@ func _process(_delta):
 		dialogue_player = get_node_or_null("Dialogueplayer")
 		if dialogue_player:
 			dialogue_player.reset()
+
