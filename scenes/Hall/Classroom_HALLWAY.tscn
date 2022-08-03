@@ -117,7 +117,7 @@ __meta__ = {
 }
 
 [node name="Solo Wall" type="StaticBody" parent="RootNode/Cube325"]
-transform = Transform( 0.00481755, 0, 0, 0, -1.72289e-09, -0.00481755, 0, 0.00481755, -1.72289e-09, -0.0161339, 0.280151, 8.56817e-08 )
+transform = Transform( 0.00481755, 0, 0, 0, -1.72289e-09, -0.00431547, 0, 0.00481755, -1.54334e-09, -0.0161339, 0.294068, 8.56817e-08 )
 
 [node name="West Wall" type="CollisionShape" parent="RootNode/Cube325/Solo Wall"]
 transform = Transform( 1, 0, 0, 0, -4.06515e-06, 9.99998, 0, -92.9999, -4.37113e-07, 0, 0, 0 )
