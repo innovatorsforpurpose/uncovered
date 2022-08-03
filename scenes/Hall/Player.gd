@@ -6,7 +6,7 @@ var jump_speed = 10
 var spin = 0.05
 var velocity = Vector3.ZERO
 #var jump = false
-var sprintspeed = 10
+var sprintspeed = 20
 var flag = 1
 
 func get_input():
