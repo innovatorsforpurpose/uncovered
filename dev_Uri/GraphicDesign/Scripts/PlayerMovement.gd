@@ -32,12 +32,12 @@ func _process(delta):
 		rotation_degrees = 90
 		velocity += Vector2.RIGHT
 		move_grabbed("right")
+	if Input.is_key_pressed(KEY_SPACE):
+		velocity *= 3
 	# Moves the player and checks for collisions
 	var collision = move_and_collide(velocity * settings.PLAYER_SPEED)
-	# If key A is pressed, pick up the nearby item to the left hand
 	if Input.is_key_pressed(KEY_D):
 		grab(true, collision)
-	# If key D is pressed, pick up the nearby item to the right hand
 	if Input.is_key_pressed(KEY_A):
 		grab(false, collision)
 	boundry()
@@ -125,11 +125,13 @@ func get_snapped_position(left: bool) -> Vector2:
 		var placement_x = int(((grabbed_left.position.x-settings.GRID_MARGIN)) / settings.GRID_SQUARE_MARGIN)
 		var placement_y = int(((grabbed_left.position.y-settings.GRID_MARGIN)) / settings.GRID_SQUARE_MARGIN)
 		var pos = Vector2(settings.GRID_MARGIN+half_length+((settings.GRID_SQUARE_MARGIN)*placement_x), settings.GRID_MARGIN+half_length+((settings.GRID_SQUARE_MARGIN)*placement_y))
-		clones[(placement_x+1) + (placement_y*settings.GRID_LENGTH)] = grabbed_left
+		if !((placement_x+1) + (placement_y*settings.GRID_LENGTH) in clones.keys()):
+			clones[(placement_x+1) + (placement_y*settings.GRID_LENGTH)] = grabbed_left
 		return pos
 	else:
 		var placement_x = int((grabbed_right.position.x-settings.GRID_MARGIN) / settings.GRID_SQUARE_MARGIN)
 		var placement_y = int((grabbed_right.position.y-settings.GRID_MARGIN) / settings.GRID_SQUARE_MARGIN)
 		var pos = Vector2(settings.GRID_MARGIN+half_length+(settings.GRID_SQUARE_MARGIN*placement_x), settings.GRID_MARGIN+half_length+(settings.GRID_SQUARE_MARGIN*placement_y))
-		clones[(placement_x+1) + (placement_y*settings.GRID_LENGTH)] = grabbed_right
+		if !((placement_x+1) + (placement_y*settings.GRID_LENGTH) in clones.keys()):
+			clones[(placement_x+1) + (placement_y*settings.GRID_LENGTH)] = grabbed_right
 		return pos

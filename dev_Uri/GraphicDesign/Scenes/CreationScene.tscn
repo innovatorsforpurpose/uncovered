@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://Scripts/PlayerMovement.gd" type="Script" id=1]
 [ext_resource path="res://Resources/Player.PNG" type="Texture" id=2]
@@ -24,7 +24,9 @@
 [ext_resource path="res://Scripts/HeartSymbol.gd" type="Script" id=22]
 [ext_resource path="res://Scripts/TriangleSymbol.gd" type="Script" id=23]
 [ext_resource path="res://Scenes/SubmitButton.gd" type="Script" id=24]
+[ext_resource path="res://Resources/Screen Shot 2022-08-02 at 2.18.53 PM.png" type="Texture" id=25]
 [ext_resource path="res://Scenes/TimerLabel.gd" type="Script" id=26]
+[ext_resource path="res://Scenes/GoBackButton.gd" type="Script" id=27]
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 8.625, 8.375 )
@@ -38,6 +40,10 @@ extents = Vector2( 10, 4 )
 
 [sub_resource type="QuadMesh" id=7]
 
+[sub_resource type="CanvasItemMaterial" id=8]
+
+[sub_resource type="QuadMesh" id=9]
+
 [node name="CreationScene" type="Node2D"]
 position = Vector2( 1, -1 )
 script = ExtResource( 5 )
@@ -49,7 +55,7 @@ script = ExtResource( 3 )
 script = ExtResource( 10 )
 
 [node name="SymbolShape" type="CollisionShape2D" parent="Symbol"]
-position = Vector2( 2, 1 )
+position = Vector2( 1, -1 )
 scale = Vector2( 4, 4 )
 shape = SubResource( 3 )
 
@@ -71,12 +77,14 @@ script = ExtResource( 11 )
 
 [node name="SkullSymbol" type="Sprite" parent="Symbols"]
 visible = false
+position = Vector2( 86, 143 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 9 )
 script = ExtResource( 17 )
 
 [node name="TriangleSymbol" type="Sprite" parent="Symbols"]
 visible = false
+position = Vector2( -2, -6 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 7 )
 script = ExtResource( 23 )
@@ -125,8 +133,8 @@ margin_left = 744.0
 margin_top = 411.0
 margin_right = 1004.0
 margin_bottom = 454.0
-text = "Go Back To School"
-script = ExtResource( 14 )
+text = "Back"
+script = ExtResource( 27 )
 
 [node name="GridSquare" type="MeshInstance2D" parent="."]
 position = Vector2( 42, -35 )
@@ -203,5 +211,21 @@ margin_bottom = 303.0
 text = "Time Left: 5s"
 script = ExtResource( 26 )
 
+[node name="CompletedScreen" type="MeshInstance2D" parent="."]
+visible = false
+material = SubResource( 8 )
+position = Vector2( 514.25, 299.876 )
+scale = Vector2( 1029.5, 600.752 )
+z_index = 10
+mesh = SubResource( 9 )
+
+[node name="ThanksForPlaying" type="Sprite" parent="CompletedScreen"]
+position = Vector2( 0.00318474, -0.027288 )
+scale = Vector2( 0.000622376, 0.00106656 )
+z_index = 20
+z_as_relative = false
+texture = ExtResource( 25 )
+
 [connection signal="pressed" from="ResetCanvasButton" to="ResetCanvasButton" method="click"]
+[connection signal="pressed" from="GoBackButton" to="GoBackButton" method="click"]
 [connection signal="pressed" from="GoalHolder/StaticBody2D/SubmitButton" to="GoalHolder/StaticBody2D/SubmitButton" method="click"]
