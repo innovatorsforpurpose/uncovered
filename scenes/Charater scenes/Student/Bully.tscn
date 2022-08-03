@@ -8,7 +8,12 @@
 points = PoolVector3Array( -1, -1, -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, -1, 1, 1, 1, -1, -1, -1, -1, 1, -1, 1, -1 )
 
 [node name="Bully" type="Area"]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
+collision_mask = 2
 script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="Spatial" type="MeshInstance" parent="."]
 mesh = SubResource( 1 )
@@ -16,8 +21,11 @@ skeleton = NodePath("")
 material/0 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1.42695, 0, 0, 0, 1, 0, 0, 0, 1.42695, 0, 0, 0 )
 shape = SubResource( 2 )
 
 [node name="VisibilityNotifier" type="VisibilityNotifier" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0480642, 0, -0.0640697 )
+transform = Transform( 1.76814, 0, 0, 0, 1, 0, 0, 0, 1.76814, 0.0480642, 0, -0.0640697 )
 aabb = AABB( -1.076, -1, -1.34918, 2.15201, 2, 2.69836 )
+
+[connection signal="body_exited" from="." to="." method="_on_Bully_body_exited"]

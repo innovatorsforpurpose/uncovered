@@ -17,7 +17,9 @@ func find_and_use_dialogue():
 			print("now changing target")
 			target = 0
 			
-func _on_Mentor_body_exited(_body):
+
+
+func _on_Student_body_exited(body):
 	dialogue_player = get_node_or_null("Dialogueplayer")
 	if dialogue_player:
 		dialogue_player.reset()
@@ -29,7 +31,7 @@ func _process(_delta):
 
 func _physics_process(_delta):
 	if target == 0 and path.size() == 0:
-		path = [Vector3(-20,1,-43),Vector3(-17,1,-34),Vector3(11,1,-36),Vector3(-10,1,-35)]
+		path = [Vector3(-20,12.458,-6),Vector3(-27,12.458,-5),Vector3(-23,12.458,-1),Vector3(-20.582,12.458,-5.879)]
 	if path.size() > 0:
 		velocity = Vector3(path[0].x - transform.origin.x, path[0].y - transform.origin.y, path[0].z - transform.origin.z)
 		var distance =  velocity.length()
@@ -41,3 +43,4 @@ func _physics_process(_delta):
 		else:
 			velocity = velocity.normalized() * speed
 	transform.origin += velocity
+

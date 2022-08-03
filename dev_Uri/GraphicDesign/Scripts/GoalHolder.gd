@@ -10,25 +10,28 @@ var reduction_scale = 3
 var last_score = 0
 var total_score = 0
 
+var time = 0
+var last_time = 0
+
 # Name of symbol or NONE for nothing
 
 var designs = [["Heart","Heart","NONE","Heart","Heart",
-				"Heart","NONE","Heart","NONE","Heart",
-				"Heart","NONE","NONE","NONE","Heart",
-				"NONE","Heart","NONE","Heart","NONE",
-				"NONE","NONE","Heart","NONE","NONE"],
+				"Heart","NONE", "Heart","NONE","Heart",
+				"Heart", "NONE", "NONE","NONE","Heart",
+				"NONE", "Heart", "NONE","Heart","NONE",
+				"NONE", "NONE", "Heart", "NONE","NONE"],
 				
 				["Square","NONE","NONE","NONE","Square",
 				"NONE","Square","Skull","Square","NONE",
-				"NONE","Skull","Star","Skull","NONE",
+				"NONE", "Skull", "Star", "Skull","NONE",
 				"NONE","Square","Skull","Square","NONE",
-				"Square","NONE","NONE","NONE","Square"],
+				"Square","NONE","NONE","NONE", "Square"],
 				
-				["NONE",  "NONE",  "NONE",  "NONE",  "NONE",
-				"NONE", "Star", "Triangle", "Star",  "NONE",
+				["NONE",   "NONE",  "NONE",  "NONE",  "NONE",
+				"NONE", "Star", "Triangle", "Star",   "NONE",
 				"NONE","Triangle","Circle","Triangle","NONE",
-				"NONE","Star","Triangle","Star","NONE",
-				"NONE","NONE","NONE","NONE","NONE"],
+				"NONE", "Star", "Triangle",  "Star",  "NONE",
+				"NONE",   "NONE",  "NONE",  "NONE",   "NONE"],
 				
 				["NONE","Circle","Circle","Circle","NONE",
 				"Circle", "NONE", "NONE","NONE","Circle",

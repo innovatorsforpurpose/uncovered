@@ -1,23 +1,20 @@
 extends Area
 
 var target = 0
-var velocity = Vector3(0,0,0)
-var speed = 0.2
-var path = []
 
 var dialogue_player = null
 
 func _input(event):
-	if event.is_action_pressed("game_usage") and len(get_overlapping_bodies()) > 1:
+	if event.is_action_pressed("game_usage") and len(get_overlapping_bodies()) > 2:
 		find_and_use_dialogue()
 func find_and_use_dialogue():
 	dialogue_player = get_node_or_null("Dialogueplayer")
 	if dialogue_player:
-		if not dialogue_player.next_line():
-			print("now changing target")
-			target = 1
-			
-func _on_Mentor_body_exited(_body):
+		dialogue_player.next_line()
+
+
+
+func _on_IDesk_body_exited(body):
 	dialogue_player = get_node_or_null("Dialogueplayer")
 	if dialogue_player:
 		dialogue_player.reset()
@@ -26,3 +23,5 @@ func _process(_delta):
 		dialogue_player = get_node_or_null("Dialogueplayer")
 		if dialogue_player:
 			dialogue_player.reset()
+
+
