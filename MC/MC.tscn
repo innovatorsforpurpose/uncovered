@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://MC/MC.gd" type="Script" id=1]
+[ext_resource path="res://BODIRIGGI(IDLES) (1).glb" type="PackedScene" id=2]
 
 [sub_resource type="ConvexPolygonShape" id=3]
 points = PoolVector3Array( -1, -1, -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, -1, 1, 1, 1, -1, -1, -1, -1, 1, -1, 1, -1 )
@@ -15,18 +16,20 @@ transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.0171986, -9.53674e-07,
 shape = SubResource( 3 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.0171986, -9.53674e-07, -0.0106621 )
+transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 0.0171986, -9.53674e-07, 14.3666 )
+visible = false
 layers = 65
 mesh = SubResource( 2 )
 skeleton = NodePath("")
-material/0 = null
 
 [node name="CameraPivot" type="Spatial" parent="."]
 
 [node name="Camera" type="Camera" parent="CameraPivot"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.471495, -0.386913 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.471495, 14.522 )
 current = true
 fov = 53.4731
 size = 20.0
+
+[node name="BODIRIGGI(IDLES) (1)" parent="." instance=ExtResource( 2 )]
 
 [connection signal="ready" from="." to="." method="_on_MC_ready"]

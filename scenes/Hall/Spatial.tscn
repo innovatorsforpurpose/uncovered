@@ -176,16 +176,16 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00904, 0 )
 [node name="Enviroment" type="CanvasLayer" parent="Node2D"]
 
 [node name="MC" parent="Node2D/Enviroment" instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.517, 12.458, 11.11 )
+transform = Transform( -0.09, 0, -7.86805e-09, 0, 0.09, 0, 7.86805e-09, 0, -0.09, -25.517, 12.458, 11.11 )
 
 [node name="Mentor" parent="Node2D/Enviroment" instance=ExtResource( 8 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -24.4266, 12.458, 4.39275 )
+transform = Transform( -0.09, 0, -7.86805e-09, 0, 0.09, 0, 7.86805e-09, 0, -0.09, -24.4266, 12.458, 4.39275 )
 
 [node name="Dialogueplayer" parent="Node2D/Enviroment/Mentor" instance=ExtResource( 10 )]
 follow_viewport_enable = true
 
 [node name="GC" parent="Node2D/Enviroment" instance=ExtResource( 9 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -41.1189, 12.458, -5.783 )
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -40.2561, 12.5142, -5.96248 )
 
 [node name="Dialogueplayer" parent="Node2D/Enviroment/GC" instance=ExtResource( 10 )]
 follow_viewport_enable = true

@@ -97,7 +97,6 @@ shape = SubResource( 6 )
 [node name="Cube289" type="MeshInstance" parent="RootNode"]
 transform = Transform( 207.575, 0, 0, 0, -7.42344e-05, 207.574, 0, -207.574, -7.42344e-05, -29.0502, -0.429555, -11.736 )
 mesh = SubResource( 2 )
-material/0 = null
 
 [node name="CollisionShape4" type="CollisionShape" parent="RootNode"]
 transform = Transform( 207.575, 0, 0, 0, -7.42344e-05, 207.574, 0, -207.574, -7.42344e-05, -29.0502, -0.429554, -11.736 )
@@ -106,7 +105,6 @@ shape = SubResource( 8 )
 [node name="Cube320" type="MeshInstance" parent="RootNode"]
 transform = Transform( 207.575, 0, 0, 0, -7.42344e-05, 207.574, 0, -207.574, -7.42344e-05, -29.0502, -0.429555, -11.736 )
 mesh = SubResource( 3 )
-material/0 = null
 
 [node name="Cube325" type="MeshInstance" parent="RootNode"]
 transform = Transform( 207.575, 0, 0, 0, -7.42344e-05, 207.574, 0, -207.574, -7.42344e-05, -29.2123, -0.00120258, -11.5808 )
