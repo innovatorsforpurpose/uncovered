@@ -160,6 +160,9 @@ anims/open = SubResource( 6 )
 [node name="Knob1" parent="." instance=ExtResource( 4 )]
 transform = Transform( 0.128424, 0, 0, 0, 0.10088, 0, 0, 0, 0.103299, -22.4065, 7.01012, -40.8946 )
 
+[node name="MCSRevengeTransport" parent="." instance=ExtResource( 4 )]
+transform = Transform( 0.128424, 0, 0, 0, 0.10088, 0, 0, 0, 0.103299, -32.6436, 7.72239, -24.4908 )
+
 [node name="Knob2" parent="." instance=ExtResource( 4 )]
 transform = Transform( 0.128424, 0, 0, 0, 0.10088, 0, 0, 0, 0.103299, -22.5564, 7.0205, -52.4807 )
 script = ExtResource( 5 )
