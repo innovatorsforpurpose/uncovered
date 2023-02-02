@@ -76,7 +76,7 @@ extents = Vector3( 0.001, 0.0264457, 0.00799164 )
 extents = Vector3( 0.001, 0.00670762, 0.0112974 )
 
 [node name="Classroom_HALLWAY" type="Spatial"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.60065, 12.0128 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.60065, 11.9872 )
 
 [node name="RootNode" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.48313, 0, 9.04965 )

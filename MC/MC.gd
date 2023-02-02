@@ -4,6 +4,7 @@ var gravity = Vector3.DOWN * 15
 var walkspeed = 5
 var speed
 var jump_speed = 10
+var jump_impulse = 15
 var spin = 0.05
 var velocity = Vector3.ZERO
 #var jump = false
@@ -15,10 +16,10 @@ func _ready():
 func get_input():
 	if Input.is_action_pressed("shift"):
 		speed = sprintspeed
-		gravity = Vector3.DOWN * 75
+		gravity = Vector3.DOWN * 98
 	else:
 		speed = walkspeed
-		gravity = Vector3.DOWN * 75 
+		gravity = Vector3.DOWN * 98 
 	var vy = velocity.y
 	velocity = Vector3()
 	if Input.is_action_pressed("move_forward"):
@@ -37,6 +38,8 @@ func get_input():
 		# Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	velocity.y = vy
 func _physics_process(delta):
+	if is_on_floor() and Input.is_action_just_pressed("jump"):
+		velocity.y += jump_impulse
 	velocity += gravity * delta
 	get_input()
 	velocity = move_and_slide(velocity, Vector3.UP)
@@ -44,9 +47,9 @@ func _physics_process(delta):
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
 		if event.relative.x > 0:
-			rotate_y(-lerp(0, spin, event.relative.x/50))
+			rotate_y(-lerp(0, spin, event.relative.x/12.5))
 		if event.relative.x < 0:
-			rotate_y(-lerp(0, spin, event.relative.x/50))
+			rotate_y(-lerp(0, spin, event.relative.x/12.5))
 func set_active(active):
 	player_active = active
 	print(player_active)
