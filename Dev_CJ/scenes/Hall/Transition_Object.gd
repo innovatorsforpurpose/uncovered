@@ -1,4 +1,4 @@
-extends Spatial
+extends Node3D
 var framecount = 0
 var seconds = 0
 # Declare member variables here. Examples:
@@ -22,8 +22,8 @@ func _process(delta):
 
 func _on_Area_input_event(camera, event, position, normal, shape_idx):
 	if event is InputEventMouseButton:
-		if event.button_index ==BUTTON_LEFT and event.pressed == true:
-			$CSGSphere.visible = false
+		if event.button_index ==MOUSE_BUTTON_LEFT and event.button_pressed == true:
+			$CSGSphere3D.visible = false
 			print("I am here sir i have done it ")
 			get_node("/root/RootScene/Door1/AnimationPlayer").play("open")
 			get_node("/root/RootScene/Timer").start(2)
@@ -34,4 +34,4 @@ func _on_Timer_timeout():
 	#var success = ProjectSettings.load_resource_pack("res://UncoveredMinigame.pck")
 	#if success:
 	#var imported_scene = load("res://CreationScene.tscn")
-	get_tree().change_scene("res://CreationScene.tscn")
+	get_tree().change_scene_to_file("res://CreationScene.tscn")

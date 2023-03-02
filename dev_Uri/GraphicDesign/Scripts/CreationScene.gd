@@ -1,9 +1,9 @@
 extends Node2D
 
-onready var symbol_body = get_node("/root/CreationScene/Symbol")
-onready var symbol_holder = get_node("/root/CreationScene/Symbols")
-onready var settings = get_node("/root/CreationScene/Settings")
-onready var square = get_node("/root/CreationScene/GridSquare")
+@onready var symbol_body = get_node("/root/CreationScene/Symbol")
+@onready var symbol_holder = get_node("/root/CreationScene/Symbols")
+@onready var settings = get_node("/root/CreationScene/Settings")
+@onready var square = get_node("/root/CreationScene/GridSquare")
 
 func _ready():
 	call_deferred("create_grid")

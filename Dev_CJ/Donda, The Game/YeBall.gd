@@ -6,7 +6,7 @@ func _ready():
 
 
 func _process(_delta):
-	if mode == RigidBody2D.MODE_STATIC:
+	if mode == RigidBody2D.FREEZE_MODE_STATIC:
 		mode = RigidBody2D.MODE_RIGID
 		print("bro it wont work")
 	if position.y < 0 or position.y > 600:

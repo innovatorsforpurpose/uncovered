@@ -1,8 +1,8 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 var time = 0
 
-export (int) var speed = 100
+@export (int) var speed = 100
 
 func _physics_process(delta):
 	time = time + delta
@@ -26,7 +26,7 @@ func _process(delta):
 # func _ready():
 # 	if Input.is_action_pressed("left"):
 # 				velocity.x = 1
-# 				$Sprite.flip_h = false
+# 				$Sprite2D.flip_h = false
 
 # 	if Input.is_action_pressed("down"):
 # 		velocity.y += 1

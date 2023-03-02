@@ -1,6 +1,6 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
-export (int) var speed = 900
+@export (int) var speed = 900
 
 var velocity = Vector2()
 var collision
@@ -25,7 +25,9 @@ func get_input():
 
 func _physics_process(delta):
 	get_input()
-	velocity = move_and_slide(velocity)
+	set_velocity(velocity)
+	move_and_slide()
+	velocity = velocity
 	
 	
 func is_on_floor():

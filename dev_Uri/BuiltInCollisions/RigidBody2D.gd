@@ -23,4 +23,7 @@ func get_input():
 func _physics_process(delta):
 	velocity.y += gravity * delta
 	get_input()
-	velocity = move_and_slide(velocity, Vector2(0, -1))
+	set_velocity(velocity)
+	set_up_direction(Vector2(0, -1))
+	move_and_slide()
+	velocity = velocity

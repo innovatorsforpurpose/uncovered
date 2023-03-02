@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 const GRAVITY = 20
 const MAXFALLSPEED = 200
@@ -35,7 +35,9 @@ func _proccess(delta):
 		if Input.is_key_pressed(KEY_SPACE):
 			motion.y = -JUMP
 	
-	motion = move_and_slide(motion)
+	set_velocity(motion)
+	move_and_slide()
+	motion = velocity
 		
 	
 	

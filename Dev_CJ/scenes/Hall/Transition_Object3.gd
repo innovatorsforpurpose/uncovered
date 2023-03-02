@@ -1,4 +1,4 @@
-extends Spatial
+extends Node3D
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -20,8 +20,8 @@ func _process(delta):
 
 func _on_Area_input_event(camera, event, position, normal, shape_idx):
 	if event is InputEventMouseButton:
-		if event.button_index ==BUTTON_LEFT and event.pressed == true:
-			$CSGSphere.visible = false
+		if event.button_index ==MOUSE_BUTTON_LEFT and event.button_pressed == true:
+			$CSGSphere3D.visible = false
 			print("I am here sir i have done it ")
 			get_node("/root/RootScene/Door3/AnimationPlayer").play("open")
 			get_node("/root/RootScene/Timer").start(3)
@@ -29,5 +29,5 @@ func _on_Area_input_event(camera, event, position, normal, shape_idx):
 
 func _on_Timer_timeout():
 	print("transition 3")
-	get_tree().change_scene("res://CreationScene.tscn")
+	get_tree().change_scene_to_file("res://CreationScene.tscn")
 #switch to a different game

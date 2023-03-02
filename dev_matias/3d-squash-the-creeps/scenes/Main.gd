@@ -1,13 +1,13 @@
 extends Node
 
-export (PackedScene) var mob_scene = preload("Mob.tscn")
+@export (PackedScene) var mob_scene = preload("Mob.tscn")
 
 
 func _ready():
 	randomize()
 	
 func _on_MobTimer_timeout():
-	var mob = mob_scene.instance()
+	var mob = mob_scene.instantiate()
 	
 	var mob_spawn_location =  $SpawnPath/SpawnLocation
 	mob_spawn_location.until_offset = randf()
@@ -16,5 +16,5 @@ func _on_MobTimer_timeout():
 	
 	add_child(mob)
 	
-	mob.initilize(mob_spawn_location.translation, player_position)
+	mob.initilize(mob_spawn_location.position, player_position)
 	

@@ -1,4 +1,4 @@
-extends Spatial
+extends Node3D
 var framecount = 0
 var seconds = 0
 # Declare member variables here. Examples:
@@ -22,8 +22,8 @@ func _process(delta):
 
 func _on_Area_input_event(camera, event, position, normal, shape_idx):
 	if event is InputEventMouseButton:
-		if event.button_index ==BUTTON_LEFT and event.pressed == true:
-			$CSGSphere.visible = false
+		if event.button_index ==MOUSE_BUTTON_LEFT and event.button_pressed == true:
+			$CSGSphere3D.visible = false
 			print("I am here sir i have done it ")
 			get_node("/root/RootScene/Door1/AnimationPlayer").play("open")
 			get_node("/root/RootScene/MCSRevengeTransport/BossBattleTimer").start(2)
@@ -33,6 +33,6 @@ func _on_Timer_timeout():
 	#print("transition")
 	var success = true# ProjectSettings.load_resource_pack("res://packs/UncoveredMinigame.zip")
 	if success:
-		get_tree().change_scene("res://Bossgame_.tscn")
+		get_tree().change_scene_to_file("res://Bossgame_.tscn")
 	else:
 		print("could not load uncovered minigame")

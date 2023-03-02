@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 # Options
 const G_FORCE = -0.5
@@ -61,7 +61,7 @@ func _process(delta):
 	print("X FORCE: "+str(x_force))
 	print("Y FORCE: "+str(y_force))
 
-func collision(var x: bool):
+func collision(x: bool):
 	if x:
 		x_force = -x_force*BOUNCE
 	else:

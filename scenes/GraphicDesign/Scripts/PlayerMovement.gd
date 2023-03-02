@@ -1,9 +1,9 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
-onready var settings = get_node("/root/CreationScene/Settings")
-onready var main = get_node("/root/Main")
-var grabbed_right = KinematicBody2D.new()
-var grabbed_left = KinematicBody2D.new()
+@onready var settings = get_node("/root/CreationScene/Settings")
+@onready var main = get_node("/root/Main")
+var grabbed_right = CharacterBody2D.new()
+var grabbed_left = CharacterBody2D.new()
 
 func _process(delta):
 	var velocity = Vector2.ZERO
@@ -46,7 +46,7 @@ func boundry():
 	if position.y < 0:
 		position.y = view.y
 
-func move_grabbed(var pos: String):
+func move_grabbed(pos: String):
 	var right_offset = Vector2.ZERO # The offset for the item on the right hand
 	var left_offset = Vector2.ZERO # The offset for the item on the left hand
 	var rotation = 0
@@ -78,11 +78,11 @@ func grab(left: bool, collision: KinematicCollision2D):
 	if grabbed_right.get_child_count() != 0:
 		grabbed_right.scale *= 2
 		grabbed_right.get_children()[0].disabled = false
-		grabbed_right = KinematicBody2D.new()
+		grabbed_right = CharacterBody2D.new()
 	if grabbed_left.get_child_count() != 0:
 		grabbed_left.scale *= 2
 		grabbed_left.get_children()[0].disabled = false
-		grabbed_left = KinematicBody2D.new()
+		grabbed_left = CharacterBody2D.new()
 	# If the collider exists, pick it up.
 	if collision != null:
 		if collision.collider != null:

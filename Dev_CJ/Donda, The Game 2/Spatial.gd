@@ -1,4 +1,4 @@
-extends Spatial
+extends Node3D
 var framecount = 0
 var seconds = 0
 

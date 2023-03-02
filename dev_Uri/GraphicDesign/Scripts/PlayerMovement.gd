@@ -1,13 +1,13 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
-onready var settings = get_node("/root/CreationScene/Settings")
-onready var main = get_node("/root/CreationScene")
-onready var goals = get_node("/root/CreationScene/GoalHolder")
-var grabbed_right = KinematicBody2D.new()
-var grabbed_left = KinematicBody2D.new()
+@onready var settings = get_node("/root/CreationScene/Settings")
+@onready var main = get_node("/root/CreationScene")
+@onready var goals = get_node("/root/CreationScene/GoalHolder")
+var grabbed_right = CharacterBody2D.new()
+var grabbed_left = CharacterBody2D.new()
 
-onready var right_timer = settings.PICKUP_DELAY
-onready var left_timer = settings.PICKUP_DELAY
+@onready var right_timer = settings.PICKUP_DELAY
+@onready var left_timer = settings.PICKUP_DELAY
 
 var right_size = Vector2()
 var left_size = Vector2()
@@ -60,7 +60,7 @@ func boundry():
 	if position.y < 0:
 		position.y = view.y
 
-func move_grabbed(var pos: String):
+func move_grabbed(pos: String):
 	var right_offset = Vector2.ZERO # The offset for the item on the right hand
 	var left_offset = Vector2.ZERO # The offset for the item on the left hand
 	var rotation = 0
@@ -94,13 +94,13 @@ func grab(left: bool, collision: KinematicCollision2D):
 		grabbed_right.scale *= 2
 		grabbed_right.z_index = -10
 		grabbed_right.position = get_snapped_position(false)
-		grabbed_right = KinematicBody2D.new()
+		grabbed_right = CharacterBody2D.new()
 		right_timer = settings.PICKUP_DELAY
 	if grabbed_left.get_child_count() != 0 and left and left_timer == 0:
 		grabbed_left.scale *= 2
 		grabbed_left.z_index = -10
 		grabbed_left.position = get_snapped_position(true)
-		grabbed_left = KinematicBody2D.new()
+		grabbed_left = CharacterBody2D.new()
 		left_timer = settings.PICKUP_DELAY
 	# If the collider exists, pick it up.
 	if collision != null:

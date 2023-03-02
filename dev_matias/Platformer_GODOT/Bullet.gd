@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 var velocity = Vector2(1, 0)
 var speed = 300

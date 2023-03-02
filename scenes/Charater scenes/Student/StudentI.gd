@@ -1,4 +1,4 @@
-extends Area
+extends Area3D
 
 var target = 0
 var velocity = Vector3(0,0,0)

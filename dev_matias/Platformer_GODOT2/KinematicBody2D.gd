@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 signal health_updated(health)
 signal kill()
@@ -11,10 +11,10 @@ const MAXSPEED = 80
 const JUMP = 400
 const ACCELERATION = 10
 var bullet_counter = 0
-#onready var timer = $Sprite/Timer
+#onready var timer = $Sprite2D/Timer
 """
 #export (float) var max_health = 100
-#onready var health = max_health setget _set_health
+#onready var health = max_health : set = _set_health
 
 func damage(amount):
 	if timer.is_stopped():
@@ -59,9 +59,9 @@ func _process(delta):
 		motion.x = clamp(motion.x, -MAXSPEED, MAXSPEED)
 		
 	if facing_right == true:
-		$Sprite.scale.x = 3
+		$Sprite2D.scale.x = 3
 	else:
-		$Sprite.scale.x = -3
+		$Sprite2D.scale.x = -3
 		
 	if Input.is_action_pressed("right"):
 		motion.x += ACCELERATION
@@ -101,10 +101,13 @@ func _process(delta):
 		position.y = -83
 		
 		
-	motion = move_and_slide(motion, UP)
+	set_velocity(motion)
+	set_up_direction(UP)
+	move_and_slide()
+	motion = velocity
 	
 func shoot():
-	var bullet = bulletpath.instance()
+	var bullet = bulletpath.instantiate()
 	get_parent().add_child(bullet)
 	bullet.position = $Node2D/shot.global_position
 	bullet.velocity = $Node2D/shot.get_global_mouse_position() - bullet.position

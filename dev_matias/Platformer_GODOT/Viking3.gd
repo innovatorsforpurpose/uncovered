@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 
 const UP = Vector2(0, -1)
@@ -37,5 +37,8 @@ func _process(delta):
 		if Input.is_action_pressed("jump"):
 			motion.y = -JUMP
 	
-	motion = move_and_slide(motion, UP)
+	set_velocity(motion)
+	set_up_direction(UP)
+	move_and_slide()
+	motion = velocity
 		

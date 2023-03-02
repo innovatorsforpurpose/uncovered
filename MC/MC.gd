@@ -1,4 +1,4 @@
-extends KinematicBody
+extends CharacterBody3D
 var player_active = true
 var gravity = Vector3.DOWN * 15
 var walkspeed = 5
@@ -42,7 +42,10 @@ func _physics_process(delta):
 		velocity.y += jump_impulse
 	velocity += gravity * delta
 	get_input()
-	velocity = move_and_slide(velocity, Vector3.UP)
+	set_velocity(velocity)
+	set_up_direction(Vector3.UP)
+	move_and_slide()
+	velocity = velocity
 	#if jump and is_on_floor():
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:

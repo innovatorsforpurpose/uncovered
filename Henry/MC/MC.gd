@@ -1,8 +1,8 @@
-extends KinematicBody
+extends CharacterBody3D
 
-export (int) var speed = 50.0
-export var jump_impulse = 20.0
-export var fall_acceleration = 70
+@export (int) var speed = 50.0
+@export var jump_impulse = 20.0
+@export var fall_acceleration = 70
 var player_active = true
 
 func _on_MC_ready():
@@ -24,8 +24,10 @@ func _physics_process(delta):
 	if is_on_floor() and Input.is_action_pressed("jump"):
 		direction.y = jump_impulse
 	direction.y -= fall_acceleration * delta 
-	move_and_slide(direction, Vector3.UP) 
-	for index in get_slide_count():
+	set_velocity(direction)
+	set_up_direction(Vector3.UP)
+	move_and_slide() 
+	for index in get_slide_collision_count():
 		var _collision = get_slide_collision(index)
 func set_active(active):
 	player_active = active

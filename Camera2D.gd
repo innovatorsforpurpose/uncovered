@@ -1,5 +1,5 @@
 extends Camera2D
-# onready 	var MainCharacter = get_node("/root/Node2D/KinematicBody2D")
+# onready 	var MainCharacter = get_node("/root/Node2D/CharacterBody2D")
 
 #This function gets called every frame
 func _process(delta):

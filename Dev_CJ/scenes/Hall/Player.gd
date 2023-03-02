@@ -1,4 +1,4 @@
-extends KinematicBody
+extends CharacterBody3D
 var gravity = Vector3.DOWN * 15
 var walkspeed = 5
 var speed
@@ -40,7 +40,10 @@ func get_input():
 func _physics_process(delta):
 	velocity += gravity * delta
 	get_input()
-	velocity = move_and_slide(velocity, Vector3.UP)
+	set_velocity(velocity)
+	set_up_direction(Vector3.UP)
+	move_and_slide()
+	velocity = velocity
 	#if jump and is_on_floor():
 		#velocity.y = jump_speed
 
@@ -57,5 +60,5 @@ func _ready():
 	initial_position = get_global_transform().origin
 func _process(_delta):
 	if Input.is_action_just_pressed("reset"):
-		set_translation(initial_position)
+		set_position(initial_position)
 		speed = 2.5

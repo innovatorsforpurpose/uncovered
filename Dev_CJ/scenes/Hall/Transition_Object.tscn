@@ -2,20 +2,20 @@
 
 [ext_resource path="res://scenes/Hall/Transition_Object.gd" type="Script" id=1]
 
-[sub_resource type="SphereShape" id=1]
+[sub_resource type="SphereShape3D" id=1]
 radius = 0.967927
 
-[node name="Transition_Object" type="Spatial"]
+[node name="Transition_Object" type="Node3D"]
 script = ExtResource( 1 )
 
-[node name="CSGSphere" type="CSGSphere" parent="."]
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
 
-[node name="Area" type="Area" parent="CSGSphere"]
+[node name="Area3D" type="Area3D" parent="CSGSphere3D"]
 
-[node name="CollisionShape" type="CollisionShape" parent="CSGSphere/Area"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CSGSphere3D/Area3D"]
 shape = SubResource( 1 )
 
-[node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.98928 )
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.98928 )
 
-[connection signal="input_event" from="CSGSphere/Area" to="." method="_on_Area_input_event"]
+[connection signal="input_event" from="CSGSphere3D/Area3D" to="." method="_on_Area_input_event"]

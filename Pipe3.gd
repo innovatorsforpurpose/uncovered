@@ -1,4 +1,4 @@
-extends Sprite
+extends Sprite2D
 
 const bulletPath = preload ('res://Bullet.tscn')
 
@@ -11,7 +11,7 @@ func _process(delta):
 		shoot()
 	
 func shoot():
-	var bullet = bulletPath.instance()
+	var bullet = bulletPath.instantiate()
 	
 	get_parent().get_parent().add_child(bullet)
 	# var test_node = get_node("/root/Collisionshape2D/Pipe_2")

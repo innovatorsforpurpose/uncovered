@@ -1,4 +1,4 @@
-extends Area
+extends Area3D
 
 func _input(event):
 	if event.is_action_pressed("game_usage") and len(get_overlapping_bodies()) > 1:

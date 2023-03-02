@@ -1,9 +1,9 @@
 extends Node
 
-onready var settings = get_node("/root/CreationScene/Settings")
-onready var main = get_node("/root/CreationScene")
-onready var square = get_children()[0]
-onready var holder = KinematicBody2D.new()
+@onready var settings = get_node("/root/CreationScene/Settings")
+@onready var main = get_node("/root/CreationScene")
+@onready var square = get_children()[0]
+@onready var holder = CharacterBody2D.new()
 var holders = {}
 var reduction_scale = 3
 

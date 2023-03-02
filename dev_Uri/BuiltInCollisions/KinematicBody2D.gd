@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 const RUN_SPEED = 7
 const JUMP_SPEED = -10
@@ -7,7 +7,7 @@ const MAX_CLONES = 500
 
 var velocity = Vector2()
 var clones = []
-onready var scene2d = get_node("/root/Node2")
+@onready var scene2d = get_node("/root/Node2")
 
 func get_input() -> bool:
 	velocity.x = 0
@@ -36,7 +36,7 @@ func get_input() -> bool:
 		velocity.y += JUMP_SPEED/10
 	if Input.is_key_pressed(KEY_W):
 		var clone = get_node("/root/Node2D/Projectile").duplicate()
-		clone.apply_impulse(Vector2.ZERO, Vector2.RIGHT*1000)
+		clone.apply_impulse(Vector2.RIGHT*1000, Vector2.ZERO)
 		scene2d.add_child(clone)
 		clones.append(clone)
 		if clones.size() > MAX_CLONES:
@@ -56,4 +56,5 @@ func _physics_process(delta):
 		# Moves object if it collides with the ground
 		var remainder = collision.remainder
 		remainder.y = 0
-		move_and_slide(remainder * 50)
+		set_velocity(remainder * 50)
+		move_and_slide()

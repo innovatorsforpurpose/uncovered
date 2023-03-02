@@ -1,7 +1,7 @@
 extends Button
 
-onready var player = get_node("/root/CreationScene/PlayerBody")
-onready var scene = get_node("/root/CreationScene")
+@onready var player = get_node("/root/CreationScene/PlayerBody")
+@onready var scene = get_node("/root/CreationScene")
 
 func _process(delta):
 	if Input.is_key_pressed(KEY_R):

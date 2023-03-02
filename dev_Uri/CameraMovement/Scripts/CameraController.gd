@@ -1,6 +1,6 @@
 extends Camera2D
 
-onready var player = get_node("/root/Player")
+@onready var player = get_node("/root/Player")
 
 func _process (delta):
 	var view_size = get_viewport().size

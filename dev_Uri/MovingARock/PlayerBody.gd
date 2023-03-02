@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 const MAX_SPEED = 5
 var speed = MAX_SPEED

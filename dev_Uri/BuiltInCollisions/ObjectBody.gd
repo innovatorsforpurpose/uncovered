@@ -1,5 +1,5 @@
 extends Area2D
 
 func body_entered(body: Node):
-	if body is KinematicBody2D:
+	if body is CharacterBody2D:
 		print("COLLISION!")

@@ -1,9 +1,9 @@
 
-extends KinematicBody2D
+extends CharacterBody2D
 
-#onready var timer = $Sprite/Timer
-export (float) var max_health = 100
-onready var health = max_health setget _set_health
+#onready var timer = $Sprite2D/Timer
+@export (float) var max_health = 100
+@onready var health = max_health : set = _set_health
 
 #func damage(amount):
 #	if timer.is_stopped():

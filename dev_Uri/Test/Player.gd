@@ -1,4 +1,4 @@
-extends Sprite
+extends Sprite2D
 
 # Constants
 var acceleration = 5 # Max speed = acceleration/linear friction
@@ -44,6 +44,6 @@ func _process(delta):
 		leftDirection = -1
 		rightDirection = 1
 		rotation = 0
-		position = Vector2(ProjectSettings.get_setting("display/window/size/width")/2,
-		ProjectSettings.get_setting("display/window/size/height")/2)
+		position = Vector2(ProjectSettings.get_setting("display/window/size/viewport_width")/2,
+		ProjectSettings.get_setting("display/window/size/viewport_height")/2)
 		

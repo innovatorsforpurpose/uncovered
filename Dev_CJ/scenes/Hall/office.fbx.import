@@ -11,7 +11,7 @@ dest_files=[ "res://.import/office.fbx-95177e3ef30d8400ce71defc14a9ca52.scn" ]
 
 [params]
 
-nodes/root_type="Spatial"
+nodes/root_type="Node3D"
 nodes/root_name="Scene Root"
 nodes/root_scale=1.0
 nodes/custom_script=""

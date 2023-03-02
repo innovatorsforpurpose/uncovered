@@ -1,7 +1,7 @@
 extends Node
 
-onready var settings = get_node("/root/CreationScene/Settings")
-onready var square = get_children()[0]
+@onready var settings = get_node("/root/CreationScene/Settings")
+@onready var square = get_children()[0]
 var reduction_scale = 3
 
 var designs = [["NONE, Skull, NONE, Skull, NONE",

@@ -11,7 +11,7 @@ dest_files=[ "res://.import/Classroom_hallway_main.fbx-96a47e3a8f2ba32cc4fdf10c9
 
 [params]
 
-nodes/root_type="Spatial"
+nodes/root_type="Node3D"
 nodes/root_name="Scene Root"
 nodes/root_scale=1.0
 nodes/custom_script=""

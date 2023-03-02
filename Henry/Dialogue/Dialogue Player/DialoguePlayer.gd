@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-export(String, FILE, "*.json") var dialogue_file
+@export var dialogue_file # (String, FILE, "*.json")
 
 
 func _on_Dialogueplayer_ready():
@@ -55,12 +55,14 @@ func load_dialogue():
 		if err != OK:
 			return
 		else:
-			return parse_json(file.get_as_text())
+			var test_json_conv = JSON.new()
+			test_json_conv.parse(file.get_as_text())
+			return test_json_conv.get_data()
 
 func _on_Timer_timeout():
 	is_dialogue_active = false
 func toggle_the_player(on):
-	var player = get_tree().get_root().find_node("MC", true, false)
+	var player = get_tree().get_root().find_child("MC", true, false)
 	if player:
 		player.set_active(on)
 

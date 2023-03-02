@@ -1,13 +1,13 @@
 extends Button
 
 var design = 0
-onready var goals = get_node("/root/CreationScene/GoalHolder")
-onready var player = get_node("/root/CreationScene/PlayerBody")
-onready var score = get_node("/root/CreationScene/ScoreLabel")
-onready var main = get_node("/root/CreationScene")
-onready var settings = get_node("/root/CreationScene/Settings")
-onready var completed_label = get_node("/root/CreationScene/CompletedLabel")
-onready var timer = get_node("/root/CreationScene/TimerLabel")
+@onready var goals = get_node("/root/CreationScene/GoalHolder")
+@onready var player = get_node("/root/CreationScene/PlayerBody")
+@onready var score = get_node("/root/CreationScene/ScoreLabel")
+@onready var main = get_node("/root/CreationScene")
+@onready var settings = get_node("/root/CreationScene/Settings")
+@onready var completed_label = get_node("/root/CreationScene/CompletedLabel")
+@onready var timer = get_node("/root/CreationScene/TimerLabel")
 var last_time = 0
 
 # Checks if the current canvas is equal to the one the player is checking

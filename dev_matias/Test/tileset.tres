@@ -1,14 +1,14 @@
 [gd_resource type="TileSet" load_steps=4 format=2]
 
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://icon.png" type="Texture2D" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
-[sub_resource type="StreamTexture" id=2]
+[sub_resource type="CompressedTexture2D" id=2]
 load_path = "res://.import/tilemap-grid.png-639f71b0799a7751a70fad8314bd8468.stex"
 
 [resource]
-0/name = "Sprite"
+0/name = "Sprite2D"
 0/texture = ExtResource( 2 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )

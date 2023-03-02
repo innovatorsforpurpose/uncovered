@@ -3,16 +3,16 @@
 [ext_resource path="res://RigidCrate.gd" type="Script" id=1]
 [ext_resource path="res://crate.obj" type="ArrayMesh" id=2]
 
-[sub_resource type="ConvexPolygonShape" id=1]
-points = PoolVector3Array( 0.25, 0.499902, 0.25, -0.25, 9.78964e-05, -0.25, -0.25, 9.78964e-05, -0.148444, 0.25, 9.78964e-05, -0.25, -0.25, 0.499902, -0.25, -0.249951, 9.78964e-05, 0.25, 0.25, 0.499902, -0.25, -0.249951, 0.499902, 0.25, 0.25, 9.78964e-05, 0.25 )
+[sub_resource type="ConvexPolygonShape3D" id=1]
+points = PackedVector3Array( 0.25, 0.499902, 0.25, -0.25, 9.78964e-05, -0.25, -0.25, 9.78964e-05, -0.148444, 0.25, 9.78964e-05, -0.25, -0.25, 0.499902, -0.25, -0.249951, 9.78964e-05, 0.25, 0.25, 0.499902, -0.25, -0.249951, 0.499902, 0.25, 0.25, 9.78964e-05, 0.25 )
 
-[node name="RigidCrate" type="RigidBody"]
+[node name="RigidCrate" type="RigidBody3D"]
 script = ExtResource( 1 )
 
-[node name="MeshInstance" type="MeshInstance" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = ExtResource( 2 )
 material/0 = null
 material/1 = null
 
-[node name="CollisionShape" type="CollisionShape" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource( 1 )
