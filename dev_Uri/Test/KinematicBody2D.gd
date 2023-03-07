@@ -5,7 +5,8 @@ var angular_speed = PI
 
 
 func _ready():
-	print("Ready")
+	# print("Ready")
+	pass
 
 func _process(delta):
 	var velocity = Vector2.UP.rotated(rotation) * speed

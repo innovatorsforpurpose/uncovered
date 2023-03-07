@@ -58,8 +58,8 @@ func _process(delta):
 	if jump_timer > 0:
 		jump_timer -= 1
 	
-	print("X FORCE: "+str(x_force))
-	print("Y FORCE: "+str(y_force))
+	# print("X FORCE: "+str(x_force))
+	# print("Y FORCE: "+str(y_force))
 
 func collision(var x: bool):
 	if x:
