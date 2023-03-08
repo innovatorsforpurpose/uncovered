@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/circle-clip-art-2.png-326f9a6bca3e7bd73ccdf07528c80c4d.stex"
+path="res://.import/images.png-e89c797cddb22ebdaae1d048c18396a9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://circle-clip-art-2.png"
-dest_files=[ "res://.import/circle-clip-art-2.png-326f9a6bca3e7bd73ccdf07528c80c4d.stex" ]
+source_file="res://Assets/images.png"
+dest_files=[ "res://.import/images.png-e89c797cddb22ebdaae1d048c18396a9.stex" ]
 
 [params]
 

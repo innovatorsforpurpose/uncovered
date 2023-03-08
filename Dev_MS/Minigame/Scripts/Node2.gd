@@ -27,9 +27,9 @@ func _on_green_area_body_entered():
 
 
 
-func _on_red_area_body_entered(body):
+func _on_red_area_body_entered(_body):
 	pass # Replace with function body.
 
 
-func _on_yellow_area_body_entered(body):
+func _on_yellow_area_body_entered(_body):
 	pass # Replace with function body.

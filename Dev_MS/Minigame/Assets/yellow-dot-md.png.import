@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex"
+path="res://.import/yellow-dot-md.png-6c08c23058fd1c6e63735de03b6a7b1f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icon.png"
-dest_files=[ "res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex" ]
+source_file="res://Assets/yellow-dot-md.png"
+dest_files=[ "res://.import/yellow-dot-md.png-6c08c23058fd1c6e63735de03b6a7b1f.stex" ]
 
 [params]
 

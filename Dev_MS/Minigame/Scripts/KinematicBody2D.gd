@@ -34,7 +34,7 @@ func _on_KinematicBody2D_mouse_exited():
  
 
 
-func _on_Area2D_body_entered(body):
+func _on_Area2D_body_entered(_body):
 	visible = false
 	print("hello")
 

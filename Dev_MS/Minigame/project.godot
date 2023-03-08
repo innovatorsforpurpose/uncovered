@@ -10,9 +10,8 @@ config_version=4
 
 [application]
 
-config/name="ifp again"
-run/main_scene="res://gaems.tscn"
-config/icon="res://icon.png"
+config/name="Motheboard minigame"
+run/main_scene="res://games.tscn"
 
 [gui]
 

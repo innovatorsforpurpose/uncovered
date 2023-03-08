@@ -10,9 +10,9 @@ func _on_Area2D_body_entered(body):
 	get_node("/root/Node2D")._on_green_area_body_entered()
 
 
-func _on_Area2D_body_exited(body):
+func _on_Area2D_body_exited(_body):
 	 visible = false
 
 
-func _on_Blue_area_body_entered(body):
+func _on_Blue_area_body_entered(_body):
 	pass # Replace with function body.
