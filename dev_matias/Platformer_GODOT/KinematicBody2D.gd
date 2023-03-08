@@ -88,7 +88,7 @@ func _process(delta):
 			motion.y = -JUMP
 			
 	if !is_on_floor():
-		print(position)
+		# print(position)
 		if motion.y < 0:
 			$AnimationPlayer.play("Jump")
 		else:

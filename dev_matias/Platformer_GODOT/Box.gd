@@ -12,7 +12,8 @@ onready var health = max_health setget _set_health
 	
 
 func kill():
-	print("I am dead")
+	# print("I am dead")
+	pass
 	
 func _set_health(value):
 	var prev_health = health
