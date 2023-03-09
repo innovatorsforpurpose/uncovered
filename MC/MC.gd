@@ -6,7 +6,6 @@ var speed
 var jump_speed = 10
 var jump_impulse = 15
 var spin = 0.05
-var velocity = Vector3.ZERO
 #var jump = false
 var sprintspeed = 10
 var flag = 1
@@ -52,7 +51,7 @@ func _unhandled_input(event):
 		if event.relative.x > 0:
 			rotate_y(-lerp(0, spin, event.relative.x/12.5))
 		if event.relative.x < 0:
-			rotate_y(-lerp(0, spin, event.relative.x/12.5))
+			rotate_y(+lerp(0, spin, event.relative.x/12.5))
 func set_active(active):
 	player_active = active
 	print(player_active)

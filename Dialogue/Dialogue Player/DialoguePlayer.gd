@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@export var dialogue_file # (String, FILE, "*.json")
+@export var dialogue_file (String, FILE, "*.json")
 
 
 func _on_Dialogueplayer_ready():

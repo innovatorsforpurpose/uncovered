@@ -25,7 +25,7 @@ func _process(_delta):
 	if len(get_overlapping_bodies()) == 0:
 		dialogue_player = get_node_or_null("Dialogueplayer")
 		if dialogue_player:
-			dialogue_player.reset()
+			dialogue_player
 
 func _physics_process(_delta):
 	if target == 1 and path.size() == 0:
