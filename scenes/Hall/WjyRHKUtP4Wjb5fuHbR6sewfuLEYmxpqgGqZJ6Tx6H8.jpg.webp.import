@@ -3,16 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://r6gqw7oojyih"
-path.etc2="res://.godot/imported/WjyRHKUtP4Wjb5fuHbR6sewfuLEYmxpqgGqZJ6Tx6H8.jpg.webp-ef27f093df403a7987014233d213d0b3.etc2.ctex"
+path.s3tc="res://.godot/imported/WjyRHKUtP4Wjb5fuHbR6sewfuLEYmxpqgGqZJ6Tx6H8.jpg.webp-ef27f093df403a7987014233d213d0b3.s3tc.ctex"
 metadata={
-"imported_formats": ["etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://scenes/Hall/WjyRHKUtP4Wjb5fuHbR6sewfuLEYmxpqgGqZJ6Tx6H8.jpg.webp"
-dest_files=["res://.godot/imported/WjyRHKUtP4Wjb5fuHbR6sewfuLEYmxpqgGqZJ6Tx6H8.jpg.webp-ef27f093df403a7987014233d213d0b3.etc2.ctex"]
+dest_files=["res://.godot/imported/WjyRHKUtP4Wjb5fuHbR6sewfuLEYmxpqgGqZJ6Tx6H8.jpg.webp-ef27f093df403a7987014233d213d0b3.s3tc.ctex"]
 
 [params]
 
