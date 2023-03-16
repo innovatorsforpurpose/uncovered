@@ -18,12 +18,12 @@
 [ext_resource path="res://Scenes/Charater scenes/Student/Bulletin Board.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Scenes/Charater scenes/Student/Bully.tscn" type="PackedScene" id=17]
 [ext_resource path="res://other parts of the hallway/Classroom.fbx" type="PackedScene" id=18]
+[ext_resource path="res://other parts of the hallway/Whiteboard.fbx" type="PackedScene" id=19]
 [ext_resource path="res://other parts of the hallway/atrium.fbx" type="PackedScene" id=20]
 [ext_resource path="res://other parts of the hallway/Classroom_hallway_main_dead_end_door.fbx" type="PackedScene" id=21]
 [ext_resource path="res://other parts of the hallway/classroom_teacher_Desk.fbx" type="PackedScene" id=22]
 [ext_resource path="res://other parts of the hallway/Main_Table.fbx" type="PackedScene" id=23]
 [ext_resource path="res://other parts of the hallway/classroom_chairs_and_Desks.fbx" type="PackedScene" id=24]
-[ext_resource path="res://other parts of the hallway/classroom_whiteboard.fbx" type="PackedScene" id=25]
 [ext_resource path="res://other parts of the hallway/atrium_dead_end.fbx" type="PackedScene" id=27]
 [ext_resource path="res://other parts of the hallway/office-3.fbx" type="PackedScene" id=28]
 
@@ -238,7 +238,7 @@ follow_viewport_enable = true
 dialogue_file = "res://Scenes/Charater scenes/Student/jsons/StudentII.json"
 
 [node name="Bulletin Board" parent="Node2D/Enviroment" instance=ExtResource( 16 )]
-transform = Transform( -0.395599, 0, -0.308466, 0, 0.501647, 0, 0.308466, 0, -0.395599, -17.7449, 14.0179, -9.19089 )
+transform = Transform( -0.390375, 0, -0.315051, 0, 0.501647, 0, 0.315051, 0, -0.390375, -17.7717, 14.0179, -9.26607 )
 
 [node name="Dialogueplayer" parent="Node2D/Enviroment/Bulletin Board" instance=ExtResource( 10 )]
 follow_viewport_enable = true
@@ -252,7 +252,7 @@ follow_viewport_enable = true
 dialogue_file = "res://Scenes/Charater scenes/Student/jsons/Bully.json"
 
 [node name="IDesk" parent="Node2D/Enviroment" instance=ExtResource( 15 )]
-transform = Transform( 0.547367, 0, 0, 0, 1, 0, 0, 0, 1, -27.6366, 12.4367, -10.581 )
+transform = Transform( 0.547367, 0, 0, 0, 1, 0, 0, 0, 1, -28.1483, 12.4367, -9.60219 )
 
 [node name="Dialogueplayer" parent="Node2D/Enviroment/IDesk" instance=ExtResource( 10 )]
 follow_viewport_enable = true
@@ -266,34 +266,34 @@ transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -1.457, 0 )
 shape = SubResource( 7 )
 
 [node name="Classroom" parent="." instance=ExtResource( 18 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.6841, 7.58046, -36.2216 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.0215, 6.65417, -38.6718 )
 
 [node name="atrium" parent="." instance=ExtResource( 20 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.5479, 7.41621, -23.5455 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.6001, 6.47473, -23.5736 )
 
 [node name="classroom_chairs_and_Desks" parent="." instance=ExtResource( 24 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.26852, 7.83602, 2.58383 )
-
-[node name="classroom_whiteboard" parent="." instance=ExtResource( 25 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.07947, 8.34962, 2.86018 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5868, 6.90973, -40.1345 )
 
 [node name="classroom_teacher_Desk" parent="." instance=ExtResource( 22 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.140064, 8.32339, 2.37129 )
+transform = Transform( 0.998921, 0.00336558, -0.0463115, -0.0034327, 0.999993, -0.00136941, 0.0463066, 0.00152693, 0.998926, -17.3227, 6.20063, -34.0485 )
 
 [node name="Classroom_hallway_main_dead_end_door" parent="." instance=ExtResource( 21 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.34712, 8.15444, -40.8196 )
+transform = Transform( -0.999991, 0, 0.00427596, 0, 1, 0, -0.00427596, 0, -0.999991, -15.956, 7.12938, -24.4338 )
 
 [node name="Main_Table" parent="." instance=ExtResource( 23 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.96684, 8.07274, -38.2962 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.5448, 6.65374, -23.299 )
 
 [node name="atrium_dead_end" parent="." instance=ExtResource( 27 )]
-transform = Transform( 0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, -0.742481, 8.51214, -30.257 )
+transform = Transform( 0.75, 0, 0, 0, 0.937307, 0, 0, 0, 1.6731, -9.74579, 7.47175, -24.5412 )
 
 [node name="office-3" parent="." instance=ExtResource( 28 )]
-transform = Transform( 0.747685, 0, 0, 0, 0.946136, 0, 0, 0, 0.940319, 7.561, 8.1, -22.329 )
+transform = Transform( 0.962766, 0, 0, 0, 1, 0, 0, 0, 0.967171, -36.1266, 7.49163, -24.3444 )
 
 [node name="Knob4" parent="." instance=ExtResource( 4 )]
 transform = Transform( 0.0164927, 0, 0, 0, 0.0101768, 0, 0, 0, 0.0106707, -25.284, 7.7173, -45.119 )
+
+[node name="Whiteboard" parent="." instance=ExtResource( 19 )]
+transform = Transform( 0.999963, 0, 0.00863927, 0, 1, 0, -0.00863927, 0, 0.999963, -17.416, 7.99107, -31.8914 )
 
 [connection signal="timeout" from="MCSRevengeTransport/BossBattleTimer" to="MCSRevengeTransport" method="_on_Timer_timeout"]
 [connection signal="input_event" from="MCSRevengeTransport/CSGSphere/Area" to="MCSRevengeTransport" method="_on_Area_input_event"]

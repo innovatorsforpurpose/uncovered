@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Whiteboard.fbx-6e7f602a590ba4531596279434a1e048.scn"
+path="res://.import/Teachers_desk .fbx-23e315b49b0a9534c423c9add761be90.scn"
 
 [deps]
 
-source_file="res://other parts of the hallway/Whiteboard.fbx"
-dest_files=[ "res://.import/Whiteboard.fbx-6e7f602a590ba4531596279434a1e048.scn" ]
+source_file="res://other parts of the hallway/Teachers_desk .fbx"
+dest_files=[ "res://.import/Teachers_desk .fbx-23e315b49b0a9534c423c9add761be90.scn" ]
 
 [params]
 
