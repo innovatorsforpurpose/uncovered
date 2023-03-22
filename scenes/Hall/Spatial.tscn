@@ -1,7 +1,6 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://scenes/Hall/Transition_Object_BossBattle.gd" type="Script" id=1]
-[ext_resource path="res://adnan/basement project.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Hall/Classroom_HALLWAY.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Hall/Hallway Door.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/Hall/Transition_Object.tscn" type="PackedScene" id=4]
@@ -19,6 +18,7 @@
 [ext_resource path="res://Scenes/Charater scenes/Student/Bulletin Board.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Scenes/Charater scenes/Student/Bully.tscn" type="PackedScene" id=17]
 [ext_resource path="res://other parts of the hallway/Classroom.fbx" type="PackedScene" id=18]
+[ext_resource path="res://other parts of the hallway/Classroom_office.fbx" type="PackedScene" id=19]
 [ext_resource path="res://other parts of the hallway/atrium.fbx" type="PackedScene" id=20]
 [ext_resource path="res://other parts of the hallway/Classroom_hallway_main_dead_end_door.fbx" type="PackedScene" id=21]
 [ext_resource path="res://other parts of the hallway/classroom_teacher_Desk.fbx" type="PackedScene" id=22]
@@ -28,6 +28,7 @@
 [ext_resource path="res://other parts of the hallway/Hall_bulletin_boards.fbx" type="PackedScene" id=26]
 [ext_resource path="res://other parts of the hallway/atrium_dead_end.fbx" type="PackedScene" id=27]
 [ext_resource path="res://other parts of the hallway/office-3.fbx" type="PackedScene" id=28]
+[ext_resource path="res://adnan/basement project.tscn" type="PackedScene" id=29]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -131,7 +132,7 @@ extents = Vector3( 104.159, 1.85556, 24.3701 )
 [node name="RootScene" type="Spatial"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0466938, 6.2102, 18.9819 )
 
-[node name="BASEMENT" parent="." instance=ExtResource( 1 )]
+[node name="BASEMENT" parent="." instance=ExtResource( 29 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.8567, 2.69703, -75.4432 )
 
 [node name="Classroom_HALLWAY" parent="." instance=ExtResource( 2 )]
