@@ -1,6 +1,7 @@
 [gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://scenes/Hall/Transition_Object_BossBattle.gd" type="Script" id=1]
+[ext_resource path="res://adnan/basement project.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Hall/Classroom_HALLWAY.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Hall/Hallway Door.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/Hall/Transition_Object.tscn" type="PackedScene" id=4]
@@ -124,11 +125,20 @@ radius = 0.967927
 [sub_resource type="BoxShape" id=7]
 extents = Vector3( 95.2636, 4.48513, 62.9712 )
 
+[sub_resource type="BoxShape" id=8]
+extents = Vector3( 104.159, 1.85556, 24.3701 )
+
 [node name="RootScene" type="Spatial"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0466938, 6.2102, 18.9819 )
 
+[node name="BASEMENT" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.8567, 2.69703, -75.4432 )
+
 [node name="Classroom_HALLWAY" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.90735e-06, 7.60065, 12.0768 )
+
+[node name="Classroom_HALLWAY2" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.00991333, -0.00277475, 0.999947, 1.45785e-05, 0.999996, 0.00277503, -0.999951, 4.20874e-05, -0.00991325, 12.8519, 3.63728, -96.4565 )
 
 [node name="Door1" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.4456, 6.612, -42.2872 )
@@ -268,6 +278,16 @@ shape = SubResource( 7 )
 
 [node name="Classroom" parent="." instance=ExtResource( 18 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.478912, 8.00668, 2.93122 )
+
+[node name="Classroom_office" parent="." instance=ExtResource( 19 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -41.3391, 7.89988, -19.851 )
+
+[node name="StaticBody2" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.26708, 7.39091, -11.864 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -46.3814, -7.25454, -55.5926 )
+shape = SubResource( 8 )
 
 [node name="atrium" parent="." instance=ExtResource( 20 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.27474, 8.23984, -40.8071 )
