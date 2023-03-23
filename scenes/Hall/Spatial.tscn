@@ -19,11 +19,11 @@
 [ext_resource path="res://Scenes/Charater scenes/Student/Bully.tscn" type="PackedScene" id=17]
 [ext_resource path="res://other parts of the hallway/Classroom.fbx" type="PackedScene" id=18]
 [ext_resource path="res://other parts of the hallway/Whiteboard.fbx" type="PackedScene" id=19]
-[ext_resource path="res://other parts of the hallway/atrium.fbx" type="PackedScene" id=20]
 [ext_resource path="res://other parts of the hallway/Classroom_hallway_main_dead_end_door.fbx" type="PackedScene" id=21]
 [ext_resource path="res://other parts of the hallway/classroom_teacher_Desk.fbx" type="PackedScene" id=22]
 [ext_resource path="res://other parts of the hallway/Main_Table.fbx" type="PackedScene" id=23]
 [ext_resource path="res://other parts of the hallway/classroom_chairs_and_Desks.fbx" type="PackedScene" id=24]
+[ext_resource path="res://Atrium.glb" type="PackedScene" id=25]
 [ext_resource path="res://other parts of the hallway/atrium_dead_end.fbx" type="PackedScene" id=27]
 [ext_resource path="res://other parts of the hallway/office-3.fbx" type="PackedScene" id=28]
 
@@ -268,9 +268,6 @@ shape = SubResource( 7 )
 [node name="Classroom" parent="." instance=ExtResource( 18 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.0215, 6.65417, -38.6718 )
 
-[node name="atrium" parent="." instance=ExtResource( 20 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.6001, 6.47473, -23.5736 )
-
 [node name="classroom_chairs_and_Desks" parent="." instance=ExtResource( 24 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5868, 6.90973, -40.1345 )
 
@@ -294,6 +291,12 @@ transform = Transform( 0.0164927, 0, 0, 0, 0.0101768, 0, 0, 0, 0.0106707, -25.28
 
 [node name="Whiteboard" parent="." instance=ExtResource( 19 )]
 transform = Transform( 0.999963, 0, 0.00863927, 0, 1, 0, -0.00863927, 0, 0.999963, -17.416, 7.99107, -31.8914 )
+
+[node name="Atrium" parent="." instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.6058, 6.47473, -23.7077 )
+__meta__ = {
+"_editor_description_": ""
+}
 
 [connection signal="timeout" from="MCSRevengeTransport/BossBattleTimer" to="MCSRevengeTransport" method="_on_Timer_timeout"]
 [connection signal="input_event" from="MCSRevengeTransport/CSGSphere/Area" to="MCSRevengeTransport" method="_on_Area_input_event"]
