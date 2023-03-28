@@ -19,7 +19,6 @@ transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.0171986, -9.53674e-07,
 layers = 65
 mesh = SubResource( 2 )
 skeleton = NodePath("")
-material/0 = null
 
 [node name="CameraPivot" type="Spatial" parent="."]
 
@@ -28,5 +27,3 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.471495, -0.386913 )
 current = true
 fov = 53.4731
 size = 20.0
-
-[connection signal="ready" from="." to="." method="_on_MC_ready"]
