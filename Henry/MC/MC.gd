@@ -27,9 +27,10 @@ func _physics_process(delta):
 	move_and_slide(direction, Vector3.UP) 
 	for index in get_slide_count():
 		var _collision = get_slide_collision(index)
+
 func set_active(active):
 	player_active = active
-	print(player_active)
+	# print(player_active)
 	set_physics_process(active)
 	set_process(active)
 	set_process_input(active)

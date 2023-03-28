@@ -18,7 +18,6 @@ __meta__ = {
 
 [node name="G" type="MeshInstance" parent="C"]
 mesh = SubResource( 1 )
-material/0 = null
 
 [node name="Collision3D" type="CollisionShape" parent="."]
 transform = Transform( 0.297402, 0, 0, 0, 1, 0, 0, 0, 0.297402, 0, 0, 0 )
