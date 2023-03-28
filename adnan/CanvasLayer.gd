@@ -26,6 +26,7 @@ func _on_Area_body_entered(body):
 	if body.name == "MC":
 		get_node("/root/RootScene/BASEMENT/ColorRect").visible = true
 		get_node("/root/RootScene/BASEMENT/ColorRect/ColorRectTimer/").start(3)
+		get_node("/root/RootScene/BASEMENT/go to vent text")
 		$InstructionsBackground.visible = true
 
 	get_node("/root/RootScene/BASEMENT/Instructions/InstructionsTimer").start(1)

@@ -18,8 +18,7 @@ func _ready():
 
 func _on_Area2_body_entered(body):
 	if body.name == "MC":
-		get_node("/root/RootScene/BASEMENT/go to vent text").visible = true
-		get_node("/root/RootScene/BASEMENT/go to vent text/Timer").start(3)
+		get_node("/root/RootScene/BASEMENT/go to vent text/Timer").start(5)
 	
 	pass # Replace with function body.
 
