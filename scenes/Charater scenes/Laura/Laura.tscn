@@ -23,6 +23,7 @@ mesh = SubResource( 3 )
 [node name="janitor copy" parent="C/G" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0432751, 0.193929, 0.125623 )
 
+
 [node name="Collision3D" type="CollisionShape" parent="."]
 transform = Transform( 0.297402, 0, 0, 0, 1, 0, 0, 0, 0.297402, 0, 0, 0 )
 shape = SubResource( 2 )
