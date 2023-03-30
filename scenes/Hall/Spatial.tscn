@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://scenes/Hall/Transition_Object_BossBattle.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Hall/Classroom_HALLWAY.tscn" type="PackedScene" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://Scenes/Charater scenes/Student/Bully.tscn" type="PackedScene" id=17]
 [ext_resource path="res://other parts of the hallway/Classroom.fbx" type="PackedScene" id=18]
 [ext_resource path="res://other parts of the hallway/Whiteboard.fbx" type="PackedScene" id=19]
+[ext_resource path="res://other parts of the hallway/Text.fbx" type="PackedScene" id=20]
 [ext_resource path="res://other parts of the hallway/Classroom_hallway_main_dead_end_door.fbx" type="PackedScene" id=21]
 [ext_resource path="res://other parts of the hallway/classroom_teacher_Desk.fbx" type="PackedScene" id=22]
 [ext_resource path="res://other parts of the hallway/Main_Table.fbx" type="PackedScene" id=23]
@@ -284,7 +285,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.5448, 6.65374, -23.299 )
 transform = Transform( 0.75, 0, 0, 0, 0.937307, 0, 0, 0, 1.6731, -9.74579, 7.47175, -24.5412 )
 
 [node name="office-3" parent="." instance=ExtResource( 28 )]
-transform = Transform( 0.962766, 0, 0, 0, 1, 0, 0, 0, 0.967171, -36.1266, 7.49163, -24.3444 )
+transform = Transform( 0.962766, 0, 0, 0, 1, 0, 0, 0, 0.967171, -36.3563, 7.60737, -24.461 )
 
 [node name="Knob4" parent="." instance=ExtResource( 4 )]
 transform = Transform( 0.0164927, 0, 0, 0, 0.0101768, 0, 0, 0, 0.0106707, -25.284, 7.7173, -45.119 )
@@ -297,6 +298,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.6058, 6.47473, -23.7077 )
 __meta__ = {
 "_editor_description_": ""
 }
+
+[node name="Text" parent="." instance=ExtResource( 20 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -42.7721, 5.98089, -13.6491 )
 
 [connection signal="timeout" from="MCSRevengeTransport/BossBattleTimer" to="MCSRevengeTransport" method="_on_Timer_timeout"]
 [connection signal="input_event" from="MCSRevengeTransport/CSGSphere/Area" to="MCSRevengeTransport" method="_on_Area_input_event"]
