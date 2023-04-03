@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=2]
-
-[ext_resource path="res://scenes/Hall/free_modular_air_duct_kit.glb" type="PackedScene" id=1]
-
-[node name="free_modular_air_duct_kit" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.98734 )
-
-[node name="defaultMaterial15" parent="Sketchfab_model/Collada visual scene group/air_duct_I" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.16567e-09, 0.141054 )
