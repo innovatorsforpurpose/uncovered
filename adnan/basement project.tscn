@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://adnan/Camera.gd" type="Script" id=1]
 [ext_resource path="res://2.glb" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://material.material" type="Material" id=9]
 [ext_resource path="res://adnan/ColorRect.gd" type="Script" id=10]
 [ext_resource path="res://adnan/Conversation.gd" type="Script" id=11]
+[ext_resource path="res://Dev_MS/Minigame/Assets/battlenet.ttf" type="DynamicFontData" id=12]
 
 [sub_resource type="BoxShape" id=11]
 extents = Vector3( 4.85664, 2, 0.574707 )
@@ -118,6 +119,18 @@ extents = Vector3( 0.355751, 1.11831, 0.328131 )
 [sub_resource type="BoxShape" id=27]
 extents = Vector3( 1, 0.194294, 1.13375 )
 
+[sub_resource type="StyleBoxFlat" id=35]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.972549, 0.968627, 0.968627, 1 )
+
+[sub_resource type="DynamicFont" id=36]
+size = 25
+font_data = ExtResource( 12 )
+
 [sub_resource type="Gradient" id=28]
 
 [sub_resource type="GradientTexture" id=29]
@@ -221,7 +234,6 @@ script = ExtResource( 10 )
 [node name="ColorRectTimer" type="Timer" parent="ColorRect"]
 
 [node name="Instructions" type="CanvasLayer" parent="."]
-visible = false
 script = ExtResource( 7 )
 
 [node name="InstructionsTimer" type="Timer" parent="Instructions"]
@@ -255,9 +267,45 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0243594, -0.0486282, -0.0563
 shape = SubResource( 27 )
 
 [node name="go to vent text" type="CanvasLayer" parent="."]
+visible = false
 script = ExtResource( 8 )
 
+[node name="Node2D" type="Node2D" parent="go to vent text"]
+
+[node name="Instructions" type="MarginContainer" parent="go to vent text/Node2D"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -2.0
+margin_top = 96.0
+margin_right = 376.0
+margin_bottom = 232.0
+rect_scale = Vector2( 1.00117, 1 )
+
+[node name="Panel" type="Panel" parent="go to vent text/Node2D/Instructions"]
+margin_right = 378.0
+margin_bottom = 136.0
+custom_styles/panel = SubResource( 35 )
+
+[node name="MarginContainer" type="MarginContainer" parent="go to vent text/Node2D/Instructions"]
+margin_right = 378.0
+margin_bottom = 136.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="go to vent text/Node2D/Instructions/MarginContainer"]
+margin_right = 378.0
+margin_bottom = 136.0
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="go to vent text/Node2D/Instructions/MarginContainer/HBoxContainer"]
+margin_top = 56.0
+margin_right = 365.0
+margin_bottom = 79.0
+custom_fonts/font = SubResource( 36 )
+text = "I think I hear something from the vent, lets check it out"
+
 [node name="NinePatchRect" type="NinePatchRect" parent="go to vent text"]
+visible = false
 modulate = Color( 0.0705882, 0.0666667, 0.0666667, 1 )
 self_modulate = Color( 0.0627451, 0.0588235, 0.0588235, 1 )
 margin_left = 222.0
@@ -268,6 +316,7 @@ rect_scale = Vector2( 11.1354, 12.1585 )
 texture = SubResource( 29 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="go to vent text"]
+visible = false
 margin_left = 349.0
 margin_top = 300.0
 margin_right = 619.0
@@ -287,7 +336,118 @@ shape = SubResource( 30 )
 [node name="Converstaion" type="CanvasLayer" parent="."]
 script = ExtResource( 11 )
 
+[node name="Node2D" type="Node2D" parent="Converstaion"]
+
+[node name="Instructions" type="MarginContainer" parent="Converstaion/Node2D"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -2.0
+margin_top = 96.0
+margin_right = 376.0
+margin_bottom = 232.0
+rect_scale = Vector2( 1.00117, 1 )
+
+[node name="Panel" type="Panel" parent="Converstaion/Node2D/Instructions"]
+margin_right = 640.0
+margin_bottom = 136.0
+custom_styles/panel = SubResource( 35 )
+
+[node name="MarginContainer" type="MarginContainer" parent="Converstaion/Node2D/Instructions"]
+margin_right = 640.0
+margin_bottom = 136.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Converstaion/Node2D/Instructions/MarginContainer"]
+margin_right = 640.0
+margin_bottom = 136.0
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label1" type="Label" parent="Converstaion/Node2D/Instructions/MarginContainer/HBoxContainer"]
+margin_top = 30.0
+margin_right = 640.0
+margin_bottom = 105.0
+custom_fonts/font = SubResource( 36 )
+text = "  ???: So, my friend, our plan is working perfectly. The students are becoming
+ more and more sluggish by the day. 
+"
+
+[node name="Label2" type="Label" parent="Converstaion/Node2D/Instructions/MarginContainer/HBoxContainer"]
+visible = false
+margin_top = 17.0
+margin_right = 633.0
+margin_bottom = 118.0
+custom_fonts/font = SubResource( 36 )
+text = "  ???:Yes, indeed. Our sedative-laced water fountains are doing wonders. 
+	The students are unknowingly drinking it during lunchtime, and they are falling
+	 right into our trap.
+ "
+
+[node name="Label3" type="Label" parent="Converstaion/Node2D/Instructions/MarginContainer/HBoxContainer"]
+visible = false
+margin_top = 17.0
+margin_right = 633.0
+margin_bottom = 118.0
+custom_fonts/font = SubResource( 36 )
+text = " "
+
+[node name="Label4" type="Label" parent="Converstaion/Node2D/Instructions/MarginContainer/HBoxContainer"]
+visible = false
+margin_top = 17.0
+margin_right = 633.0
+margin_bottom = 118.0
+custom_fonts/font = SubResource( 36 )
+text = "  ???:Yes, indeed. Our sedative-laced water fountains are doing wonders. 
+	The students are unknowingly drinking it during lunchtime, and they are falling
+	 right into our trap.
+ "
+
+[node name="Label5" type="Label" parent="Converstaion/Node2D/Instructions/MarginContainer/HBoxContainer"]
+visible = false
+margin_top = 17.0
+margin_right = 633.0
+margin_bottom = 118.0
+custom_fonts/font = SubResource( 36 )
+text = "  ???:Yes, indeed. Our sedative-laced water fountains are doing wonders. 
+	The students are unknowingly drinking it during lunchtime, and they are falling
+	 right into our trap.
+ "
+
+[node name="Label6" type="Label" parent="Converstaion/Node2D/Instructions/MarginContainer/HBoxContainer"]
+visible = false
+margin_top = 17.0
+margin_right = 633.0
+margin_bottom = 118.0
+custom_fonts/font = SubResource( 36 )
+text = "  ???:Yes, indeed. Our sedative-laced water fountains are doing wonders. 
+	The students are unknowingly drinking it during lunchtime, and they are falling
+	 right into our trap.
+ "
+
+[node name="Label7" type="Label" parent="Converstaion/Node2D/Instructions/MarginContainer/HBoxContainer"]
+visible = false
+margin_top = 17.0
+margin_right = 633.0
+margin_bottom = 118.0
+custom_fonts/font = SubResource( 36 )
+text = "  ???:Yes, indeed. Our sedative-laced water fountains are doing wonders. 
+	The students are unknowingly drinking it during lunchtime, and they are falling
+	 right into our trap.
+ "
+
+[node name="Label8" type="Label" parent="Converstaion/Node2D/Instructions/MarginContainer/HBoxContainer"]
+visible = false
+margin_top = 17.0
+margin_right = 633.0
+margin_bottom = 118.0
+custom_fonts/font = SubResource( 36 )
+text = "  ???:Yes, indeed. Our sedative-laced water fountains are doing wonders. 
+	The students are unknowingly drinking it during lunchtime, and they are falling
+	 right into our trap.
+ "
+
 [node name="NinePatchRect" type="NinePatchRect" parent="Converstaion"]
+visible = false
 modulate = Color( 0.764706, 0.0823529, 0.0823529, 1 )
 self_modulate = Color( 0.8, 0.0823529, 0.0823529, 1 )
 show_behind_parent = true
@@ -299,6 +459,7 @@ margin_bottom = 496.0
 texture = SubResource( 34 )
 
 [node name="Text1" type="RichTextLabel" parent="Converstaion"]
+visible = false
 margin_left = 356.0
 margin_top = 269.0
 margin_right = 782.0

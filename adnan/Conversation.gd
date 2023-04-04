@@ -14,10 +14,12 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	var counter = 1
 	if Input.is_action_pressed("game_usage"):
-		get_node("/root/RootScene/BASEMENT/Converstaion/Text1").visible = false
-		get_node("/root/RootScene/BASEMENT/Converstaion/Text2").visible = true
-	
+		get_node("/root/RootScene/BASEMENT/Converstaion/Node2D/Instructions/MarginContainer/HBoxContainer/Label" + str(counter)).visible = false
+		get_node("/root/RootScene/BASEMENT/Converstaion/Node2D/Instructions/MarginContainer/HBoxContainer/Label" + str(counter + 1)).visible = true
+		counter += 1
+		
 		
 	pass
 
