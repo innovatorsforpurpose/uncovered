@@ -267,7 +267,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0243594, -0.0486282, -0.0563
 shape = SubResource( 27 )
 
 [node name="go to vent text" type="CanvasLayer" parent="."]
-visible = false
 script = ExtResource( 8 )
 
 [node name="Node2D" type="Node2D" parent="go to vent text"]
@@ -298,11 +297,12 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="go to vent text/Node2D/Instructions/MarginContainer/HBoxContainer"]
-margin_top = 56.0
-margin_right = 365.0
-margin_bottom = 79.0
+margin_top = 43.0
+margin_right = 352.0
+margin_bottom = 92.0
 custom_fonts/font = SubResource( 36 )
-text = "I think I hear something from the vent, lets check it out"
+text = "  I think I hear something from the vent, 
+  lets check it out"
 
 [node name="NinePatchRect" type="NinePatchRect" parent="go to vent text"]
 visible = false
@@ -327,10 +327,10 @@ text = "go to vent "
 [node name="Timer" type="Timer" parent="go to vent text"]
 
 [node name="Area3" type="Area" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3104, 1.19039, 8.8654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3104, 1.19039, 8.39414 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Area3"]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -0.0403719, 0.309101, 1.36033 )
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -1.50762, -1.63169, 1.96011 )
 shape = SubResource( 30 )
 
 [node name="Converstaion" type="CanvasLayer" parent="."]
@@ -374,77 +374,86 @@ text = "  ???: So, my friend, our plan is working perfectly. The students are be
 
 [node name="Label2" type="Label" parent="Converstaion/Node2D/Instructions/MarginContainer/HBoxContainer"]
 visible = false
+margin_left = 644.0
 margin_top = 17.0
-margin_right = 633.0
+margin_right = 1293.0
 margin_bottom = 118.0
 custom_fonts/font = SubResource( 36 )
-text = "  ???:Yes, indeed. Our sedative-laced water fountains are doing wonders. 
-	The students are unknowingly drinking it during lunchtime, and they are falling
-	 right into our trap.
+text = "  ???: Yes, indeed. Our sedative-laced water fountains are doing wonders. 
+	  The students are unknowingly drinking it during lunchtime, and they are falling
+	  right into our trap.
  "
 
 [node name="Label3" type="Label" parent="Converstaion/Node2D/Instructions/MarginContainer/HBoxContainer"]
 visible = false
+margin_left = 1297.0
 margin_top = 17.0
-margin_right = 633.0
+margin_right = 1656.0
 margin_bottom = 118.0
 custom_fonts/font = SubResource( 36 )
-text = " "
+text = "  ???: It's the perfect way to subdue them
+  without raising any suspicion. Soon, 
+  the entire school will be under our control.
+"
 
 [node name="Label4" type="Label" parent="Converstaion/Node2D/Instructions/MarginContainer/HBoxContainer"]
 visible = false
+margin_left = 1660.0
 margin_top = 17.0
-margin_right = 633.0
+margin_right = 2189.0
 margin_bottom = 118.0
 custom_fonts/font = SubResource( 36 )
-text = "  ???:Yes, indeed. Our sedative-laced water fountains are doing wonders. 
-	The students are unknowingly drinking it during lunchtime, and they are falling
-	 right into our trap.
- "
+text = "  ???: Yes, and with the students weakened and sedated,
+  we can carry out our nefarious plans without any interference.
+  They won't even know what hit them.
+"
 
 [node name="Label5" type="Label" parent="Converstaion/Node2D/Instructions/MarginContainer/HBoxContainer"]
 visible = false
+margin_left = 2193.0
 margin_top = 17.0
-margin_right = 633.0
+margin_right = 2733.0
 margin_bottom = 118.0
 custom_fonts/font = SubResource( 36 )
-text = "  ???:Yes, indeed. Our sedative-laced water fountains are doing wonders. 
-	The students are unknowingly drinking it during lunchtime, and they are falling
-	 right into our trap.
- "
+text = "  ???: Exactly. It's the ultimate scheme - taking advantage 
+  of their trust in the water fountains and using it against them. 
+  They won't suspect a thing.
+"
 
 [node name="Label6" type="Label" parent="Converstaion/Node2D/Instructions/MarginContainer/HBoxContainer"]
 visible = false
+margin_left = 2737.0
 margin_top = 17.0
-margin_right = 633.0
+margin_right = 3231.0
 margin_bottom = 118.0
 custom_fonts/font = SubResource( 36 )
-text = "  ???:Yes, indeed. Our sedative-laced water fountains are doing wonders. 
-	The students are unknowingly drinking it during lunchtime, and they are falling
-	 right into our trap.
- "
+text = "  ???: It's brilliant. We'll continue to dose the water fountains
+  until our plan is fully executed. No one will dare 
+  stand in our way.
+"
 
 [node name="Label7" type="Label" parent="Converstaion/Node2D/Instructions/MarginContainer/HBoxContainer"]
 visible = false
-margin_top = 17.0
-margin_right = 633.0
-margin_bottom = 118.0
+margin_left = 3235.0
+margin_top = 30.0
+margin_right = 3586.0
+margin_bottom = 105.0
 custom_fonts/font = SubResource( 36 )
-text = "  ???:Yes, indeed. Our sedative-laced water fountains are doing wonders. 
-	The students are unknowingly drinking it during lunchtime, and they are falling
-	 right into our trap.
- "
+text = "  ???: To our success! The students won't 
+  know what hit them until it's too late.
+"
 
 [node name="Label8" type="Label" parent="Converstaion/Node2D/Instructions/MarginContainer/HBoxContainer"]
 visible = false
+margin_left = 3590.0
 margin_top = 17.0
-margin_right = 633.0
+margin_right = 3992.0
 margin_bottom = 118.0
 custom_fonts/font = SubResource( 36 )
-text = "  ???:Yes, indeed. Our sedative-laced water fountains are doing wonders. 
-	The students are unknowingly drinking it during lunchtime, and they are falling
-	 right into our trap.
- "
+text = "  ???: Cheers to that! The sedated students
+  will be our key to victory. We'll rule this school 
+  with an iron fist.
+"
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Converstaion"]
 visible = false
