@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://scenes/Hall/KinematicBody.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Hall/Material_053.material" type="Material" id=2]
@@ -75,10 +75,6 @@ extents = Vector3( 0.001, 0.0264457, 0.00799164 )
 
 [sub_resource type="BoxShape" id=20]
 extents = Vector3( 0.001, 0.00670762, 0.0112974 )
-
-[sub_resource type="CapsuleShape" id=22]
-radius = 0.810772
-height = 0.565
 
 [node name="Classroom_HALLWAY" type="Spatial"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.60065, 12.0128 )
@@ -177,10 +173,6 @@ shape = SubResource( 20 )
 [node name="KinematicBody" type="KinematicBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.042, -0.127995, -67.1638 )
 script = ExtResource( 1 )
-
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.134918, 0.638408, 0 )
-shape = SubResource( 22 )
 
 [node name="Sprite3D" type="Sprite3D" parent="KinematicBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.63613, -0.280468, 0 )
