@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/asphalt_02_diff_4k.jpg-6b3cc350bfce1e28a4e7c7361e5a9098.s3tc.stex"
-path.etc2="res://.import/asphalt_02_diff_4k.jpg-6b3cc350bfce1e28a4e7c7361e5a9098.etc2.stex"
+path.s3tc="res://.import/asphalt_02_diff_4k.jpg-fec95227fa35657907c51c0a7a6e2ceb.s3tc.stex"
+path.etc2="res://.import/asphalt_02_diff_4k.jpg-fec95227fa35657907c51c0a7a6e2ceb.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Components/Basement/assets/asphalt_02_diff_4k.jpg"
-dest_files=[ "res://.import/asphalt_02_diff_4k.jpg-6b3cc350bfce1e28a4e7c7361e5a9098.s3tc.stex", "res://.import/asphalt_02_diff_4k.jpg-6b3cc350bfce1e28a4e7c7361e5a9098.etc2.stex" ]
+source_file="res://Components/basement/assets/asphalt_02_diff_4k.jpg"
+dest_files=[ "res://.import/asphalt_02_diff_4k.jpg-fec95227fa35657907c51c0a7a6e2ceb.s3tc.stex", "res://.import/asphalt_02_diff_4k.jpg-fec95227fa35657907c51c0a7a6e2ceb.etc2.stex" ]
 
 [params]
 

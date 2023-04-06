@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/photos_2015_09_18_fst_696d0otztq5.jpg-c0e6cdc0f29a36881c914ee89b9a6615.s3tc.stex"
-path.etc2="res://.import/photos_2015_09_18_fst_696d0otztq5.jpg-c0e6cdc0f29a36881c914ee89b9a6615.etc2.stex"
+path.s3tc="res://.import/photos_2015_09_18_fst_696d0otztq5.jpg-9f5c4af92ee84d21ec700cb4337d749b.s3tc.stex"
+path.etc2="res://.import/photos_2015_09_18_fst_696d0otztq5.jpg-9f5c4af92ee84d21ec700cb4337d749b.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Components/Basement/assets/photos_2015_09_18_fst_696d0otztq5.jpg"
-dest_files=[ "res://.import/photos_2015_09_18_fst_696d0otztq5.jpg-c0e6cdc0f29a36881c914ee89b9a6615.s3tc.stex", "res://.import/photos_2015_09_18_fst_696d0otztq5.jpg-c0e6cdc0f29a36881c914ee89b9a6615.etc2.stex" ]
+source_file="res://Components/basement/assets/photos_2015_09_18_fst_696d0otztq5.jpg"
+dest_files=[ "res://.import/photos_2015_09_18_fst_696d0otztq5.jpg-9f5c4af92ee84d21ec700cb4337d749b.s3tc.stex", "res://.import/photos_2015_09_18_fst_696d0otztq5.jpg-9f5c4af92ee84d21ec700cb4337d749b.etc2.stex" ]
 
 [params]
 

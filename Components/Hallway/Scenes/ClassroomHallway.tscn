@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=2]
 
-[ext_resource path="res://scenes/Hall/KinematicBody.gd" type="Script" id=1]
-[ext_resource path="res://scenes/Hall/Material_053.material" type="Material" id=2]
+[ext_resource path="res://workspaces/dev_Uri/Hall/KinematicBody.gd" type="Script" id=1]
+[ext_resource path="res://workspaces/dev_Uri/Hall/Material_053.material" type="Material" id=2]
 
 [sub_resource type="ConvexPolygonShape" id=6]
 points = PoolVector3Array( -0.0416725, -0.0424003, -0.0100031, -0.041703, -0.0552031, -0.0100031, -0.041703, -0.0401969, -0.0100031, -0.0415993, -0.0507538, -0.0100031, -0.0415993, -0.0499415, -0.0100031, -0.0416908, -0.0405157, -0.0100031 )

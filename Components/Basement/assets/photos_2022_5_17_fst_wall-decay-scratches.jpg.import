@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/photos_2022_5_17_fst_wall-decay-scratches.jpg-893ce7f4532bb86916f7d530de5076a3.stex"
+path="res://.import/photos_2022_5_17_fst_wall-decay-scratches.jpg-6b9e2ab74893101875d8a532a44e51a0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Components/Basement/assets/photos_2022_5_17_fst_wall-decay-scratches.jpg"
-dest_files=[ "res://.import/photos_2022_5_17_fst_wall-decay-scratches.jpg-893ce7f4532bb86916f7d530de5076a3.stex" ]
+source_file="res://Components/basement/assets/photos_2022_5_17_fst_wall-decay-scratches.jpg"
+dest_files=[ "res://.import/photos_2022_5_17_fst_wall-decay-scratches.jpg-6b9e2ab74893101875d8a532a44e51a0.stex" ]
 
 [params]
 
