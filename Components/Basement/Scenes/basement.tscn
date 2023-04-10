@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Components/basement/Scenes/2.glb" type="PackedScene" id=1]
 [ext_resource path="res://Components/Classroom L1/scenes-assets/photos_2022_5_17_fst_wall-decay-scratches (1).jpg" type="Texture" id=2]
-[ext_resource path="res://Components/entities/Objects/Large objects/material.material" type="Material" id=3]
+[ext_resource path="res://Components/basement/assets/basement.material" type="Material" id=3]
 [ext_resource path="res://assets/Objects/Smaller Objects/Lamps/steampunk_lamps.glb" type="PackedScene" id=4]
 [ext_resource path="res://Components/basement/assets/asphalt_02_diff_4k.jpg" type="Texture" id=5]
 [ext_resource path="res://Components/basement/assets/CanvasLayer.gd" type="Script" id=6]

@@ -98,3 +98,7 @@ func _on_Bulletin_Board_body_entered(body):
 
 func _on_Bully_body_entered(body):
 	_ready()
+
+
+func _on_StudentII_body_exited(body):
+	pass # Replace with function body.
