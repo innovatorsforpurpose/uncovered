@@ -9,7 +9,7 @@
 points = PoolVector3Array( -1, -1, -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, -1, 1, 1, 1, -1, -1, -1, -1, 1, -1, 1, -1 )
 
 [node name="Bully" type="Area"]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.00315917, 0.00280321, -0.00119758 )
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.00315917, 0.521494, -0.00119758 )
 collision_mask = 2
 script = ExtResource( 1 )
 __meta__ = {
