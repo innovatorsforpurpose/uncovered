@@ -132,7 +132,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0466938, 6.2102, 18.9819 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.90735e-06, 7.60065, 12.0768 )
 
 [node name="Classroom_HALLWAY2" parent="." instance=ExtResource( 2 )]
-transform = Transform( -0.00991333, -0.00277475, 0.999947, 1.45785e-05, 0.999996, 0.00277503, -0.999951, 4.20874e-05, -0.00991325, 3.91069, 3.63728, -96.4565 )
+transform = Transform( -0.00991333, -0.00277475, 0.999947, 1.45785e-05, 0.999996, 0.00277503, -0.999951, 4.20874e-05, -0.00991325, 12.8519, 3.63728, -96.4565 )
 
 [node name="Door1" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.4456, 6.612, -42.3292 )
@@ -237,7 +237,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00904, 0 )
 [node name="Enviroment" type="CanvasLayer" parent="Node2D"]
 
 [node name="MC" parent="Node2D/Enviroment" instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.0397, 12.458, -39.9503 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.517, 12.458, 11.11 )
 
 [node name="Mentor" parent="Node2D/Enviroment" instance=ExtResource( 8 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -24.4266, 12.458, 4.39275 )
