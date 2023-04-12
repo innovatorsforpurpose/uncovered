@@ -132,7 +132,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0466938, 6.2102, 18.9819 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.90735e-06, 7.60065, 12.0768 )
 
 [node name="Classroom_HALLWAY2" parent="." instance=ExtResource( 2 )]
-transform = Transform( -0.00991333, -0.00277475, 0.999947, 1.45785e-05, 0.999996, 0.00277503, -0.999951, 4.20874e-05, -0.00991325, 12.8519, 3.63728, -96.4565 )
+transform = Transform( -0.999978, -0.00277475, -0.00598657, -0.00277495, 0.999996, 2.54759e-05, 0.00598647, 4.20877e-05, -0.999982, -50.5283, 3.01994, -109.838 )
 
 [node name="Door1" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.4456, 6.612, -42.3292 )
@@ -229,7 +229,7 @@ transform = Transform( 0.75, 0, 0, 0, 0.937307, 0, 0, 0, 1.6731, -9.74579, 7.471
 transform = Transform( 0.962766, 0, 0, 0, 1, 0, 0, 0, 0.967171, -36.3563, 7.60737, -24.461 )
 
 [node name="BASEMENT" parent="." instance=ExtResource( 29 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.8567, 2.69703, -75.4432 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.1884, 1.02765, -76.0712 )
 
 [node name="Node2D" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00904, 0 )
