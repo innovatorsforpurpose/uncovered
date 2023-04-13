@@ -11,7 +11,6 @@ config_version=4
 [application]
 
 config/name="woahhallway"
-run/main_scene="res://scenes/uncoverhallway.tscn"
 
 [gui]
 
