@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/Charater scenes/Student/StudentI.gd" type="Script" id=1]
-[ext_resource path="res://other parts of the hallway/janitor copy.fbx" type="PackedScene" id=2]
+[ext_resource path="res://Dev_BA/janitor.glb" type="PackedScene" id=2]
 
 [sub_resource type="ArrayMesh" id=3]
 
@@ -29,5 +29,5 @@ shape = SubResource( 2 )
 transform = Transform( 0.338946, 0, 0, 0, 0.518095, 0, 0, 0, 0.338946, 0, 0, 0 )
 aabb = AABB( -1.35386, -1, -1.55014, 2.70774, 2, 3.10029 )
 
-[node name="janitor copy" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.219203, 0, 0, 0, 0.219203, 0, 0, 0, 0.219203, 0.0791718, 0, 0.110224 )
+[node name="janitor" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.219203, 0, 0, 0, 0.219203, 0, 0, 0, 0.219203, 0.0785777, -5.96046e-08, 0.111956 )
