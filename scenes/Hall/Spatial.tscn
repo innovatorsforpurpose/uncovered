@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://scenes/Hall/Transition_Object_BossBattle.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Hall/Classroom_HALLWAY.tscn" type="PackedScene" id=2]
@@ -18,6 +18,7 @@
 [ext_resource path="res://Scenes/Charater scenes/Student/Bulletin Board.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Scenes/Charater scenes/Student/Bully.tscn" type="PackedScene" id=17]
 [ext_resource path="res://other parts of the hallway/Classroom.fbx" type="PackedScene" id=18]
+[ext_resource path="res://scenes/Hall/CircuitTransition.gd" type="Script" id=19]
 [ext_resource path="res://other parts of the hallway/Classroom_hallway_main_dead_end_door.fbx" type="PackedScene" id=21]
 [ext_resource path="res://other parts of the hallway/classroom_teacher_Desk.fbx" type="PackedScene" id=22]
 [ext_resource path="res://other parts of the hallway/Main_Table.fbx" type="PackedScene" id=23]
@@ -174,6 +175,7 @@ script = ExtResource( 1 )
 [node name="BossBattleTimer" type="Timer" parent="MCSRevengeTransport"]
 
 [node name="CSGSphere" type="CSGSphere" parent="MCSRevengeTransport"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.55246, -0.237152, 0.638538 )
 
 [node name="Area" type="Area" parent="MCSRevengeTransport/CSGSphere"]
 
@@ -316,6 +318,24 @@ __meta__ = {
 [node name="Text" parent="." instance=ExtResource( 31 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -42.7721, 5.98089, -13.6491 )
 
+[node name="CircuitTransition" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33.0627, 7.80818, -23.7961 )
+script = ExtResource( 19 )
+
+[node name="circuitTimer" type="Timer" parent="CircuitTransition"]
+
+[node name="CSGSphere2" type="CSGSphere" parent="CircuitTransition"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.553017, -0.231472, 0.632858 )
+radius = 0.367649
+
+[node name="Area" type="Area" parent="CircuitTransition/CSGSphere2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="CircuitTransition/CSGSphere2/Area"]
+shape = SubResource( 8 )
+
+[node name="Camera" type="Camera" parent="CircuitTransition"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.98928 )
+
 [connection signal="timeout" from="MCSRevengeTransport/BossBattleTimer" to="MCSRevengeTransport" method="_on_Timer_timeout"]
 [connection signal="input_event" from="MCSRevengeTransport/CSGSphere/Area" to="MCSRevengeTransport" method="_on_Area_input_event"]
 [connection signal="timeout" from="Timer" to="Knob1" method="_on_Timer_timeout"]
@@ -337,3 +357,5 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -42.7721, 5.98089, -13.6491 )
 [connection signal="ready" from="Node2D/Enviroment/Bulletin Board/Dialogueplayer" to="Node2D/Enviroment/Bulletin Board/Dialogueplayer" method="_on_Dialogueplayer_ready"]
 [connection signal="body_entered" from="Node2D/Enviroment/Bully" to="Node2D/Enviroment/Mentor/Dialogueplayer" method="_on_Bully_body_entered"]
 [connection signal="ready" from="Node2D/Enviroment/Bully/Dialogueplayer" to="Node2D/Enviroment/Bully/Dialogueplayer" method="_on_Dialogueplayer_ready"]
+[connection signal="timeout" from="CircuitTransition/circuitTimer" to="CircuitTransition" method="_on_circuitTimer_timeout"]
+[connection signal="input_event" from="CircuitTransition/CSGSphere2/Area" to="CircuitTransition" method="_on_Area_input_event"]

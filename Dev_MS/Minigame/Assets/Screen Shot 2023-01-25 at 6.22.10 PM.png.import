@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Screen Shot 2023-01-25 at 6.22.10 PM.png-b29397279aa09fb737239c4048c49360.stex"
+path="res://.import/Screen Shot 2023-01-25 at 6.22.10 PM.png-303f168aca8b9718feb790991377beb5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Screen Shot 2023-01-25 at 6.22.10 PM.png"
-dest_files=[ "res://.import/Screen Shot 2023-01-25 at 6.22.10 PM.png-b29397279aa09fb737239c4048c49360.stex" ]
+source_file="res://Dev_MS/Minigame/Assets/Screen Shot 2023-01-25 at 6.22.10 PM.png"
+dest_files=[ "res://.import/Screen Shot 2023-01-25 at 6.22.10 PM.png-303f168aca8b9718feb790991377beb5.stex" ]
 
 [params]
 
