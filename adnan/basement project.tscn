@@ -168,7 +168,7 @@ albedo_texture = ExtResource( 3 )
 [node name="BASEMENT" type="Spatial"]
 
 [node name="StaticBody" type="StaticBody" parent="."]
-transform = Transform( 0.00113447, 0, 0.999999, 0, 1, 0, -0.999999, 0, 0.00113447, 4.98717, 1.02011, 5.03261 )
+transform = Transform( 0.00113447, 0, 0, 0, 1, 0, -0.999999, 0, 0, 4.98717, 1.02011, 5.03261 )
 visible = false
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
@@ -176,6 +176,58 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0111179, -0.775808, -9.7997
 shape = SubResource( 11 )
 
 [node name="MeshInstance3" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0112677, 0.43484, -9.93575 )
+mesh = SubResource( 10 )
+material/0 = SubResource( 12 )
+
+[node name="StaticBody6" type="StaticBody" parent="."]
+transform = Transform( 0.46, 0, 0, 0, 1, 0, 0, 0, 0, -3.28465, 1.02011, 10.4031 )
+visible = false
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0111179, -0.775808, -9.79971 )
+shape = SubResource( 11 )
+
+[node name="MeshInstance3" type="MeshInstance" parent="StaticBody6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0112677, 0.43484, -9.93575 )
+mesh = SubResource( 10 )
+material/0 = SubResource( 12 )
+
+[node name="StaticBody5" type="StaticBody" parent="."]
+transform = Transform( 0.4, 0, 0, 0, 1, 0, 0, 0, 0, 2.98614, 1.02011, 9.99054 )
+visible = false
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0111179, -0.775808, -9.79971 )
+shape = SubResource( 11 )
+
+[node name="MeshInstance3" type="MeshInstance" parent="StaticBody5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0112677, 0.43484, -9.93575 )
+mesh = SubResource( 10 )
+material/0 = SubResource( 12 )
+
+[node name="StaticBody4" type="StaticBody" parent="."]
+transform = Transform( -1, 0, 0, 0, 1, 0, -0.00061086, 0, 0, 0.0834255, 1.02011, 0.10955 )
+visible = false
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0111179, -0.775808, -9.79971 )
+shape = SubResource( 11 )
+
+[node name="MeshInstance3" type="MeshInstance" parent="StaticBody4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0112677, 0.43484, -9.93575 )
+mesh = SubResource( 10 )
+material/0 = SubResource( 12 )
+
+[node name="StaticBody3" type="StaticBody" parent="."]
+transform = Transform( 0.00113447, 0, 0, 0, 1, 0, -0.999999, 0, 0, -4.94008, 1.02011, 5.03261 )
+visible = false
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody3"]
+transform = Transform( 1.28702e-06, 0, 0, 0, 1, 0, -0.00113447, 0, 0, -1.39698e-08, -0.775808, 1.23978e-05 )
+shape = SubResource( 11 )
+
+[node name="MeshInstance3" type="MeshInstance" parent="StaticBody3"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0112677, 0.43484, -9.93575 )
 mesh = SubResource( 10 )
 material/0 = SubResource( 12 )
@@ -217,6 +269,10 @@ shape = SubResource( 9 )
 transform = Transform( 0.00113447, 0, 0.999999, 0, 1, 0, -0.999999, 0, 0.00113447, 4.98717, 1.52426, 4.98443 )
 mesh = SubResource( 5 )
 
+[node name="MeshInstance2" type="MeshInstance" parent="LeftWall"]
+transform = Transform( 0.00113447, 0, 0.999999, 0, 1, 0, -0.999999, 0, 0.00113447, -5.00717, 1.52426, 4.98443 )
+mesh = SubResource( 5 )
+
 [node name="MeshInstance" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.90964, 1.50691, 10.04 )
 mesh = SubResource( 6 )
@@ -238,18 +294,6 @@ skeleton = NodePath("StaticBody")
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.983692, 1.69942 )
 
 [node name="CollisionShape" type="CollisionShape" parent="MeshInstance3/StaticBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00516731, -1.69942 )
-shape = SubResource( 8 )
-
-[node name="MeshInstance4" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.98556, 1.51549, 10.04 )
-mesh = SubResource( 6 )
-skeleton = NodePath("StaticBody")
-
-[node name="StaticBody" type="StaticBody" parent="MeshInstance4"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.983692, 1.69942 )
-
-[node name="CollisionShape" type="CollisionShape" parent="MeshInstance4/StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00516731, -1.69942 )
 shape = SubResource( 8 )
 
