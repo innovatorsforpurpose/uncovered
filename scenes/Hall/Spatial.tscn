@@ -204,7 +204,7 @@ shape = SubResource( 7 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.0215, 6.65417, -38.6718 )
 
 [node name="classroom_chairs_and_Desks" parent="." instance=ExtResource( 24 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5868, 6.90973, -40.1345 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.7114, 6.34781, -40.0806 )
 
 [node name="classroom_teacher_Desk" parent="." instance=ExtResource( 22 )]
 transform = Transform( 0.998921, 0.00336558, -0.0463115, -0.0034327, 0.999993, -0.00136941, 0.0463066, 0.00152693, 0.998926, -17.3227, 6.20063, -34.0485 )
