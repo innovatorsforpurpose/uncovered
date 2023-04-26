@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/6Tp5aB97c.png-0e844bf9f79f029de9f4ef5fb27a7e09.stex"
+path="res://.import/6Tp5aB97c.png-5142f5b966d43db9901a28c503634570.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/6Tp5aB97c.png"
-dest_files=[ "res://.import/6Tp5aB97c.png-0e844bf9f79f029de9f4ef5fb27a7e09.stex" ]
+source_file="res://Dev_MS/Minigame/Assets/6Tp5aB97c.png"
+dest_files=[ "res://.import/6Tp5aB97c.png-5142f5b966d43db9901a28c503634570.stex" ]
 
 [params]
 
