@@ -131,9 +131,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0466938, 6.2102, 18.9819 )
 [node name="Classroom_HALLWAY" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.90735e-06, 7.60065, 12.0768 )
 
-[node name="Classroom_HALLWAY2" parent="." instance=ExtResource( 2 )]
-transform = Transform( -0.999978, -0.00277475, -0.00598657, -0.00277495, 0.999996, 2.54759e-05, 0.00598647, 4.20877e-05, -0.999982, -50.5283, 3.01994, -109.838 )
-
 [node name="Door1" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.4456, 6.612, -42.3292 )
 
