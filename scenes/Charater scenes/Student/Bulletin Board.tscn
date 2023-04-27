@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/Charater scenes/Student/Bulletin Board.gd" type="Script" id=1]
-[ext_resource path="res://other parts of the hallway/Material_077.material" type="Material" id=2]
+[ext_resource path="res://materialassests/Material_077.material" type="Material" id=2]
 
 [sub_resource type="ArrayMesh" id=1]
 blend_shape_mode = 0

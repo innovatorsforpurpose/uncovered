@@ -18,7 +18,7 @@ func play():
 	if is_dialogue_active:
 		return
 	dialogues = load_dialogue()
-	# print(dialogues)
+	print(dialogues)
 	if dialogues == null:
 		return
 	is_dialogue_active = true
@@ -33,9 +33,7 @@ func next_line():
 	# print("line")
 	# print(current_dialogue_id)
 	toggle_the_player(false)
-	$NinePatchRect/Name.text = dialogues[current_dialogue_id]['name']
-	$NinePatchRect/Message.text = dialogues[current_dialogue_id]['text']
-	$NinePatchRect.visible = true
+
 	current_dialogue_id += 1	
 	if  current_dialogue_id >= len(dialogues):
 		current_dialogue_id = len(dialogues) - 1
@@ -43,8 +41,12 @@ func next_line():
 		$NinePatchRect.visible = false
 		toggle_the_player(true)
 		return false 
+	
 	$NinePatchRect/Name.text = dialogues[current_dialogue_id]['name']
 	$NinePatchRect/Message.text = dialogues[current_dialogue_id]['text']
+	$NinePatchRect.visible = true
+	# $NinePatchRect/Name.text = dialogues[current_dialogue_id]['name']
+	# $NinePatchRect/Message.text = dialogues[current_dialogue_id]['text']
 	return true
 
 func load_dialogue():
@@ -97,4 +99,7 @@ func _on_Bulletin_Board_body_entered(body):
 
 
 func _on_Bully_body_entered(body):
+	_ready()
+
+func _on_Door_body_entered(_body):
 	_ready()
