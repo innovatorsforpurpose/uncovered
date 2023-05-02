@@ -245,10 +245,10 @@ mesh = SubResource( 18 )
 skeleton = NodePath("Floor")
 
 [node name="Floor" type="StaticBody" parent="MeshInstance2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.53674e-07, -5.06023 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0108705, -5.06023 )
 
 [node name="CollisionShape" type="CollisionShape" parent="MeshInstance2/Floor"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.51551 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.53674e-07, 3.51551 )
 shape = SubResource( 4 )
 
 [node name="Camera" type="Camera" parent="."]
