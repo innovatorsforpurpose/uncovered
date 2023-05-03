@@ -132,7 +132,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0466938, 6.2102, 18.9819 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.90735e-06, 7.68119, 12.0768 )
 
 [node name="Basement_HALLWAY" parent="." instance=ExtResource( 2 )]
-transform = Transform( -0.99998, 0, 0.00635277, 0, 1, 0, -0.00635277, 0, -0.99998, -49.2084, 1.76146, -110.387 )
+transform = Transform( -0.99998, 0, 0.00635277, 0, 1, 0, -0.00635277, 0, -0.99998, -49.2084, 1.92863, -110.387 )
 
 [node name="Door1" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.4456, 6.612, -42.3292 )
@@ -156,9 +156,6 @@ anims/open = SubResource( 4 )
 
 [node name="Door3" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.6063, 6.612, -66.8241 )
-
-[node name="Classroom_HALLWAY_door" parent="Door3" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00915527, 0.414001, 1.377 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Door3"]
 anims/RESET = SubResource( 5 )
@@ -186,10 +183,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.98928 )
 [node name="Knob2" parent="." instance=ExtResource( 4 )]
 transform = Transform( 0.128424, 0, 0, 0, 0.10088, 0, 0, 0, 0.103299, -22.5564, 7.0205, -52.4807 )
 script = ExtResource( 5 )
-
-[node name="Knob3" parent="." instance=ExtResource( 4 )]
-transform = Transform( 0.128424, 0, 0, 0, 0.10088, 0, 0, 0, 0.103299, -22.5826, 7.01692, -65.4476 )
-script = ExtResource( 6 )
 
 [node name="Timer" type="Timer" parent="."]
 
@@ -236,7 +229,7 @@ transform = Transform( 0.75, 0, 0, 0, 0.937307, 0, 0, 0, 1.6731, -9.74579, 7.471
 transform = Transform( 0.962766, 0, 0, 0, 1, 0, 0, 0, 0.967171, -36.3563, 7.60737, -24.461 )
 
 [node name="BASEMENT" parent="." instance=ExtResource( 29 )]
-transform = Transform( 1, 0, 0, 0, 0.999988, -0.00492181, 0, 0.00492181, 0.999988, -25.1884, -0.0220208, -76.0764 )
+transform = Transform( 1, 0, 0, 0, 0.999988, -0.00492181, 0, 0.00492181, 0.999988, -25.2589, 0.012929, -75.9425 )
 
 [node name="Node2D" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00904, 0 )
@@ -322,6 +315,10 @@ __meta__ = {
 
 [node name="Text" parent="." instance=ExtResource( 31 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -42.7721, 5.98089, -13.6491 )
+
+[node name="Knob3" parent="." instance=ExtResource( 4 )]
+transform = Transform( 0.128424, 0, 0, 0, 0.10088, -2.32831e-10, 0, 1.74623e-10, 0.103299, -22.5826, 11.7132, -74.3176 )
+script = ExtResource( 6 )
 
 [connection signal="timeout" from="MCSRevengeTransport/BossBattleTimer" to="MCSRevengeTransport" method="_on_Timer_timeout"]
 [connection signal="input_event" from="MCSRevengeTransport/CSGSphere/Area" to="MCSRevengeTransport" method="_on_Area_input_event"]

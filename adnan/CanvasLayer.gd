@@ -10,7 +10,7 @@ extends CanvasLayer
 func _ready():
 	# print($NinePatchRect)
 	$InstructionsBackground.visible = false
-	var n = get_node("/root/RootScene/BASEMENT2/ColorRect")
+	var n = get_node("/root/RootScene/BASEMENT/ColorRect")
 	# print(n)
 	get_node("/root/RootScene/BASEMENT/ColorRect").visible = false
 	pass # Replace with function body.
