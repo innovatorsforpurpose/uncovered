@@ -18,7 +18,7 @@ func play():
 	if is_dialogue_active:
 		return
 	dialogues = load_dialogue()
-	print(dialogues)
+	#print(dialogues)
 	if dialogues == null:
 		return
 	is_dialogue_active = true
@@ -51,6 +51,7 @@ func next_line():
 
 func load_dialogue():
 	var file = File.new()
+	print(dialogue_file)
 	if file.file_exists(dialogue_file):
 		#print_debug("filename:" + dialogue_file)
 		var err = file.open(dialogue_file, file.READ)
