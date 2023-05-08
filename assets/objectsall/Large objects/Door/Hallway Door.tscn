@@ -18,6 +18,7 @@ surfaces/0 = {
 }
 
 [sub_resource type="BoxShape" id=5]
+extents = Vector3( 1.50277, 1, 1 )
 
 [node name="Classroom_HALLWAY_door" type="Spatial"]
 transform = Transform( 1.61034, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
@@ -51,11 +52,11 @@ shape = SubResource( 5 )
 
 [node name="VisibilityNotifier" type="VisibilityNotifier" parent="RootNode/Door"]
 transform = Transform( 1.54557, 0, 0, 0, 2.20665, 0, 0, 0, 1.54557, 0, 0, -0.701232 )
-aabb = AABB( -2.59959, -1.56444, -2.83025, 5.19919, 3.12887, 5.6605 )
 
 [node name="Dialogueplayer" parent="RootNode/Door" instance=ExtResource( 1 )]
 follow_viewport_enable = true
 dialogue_file = "res://assets/objectsall/Large objects/Door/Door tutorial.json"
 
-[connection signal="tree_exited" from="RootNode/Door/door#2005" to="RootNode/Door" method="_on_door2005_tree_exited"]
+[connection signal="body_entered" from="RootNode/Door" to="RootNode/Door" method="_on_Door_body_entered"]
+[connection signal="body_exited" from="RootNode/Door" to="RootNode/Door" method="_on_Door_body_exited"]
 [connection signal="ready" from="RootNode/Door/Dialogueplayer" to="RootNode/Door/Dialogueplayer" method="_on_Dialogueplayer_ready"]

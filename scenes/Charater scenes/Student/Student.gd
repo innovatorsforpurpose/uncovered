@@ -15,7 +15,7 @@ func find_and_use_dialogue():
 	if dialogue_player:
 		if not dialogue_player.next_line():
 			# print("now changing target")
-			target = 0
+			target = 1
 			
 
 
