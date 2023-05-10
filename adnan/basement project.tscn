@@ -600,6 +600,7 @@ text = "5"
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.71775, 6.82555 )
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0640452, 0, 54.8097 )
 shape = SubResource( 37 )
 
 [node name="MeshInstance" type="MeshInstance" parent="StaticBody2/CollisionShape"]
