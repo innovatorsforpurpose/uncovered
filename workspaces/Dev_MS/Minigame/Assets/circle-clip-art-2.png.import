@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/circle-clip-art-2.png-71b0e92cadd767d1c736da7afd239064.stex"
+path="res://.import/circle-clip-art-2.png-dcc14c3418210a95c0af8f5bafe4900f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/circle-clip-art-2.png"
-dest_files=[ "res://.import/circle-clip-art-2.png-71b0e92cadd767d1c736da7afd239064.stex" ]
+source_file="res://workspaces/Dev_MS/Minigame/Assets/circle-clip-art-2.png"
+dest_files=[ "res://.import/circle-clip-art-2.png-dcc14c3418210a95c0af8f5bafe4900f.stex" ]
 
 [params]
 

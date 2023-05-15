@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1st34.png-2d887acac8b09bc0eac5d16c42b0efed.stex"
+path="res://.import/1st34.png-1a6bbc633518ebd9904cae027d64c248.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/1st34.png"
-dest_files=[ "res://.import/1st34.png-2d887acac8b09bc0eac5d16c42b0efed.stex" ]
+source_file="res://workspaces/Dev_MS/Minigame/Assets/1st34.png"
+dest_files=[ "res://.import/1st34.png-1a6bbc633518ebd9904cae027d64c248.stex" ]
 
 [params]
 

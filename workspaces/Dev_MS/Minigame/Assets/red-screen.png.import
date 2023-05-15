@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/red-screen.png-c0b904ef24d5b72875bc310bdd515615.stex"
+path="res://.import/red-screen.png-5d9a76d48ec6d2adec5e9823103227d0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/red-screen.png"
-dest_files=[ "res://.import/red-screen.png-c0b904ef24d5b72875bc310bdd515615.stex" ]
+source_file="res://workspaces/Dev_MS/Minigame/Assets/red-screen.png"
+dest_files=[ "res://.import/red-screen.png-5d9a76d48ec6d2adec5e9823103227d0.stex" ]
 
 [params]
 

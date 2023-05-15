@@ -27,5 +27,8 @@ func _process(_delta):
 		if dialogue_player:
 			dialogue_player.reset()
 
+func _on_Door_body_entered(body):
+	pass
 
-
+func _on_Door_body_exited(body):
+	pass

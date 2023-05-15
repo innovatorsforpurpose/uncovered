@@ -11,7 +11,8 @@
 [ext_resource path="res://minigames/BossBattle/material.material" type="Material" id=9]
 [ext_resource path="res://workspaces/adnan/ColorRect.gd" type="Script" id=10]
 [ext_resource path="res://workspaces/adnan/Conversation.gd" type="Script" id=11]
-[ext_resource path="res://Dev_MS/Minigame/Assets/battlenet.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://workspaces/Dev_MS/Minigame/Assets/battlenet.ttf" type="DynamicFontData" id=12]
+
 
 [sub_resource type="BoxShape" id=11]
 extents = Vector3( 4.85664, 2, 0.574707 )

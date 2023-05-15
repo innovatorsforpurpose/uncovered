@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/173782_green-circle-png.png-6726381e9a9325d82be43429941eb53f.stex"
+path="res://.import/173782_green-circle-png.png-35bf9b3719747fddee49bd4b85a81fd0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/173782_green-circle-png.png"
-dest_files=[ "res://.import/173782_green-circle-png.png-6726381e9a9325d82be43429941eb53f.stex" ]
+source_file="res://workspaces/Dev_MS/Minigame/Assets/173782_green-circle-png.png"
+dest_files=[ "res://.import/173782_green-circle-png.png-35bf9b3719747fddee49bd4b85a81fd0.stex" ]
 
 [params]
 
