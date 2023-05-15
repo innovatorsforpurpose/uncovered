@@ -52,7 +52,7 @@ func _unhandled_input(event):
 			rotate_y(-lerp(0, spin, event.relative.x/12.5))
 func set_active(active):
 	player_active = active
-	print(player_active)
+	#print(player_active)
 	set_physics_process(active)
 	set_process(active)
 	set_process_input(active)

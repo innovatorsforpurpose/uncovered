@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/Charater scenes/Student/Student.gd" type="Script" id=1]
-[ext_resource path="res://other parts of the hallway/janitor copy.fbx" type="PackedScene" id=2]
+[ext_resource path="res://Dev_BA/janitor.glb" type="PackedScene" id=2]
 
 [sub_resource type="ArrayMesh" id=3]
 
@@ -24,5 +24,5 @@ shape = SubResource( 2 )
 [node name="VisibilityNotifier" type="VisibilityNotifier" parent="."]
 aabb = AABB( -0.81553, -0.497764, -0.80431, 1.63108, 0.995529, 1.60862 )
 
-[node name="janitor copy" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.45953, 0, 0, 0, 0.45953, 0, 0, 0, 0.45953, 0.184881, 0.440904, 0.391467 )
+[node name="janitor" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.45953, 0, 0, 0, 0.45953, 0, 0, 0, 0.45953, 0.187521, 0.437675, 0.383705 )
