@@ -16,7 +16,7 @@ func find_and_use_dialogue():
 			target = 1
 			
 
-func _on_door2005_tree_exited():
+func _on_Door_tree_exited():
 	dialogue_player = get_node_or_null("Dialogueplayer")
 	if dialogue_player:
 		dialogue_player.reset()
@@ -26,6 +26,7 @@ func _process(_delta):
 		dialogue_player = get_node_or_null("Dialogueplayer")
 		if dialogue_player:
 			dialogue_player.reset()
+
 
 
 
