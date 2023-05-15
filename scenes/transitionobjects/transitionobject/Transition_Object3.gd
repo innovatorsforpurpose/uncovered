@@ -18,7 +18,7 @@ func _process(delta):
 #func _process(delta):
 #	pass
 
-func _on_Area_input_event(camera, event, position, normal, shape_idx):
+func _on_Area_input_event(_camera, event, _position, _normal, _shape_idx):
 	if event is InputEventMouseButton:
 		if event.button_index ==BUTTON_LEFT and event.pressed == true:
 			$CSGSphere.visible = false
@@ -29,6 +29,6 @@ func _on_Area_input_event(camera, event, position, normal, shape_idx):
 
 func _on_Timer_timeout():
 	# print("transition 3")
-	get_tree().change_scene("res://scenes/Hall/CreationScene.tscn")
+	return get_tree().change_scene("res://scenes/Hall/CreationScene.tscn")
 
 #switch to a different game

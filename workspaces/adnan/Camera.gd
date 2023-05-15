@@ -1,6 +1,6 @@
 extends Camera
 
-export (int) var speed = .1
+export (float) var speed = 0.1
 
 var time = 0
 var x_movement = 0;

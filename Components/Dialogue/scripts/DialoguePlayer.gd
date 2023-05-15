@@ -71,35 +71,35 @@ func _on_Mentor_body_entered(_body):
 	_ready()
 
 
-func _on_GC_body_entered(body):
+func _on_GC_body_entered(_body):
 	_ready()
 
 
-func _on_Laura_body_entered(body):
+func _on_Laura_body_entered(_body):
 	_ready()
 
 
 
-func _on_Student_body_entered(body):
+func _on_Student_body_entered(_body):
 	_ready()
 
 
-func _on_StudentI_body_entered(body):
+func _on_StudentI_body_entered(_body):
 	_ready()
 
 
-func _on_StudentII_body_entered(body):
+func _on_StudentII_body_entered(_body):
 	_ready()
 
 
-func _on_IDesk_body_entered(body): 
+func _on_IDesk_body_entered(_body): 
 	_ready()
 
-func _on_Bulletin_Board_body_entered(body):
+func _on_Bulletin_Board_body_entered(_body):
 	_ready()
 
 
-func _on_Bully_body_entered(body):
+func _on_Bully_body_entered(_body):
 	_ready()
 
 func _on_Door_body_entered(_body):

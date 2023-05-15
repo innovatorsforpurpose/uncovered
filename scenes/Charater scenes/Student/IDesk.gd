@@ -14,7 +14,7 @@ func find_and_use_dialogue():
 
 
 
-func _on_IDesk_body_exited(body):
+func _on_IDesk_body_exited(_body):
 	dialogue_player = get_node_or_null("Dialogueplayer")
 	if dialogue_player:
 		dialogue_player.reset()
