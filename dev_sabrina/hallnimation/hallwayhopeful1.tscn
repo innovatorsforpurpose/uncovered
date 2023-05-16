@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=2]
+[gd_scene load_steps=60 format=2]
 
 [ext_resource path="res://dev_sabrina/hallnimation/assets/art/board copy.png" type="Texture" id=1]
 [ext_resource path="res://dev_sabrina/hallnimation/assets/art/Screen Shot 2023-04-10 at 3.32.47 PM.png" type="Texture" id=2]
@@ -562,6 +562,9 @@ tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = PoolRealArray( 0, 1, -3.81973, 0.135506, 9.333, 0.0157073, 0, 0, 0.999877, 1.16048, 1.16048, 1.16048, 0.0666667, 1, -3.81973, 0.135323, 9.333, 0.0155681, 0, 0, 0.999879, 1.16048, 1.16048, 1.16048, 0.133333, 1, -3.81973, 0.134296, 9.333, 0.0147863, 0, 0, 0.999891, 1.16048, 1.16048, 1.16048, 0.2, 1, -3.81973, 0.131537, 9.333, 0.0126873, 0, 0, 0.99992, 1.16048, 1.16048, 1.16048, 0.266667, 1, -3.81973, 0.126119, 9.333, 0.0085641, 0, 0, 0.999963, 1.16048, 1.16048, 1.16048, 0.333333, 1, -3.81973, 0.117491, 9.333, 0.0019988, 0, 0, 0.999998, 1.16048, 1.16048, 1.16048, 0.4, 1, -3.81973, 0.104135, 9.333, -0.00816518, 0, 0, 0.999967, 1.16048, 1.16048, 1.16048, 0.466667, 1, -3.81973, 0.0858812, 9.333, -0.0220547, 0, 0, 0.999757, 1.16048, 1.16048, 1.16048, 0.533333, 1, -3.81973, 0.0615049, 9.333, -0.0405956, 0, 0, 0.999176, 1.16048, 1.16048, 1.16048, 0.6, 1, -3.81973, 0.0300776, 9.333, -0.064478, 0, 0, 0.997919, 1.16048, 1.16048, 1.16048, 0.666667, 1, -3.81973, -0.0391847, 9.333, -0.131103, -0.0154668, -0.00801883, 0.991216, 1.16048, 1.16048, 1.16048, 0.733333, 1, -3.81973, -0.232946, 9.333, -0.289474, -0.0629402, -0.0540871, 0.953582, 1.16048, 1.16048, 1.16048, 0.8, 1, -3.81973, -0.480514, 9.333, -0.379123, -0.0822419, -0.102941, 0.915918, 1.16048, 1.16048, 1.16048, 0.933333, 1, -3.81973, -0.980915, 9.333, -0.414869, -0.0750826, -0.161024, 0.892366, 1.16048, 1.16048, 1.16048, 1.13333, 1, -3.81973, -1.66738, 9.333, -0.446832, -0.0614039, -0.219454, 0.865107, 1.16048, 1.16048, 1.16048, 1.26667, 1, -3.81973, -2.0646, 9.333, -0.458588, -0.053841, -0.243109, 0.853051, 1.16048, 1.16048, 1.16048, 1.4, 1, -3.81973, -2.40025, 9.333, -0.465482, -0.0485626, -0.257683, 0.845321, 1.16048, 1.16048, 1.16048, 1.46667, 1, -3.81973, -2.54153, 9.333, -0.467616, -0.0467818, -0.262316, 0.842815, 1.16048, 1.16048, 1.16048, 1.53333, 1, -3.81973, -2.6627, 9.333, -0.469069, -0.0455251, -0.265505, 0.841076, 1.16048, 1.16048, 1.16048, 1.6, 1, -3.81973, -2.76218, 9.333, -0.469988, -0.044712, -0.267537, 0.839962, 1.16048, 1.16048, 1.16048, 1.66667, 1, -3.81973, -2.84035, 9.333, -0.470523, -0.0442317, -0.268726, 0.839308, 1.16048, 1.16048, 1.16048, 1.73333, 1, -3.81973, -2.892, 9.333, -0.470746, -0.0440296, -0.269223, 0.839034, 1.16048, 1.16048, 1.16048, 1.8, 1, -3.81973, -2.91947, 9.333, -0.470814, -0.0439677, -0.269375, 0.838951, 1.16048, 1.16048, 1.16048, 1.86667, 1, -3.81973, -2.92379, 9.333, -0.470818, -0.0439644, -0.269383, 0.838946, 1.16048, 1.16048, 1.16048, 2.08333, 1, -3.81973, -2.92379, 9.333, -0.470818, -0.0439644, -0.269383, 0.838946, 1.16048, 1.16048, 1.16048 )
 
+[sub_resource type="BoxShape" id=44]
+extents = Vector3( 2.99294, 2.95882, 1 )
+
 [node name="hallwayhopeful" type="Spatial"]
 
 [node name="painting" type="MeshInstance" parent="."]
@@ -570,92 +573,92 @@ mesh = SubResource( 2 )
 material/0 = SubResource( 30 )
 
 [node name="floorpart1" type="MeshInstance" parent="."]
-transform = Transform( 1.01224, 0, 0, 0, 1, 0, 0, 0, 1, -3.16081, 0.453375, -1.70226 )
+transform = Transform( 1.01224, 0, 0, 0, 1, 0, 0, 0, 1, -3.16081, 0.266486, -1.70226 )
 mesh = SubResource( 1 )
 material/0 = SubResource( 29 )
 
 [node name="FloorPart2" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.08947, 0.453375, 13.8226 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.08947, 0.42235, 13.8226 )
 mesh = SubResource( 7 )
 material/0 = SubResource( 34 )
 
 [node name="floorcube000" type="MeshInstance" parent="."]
-transform = Transform( 1.16047, -0.00416394, 0, 0.00416394, 1.16047, 0, 0, 0, 1.16048, -2.29533, 0.460446, 4.8267 )
+transform = Transform( 1.16047, -0.00416394, 0, 0.00416394, 1.16047, 0, 0, 0, 1.16048, -2.29533, 0.412567, 4.8267 )
 mesh = SubResource( 3 )
 material/0 = SubResource( 31 )
 
 [node name="floorcube001" type="MeshInstance" parent="."]
-transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -5.34746, 0.435143, 4.81377 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -5.34746, 0.387264, 4.81377 )
 mesh = SubResource( 4 )
 material/0 = SubResource( 32 )
 
 [node name="floorcube002" type="MeshInstance" parent="."]
-transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -0.770183, 0.584202, 4.83686 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -0.770183, 0.536323, 4.83686 )
 mesh = SubResource( 5 )
 material/0 = SubResource( 33 )
 
 [node name="floorcube003" type="MeshInstance" parent="."]
-transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -3.82669, 0.452588, 4.82009 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -3.82669, 0.404709, 4.82009 )
 mesh = SubResource( 6 )
 material/0 = SubResource( 31 )
 
 [node name="floorcube007" type="MeshInstance" parent="."]
-transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -2.28837, 0.46649, 6.28051 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -2.28837, 0.418611, 6.28051 )
 mesh = SubResource( 8 )
 material/0 = SubResource( 31 )
 
 [node name="floorcube006" type="MeshInstance" parent="."]
-transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -5.3405, 0.431746, 6.25742 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -5.3405, 0.383867, 6.25742 )
 mesh = SubResource( 9 )
 material/0 = SubResource( 31 )
 
 [node name="floorcube005" type="MeshInstance" parent="."]
-transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -0.763223, 0.580804, 6.28051 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -0.763223, 0.532925, 6.28051 )
 mesh = SubResource( 10 )
 material/0 = SubResource( 31 )
 
 [node name="floorcube004" type="MeshInstance" parent="."]
-transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -3.81973, 0.459881, 6.26374 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -3.81973, 0.412002, 6.26374 )
 mesh = SubResource( 11 )
 material/0 = SubResource( 35 )
 
 [node name="floorcube011" type="MeshInstance" parent="."]
-transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -3.81973, 0.459881, 7.80535 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -3.81973, 0.412002, 7.80535 )
 mesh = SubResource( 12 )
 material/0 = SubResource( 31 )
 
 [node name="floorcube010" type="MeshInstance" parent="."]
-transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -0.763223, 0.580804, 7.82211 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -0.763223, 0.532925, 7.82211 )
 mesh = SubResource( 13 )
 material/0 = SubResource( 36 )
 
 [node name="floorcube009" type="MeshInstance" parent="."]
-transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -5.3405, 0.431746, 7.79903 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -5.3405, 0.383867, 7.79903 )
 mesh = SubResource( 14 )
 material/0 = SubResource( 35 )
 
 [node name="floorcube008" type="MeshInstance" parent="."]
-transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -2.28837, 0.469282, 7.799 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -2.28837, 0.421403, 7.799 )
 mesh = SubResource( 15 )
 material/0 = SubResource( 31 )
 
 [node name="floorcube015" type="MeshInstance" parent="."]
-transform = Transform( 1.16048, 0, 0, 0, 1.16037, -0.0162028, 0, 0.0162028, 1.16037, -2.28837, 0.436181, 9.334 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16037, -0.0162028, 0, 0.0162028, 1.16037, -2.28837, 0.388302, 9.334 )
 mesh = SubResource( 16 )
 material/0 = SubResource( 36 )
 
 [node name="floorcube014" type="MeshInstance" parent="."]
-transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -5.3405, 0.426211, 9.3441 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -5.3405, 0.378332, 9.3441 )
 mesh = SubResource( 17 )
 material/0 = SubResource( 31 )
 
 [node name="floorcube013" type="MeshInstance" parent="."]
-transform = Transform( 1.16048, 0, 0, 0, 1.16013, -0.0283531, 0, 0.0283531, 1.16013, -0.763223, 0.35534, 9.35095 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16013, -0.0283531, 0, 0.0283531, 1.16013, -0.763223, 0.307461, 9.35095 )
 mesh = SubResource( 18 )
 material/0 = SubResource( 31 )
 
 [node name="floorcube012" type="MeshInstance" parent="."]
-transform = Transform( 1.16048, 0, 0, 0, 1.15991, -0.0364515, 0, 0.0364515, 1.15991, -3.81973, 0.414345, 9.333 )
+transform = Transform( 1.16048, 0, 0, 0, 1.15991, -0.0364515, 0, 0.0364515, 1.15991, -3.81973, 0.366466, 9.333 )
 mesh = SubResource( 19 )
 material/0 = SubResource( 31 )
 
@@ -675,7 +678,7 @@ mesh = SubResource( 22 )
 material/0 = SubResource( 39 )
 
 [node name="darkness_simulator" type="MeshInstance" parent="."]
-transform = Transform( 4.1621, 0, 0, 0, 4.1621, 0, 0, 0, 4.1621, -3.87669, -4.15178, 7.46738 )
+transform = Transform( 4.162, 0, 0, 0, 0.1, 0, 0, 0, 4.162, -3.87669, -0.129048, 7.46738 )
 mesh = SubResource( 23 )
 
 [node name="painting003" type="MeshInstance" parent="."]
@@ -849,10 +852,18 @@ spot_angle = 86.28
 spot_angle_attenuation = 0.659
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "Animation"
 anims/Animation = SubResource( 28 )
 script = ExtResource( 43 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.16081, 1.66457, 14.3987 )
 script = ExtResource( 42 )
+
+[node name="Area2" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.8419, 1.66457, 14.3987 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Area2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.6908, 0, -5.18653 )
+shape = SubResource( 44 )
+
+[connection signal="body_shape_entered" from="Area2" to="AnimationPlayer" method="_on_Area2_body_shape_entered"]

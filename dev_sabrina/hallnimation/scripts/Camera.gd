@@ -27,6 +27,6 @@ func _physics_process(_delta):
 	if Input.is_action_pressed("ui_front"):
 		transform.origin.z -= speed
 		pass
-	if Input.is_action_pressed(" ui_back"):
+	if Input.is_action_pressed("ui_back"):
 		transform.origin.z += speed
 		pass

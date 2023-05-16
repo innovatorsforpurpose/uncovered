@@ -124,7 +124,7 @@ tracks/0/keys = {
 radius = 0.967927
 
 [sub_resource type="BoxShape" id=7]
-extents = Vector3( 95.2636, 4.48513, 62.9712 )
+extents = Vector3( 95.2636, 0.001, 62.9712 )
 
 [node name="RootScene" type="Spatial"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0466938, 6.2102, 18.9819 )
@@ -199,7 +199,7 @@ script = ExtResource( 6 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.6082, 2.94819, -1.29853 )
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.82414, -1.45742, -1.71461 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.78874, 3.10639, 21.577 )
 shape = SubResource( 7 )
 
 [node name="Classroom" parent="." instance=ExtResource( 18 )]
@@ -231,7 +231,7 @@ transform = Transform( 0.75, 0, 0, 0, 0.937307, 0, 0, 0, 1.6731, -9.74579, 7.471
 transform = Transform( 0.962766, 0, 0, 0, 1, 0, 0, 0, 0.967171, -36.3563, 7.60737, -24.461 )
 
 [node name="BASEMENT" parent="." instance=ExtResource( 29 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.8567, 2.69703, -75.4432 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.8853, 2.66375, -51.024 )
 
 [node name="Node2D" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00904, 0 )
