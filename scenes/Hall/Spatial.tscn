@@ -130,11 +130,10 @@ extents = Vector3( 95.2636, 0.001, 62.9712 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0466938, 6.2102, 18.9819 )
 
 [node name="Classroom_HALLWAY" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.90735e-06, 7.60065, 12.0768 )
-visible = false
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.90735e-06, 7.68119, 12.0768 )
 
-[node name="Classroom_HALLWAY2" parent="." instance=ExtResource( 2 )]
-transform = Transform( -0.00991333, -0.00277475, 0.999947, 1.45785e-05, 0.999996, 0.00277503, -0.999951, 4.20874e-05, -0.00991325, 12.8519, 3.63728, -96.4565 )
+[node name="Basement_HALLWAY" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.99998, 0, 0.00635277, 0, 1, 0, -0.00635277, 0, -0.99998, -49.2084, 1.92863, -110.387 )
 
 [node name="Door1" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.4368, 6.612, -43.2668 )
@@ -202,6 +201,12 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.6082, 2.94819, -1.29853 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.78874, 3.10639, 21.577 )
 shape = SubResource( 7 )
 
+[node name="StaticBody3" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.6082, -2.66825, -15.3158 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.824, 2.85998, -1.715 )
+
 [node name="Classroom" parent="." instance=ExtResource( 18 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.0215, 6.65417, -38.6718 )
 
@@ -239,7 +244,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00904, 0 )
 [node name="Enviroment" type="CanvasLayer" parent="Node2D"]
 
 [node name="MC" parent="Node2D/Enviroment" instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.517, 12.458, 11.11 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.4143, 12.458, -41.1132 )
 
 [node name="Mentor" parent="Node2D/Enviroment" instance=ExtResource( 8 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -24.4266, 12.458, 4.39275 )
