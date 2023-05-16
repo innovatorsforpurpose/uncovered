@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Screen Shot 2023-04-10 at 3.32.28 PM.png-acc498e0e776e9f78cb818699ec9f788.s3tc.stex"
-path.etc2="res://.import/Screen Shot 2023-04-10 at 3.32.28 PM.png-acc498e0e776e9f78cb818699ec9f788.etc2.stex"
+path.s3tc="res://.import/Screen Shot 2023-04-10 at 3.32.28 PM.png-4445344e50ad6423757b9f8a360f6965.s3tc.stex"
+path.etc2="res://.import/Screen Shot 2023-04-10 at 3.32.28 PM.png-4445344e50ad6423757b9f8a360f6965.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://hallnimation/assets/art/Screen Shot 2023-04-10 at 3.32.28 PM.png"
-dest_files=[ "res://.import/Screen Shot 2023-04-10 at 3.32.28 PM.png-acc498e0e776e9f78cb818699ec9f788.s3tc.stex", "res://.import/Screen Shot 2023-04-10 at 3.32.28 PM.png-acc498e0e776e9f78cb818699ec9f788.etc2.stex" ]
+source_file="res://dev_sabrina/hallnimation/assets/art/Screen Shot 2023-04-10 at 3.32.28 PM.png"
+dest_files=[ "res://.import/Screen Shot 2023-04-10 at 3.32.28 PM.png-4445344e50ad6423757b9f8a360f6965.s3tc.stex", "res://.import/Screen Shot 2023-04-10 at 3.32.28 PM.png-4445344e50ad6423757b9f8a360f6965.etc2.stex" ]
 
 [params]
 

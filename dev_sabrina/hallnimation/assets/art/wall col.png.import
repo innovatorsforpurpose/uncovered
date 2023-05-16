@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/wall col.png-6ce5da82849dde4b43f315157d0ce9c1.s3tc.stex"
-path.etc2="res://.import/wall col.png-6ce5da82849dde4b43f315157d0ce9c1.etc2.stex"
+path.s3tc="res://.import/wall col.png-d4a7c5dc0f43df629add25ad3a3abd81.s3tc.stex"
+path.etc2="res://.import/wall col.png-d4a7c5dc0f43df629add25ad3a3abd81.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://hallnimation/assets/art/wall col.png"
-dest_files=[ "res://.import/wall col.png-6ce5da82849dde4b43f315157d0ce9c1.s3tc.stex", "res://.import/wall col.png-6ce5da82849dde4b43f315157d0ce9c1.etc2.stex" ]
+source_file="res://dev_sabrina/hallnimation/assets/art/wall col.png"
+dest_files=[ "res://.import/wall col.png-d4a7c5dc0f43df629add25ad3a3abd81.s3tc.stex", "res://.import/wall col.png-d4a7c5dc0f43df629add25ad3a3abd81.etc2.stex" ]
 
 [params]
 

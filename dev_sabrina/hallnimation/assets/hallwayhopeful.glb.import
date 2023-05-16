@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/hallwayhopeful.glb-833537a15da739313591fabf09b79fcb.scn"
+path="res://.import/hallwayhopeful.glb-2cd1131a2b43d8eae6fd7de2e97b2fa5.scn"
 
 [deps]
 
-source_file="res://hallnimation/assets/hallwayhopeful.glb"
-dest_files=[ "res://.import/hallwayhopeful.glb-833537a15da739313591fabf09b79fcb.scn" ]
+source_file="res://dev_sabrina/hallnimation/assets/hallwayhopeful.glb"
+dest_files=[ "res://.import/hallwayhopeful.glb-2cd1131a2b43d8eae6fd7de2e97b2fa5.scn" ]
 
 [params]
 

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/floorfallunc.png-504980ba31445881ff1a9fb5c2e9f6cf.s3tc.stex"
-path.etc2="res://.import/floorfallunc.png-504980ba31445881ff1a9fb5c2e9f6cf.etc2.stex"
+path.s3tc="res://.import/floorfallunc.png-0e0f3f880ce4feb6620844e267f8663a.s3tc.stex"
+path.etc2="res://.import/floorfallunc.png-0e0f3f880ce4feb6620844e267f8663a.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://hallnimation/assets/art/floorfallunc.png"
-dest_files=[ "res://.import/floorfallunc.png-504980ba31445881ff1a9fb5c2e9f6cf.s3tc.stex", "res://.import/floorfallunc.png-504980ba31445881ff1a9fb5c2e9f6cf.etc2.stex" ]
+source_file="res://dev_sabrina/hallnimation/assets/art/floorfallunc.png"
+dest_files=[ "res://.import/floorfallunc.png-0e0f3f880ce4feb6620844e267f8663a.s3tc.stex", "res://.import/floorfallunc.png-0e0f3f880ce4feb6620844e267f8663a.etc2.stex" ]
 
 [params]
 

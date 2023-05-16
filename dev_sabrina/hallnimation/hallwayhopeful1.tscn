@@ -1,66 +1,20 @@
-[gd_scene load_steps=87 format=2]
+[gd_scene load_steps=59 format=2]
 
-[ext_resource path="res://hallnimation/assets/art/board copy.png" type="Texture" id=1]
-[ext_resource path="res://hallnimation/assets/art/Screen Shot 2023-04-10 at 3.32.47 PM.png" type="Texture" id=2]
-[ext_resource path="res://hallnimation/assets/art/dance copy.png" type="Texture" id=3]
-[ext_resource path="res://hallnimation/assets/art/poster1 copy.png" type="Texture" id=4]
-[ext_resource path="res://hallnimation/assets/art/ceiling2 copy.png" type="Texture" id=5]
-[ext_resource path="res://hallnimation/assets/art/Screen Shot 2023-04-10 at 3.32.28 PM.png" type="Texture" id=6]
-[ext_resource path="res://hallnimation/assets/art/Screen Shot 2023-04-24 at 4.35.41 PM.png" type="Texture" id=7]
-[ext_resource path="res://hallnimation/assets/Material_015.material" type="Material" id=8]
-[ext_resource path="res://hallnimation/assets/Material_006.material" type="Material" id=9]
-[ext_resource path="res://hallnimation/assets/art/wall col.png" type="Texture" id=10]
-[ext_resource path="res://hallnimation/assets/art/2blocksmoon.png" type="Texture" id=11]
-[ext_resource path="res://hallnimation/assets/Material.material" type="Material" id=12]
-[ext_resource path="res://hallnimation/assets/art/floorUnc.png" type="Texture" id=13]
-[ext_resource path="res://hallnimation/assets/art/floorfallunc.png" type="Texture" id=14]
-[ext_resource path="res://hallnimation/assets/Material_013.material" type="Material" id=15]
-[ext_resource path="res://hallnimation/assets/Material_018.material" type="Material" id=16]
-[ext_resource path="res://hallnimation/assets/Material_007.material" type="Material" id=17]
-[ext_resource path="res://hallnimation/assets/Material_011.material" type="Material" id=18]
-[ext_resource path="res://hallnimation/assets/Material_034.material" type="Material" id=19]
-[ext_resource path="res://hallnimation/assets/Material_031.material" type="Material" id=20]
-[ext_resource path="res://hallnimation/assets/Material_019.material" type="Material" id=21]
-[ext_resource path="res://hallnimation/assets/Material_010.material" type="Material" id=22]
-[ext_resource path="res://hallnimation/assets/art/2blocksabstract.png" type="Texture" id=23]
-[ext_resource path="res://hallnimation/assets/art/Screen Shot 2023-04-10 at 3.32.36 PM.png" type="Texture" id=24]
-[ext_resource path="res://hallnimation/assets/Material_003.material" type="Material" id=25]
-[ext_resource path="res://hallnimation/assets/Material_017.material" type="Material" id=26]
-[ext_resource path="res://hallnimation/assets/Material_029.material" type="Material" id=27]
-[ext_resource path="res://hallnimation/assets/Material_009.material" type="Material" id=28]
-[ext_resource path="res://hallnimation/assets/Material_016.material" type="Material" id=29]
-[ext_resource path="res://hallnimation/assets/art/cityscape copy.png" type="Texture" id=30]
-[ext_resource path="res://hallnimation/assets/Material_004.material" type="Material" id=31]
-[ext_resource path="res://hallnimation/assets/Material_008.material" type="Material" id=32]
-[ext_resource path="res://hallnimation/assets/Material_026.material" type="Material" id=33]
-[ext_resource path="res://hallnimation/assets/Material_027.material" type="Material" id=34]
-[ext_resource path="res://hallnimation/assets/Material_028.material" type="Material" id=35]
-[ext_resource path="res://hallnimation/assets/Material_005.material" type="Material" id=36]
-[ext_resource path="res://hallnimation/assets/Material_030.material" type="Material" id=37]
-[ext_resource path="res://hallnimation/assets/Material_033.material" type="Material" id=38]
-[ext_resource path="res://hallnimation/assets/Material_014.material" type="Material" id=39]
-[ext_resource path="res://hallnimation/assets/Material_012.material" type="Material" id=40]
-[ext_resource path="res://hallnimation/assets/Material_002.material" type="Material" id=41]
-[ext_resource path="res://hallnimation/scripts/Camera.gd" type="Script" id=42]
-[ext_resource path="res://hallnimation/scripts/AnimationPlayer.gd" type="Script" id=43]
-
-[sub_resource type="ArrayMesh" id=1]
-resource_name = "hallwayhopeful_Cube003"
-surfaces/0 = {
-"aabb": AABB( -3.19572, -0.131944, -12.8025, 6.39758, 0.308572, 18.554 ),
-"array_data": PoolByteArray( 177, 134, 76, 192, 20, 2, 3, 190, 214, 242, 183, 64, 129, 0, 0, 127, 0, 54, 0, 60, 177, 134, 76, 192, 20, 2, 3, 190, 214, 242, 183, 64, 0, 130, 126, 63, 0, 48, 0, 52, 177, 134, 76, 192, 20, 2, 3, 190, 214, 242, 183, 64, 0, 2, 254, 126, 0, 54, 0, 0, 177, 134, 76, 192, 104, 253, 230, 61, 214, 242, 183, 64, 129, 0, 0, 127, 0, 57, 0, 60, 177, 134, 76, 192, 104, 253, 230, 61, 214, 242, 183, 64, 0, 126, 130, 63, 0, 59, 0, 52, 177, 134, 76, 192, 104, 253, 230, 61, 214, 242, 183, 64, 0, 2, 2, 126, 0, 57, 0, 0, 177, 134, 76, 192, 20, 2, 3, 190, 40, 205, 76, 193, 129, 0, 0, 127, 0, 54, 0, 58, 177, 134, 76, 192, 20, 2, 3, 190, 40, 205, 76, 193, 0, 130, 126, 63, 0, 48, 0, 56, 177, 134, 76, 192, 20, 2, 3, 190, 40, 205, 76, 193, 129, 126, 0, 127, 0, 54, 0, 58, 47, 101, 76, 64, 52, 28, 7, 190, 14, 12, 184, 64, 0, 130, 126, 63, 0, 54, 0, 52, 47, 101, 76, 64, 52, 28, 7, 190, 14, 12, 184, 64, 0, 2, 5, 125, 0, 54, 0, 52, 47, 101, 76, 64, 52, 28, 7, 190, 12, 215, 76, 193, 0, 130, 126, 63, 0, 54, 0, 56, 47, 101, 76, 64, 52, 28, 7, 190, 12, 215, 76, 193, 129, 126, 0, 127, 0, 54, 0, 56, 55, 235, 76, 64, 20, 222, 52, 62, 238, 162, 183, 64, 0, 126, 130, 63, 0, 57, 0, 52, 55, 235, 76, 64, 20, 222, 52, 62, 238, 162, 183, 64, 0, 2, 6, 125, 0, 57, 0, 52, 47, 101, 76, 64, 40, 194, 240, 61, 12, 215, 76, 193, 0, 126, 130, 63, 0, 57, 0, 56, 47, 101, 76, 64, 40, 194, 240, 61, 12, 215, 76, 193, 129, 126, 0, 127, 0, 57, 0, 56, 177, 134, 76, 192, 104, 253, 230, 61, 40, 205, 76, 193, 129, 0, 0, 127, 0, 57, 0, 58, 177, 134, 76, 192, 104, 253, 230, 61, 40, 205, 76, 193, 0, 126, 130, 63, 0, 59, 0, 56, 177, 134, 76, 192, 104, 253, 230, 61, 40, 205, 76, 193, 129, 126, 0, 127, 0, 57, 0, 58 ),
-"array_index_data": PoolByteArray( 10, 0, 5, 0, 14, 0, 10, 0, 2, 0, 5, 0, 0, 0, 17, 0, 3, 0, 0, 0, 6, 0, 17, 0, 7, 0, 9, 0, 11, 0, 7, 0, 1, 0, 9, 0, 15, 0, 4, 0, 18, 0, 15, 0, 13, 0, 4, 0, 8, 0, 16, 0, 19, 0, 8, 0, 12, 0, 16, 0 ),
-"blend_shape_data": [  ],
-"format": 2194711,
-"index_count": 30,
-"material": ExtResource( 16 ),
-"primitive": 4,
-"skeleton_aabb": [  ],
-"vertex_count": 20
-}
-
-[sub_resource type="SpatialMaterial" id=29]
-albedo_texture = ExtResource( 13 )
+[ext_resource path="res://dev_sabrina/hallnimation/assets/art/board copy.png" type="Texture" id=1]
+[ext_resource path="res://dev_sabrina/hallnimation/assets/art/Screen Shot 2023-04-10 at 3.32.47 PM.png" type="Texture" id=2]
+[ext_resource path="res://dev_sabrina/hallnimation/assets/art/dance copy.png" type="Texture" id=3]
+[ext_resource path="res://dev_sabrina/hallnimation/assets/art/poster1 copy.png" type="Texture" id=4]
+[ext_resource path="res://dev_sabrina/hallnimation/assets/art/ceiling2 copy.png" type="Texture" id=5]
+[ext_resource path="res://dev_sabrina/hallnimation/assets/art/Screen Shot 2023-04-24 at 4.35.41 PM.png" type="Texture" id=7]
+[ext_resource path="res://dev_sabrina/hallnimation/assets/art/wall col.png" type="Texture" id=10]
+[ext_resource path="res://dev_sabrina/hallnimation/assets/art/2blocksmoon.png" type="Texture" id=11]
+[ext_resource path="res://dev_sabrina/hallnimation/assets/art/floorUnc.png" type="Texture" id=13]
+[ext_resource path="res://dev_sabrina/hallnimation/assets/art/floorfallunc.png" type="Texture" id=14]
+[ext_resource path="res://dev_sabrina/hallnimation/assets/art/2blocksabstract.png" type="Texture" id=23]
+[ext_resource path="res://dev_sabrina/hallnimation/assets/art/Screen Shot 2023-04-10 at 3.32.28 PM.png" type="Texture" id=24]
+[ext_resource path="res://dev_sabrina/hallnimation/assets/art/cityscape copy.png" type="Texture" id=30]
+[ext_resource path="res://dev_sabrina/hallnimation/scripts/Camera.gd" type="Script" id=42]
+[ext_resource path="res://dev_sabrina/hallnimation/scripts/AnimationPlayer.gd" type="Script" id=43]
 
 [sub_resource type="ArrayMesh" id=2]
 resource_name = "hallwayhopeful_Cube007"
@@ -71,7 +25,6 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 36,
-"material": ExtResource( 21 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 24
@@ -79,6 +32,23 @@ surfaces/0 = {
 
 [sub_resource type="SpatialMaterial" id=30]
 albedo_texture = ExtResource( 4 )
+
+[sub_resource type="ArrayMesh" id=1]
+resource_name = "hallwayhopeful_Cube003"
+surfaces/0 = {
+"aabb": AABB( -3.19572, -0.131944, -12.8025, 6.39758, 0.308572, 18.554 ),
+"array_data": PoolByteArray( 177, 134, 76, 192, 20, 2, 3, 190, 214, 242, 183, 64, 129, 0, 0, 127, 0, 54, 0, 60, 177, 134, 76, 192, 20, 2, 3, 190, 214, 242, 183, 64, 0, 130, 126, 63, 0, 48, 0, 52, 177, 134, 76, 192, 20, 2, 3, 190, 214, 242, 183, 64, 0, 2, 254, 126, 0, 54, 0, 0, 177, 134, 76, 192, 104, 253, 230, 61, 214, 242, 183, 64, 129, 0, 0, 127, 0, 57, 0, 60, 177, 134, 76, 192, 104, 253, 230, 61, 214, 242, 183, 64, 0, 126, 130, 63, 0, 59, 0, 52, 177, 134, 76, 192, 104, 253, 230, 61, 214, 242, 183, 64, 0, 2, 2, 126, 0, 57, 0, 0, 177, 134, 76, 192, 20, 2, 3, 190, 40, 205, 76, 193, 129, 0, 0, 127, 0, 54, 0, 58, 177, 134, 76, 192, 20, 2, 3, 190, 40, 205, 76, 193, 0, 130, 126, 63, 0, 48, 0, 56, 177, 134, 76, 192, 20, 2, 3, 190, 40, 205, 76, 193, 129, 126, 0, 127, 0, 54, 0, 58, 47, 101, 76, 64, 52, 28, 7, 190, 14, 12, 184, 64, 0, 130, 126, 63, 0, 54, 0, 52, 47, 101, 76, 64, 52, 28, 7, 190, 14, 12, 184, 64, 0, 2, 5, 125, 0, 54, 0, 52, 47, 101, 76, 64, 52, 28, 7, 190, 12, 215, 76, 193, 0, 130, 126, 63, 0, 54, 0, 56, 47, 101, 76, 64, 52, 28, 7, 190, 12, 215, 76, 193, 129, 126, 0, 127, 0, 54, 0, 56, 55, 235, 76, 64, 20, 222, 52, 62, 238, 162, 183, 64, 0, 126, 130, 63, 0, 57, 0, 52, 55, 235, 76, 64, 20, 222, 52, 62, 238, 162, 183, 64, 0, 2, 6, 125, 0, 57, 0, 52, 47, 101, 76, 64, 40, 194, 240, 61, 12, 215, 76, 193, 0, 126, 130, 63, 0, 57, 0, 56, 47, 101, 76, 64, 40, 194, 240, 61, 12, 215, 76, 193, 129, 126, 0, 127, 0, 57, 0, 56, 177, 134, 76, 192, 104, 253, 230, 61, 40, 205, 76, 193, 129, 0, 0, 127, 0, 57, 0, 58, 177, 134, 76, 192, 104, 253, 230, 61, 40, 205, 76, 193, 0, 126, 130, 63, 0, 59, 0, 56, 177, 134, 76, 192, 104, 253, 230, 61, 40, 205, 76, 193, 129, 126, 0, 127, 0, 57, 0, 58 ),
+"array_index_data": PoolByteArray( 10, 0, 5, 0, 14, 0, 10, 0, 2, 0, 5, 0, 0, 0, 17, 0, 3, 0, 0, 0, 6, 0, 17, 0, 7, 0, 9, 0, 11, 0, 7, 0, 1, 0, 9, 0, 15, 0, 4, 0, 18, 0, 15, 0, 13, 0, 4, 0, 8, 0, 16, 0, 19, 0, 8, 0, 12, 0, 16, 0 ),
+"blend_shape_data": [  ],
+"format": 2194711,
+"index_count": 30,
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 20
+}
+
+[sub_resource type="SpatialMaterial" id=29]
+albedo_texture = ExtResource( 13 )
 
 [sub_resource type="ArrayMesh" id=7]
 resource_name = "hallwayhopeful_Cube025"
@@ -89,7 +59,6 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 30,
-"material": ExtResource( 9 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 20
@@ -107,7 +76,6 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 30,
-"material": ExtResource( 29 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 20
@@ -125,14 +93,13 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 30,
-"material": ExtResource( 41 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 20
 }
 
 [sub_resource type="SpatialMaterial" id=32]
-albedo_texture = ExtResource( 6 )
+albedo_texture = ExtResource( 24 )
 
 [sub_resource type="ArrayMesh" id=5]
 resource_name = "hallwayhopeful_FC002"
@@ -143,7 +110,6 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 30,
-"material": ExtResource( 26 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 20
@@ -161,7 +127,6 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 30,
-"material": ExtResource( 8 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 20
@@ -176,7 +141,6 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 30,
-"material": ExtResource( 15 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 20
@@ -191,7 +155,6 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 30,
-"material": ExtResource( 39 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 20
@@ -206,7 +169,6 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 30,
-"material": ExtResource( 40 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 20
@@ -221,14 +183,13 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 30,
-"material": ExtResource( 25 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 20
 }
 
 [sub_resource type="SpatialMaterial" id=35]
-albedo_texture = ExtResource( 6 )
+albedo_texture = ExtResource( 24 )
 
 [sub_resource type="ArrayMesh" id=12]
 resource_name = "hallwayhopeful_FC011"
@@ -239,7 +200,6 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 30,
-"material": ExtResource( 28 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 20
@@ -254,7 +214,6 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 30,
-"material": ExtResource( 36 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 20
@@ -272,7 +231,6 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 30,
-"material": ExtResource( 31 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 20
@@ -287,7 +245,6 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 30,
-"material": ExtResource( 22 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 20
@@ -302,7 +259,6 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 30,
-"material": ExtResource( 12 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 20
@@ -317,7 +273,6 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 30,
-"material": ExtResource( 17 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 20
@@ -332,7 +287,6 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 30,
-"material": ExtResource( 18 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 20
@@ -347,7 +301,6 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 30,
-"material": ExtResource( 32 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 20
@@ -362,7 +315,6 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 36,
-"material": ExtResource( 33 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 24
@@ -380,7 +332,6 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 36,
-"material": ExtResource( 34 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 24
@@ -398,7 +349,6 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 36,
-"material": ExtResource( 35 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 24
@@ -416,7 +366,6 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 30,
-"material": ExtResource( 27 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 20
@@ -431,7 +380,6 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 84,
-"material": ExtResource( 37 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 56
@@ -449,7 +397,6 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 84,
-"material": ExtResource( 38 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 56
@@ -467,7 +414,6 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 36,
-"material": ExtResource( 19 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 24
@@ -485,7 +431,6 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 312,
-"material": ExtResource( 20 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 164
@@ -619,98 +564,98 @@ tracks/16/keys = PoolRealArray( 0, 1, -3.81973, 0.135506, 9.333, 0.0157073, 0, 0
 
 [node name="hallwayhopeful" type="Spatial"]
 
-[node name="floorpart1" type="MeshInstance" parent="."]
-transform = Transform( 1.01224, 0, 0, 0, 1, 0, 0, 0, 1, -3.16081, 0.174536, -1.70226 )
-mesh = SubResource( 1 )
-material/0 = SubResource( 29 )
-
 [node name="painting" type="MeshInstance" parent="."]
 transform = Transform( -1.3834e-07, -1.16048, 0, 1.16048, -1.3834e-07, 0, 0, 0, 1.16048, -0.240599, 2.18269, 6.3451 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 30 )
 
+[node name="floorpart1" type="MeshInstance" parent="."]
+transform = Transform( 1.01224, 0, 0, 0, 1, 0, 0, 0, 1, -3.16081, 0.453375, -1.70226 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 29 )
+
 [node name="FloorPart2" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.08947, 0.174536, 13.8226 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.08947, 0.453375, 13.8226 )
 mesh = SubResource( 7 )
 material/0 = SubResource( 34 )
 
 [node name="floorcube000" type="MeshInstance" parent="."]
-transform = Transform( 1.16047, -0.00416394, 0, 0.00416394, 1.16047, 0, 0, 0, 1.16048, -2.29533, 0.181607, 4.8267 )
+transform = Transform( 1.16047, -0.00416394, 0, 0.00416394, 1.16047, 0, 0, 0, 1.16048, -2.29533, 0.460446, 4.8267 )
 mesh = SubResource( 3 )
 material/0 = SubResource( 31 )
 
 [node name="floorcube001" type="MeshInstance" parent="."]
-transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -5.34746, 0.156304, 4.81377 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -5.34746, 0.435143, 4.81377 )
 mesh = SubResource( 4 )
 material/0 = SubResource( 32 )
 
 [node name="floorcube002" type="MeshInstance" parent="."]
-transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -0.770183, 0.305363, 4.83686 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -0.770183, 0.584202, 4.83686 )
 mesh = SubResource( 5 )
 material/0 = SubResource( 33 )
 
 [node name="floorcube003" type="MeshInstance" parent="."]
-transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -3.82669, 0.173749, 4.82009 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -3.82669, 0.452588, 4.82009 )
 mesh = SubResource( 6 )
 material/0 = SubResource( 31 )
 
 [node name="floorcube007" type="MeshInstance" parent="."]
-transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -2.28837, 0.187651, 6.28051 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -2.28837, 0.46649, 6.28051 )
 mesh = SubResource( 8 )
 material/0 = SubResource( 31 )
 
 [node name="floorcube006" type="MeshInstance" parent="."]
-transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -5.3405, 0.152907, 6.25742 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -5.3405, 0.431746, 6.25742 )
 mesh = SubResource( 9 )
 material/0 = SubResource( 31 )
 
 [node name="floorcube005" type="MeshInstance" parent="."]
-transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -0.763223, 0.301965, 6.28051 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -0.763223, 0.580804, 6.28051 )
 mesh = SubResource( 10 )
 material/0 = SubResource( 31 )
 
 [node name="floorcube004" type="MeshInstance" parent="."]
-transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -3.81973, 0.181042, 6.26374 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -3.81973, 0.459881, 6.26374 )
 mesh = SubResource( 11 )
 material/0 = SubResource( 35 )
 
 [node name="floorcube011" type="MeshInstance" parent="."]
-transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -3.81973, 0.181042, 7.80535 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -3.81973, 0.459881, 7.80535 )
 mesh = SubResource( 12 )
 material/0 = SubResource( 31 )
 
 [node name="floorcube010" type="MeshInstance" parent="."]
-transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -0.763223, 0.301965, 7.82211 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -0.763223, 0.580804, 7.82211 )
 mesh = SubResource( 13 )
 material/0 = SubResource( 36 )
 
 [node name="floorcube009" type="MeshInstance" parent="."]
-transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -5.3405, 0.152907, 7.79903 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -5.3405, 0.431746, 7.79903 )
 mesh = SubResource( 14 )
 material/0 = SubResource( 35 )
 
 [node name="floorcube008" type="MeshInstance" parent="."]
-transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -2.28837, 0.190443, 7.799 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -2.28837, 0.469282, 7.799 )
 mesh = SubResource( 15 )
 material/0 = SubResource( 31 )
 
 [node name="floorcube015" type="MeshInstance" parent="."]
-transform = Transform( 1.16048, 0, 0, 0, 1.16037, -0.0162028, 0, 0.0162028, 1.16037, -2.28837, 0.157342, 9.334 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16037, -0.0162028, 0, 0.0162028, 1.16037, -2.28837, 0.436181, 9.334 )
 mesh = SubResource( 16 )
 material/0 = SubResource( 36 )
 
 [node name="floorcube014" type="MeshInstance" parent="."]
-transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -5.3405, 0.147372, 9.3441 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -5.3405, 0.426211, 9.3441 )
 mesh = SubResource( 17 )
 material/0 = SubResource( 31 )
 
 [node name="floorcube013" type="MeshInstance" parent="."]
-transform = Transform( 1.16048, 0, 0, 0, 1.16013, -0.0283531, 0, 0.0283531, 1.16013, -0.763223, 0.0765009, 9.35095 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16013, -0.0283531, 0, 0.0283531, 1.16013, -0.763223, 0.35534, 9.35095 )
 mesh = SubResource( 18 )
 material/0 = SubResource( 31 )
 
 [node name="floorcube012" type="MeshInstance" parent="."]
-transform = Transform( 1.16048, 0, 0, 0, 1.15991, -0.0364515, 0, 0.0364515, 1.15991, -3.81973, 0.135506, 9.333 )
+transform = Transform( 1.16048, 0, 0, 0, 1.15991, -0.0364515, 0, 0.0364515, 1.15991, -3.81973, 0.414345, 9.333 )
 mesh = SubResource( 19 )
 material/0 = SubResource( 31 )
 
@@ -753,10 +698,8 @@ transform = Transform( 3.05568, 0, 0, 0, 3.05568, 0, 0, 0, 3.05568, -1.56481, 2.
 mesh = SubResource( 27 )
 material/0 = SubResource( 43 )
 
-[node name="Node" type="Node" parent="."]
-
-[node name="Area" type="SpotLight" parent="Node"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.09433, 4.45849, 7.83451 )
+[node name="Area" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -3.09433, 4.45849, 7.83451 )
 light_energy = 1.992
 light_indirect_energy = 3.469
 light_specular = 3.823
@@ -765,8 +708,8 @@ spot_attenuation = 3.0
 spot_angle = 86.28
 spot_angle_attenuation = 0.659
 
-[node name="Area001" type="SpotLight" parent="Node"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.95257, 4.45849, 7.83451 )
+[node name="Area001" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -4.95257, 4.45849, 7.83451 )
 light_energy = 1.992
 light_indirect_energy = 3.469
 light_specular = 3.823
@@ -775,8 +718,8 @@ spot_attenuation = 3.0
 spot_angle = 86.28
 spot_angle_attenuation = 0.659
 
-[node name="Area002" type="SpotLight" parent="Node"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.23925, 4.45849, 7.83451 )
+[node name="Area002" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1.23925, 4.45849, 7.83451 )
 light_energy = 1.992
 light_indirect_energy = 3.469
 light_specular = 3.823
@@ -785,8 +728,8 @@ spot_attenuation = 3.0
 spot_angle = 86.28
 spot_angle_attenuation = 0.659
 
-[node name="Area005" type="SpotLight" parent="Node"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.09433, 4.45849, -0.361308 )
+[node name="Area005" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -3.09433, 4.45849, -0.361308 )
 light_energy = 1.992
 light_indirect_energy = 3.469
 light_specular = 3.823
@@ -795,8 +738,8 @@ spot_attenuation = 3.0
 spot_angle = 86.28
 spot_angle_attenuation = 0.659
 
-[node name="Area004" type="SpotLight" parent="Node"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.95257, 4.45849, -0.361308 )
+[node name="Area004" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -4.95257, 4.45849, -0.361308 )
 light_energy = 1.992
 light_indirect_energy = 3.469
 light_specular = 3.823
@@ -805,8 +748,8 @@ spot_attenuation = 3.0
 spot_angle = 86.28
 spot_angle_attenuation = 0.659
 
-[node name="Area003" type="SpotLight" parent="Node"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.23925, 4.45849, -0.361308 )
+[node name="Area003" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1.23925, 4.45849, -0.361308 )
 light_energy = 1.992
 light_indirect_energy = 3.469
 light_specular = 3.823
@@ -815,8 +758,8 @@ spot_attenuation = 3.0
 spot_angle = 86.28
 spot_angle_attenuation = 0.659
 
-[node name="Area008" type="SpotLight" parent="Node"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.23925, 4.45849, -0.361308 )
+[node name="Area008" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1.23925, 4.45849, -0.361308 )
 light_energy = 1.992
 light_indirect_energy = 3.469
 light_specular = 3.823
@@ -825,8 +768,8 @@ spot_attenuation = 3.0
 spot_angle = 86.28
 spot_angle_attenuation = 0.659
 
-[node name="Area007" type="SpotLight" parent="Node"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.95257, 4.45849, -0.361308 )
+[node name="Area007" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -4.95257, 4.45849, -0.361308 )
 light_energy = 1.992
 light_indirect_energy = 3.469
 light_specular = 3.823
@@ -835,8 +778,8 @@ spot_attenuation = 3.0
 spot_angle = 86.28
 spot_angle_attenuation = 0.659
 
-[node name="Area006" type="SpotLight" parent="Node"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.09433, 4.45849, -0.361308 )
+[node name="Area006" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -3.09433, 4.45849, -0.361308 )
 light_energy = 1.992
 light_indirect_energy = 3.469
 light_specular = 3.823
@@ -845,8 +788,8 @@ spot_attenuation = 3.0
 spot_angle = 86.28
 spot_angle_attenuation = 0.659
 
-[node name="Area011" type="SpotLight" parent="Node"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.23925, 4.45849, -8.22227 )
+[node name="Area011" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1.23925, 4.45849, -8.22227 )
 light_energy = 1.992
 light_indirect_energy = 3.469
 light_specular = 3.823
@@ -855,8 +798,8 @@ spot_attenuation = 3.0
 spot_angle = 86.28
 spot_angle_attenuation = 0.659
 
-[node name="Area010" type="SpotLight" parent="Node"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.95257, 4.45849, -8.22227 )
+[node name="Area010" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -4.95257, 4.45849, -8.22227 )
 light_energy = 1.992
 light_indirect_energy = 3.469
 light_specular = 3.823
@@ -865,8 +808,8 @@ spot_attenuation = 3.0
 spot_angle = 86.28
 spot_angle_attenuation = 0.659
 
-[node name="Area009" type="SpotLight" parent="Node"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.09433, 4.45849, -8.22227 )
+[node name="Area009" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -3.09433, 4.45849, -8.22227 )
 light_energy = 1.992
 light_indirect_energy = 3.469
 light_specular = 3.823
@@ -875,8 +818,8 @@ spot_attenuation = 3.0
 spot_angle = 86.28
 spot_angle_attenuation = 0.659
 
-[node name="Area014" type="SpotLight" parent="Node"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.09433, 4.45849, 15.9031 )
+[node name="Area014" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -3.09433, 4.45849, 15.9031 )
 light_energy = 1.992
 light_indirect_energy = 3.469
 light_specular = 3.823
@@ -885,8 +828,8 @@ spot_attenuation = 3.0
 spot_angle = 86.28
 spot_angle_attenuation = 0.659
 
-[node name="Area013" type="SpotLight" parent="Node"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.95257, 4.45849, 15.9031 )
+[node name="Area013" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -4.95257, 4.45849, 15.9031 )
 light_energy = 1.992
 light_indirect_energy = 3.469
 light_specular = 3.823
@@ -895,8 +838,8 @@ spot_attenuation = 3.0
 spot_angle = 86.28
 spot_angle_attenuation = 0.659
 
-[node name="Area012" type="SpotLight" parent="Node"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.23925, 4.45849, 15.9031 )
+[node name="Area012" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1.23925, 4.45849, 15.9031 )
 light_energy = 1.992
 light_indirect_energy = 3.469
 light_specular = 3.823

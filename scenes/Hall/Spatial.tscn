@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://scenes/Hall/Transition_Object_BossBattle.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Hall/Classroom_HALLWAY.tscn" type="PackedScene" id=2]
@@ -18,6 +18,7 @@
 [ext_resource path="res://Scenes/Charater scenes/Student/Bulletin Board.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Scenes/Charater scenes/Student/Bully.tscn" type="PackedScene" id=17]
 [ext_resource path="res://other parts of the hallway/Classroom.fbx" type="PackedScene" id=18]
+[ext_resource path="res://dev_sabrina/hallnimation/hallwayhopeful1.tscn" type="PackedScene" id=19]
 [ext_resource path="res://other parts of the hallway/Classroom_hallway_main_dead_end_door.fbx" type="PackedScene" id=21]
 [ext_resource path="res://other parts of the hallway/classroom_teacher_Desk.fbx" type="PackedScene" id=22]
 [ext_resource path="res://other parts of the hallway/Main_Table.fbx" type="PackedScene" id=23]
@@ -130,15 +131,16 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0466938, 6.2102, 18.9819 )
 
 [node name="Classroom_HALLWAY" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.90735e-06, 7.60065, 12.0768 )
+visible = false
 
 [node name="Classroom_HALLWAY2" parent="." instance=ExtResource( 2 )]
 transform = Transform( -0.00991333, -0.00277475, 0.999947, 1.45785e-05, 0.999996, 0.00277503, -0.999951, 4.20874e-05, -0.00991325, 12.8519, 3.63728, -96.4565 )
 
 [node name="Door1" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.4456, 6.612, -42.3292 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.4368, 6.612, -43.2668 )
 
 [node name="Classroom_HALLWAY_door" parent="Door1" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00915527, 0.414001, 1.377 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.294161, 0.342646, 1.38141 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Door1"]
 anims/RESET = SubResource( 1 )
@@ -155,17 +157,17 @@ anims/RESET = SubResource( 3 )
 anims/open = SubResource( 4 )
 
 [node name="Door3" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.6063, 6.612, -66.8241 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.5043, 6.85337, -64.2323 )
 
 [node name="Classroom_HALLWAY_door" parent="Door3" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00915527, 0.414001, 1.377 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.265951, 0, 1.40448 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Door3"]
 anims/RESET = SubResource( 5 )
 anims/open = SubResource( 6 )
 
 [node name="Knob1" parent="." instance=ExtResource( 4 )]
-transform = Transform( 0.128424, 0, 0, 0, 0.10088, 0, 0, 0, 0.103299, -22.4065, 7.01012, -40.8946 )
+transform = Transform( 0.128424, 0, 0, 0, 0.10088, 0, 0, 0, 0.103299, -22.7392, 6.95947, -41.8746 )
 
 [node name="MCSRevengeTransport" type="Spatial" parent="."]
 transform = Transform( 0.128424, 0, 0, 0, 0.10088, 0, 0, 0, 0.103299, -32.6436, 7.72239, -24.4908 )
@@ -188,7 +190,7 @@ transform = Transform( 0.128424, 0, 0, 0, 0.10088, 0, 0, 0, 0.103299, -22.5564, 
 script = ExtResource( 5 )
 
 [node name="Knob3" parent="." instance=ExtResource( 4 )]
-transform = Transform( 0.128424, 0, 0, 0, 0.10088, 0, 0, 0, 0.103299, -22.5826, 7.01692, -65.4476 )
+transform = Transform( 0.128424, 0, 0, 0, 0.10088, 0, 0, 0, 0.103299, -22.7804, 6.83834, -62.826 )
 script = ExtResource( 6 )
 
 [node name="Timer" type="Timer" parent="."]
@@ -301,9 +303,6 @@ transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -28.41, 12.458, -3.21564
 follow_viewport_enable = true
 dialogue_file = "res://Scenes/Charater scenes/Student/jsons/Bully.json"
 
-[node name="Knob4" parent="." instance=ExtResource( 4 )]
-transform = Transform( 0.0164927, 0, 0, 0, 0.0101768, 0, 0, 0, 0.0106707, -25.284, 7.7173, -45.119 )
-
 [node name="Whiteboard" parent="." instance=ExtResource( 30 )]
 transform = Transform( 0.999963, 0, 0.00863927, 0, 1, 0, -0.00863927, 0, 0.999963, -17.416, 7.99107, -31.8914 )
 
@@ -315,6 +314,9 @@ __meta__ = {
 
 [node name="Text" parent="." instance=ExtResource( 31 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -42.7721, 5.98089, -13.6491 )
+
+[node name="hallwayhopeful" parent="." instance=ExtResource( 19 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.5041, 5.11673, -52.8757 )
 
 [connection signal="timeout" from="MCSRevengeTransport/BossBattleTimer" to="MCSRevengeTransport" method="_on_Timer_timeout"]
 [connection signal="input_event" from="MCSRevengeTransport/CSGSphere/Area" to="MCSRevengeTransport" method="_on_Area_input_event"]

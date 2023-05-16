@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/poster1 copy.png-712ce3952814ca9bee98088859cde486.s3tc.stex"
-path.etc2="res://.import/poster1 copy.png-712ce3952814ca9bee98088859cde486.etc2.stex"
+path.s3tc="res://.import/poster1 copy.png-5d64fe5f3c130f56ad62e232273b5a5d.s3tc.stex"
+path.etc2="res://.import/poster1 copy.png-5d64fe5f3c130f56ad62e232273b5a5d.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://hallnimation/assets/art/poster1 copy.png"
-dest_files=[ "res://.import/poster1 copy.png-712ce3952814ca9bee98088859cde486.s3tc.stex", "res://.import/poster1 copy.png-712ce3952814ca9bee98088859cde486.etc2.stex" ]
+source_file="res://dev_sabrina/hallnimation/assets/art/poster1 copy.png"
+dest_files=[ "res://.import/poster1 copy.png-5d64fe5f3c130f56ad62e232273b5a5d.s3tc.stex", "res://.import/poster1 copy.png-5d64fe5f3c130f56ad62e232273b5a5d.etc2.stex" ]
 
 [params]
 

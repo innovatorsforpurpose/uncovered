@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/2blocksmoon.png-27ff29ebe1dd3c458cb035ad4ba7856e.s3tc.stex"
-path.etc2="res://.import/2blocksmoon.png-27ff29ebe1dd3c458cb035ad4ba7856e.etc2.stex"
+path.s3tc="res://.import/2blocksmoon.png-bdc4d30d96389e4825f1c78c6d31c8ef.s3tc.stex"
+path.etc2="res://.import/2blocksmoon.png-bdc4d30d96389e4825f1c78c6d31c8ef.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://hallnimation/assets/art/2blocksmoon.png"
-dest_files=[ "res://.import/2blocksmoon.png-27ff29ebe1dd3c458cb035ad4ba7856e.s3tc.stex", "res://.import/2blocksmoon.png-27ff29ebe1dd3c458cb035ad4ba7856e.etc2.stex" ]
+source_file="res://dev_sabrina/hallnimation/assets/art/2blocksmoon.png"
+dest_files=[ "res://.import/2blocksmoon.png-bdc4d30d96389e4825f1c78c6d31c8ef.s3tc.stex", "res://.import/2blocksmoon.png-bdc4d30d96389e4825f1c78c6d31c8ef.etc2.stex" ]
 
 [params]
 
