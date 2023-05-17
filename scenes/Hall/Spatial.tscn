@@ -129,11 +129,8 @@ extents = Vector3( 95.2636, 0.001, 62.9712 )
 [node name="RootScene" type="Spatial"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0466938, 6.2102, 18.9819 )
 
-[node name="Classroom_HALLWAY" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.90735e-06, 7.68119, 12.0768 )
-
 [node name="Basement_HALLWAY" parent="." instance=ExtResource( 2 )]
-transform = Transform( -0.99998, 0, 0.00635277, 0, 1, 0, -0.00635277, 0, -0.99998, -49.2084, 1.92863, -110.387 )
+transform = Transform( -0.99998, 0, 0.00635277, 0, 1, 0, -0.00635277, 0, -0.99998, -49.372, 2.501, -84.6347 )
 
 [node name="Door1" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.4368, 6.612, -43.2668 )
@@ -201,6 +198,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.6082, 2.94819, -1.29853 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.78874, 3.10639, 21.577 )
 shape = SubResource( 7 )
 
+[node name="CollisionShape2" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.78874, -2.02676, -5.75442 )
+shape = SubResource( 7 )
+
 [node name="StaticBody3" type="StaticBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.6082, -2.66825, -15.3158 )
 
@@ -236,7 +237,7 @@ transform = Transform( 0.75, 0, 0, 0, 0.937307, 0, 0, 0, 1.6731, -9.74579, 7.471
 transform = Transform( 0.962766, 0, 0, 0, 1, 0, 0, 0, 0.967171, -36.3563, 7.60737, -24.461 )
 
 [node name="BASEMENT" parent="." instance=ExtResource( 29 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.8853, 2.66375, -51.024 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.8853, 0.415175, -51.024 )
 
 [node name="Node2D" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00904, 0 )
@@ -244,7 +245,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00904, 0 )
 [node name="Enviroment" type="CanvasLayer" parent="Node2D"]
 
 [node name="MC" parent="Node2D/Enviroment" instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.4143, 12.458, -41.1132 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.4143, 12.458, 11.5894 )
 
 [node name="Mentor" parent="Node2D/Enviroment" instance=ExtResource( 8 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -24.4266, 12.458, 4.39275 )

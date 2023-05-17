@@ -20,16 +20,19 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
+var instructions_shown = false
 
 func _on_Area_body_entered(body):
-	if body.name == "MC":
+	print("Instructions Shown")
+	print(instructions_shown)
+	if body.name == "MC" and instructions_shown == false:
+		print("got here")
+		instructions_shown = true
 		get_node("/root/RootScene/BASEMENT/ColorRect").visible = true
 		get_node("/root/RootScene/BASEMENT/ColorRect/ColorRectTimer/").start(3)
 		get_node("/root/RootScene/BASEMENT/go to vent text")
 		$InstructionsBackground.visible = true
-
-	get_node("/root/RootScene/BASEMENT/Instructions/InstructionsTimer").start(1)
+		#get_node("/root/RootScene/BASEMENT/Instructions/InstructionsTimer").start(1)
 
 
 func _on_InstructionsTimer_timeout():

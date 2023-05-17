@@ -12,14 +12,18 @@ func _ready():
 
 
 func _physics_process(delta):
+	print(paused)
 	pass
 	if !paused:
+		print("got here")
 		if color.a > 0.3:	
 			color = Color(0, 0, 0, color.a - delta/10)# Cd every frame. 'delta' is the elapsed time since the previous frame.
 			#print(color)
 		else:
-			#queue_free()
+			visible = false
+			paused = true
 			get_node("/root/RootScene/BASEMENT/go to vent text").visible = true
+			
 			
 #func _process(delta):
 #	pass
