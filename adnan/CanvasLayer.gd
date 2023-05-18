@@ -23,10 +23,10 @@ func _ready():
 var instructions_shown = false
 
 func _on_Area_body_entered(body):
-	print("Instructions Shown")
-	print(instructions_shown)
+	# print("Instructions Shown")
+	# print(instructions_shown)
 	if body.name == "MC" and instructions_shown == false:
-		print("got here")
+		# print("got here")
 		instructions_shown = true
 		get_node("/root/RootScene/BASEMENT/ColorRect").visible = true
 		get_node("/root/RootScene/BASEMENT/ColorRect/ColorRectTimer/").start(3)

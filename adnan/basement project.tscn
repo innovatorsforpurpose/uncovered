@@ -132,10 +132,10 @@ border_color = Color( 0.972549, 0.968627, 0.968627, 1 )
 size = 25
 font_data = ExtResource( 12 )
 
-[sub_resource type="Gradient" id=28]
+[sub_resource type="Gradient" id=42]
 
 [sub_resource type="GradientTexture" id=29]
-gradient = SubResource( 28 )
+gradient = SubResource( 42 )
 
 [sub_resource type="BoxShape" id=30]
 extents = Vector3( 1.38692, 1, 1 )
@@ -313,6 +313,7 @@ transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -4.05081, 2.52233, 9.877
 transform = Transform( -0.999961, 0, -0.0088487, 0, 1, 0, 0.0088487, 0, -0.999961, -0.0305386, -0.0479746, -1.41861 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 margin_left = -33.0
 margin_top = -50.0
 margin_right = 1069.0
@@ -323,6 +324,7 @@ script = ExtResource( 10 )
 [node name="ColorRectTimer" type="Timer" parent="ColorRect"]
 
 [node name="Instructions" type="CanvasLayer" parent="."]
+visible = false
 script = ExtResource( 7 )
 
 [node name="InstructionsTimer" type="Timer" parent="Instructions"]
@@ -356,6 +358,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0243594, -0.0486282, -0.0563
 shape = SubResource( 27 )
 
 [node name="go to vent text" type="CanvasLayer" parent="."]
+visible = false
 script = ExtResource( 8 )
 
 [node name="Node2D" type="Node2D" parent="go to vent text"]
@@ -423,6 +426,7 @@ transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -1.50762, 0.758185, 1.96011 )
 shape = SubResource( 30 )
 
 [node name="Conversation" type="CanvasLayer" parent="."]
+visible = false
 script = ExtResource( 11 )
 
 [node name="Node2D" type="Node2D" parent="Conversation"]
@@ -600,7 +604,7 @@ text = "5"
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.71775, 6.82555 )
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0640452, 0, 54.8097 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0640452, 0, 0.0114937 )
 shape = SubResource( 37 )
 
 [node name="MeshInstance" type="MeshInstance" parent="StaticBody2/CollisionShape"]

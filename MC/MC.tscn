@@ -22,7 +22,7 @@ skeleton = NodePath("")
 [node name="CameraPivot" type="Spatial" parent="."]
 
 [node name="Camera" type="Camera" parent="CameraPivot"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.471495, -0.386913 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.16447, -0.386913 )
 current = true
 fov = 53.4731
 size = 20.0

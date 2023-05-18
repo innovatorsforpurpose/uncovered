@@ -12,10 +12,10 @@ func _ready():
 
 
 func _physics_process(delta):
-	print(paused)
+	# print(paused)
 	pass
 	if !paused:
-		print("got here")
+		# print("got here")
 		if color.a > 0.3:	
 			color = Color(0, 0, 0, color.a - delta/10)# Cd every frame. 'delta' is the elapsed time since the previous frame.
 			#print(color)

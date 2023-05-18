@@ -13,6 +13,8 @@ var flag = 1
 var initial_position
 func _ready():
 	initial_position = get_global_transform().origin
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	
 func get_input():
 	if Input.is_action_pressed("shift"):
 		speed = sprintspeed
@@ -30,12 +32,12 @@ func get_input():
 		velocity += transform.basis.x * speed
 	if Input.is_action_pressed("move_left"):
 		velocity += -transform.basis.x * speed
-	if Input.is_action_pressed("mouse_toggle") and flag:
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-		flag = 0
-	elif Input.is_action_pressed("mouse_toggle"):
+		
+	if Input.is_action_just_pressed("mouse_toggle") and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		# Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	elif Input.is_action_just_pressed("mouse_toggle"):
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		
 	velocity.y = vy
 func _physics_process(delta):
 	if is_on_floor() and Input.is_action_just_pressed("jump"):
