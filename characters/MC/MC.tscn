@@ -2,7 +2,6 @@
 
 [ext_resource path="res://characters/MC/MC.gd" type="Script" id=1]
 
-
 [sub_resource type="BoxShape" id=1]
 
 [sub_resource type="CubeMesh" id=2]

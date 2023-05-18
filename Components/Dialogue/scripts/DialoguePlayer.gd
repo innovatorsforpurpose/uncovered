@@ -45,8 +45,8 @@ func next_line():
 	$NinePatchRect/Name.text = dialogues[current_dialogue_id]['name']
 	$NinePatchRect/Message.text = dialogues[current_dialogue_id]['text']
 	$NinePatchRect.visible = true
-	# $NinePatchRect/Name.text = dialogues[current_dialogue_id]['name']
-	# $NinePatchRect/Message.text = dialogues[current_dialogue_id]['text']
+	$NinePatchRect/Name.text = dialogues[current_dialogue_id]['name']
+	$NinePatchRect/Message.text = dialogues[current_dialogue_id]['text']
 	return true
 
 func load_dialogue():
