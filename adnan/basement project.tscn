@@ -203,7 +203,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0111179, -0.775808, -9.7997
 shape = SubResource( 11 )
 
 [node name="MeshInstance3" type="MeshInstance" parent="StaticBody5"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0112677, 0.43484, -9.93575 )
+transform = Transform( 0.16, 0, 0, 0, 1, 0, 0, 0, 0, -0.0018028, 0.43484, 0 )
 mesh = SubResource( 10 )
 material/0 = SubResource( 12 )
 
