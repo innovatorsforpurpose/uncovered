@@ -1,13 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/Charater scenes/GC/GC.gd" type="Script" id=1]
 [ext_resource path="res://workspaces/Dev_BA/janitor.glb" type="PackedScene" id=2]
 
-
 [sub_resource type="ArrayMesh" id=3]
 
-[sub_resource type="BoxShape" id=2]
-extents = Vector3( 5.45215, 1.30142, 4.77371 )
+[sub_resource type="ConvexPolygonShape" id=2]
+points = PoolVector3Array( -1, -1, -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, -1, 1, 1, 1, -1, -1, -1, -1, 1, -1, 1, -1 )
+
+[sub_resource type="PhysicsMaterial" id=5]
+
+[sub_resource type="BoxShape" id=6]
 
 [node name="GC" type="Area"]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
@@ -18,17 +21,44 @@ __meta__ = {
 }
 
 [node name="C" type="Spatial" parent="."]
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="G" type="MeshInstance" parent="C"]
 mesh = SubResource( 3 )
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="Collision3D" type="CollisionShape" parent="."]
-transform = Transform( 0.315431, 0, 0, 0, 1, 0, 0, 0, 0.315431, 0, 0, 0 )
+transform = Transform( 2.00884, 0, 0, 0, 2.96849, 0, 0, 0, 2.00884, 0, 0, 0 )
 shape = SubResource( 2 )
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="VisibilityNotifier" type="VisibilityNotifier" parent="."]
-transform = Transform( 0.380412, 0, 0, 0, 1.85088, 0, 0, 0, 0.380412, 0, 0, 0 )
-aabb = AABB( -5.56889, -1, -5.0753, 11.1378, 2, 10.1506 )
+transform = Transform( 0.987266, 0, 0, 0, 1.12228, 0, 0, 0, 0.918878, 0, 0, 0 )
+aabb = AABB( -2.63968, -2.99662, -2.9541, 5.27938, 5.99324, 5.90821 )
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="janitor" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0677013, 0, 0.406425 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="StaticBody" type="StaticBody" parent="."]
+physics_material_override = SubResource( 5 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 2.78261, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 6 )
+__meta__ = {
+"_editor_description_": ""
+}
