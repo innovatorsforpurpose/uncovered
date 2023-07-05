@@ -1,11 +1,9 @@
-[gd_scene load_steps=52 format=2]
+[gd_scene load_steps=50 format=2]
 
 [ext_resource path="res://adnan/Camera.gd" type="Script" id=1]
-[ext_resource path="res://2.glb" type="PackedScene" id=2]
 [ext_resource path="res://other parts of the hallway/photos_2022_5_17_fst_wall-decay-scratches (1).jpg" type="Texture" id=3]
 [ext_resource path="res://steampunk_lamps.glb" type="PackedScene" id=4]
 [ext_resource path="res://adnan/asphalt_02_diff_4k.jpg" type="Texture" id=5]
-[ext_resource path="res://hiii.glb" type="PackedScene" id=6]
 [ext_resource path="res://adnan/CanvasLayer.gd" type="Script" id=7]
 [ext_resource path="res://adnan/go to vent text.gd" type="Script" id=8]
 [ext_resource path="res://material.material" type="Material" id=9]
@@ -305,12 +303,6 @@ shape = SubResource( 8 )
 
 [node name="steampunk_lamps" parent="." instance=ExtResource( 4 )]
 transform = Transform( 0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 2.90018, -0.0070684, 0.198902 )
-
-[node name="vent" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -4.05081, 2.52233, 9.87746 )
-
-[node name="hiii" parent="vent" instance=ExtResource( 6 )]
-transform = Transform( -0.999961, 0, -0.0088487, 0, 1, 0, 0.0088487, 0, -0.999961, -0.0305386, -0.0479746, -1.41861 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
