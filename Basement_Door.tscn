@@ -50,7 +50,6 @@ script = ExtResource( 2 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -0.070418, 0, -0.997518, 0, 1, 0, 0.997518, 0, -0.070418, -2.15153, 0, 0.656528 )
-current = true
 
 [node name="Area" type="Area" parent="."]
 
