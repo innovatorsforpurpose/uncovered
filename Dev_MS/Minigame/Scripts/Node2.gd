@@ -33,3 +33,12 @@ func _on_red_area_body_entered(_body):
 
 func _on_yellow_area_body_entered(_body):
 	pass # Replace with function body.
+
+
+func _on_Area_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+
+	pass # Replace with function body.
+
+
+func _on_Area_body_entered(body):
+	pass # Replace with function body.

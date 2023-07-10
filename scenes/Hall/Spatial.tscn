@@ -262,7 +262,7 @@ transform = Transform( 0.75, 0, 0, 0, 0.937307, 0, 0, 0, 1.6731, -9.74579, 7.471
 transform = Transform( 0.962766, 0, 0, 0, 1, 0, 0, 0, 0.967171, -36.3563, 7.60737, -24.461 )
 
 [node name="BASEMENT" parent="." instance=ExtResource( 29 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.8853, 0.415175, -49.8777 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.2429, 0.619236, -52.1727 )
 
 [node name="Node2D" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00904, 0 )
@@ -402,7 +402,7 @@ and start over.
 [node name="WelcomeTimer" type="Timer" parent="Welcome"]
 
 [node name="OFFICE" parent="." instance=ExtResource( 32 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -32.1015, 0.587877, -30.7142 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -31.2688, 0.587877, -19.3492 )
 
 [connection signal="body_entered" from="Door1/Area" to="Knob1" method="door_entered"]
 [connection signal="timeout" from="MCSRevengeTransport/BossBattleTimer" to="MCSRevengeTransport" method="_on_Timer_timeout"]

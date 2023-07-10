@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://other parts of the hallway/Teachers_desk .fbx" type="PackedScene" id=1]
 [ext_resource path="res://entities/Objects/Large objects/Chair/chair.tscn" type="PackedScene" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://Basement_Door.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Dev_BA/Material_016.material" type="Material" id=6]
 [ext_resource path="res://OFFICE.gd" type="Script" id=7]
+[ext_resource path="res://Computer.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Dev_MS/Minigame/games.tscn" type="PackedScene" id=9]
 
 [sub_resource type="SpatialMaterial" id=7]
 albedo_texture = ExtResource( 3 )
@@ -72,6 +74,8 @@ extents = Vector3( 3.93035, 1.71513, 0.267138 )
 [sub_resource type="CubeMesh" id=21]
 material = ExtResource( 6 )
 size = Vector3( 8, 0, 8 )
+
+[sub_resource type="BoxShape" id=22]
 
 [node name="OFFICE" type="Spatial"]
 script = ExtResource( 7 )
@@ -184,12 +188,18 @@ shape = SubResource( 20 )
 transform = Transform( -0.999971, 0, 0.00766189, 0, 1, 0, -0.00766189, 0, -0.999971, 4.09701, 0.633687, 0.655971 )
 
 [node name="StaticBody" type="StaticBody" parent="."]
-transform = Transform( -0.999971, 0, 0.00766189, 0, 1, 0, -0.00766189, 0, -0.999971, 4.09701, 0.633687, 0.655971 )
+transform = Transform( -0.999971, 0, 0.00766189, 0, 1, 0, -0.00766189, 0, -0.999971, 4.09701, 6.2223, 0.655971 )
 
 [node name="MeshInstance" type="MeshInstance" parent="StaticBody"]
-transform = Transform( -0.999971, 0, -0.0076619, 0, 1, 0, 0.0076619, 0, -0.999971, 4.10192, 2.25633, 0.624561 )
+transform = Transform( -0.999971, 0, -0.0076619, 0, 1, 0, 0.0076619, 0, -0.999971, 4.10192, -3.43279, 0.624561 )
 mesh = SubResource( 21 )
 skeleton = NodePath("../..")
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
-transform = Transform( -0.999971, 0, -0.0076619, 0, 1, 0, 0.0076619, 0, -0.999971, 4.10192, 17.8393, 0.624561 )
+transform = Transform( -0.999971, 0, -0.0076619, 0, 1, 0, 0.0076619, 0, -0.999971, 4.18888, 14.5816, 0.560615 )
+shape = SubResource( 22 )
+
+[node name="Computer" parent="." instance=ExtResource( 8 )]
+transform = Transform( 0.00452036, 0, -0.99999, 0, 1, 0, 0.99999, 0, 0.00452036, -0.560145, 0.962387, 0.138981 )
+
+[node name="Node2D" parent="." instance=ExtResource( 9 )]

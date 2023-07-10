@@ -9,12 +9,12 @@ var myDistance = Vector2(0,0)
 
 func _physics_process(_delta):
 	
-	if Input.is_action_pressed("lmc") and dragReady:
+	if Input.is_action_pressed("click") and dragReady:
 		myClickPos = get_global_mouse_position()
 		#myDistance = get_position()- myClickPos
 		#print(myDistance)
 		
-	if Input.is_action_pressed("lmc") and dragReady:
+	if Input.is_action_pressed("click") and dragReady:
 		set_position(get_global_mouse_position())
 
  
