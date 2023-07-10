@@ -1,12 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/Charater scenes/Student/Bully.gd" type="Script" id=1]
 [ext_resource path="res://workspaces/Dev_BA/janitor.glb" type="PackedScene" id=2]
 
-
-[sub_resource type="ArrayMesh" id=3]
-
-[sub_resource type="ConvexPolygonShape" id=2]
+[sub_resource type="ConvexPolygonShape" id=6]
 points = PoolVector3Array( -1, -1, -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, -1, 1, 1, 1, -1, -1, -1, -1, 1, -1, 1, -1 )
 
 [node name="Bully" type="Area"]
@@ -17,19 +14,20 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="Spatial" type="MeshInstance" parent="."]
-mesh = SubResource( 3 )
-skeleton = NodePath("")
-
-[node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1.42695, 0, 0, 0, 1, 0, 0, 0, 1.42695, 0, 0, 0 )
-shape = SubResource( 2 )
-
 [node name="VisibilityNotifier" type="VisibilityNotifier" parent="."]
-transform = Transform( 1.76814, 0, 0, 0, 1, 0, 0, 0, 1.76814, 0.0480642, 0, -0.0640697 )
-aabb = AABB( -1.076, -1, -1.34918, 2.15201, 2, 2.69836 )
+transform = Transform( 1.45135, 0, 0, 0, 3.07229, 0, 0, 0, 1.23766, -0.0189963, 1.7436, 0.00217645 )
+aabb = AABB( -1.076, -0.909767, -1.34918, 2.15201, 1.88106, 2.69836 )
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="janitor" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00744605, -0.00769699, 0.454474 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00744605, 1.69897, 0.0233646 )
+
+[node name="StaticBody" type="StaticBody" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 1.01536, 0, 0, 0, 2.78348, 0, 0, 0, 0.592014, 0.0122108, 1.75096, -0.0113946 )
+shape = SubResource( 6 )
 
 [connection signal="body_exited" from="." to="." method="_on_Bully_body_exited"]

@@ -1,14 +1,12 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/Charater scenes/Laura/Laura.gd" type="Script" id=1]
 [ext_resource path="res://workspaces/Dev_BA/janitor.glb" type="PackedScene" id=2]
 
-[sub_resource type="ConvexPolygonShape" id=2]
-points = PoolVector3Array( -1, -1, -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, -1, 1, 1, 1, -1, -1, -1, -1, 1, -1, 1, -1 )
-
 [sub_resource type="PhysicsMaterial" id=5]
 
-[sub_resource type="BoxShape" id=6]
+[sub_resource type="ConvexPolygonShape" id=6]
+points = PoolVector3Array( -1, -1, -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, -1, 1, 1, 1, -1, -1, -1, -1, 1, -1, 1, -1 )
 
 [node name="Laura" type="Area"]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
@@ -18,20 +16,14 @@ __meta__ = {
 }
 
 [node name="janitor" parent="." instance=ExtResource( 2 )]
-__meta__ = {
-"_editor_description_": ""
-}
-
-[node name="Collision3D" type="CollisionShape" parent="."]
-transform = Transform( 2.00884, 0, 0, 0, 2.96849, 0, 0, 0, 2.00884, 0, 0, 0 )
-shape = SubResource( 2 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00744605, 1.69897, 0.0233646 )
 __meta__ = {
 "_editor_description_": ""
 }
 
 [node name="VisibilityNotifier" type="VisibilityNotifier" parent="."]
-transform = Transform( 0.987266, 0, 0, 0, 1.12228, 0, 0, 0, 0.918878, 0, 0, 0 )
-aabb = AABB( -2.63968, -2.99662, -2.9541, 5.27938, 5.99324, 5.90821 )
+transform = Transform( 1.45135, 0, 0, 0, 3.07229, 0, 0, 0, 1.23766, -0.0189963, 1.7436, 0.00217645 )
+aabb = AABB( -1.076, -0.909767, -1.34918, 2.15201, 1.88106, 2.69836 )
 __meta__ = {
 "_editor_description_": ""
 }
@@ -43,7 +35,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
-transform = Transform( 1, 0, 0, 0, 2.78261, 0, 0, 0, 1, 0, 0, 0 )
+transform = Transform( 1.01536, 0, 0, 0, 2.78348, 0, 0, 0, 0.592014, 0.0122108, 1.75096, -0.0113946 )
 shape = SubResource( 6 )
 __meta__ = {
 "_editor_description_": ""

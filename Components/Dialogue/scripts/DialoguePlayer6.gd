@@ -6,8 +6,7 @@ export(String, FILE, "*.json") var dialogue_file
 func _on_Dialogueplayer_ready():
 	_ready()
 
-
-var dialogues = [] 
+var dialogues = []
 var current_dialogue_id = -1
 var is_dialogue_active = false
 

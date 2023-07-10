@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Components/Dialogue/Dialogue.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/objectsall/Large objects/Door/Door.gd" type="Script" id=2]
-
+[ext_resource path="res://Components/Dialogue/scripts/DialoguePlayer10.gd" type="Script" id=3]
 
 [sub_resource type="ArrayMesh" id=1]
 blend_shape_mode = 0
@@ -18,8 +18,7 @@ surfaces/0 = {
 "vertex_count": 3000
 }
 
-[sub_resource type="BoxShape" id=5]
-extents = Vector3( 1.50277, 1, 1 )
+[sub_resource type="BoxShape" id=6]
 
 [node name="Classroom_HALLWAY_door" type="Spatial"]
 transform = Transform( 1.61034, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
@@ -47,16 +46,19 @@ transform = Transform( 0.0248949, 12.7007, 2.77637e-06, 3.85836e-07, -3.02809e-0
 mesh = SubResource( 1 )
 skeleton = NodePath("../..")
 
-[node name="CollisionShape" type="CollisionShape" parent="RootNode/Door"]
-transform = Transform( 3.63126, 0, 0, 0, 3.16862, 0, 0, 0, 3.25987, 0, 0, -0.790068 )
-shape = SubResource( 5 )
-
 [node name="VisibilityNotifier" type="VisibilityNotifier" parent="RootNode/Door"]
 transform = Transform( 1.54557, 0, 0, 0, 2.20665, 0, 0, 0, 1.54557, 0, 0, -0.701232 )
 
 [node name="Dialogueplayer" parent="RootNode/Door" instance=ExtResource( 1 )]
 follow_viewport_enable = true
-dialogue_file = "res://assets/objectsall/Large objects/Door/Door tutorial.json"
+script = ExtResource( 3 )
+dialogue_file = ""
+
+[node name="StaticBody" type="StaticBody" parent="RootNode/Door"]
+
+[node name="CollisionShape2" type="CollisionShape" parent="RootNode/Door/StaticBody"]
+transform = Transform( 0.0790321, 0, 0, 0, 1.69009, 0, 0, 0, -0.832062, 0.102174, 0.198881, -0.580222 )
+shape = SubResource( 6 )
 
 [connection signal="body_entered" from="RootNode/Door" to="RootNode/Door" method="_on_Door_body_entered"]
 [connection signal="body_exited" from="RootNode/Door" to="RootNode/Door" method="_on_Door_body_exited"]

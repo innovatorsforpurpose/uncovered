@@ -2,19 +2,17 @@ extends CanvasLayer
 
 export(String, FILE, "*.json") var dialogue_file
 
-
 func _on_Dialogueplayer_ready():
 	_ready()
 
-
-var dialogues = [] 
+var dialogues = []
 var current_dialogue_id = -1
 var is_dialogue_active = false
 
 func _ready():
 	play()
 	$NinePatchRect.visible = false
-	
+
 func play():
 	if is_dialogue_active:
 		return
@@ -25,8 +23,7 @@ func play():
 	is_dialogue_active = true
 	$NinePatchRect.visible = true
 	current_dialogue_id = -1
-	
-	
+
 func reset():
 	current_dialogue_id = -1
 
@@ -64,6 +61,7 @@ func load_dialogue():
 
 func _on_Timer_timeout():
 	is_dialogue_active = false
+
 func toggle_the_player(on):
 	var player = get_tree().get_root().find_node("MC", true, false)
 	if player:
@@ -72,7 +70,6 @@ func toggle_the_player(on):
 func _on_Mentor_body_entered(_body):
 	_ready()
 
-
 func _on_GC_body_entered(_body):
 	_ready()
 
@@ -80,26 +77,20 @@ func _on_GC_body_entered(_body):
 func _on_Laura_body_entered(_body):
 	_ready()
 
-
-
 func _on_Student_body_entered(_body):
 	_ready()
-
 
 func _on_StudentI_body_entered(_body):
 	_ready()
 
-
 func _on_StudentII_body_entered(_body):
 	_ready()
-
 
 func _on_IDesk_body_entered(_body): 
 	_ready()
 
 func _on_Bulletin_Board_body_entered(_body):
 	_ready()
-
 
 func _on_Bully_body_entered(_body):
 	_ready()

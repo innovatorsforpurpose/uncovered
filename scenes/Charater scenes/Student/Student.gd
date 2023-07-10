@@ -11,7 +11,7 @@ func _input(event):
 	if event.is_action_pressed("game_usage") and len(get_overlapping_bodies()) > 1:
 		find_and_use_dialogue()
 func find_and_use_dialogue():
-	dialogue_player = get_node_or_null("Dialogueplayer")
+	dialogue_player = get_node_or_null("DialoguePlayer4")
 	if dialogue_player:
 		if not dialogue_player.next_line():
 			# print("now changing target")
@@ -20,18 +20,18 @@ func find_and_use_dialogue():
 
 
 func _on_Student_body_exited(_body):
-	dialogue_player = get_node_or_null("Dialogueplayer")
+	dialogue_player = get_node_or_null("DialoguePlayer4")
 	if dialogue_player:
 		dialogue_player.reset()
 func _process(_delta):
 	if len(get_overlapping_bodies()) == 0:
-		dialogue_player = get_node_or_null("Dialogueplayer")
+		dialogue_player = get_node_or_null("DialoguePlayer4")
 		if dialogue_player:
 			dialogue_player.reset()
 
 func _physics_process(_delta):
 	if target == 0 and path.size() == 0:
-		path = [Vector3(-20,12.458,-6),Vector3(-27,12.458,-5),Vector3(-23,12.458,-1),Vector3(-20.582,12.458,-5.879)]
+		path = [Vector3(-20,12.198,-6),Vector3(-27,12.198,-5),Vector3(-23,12.198,-1),Vector3(-20.582,12.198,-5.879)]
 	if path.size() > 0:
 		velocity = Vector3(path[0].x - transform.origin.x, path[0].y - transform.origin.y, path[0].z - transform.origin.z)
 		var distance =  velocity.length()

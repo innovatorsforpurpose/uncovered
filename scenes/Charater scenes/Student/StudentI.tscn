@@ -3,8 +3,8 @@
 [ext_resource path="res://Scenes/Charater scenes/Student/StudentI.gd" type="Script" id=1]
 [ext_resource path="res://workspaces/Dev_BA/janitor.glb" type="PackedScene" id=2]
 
-[sub_resource type="BoxShape" id=2]
-extents = Vector3( 1.49892, 1.30142, 1.28604 )
+[sub_resource type="ConvexPolygonShape" id=6]
+points = PoolVector3Array( -1, -1, -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, -1, 1, 1, 1, -1, -1, -1, -1, 1, -1, 1, -1 )
 
 [node name="StudentI" type="Area"]
 transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0 )
@@ -13,13 +13,24 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="Collision3D" type="CollisionShape" parent="."]
-transform = Transform( 0.234793, 0, 0, 0, 0.31359, 0, 0, 0, 0.291056, 0, 0, 0 )
-shape = SubResource( 2 )
-
 [node name="VisibilityNotifier" type="VisibilityNotifier" parent="."]
-transform = Transform( 0.338946, 0, 0, 0, 0.518095, 0, 0, 0, 0.338946, 0, 0, 0 )
-aabb = AABB( -1.35386, -1, -1.55014, 2.70774, 2, 3.10029 )
+transform = Transform( 1.45135, 0, 0, 0, 3.07229, 0, 0, 0, 1.23766, -0.0189963, 1.7436, 0.00217645 )
+aabb = AABB( -1.076, -0.909767, -1.34918, 2.15201, 1.88106, 2.69836 )
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="janitor" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.219203, 0, 0, 0, 0.219203, 0, 0, 0, 0.219203, 0.0785777, -5.96046e-08, 0.111956 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00744605, 1.69897, 0.0233646 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="StaticBody" type="StaticBody" parent="."]
+
+[node name="Collision3D" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 1.01536, 0, 0, 0, 2.78348, 0, 0, 0, 0.592014, 0.0122108, 1.75096, -0.0113946 )
+shape = SubResource( 6 )
+__meta__ = {
+"_editor_description_": ""
+}

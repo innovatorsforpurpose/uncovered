@@ -32,7 +32,9 @@ transform = Transform( 254.654, 0, 0, 0, 414.132, 0, 0, 0, 28.63, 0, 0, 0 )
 mesh = SubResource( 1 )
 
 [node name="Collision3D" type="CollisionShape" parent="."]
+transform = Transform( 0.176422, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 shape = SubResource( 2 )
 
 [node name="VisibilityNotifier" type="VisibilityNotifier" parent="."]
+transform = Transform( 0.436243, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 aabb = AABB( -2.5984, -5.15716, -5.62185, 5.19682, 10.3143, 11.2437 )

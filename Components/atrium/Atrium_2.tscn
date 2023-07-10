@@ -58,7 +58,6 @@ tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 2.07575, 2.07575, 2.07
 extents = Vector3( 1, 1, 0.928838 )
 
 [node name="Atrium-2" type="Spatial"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="Cube002" type="MeshInstance" parent="."]
 transform = Transform( 2.07575, 0, 0, 0, 2.07575, 0, 0, 0, 2.07575, 0, 0, 0 )
