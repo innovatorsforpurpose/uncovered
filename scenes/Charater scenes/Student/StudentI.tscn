@@ -1,13 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/Charater scenes/Student/StudentI.gd" type="Script" id=1]
 [ext_resource path="res://workspaces/Dev_BA/janitor.glb" type="PackedScene" id=2]
 
-
-[sub_resource type="ArrayMesh" id=3]
-
-[sub_resource type="BoxShape" id=2]
-extents = Vector3( 1.49892, 1.30142, 1.28604 )
+[sub_resource type="ConvexPolygonShape" id=1]
+points = PoolVector3Array( -1, -1, -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, -1, 1, 1, 1, -1, -1, -1, -1, 1, -1, 1, -1 )
 
 [node name="StudentI" type="Area"]
 transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0 )
@@ -16,19 +13,20 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="X" type="Spatial" parent="."]
-
-[node name="Spatial" type="MeshInstance" parent="X"]
-transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0 )
-mesh = SubResource( 3 )
-
-[node name="Collision3D" type="CollisionShape" parent="."]
-transform = Transform( 0.234793, 0, 0, 0, 0.31359, 0, 0, 0, 0.291056, 0, 0, 0 )
-shape = SubResource( 2 )
-
-[node name="VisibilityNotifier" type="VisibilityNotifier" parent="."]
-transform = Transform( 0.338946, 0, 0, 0, 0.518095, 0, 0, 0, 0.338946, 0, 0, 0 )
-aabb = AABB( -1.35386, -1, -1.55014, 2.70774, 2, 3.10029 )
-
 [node name="janitor" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.219203, 0, 0, 0, 0.219203, 0, 0, 0, 0.219203, 0.0785777, -5.96046e-08, 0.111956 )
+transform = Transform( 0.219203, 0, 0, 0, 0.219203, 0, 0, 0, 0.219203, 0, 0, 0 )
+
+[node name="StaticBody" type="StaticBody" parent="."]
+transform = Transform( 0.191332, 0, 0, 0, 0.216682, 0, 0, 0, 0.163782, 0, 0, 0 )
+
+[node name="VisibilityNotifier" type="VisibilityNotifier" parent="StaticBody"]
+transform = Transform( 0.263597, 0, 0, 0, 3.21492, 0, 0, 0, 0.22059, 0, 0, 0 )
+aabb = AABB( -5.56889, -1, -5.0753, 11.1378, 2, 10.1506 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 1.2436, 0, 0, 0, 2.86226, 0, 0, 0, 0.885465, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="."]
+transform = Transform( 0.613514, 0, 0, 0, 0.783346, 0, 0, 0, 0.494468, 0, 0, 0 )
+shape = SubResource( 1 )

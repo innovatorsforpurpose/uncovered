@@ -36,3 +36,7 @@ func _on_Timer_timeout():
 		return get_tree().change_scene("res://Scenes/CreationScene.tscn")
 	else:
 		print("could not load uncovered minigame")
+
+
+func _on_Student_body_entered(_body):
+	pass # Replace with function body.
