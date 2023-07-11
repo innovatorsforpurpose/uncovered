@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://other parts of the hallway/Teachers_desk .fbx" type="PackedScene" id=1]
 [ext_resource path="res://entities/Objects/Large objects/Chair/chair.tscn" type="PackedScene" id=2]
@@ -76,6 +76,9 @@ material = ExtResource( 6 )
 size = Vector3( 8, 0, 8 )
 
 [sub_resource type="BoxShape" id=22]
+
+[sub_resource type="BoxShape" id=23]
+extents = Vector3( 0.192363, 0.162825, 0.161592 )
 
 [node name="OFFICE" type="Spatial"]
 script = ExtResource( 7 )
@@ -203,3 +206,14 @@ shape = SubResource( 22 )
 transform = Transform( 0.00452036, 0, -0.99999, 0, 1, 0, 0.99999, 0, 0.00452036, -0.560145, 0.962387, 0.138981 )
 
 [node name="Node2D" parent="." instance=ExtResource( 9 )]
+
+[node name="Spatial" type="Spatial" parent="."]
+
+[node name="Area" type="Area" parent="Spatial"]
+transform = Transform( -1.20503, 0, 0, 0, 0.963988, 1.09926e-07, 0, -1.45558e-07, 0.728009, -3.52026, 0.786567, -0.42406 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial/Area"]
+transform = Transform( 15.733, 0, 0, 0, 4.88744, 3.41061e-12, 0, -1.13687e-13, 26.4285, -3.54851, 1.00136, 1.49745 )
+shape = SubResource( 23 )
+
+[connection signal="body_entered" from="Spatial/Area" to="Node2D" method="_on_Area_body_entered"]

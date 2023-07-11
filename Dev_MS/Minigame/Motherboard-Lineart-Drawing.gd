@@ -1,4 +1,4 @@
-extends Spatial
+extends Sprite
 
 
 # Declare member variables here. Examples:
@@ -8,7 +8,6 @@ extends Spatial
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	visible = false
 	
 	pass # Replace with function body.
 
@@ -16,11 +15,3 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
-
-func _on_Area_input_event(camera, event, position, normal, shape_idx):
-	pass # Replace with function body.
-
-
-func _on_Area_body_entered(body):
-	pass # Replace with function body.

@@ -164,7 +164,7 @@ anims/open = SubResource( 2 )
 [node name="Area" type="Area" parent="Door1"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Door1/Area"]
-transform = Transform( 1, 0, 0, 0, 10.1406, 0, 0, 0, 3.93274, 0, 0, 0.848534 )
+transform = Transform( 1, 0, 0, 0, 10.1406, 0, 0, 0, 3.93274, 0, 24.0712, 0.848534 )
 shape = SubResource( 10 )
 
 [node name="Door2" type="Spatial" parent="."]

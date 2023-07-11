@@ -18,5 +18,3 @@ func _on_Area2D_body_entered(body):
 	get_node("/root/Node2D")._on_green_area_body_entered()
 
 
-func _on_Area2D_body_exited(_body):
-	visible = false 

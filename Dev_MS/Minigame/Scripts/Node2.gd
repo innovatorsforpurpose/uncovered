@@ -9,8 +9,6 @@ export var yellowline = false
 
 
 
-
-
 func _on_green_area_body_entered():
 	print(blueline)
 	print(greenline)
@@ -28,6 +26,7 @@ func _on_green_area_body_entered():
 
 
 func _on_red_area_body_entered(_body):
+	
 	pass # Replace with function body.
 
 
@@ -38,7 +37,22 @@ func _on_yellow_area_body_entered(_body):
 func _on_Area_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 
 	pass # Replace with function body.
-
+func _ready():
+		visible = false
+		pass
+var show_minigame = false
 
 func _on_Area_body_entered(body):
-	pass # Replace with function body.
+	print("got here")
+	print(show_minigame)
+	print(body.name)
+	if body.name == "MC" and show_minigame == false:
+		print("got here 2")
+		show_minigame = true
+		get_node("/root/RootScene/OFFICE/Node2D").visible = true
+		
+
+		pass # Replace with function body.
+
+
+
