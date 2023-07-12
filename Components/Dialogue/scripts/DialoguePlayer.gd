@@ -34,7 +34,7 @@ func _on_Dialogueplayer_ready():
 
 
 var dialogues = []
-var current_dialogue_id = 1
+var current_dialogue_id = -1
 var is_dialogue_active = false
 
 func _ready():
@@ -56,8 +56,8 @@ func reset():
 	current_dialogue_id = -1
 
 func next_line():
-	# print("line")
-	# print(current_dialogue_id)
+	print("line")
+	print(current_dialogue_id)
 	toggle_the_player(false)
 	$NinePatchRect/Name.text = dialogues[current_dialogue_id]['name']
 	$NinePatchRect/Message.text = dialogues[current_dialogue_id]['text']
@@ -76,7 +76,7 @@ func next_line():
 func load_dialogue():
 	var file = File.new()
 	if file.file_exists(dialogue_file):
-		#print_debug("filename:" + dialogue_file)
+		print_debug("filename:" + dialogue_file)
 		var err = file.open(dialogue_file, file.READ)
 		if err != OK:
 			return
