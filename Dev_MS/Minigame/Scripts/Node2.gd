@@ -50,7 +50,7 @@ func _on_Area_body_entered(body):
 		print("got here 2")
 		show_minigame = true
 		get_node("/root/RootScene/OFFICE/Node2D").visible = true
-		
+
 
 		pass # Replace with function body.
 
