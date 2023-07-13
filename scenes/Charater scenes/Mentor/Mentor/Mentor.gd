@@ -12,6 +12,7 @@ func _input(event):
 		find_and_use_dialogue()
 func find_and_use_dialogue():
 	dialogue_player = get_node_or_null("DialoguePlayer")
+	print(dialogue_player)
 	if dialogue_player:
 		if not dialogue_player.next_line():
 			# print("now changing target")
@@ -21,6 +22,7 @@ func _on_Mentor_body_exited(_body):
 	dialogue_player = get_node_or_null("DialoguePlayer")
 	if dialogue_player:
 		dialogue_player.reset()
+
 func _process(_delta):
 	if len(get_overlapping_bodies()) == 0:
 		dialogue_player = get_node_or_null("DialoguePlayer")

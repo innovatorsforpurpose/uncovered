@@ -237,7 +237,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.517, 12.458, 11.11 )
 [node name="Mentor" parent="Node2D/Enviroment" instance=ExtResource( 1 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -24.4266, 12.458, 4.39275 )
 
-[node name="Dialogueplayer" parent="Node2D/Enviroment/Mentor" instance=ExtResource( 17 )]
+[node name="DialoguePlayer" parent="Node2D/Enviroment/Mentor" instance=ExtResource( 17 )]
 follow_viewport_enable = true
 
 [node name="StaticBody" type="StaticBody" parent="Node2D/Enviroment/Mentor"]
@@ -245,63 +245,63 @@ follow_viewport_enable = true
 [node name="GC" parent="Node2D/Enviroment" instance=ExtResource( 6 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -40.2284, 12.458, -5.783 )
 
-[node name="Dialogueplayer" parent="Node2D/Enviroment/GC" instance=ExtResource( 17 )]
+[node name="DialoguePlayer" parent="Node2D/Enviroment/GC" instance=ExtResource( 17 )]
 follow_viewport_enable = true
 dialogue_file = "res://jsons/GC/GC.json"
 
 [node name="Laura" parent="Node2D/Enviroment" instance=ExtResource( 12 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -24.504, 12.458, -43.349 )
 
-[node name="Dialogueplayer" parent="Node2D/Enviroment/Laura" instance=ExtResource( 17 )]
+[node name="DialoguePlayer" parent="Node2D/Enviroment/Laura" instance=ExtResource( 17 )]
 follow_viewport_enable = true
 dialogue_file = "res://jsons/Laura/Laura.json"
 
 [node name="Student" parent="Node2D/Enviroment" instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.5819, 12.4289, -6.10306 )
 
-[node name="Dialogueplayer" parent="Node2D/Enviroment/Student" instance=ExtResource( 17 )]
+[node name="DialoguePlayer" parent="Node2D/Enviroment/Student" instance=ExtResource( 17 )]
 follow_viewport_enable = true
 dialogue_file = "res://Scenes/Charater scenes/Student/jsons/Student.json"
 
 [node name="StudentI" parent="Node2D/Enviroment" instance=ExtResource( 16 )]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -19.8679, 12.458, 0.481759 )
 
-[node name="Dialogueplayer" parent="Node2D/Enviroment/StudentI" instance=ExtResource( 17 )]
+[node name="DialoguePlayer" parent="Node2D/Enviroment/StudentI" instance=ExtResource( 17 )]
 follow_viewport_enable = true
 dialogue_file = "res://Scenes/Charater scenes/Student/jsons/studentI.json"
 
 [node name="StudentII" parent="Node2D/Enviroment" instance=ExtResource( 7 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -30.6004, 12.4576, -6.41473 )
 
-[node name="Dialogueplayer" parent="Node2D/Enviroment/StudentII" instance=ExtResource( 17 )]
+[node name="DialoguePlayer" parent="Node2D/Enviroment/StudentII" instance=ExtResource( 17 )]
 follow_viewport_enable = true
 dialogue_file = "res://Scenes/Charater scenes/Student/jsons/StudentII.json"
 
 [node name="IDesk" parent="Node2D/Enviroment" instance=ExtResource( 13 )]
 transform = Transform( 0.547367, 0, 0, 0, 1, 0, 0, 0, 1, -28.1483, 12.4367, -9.60219 )
 
-[node name="Dialogueplayer" parent="Node2D/Enviroment/IDesk" instance=ExtResource( 17 )]
+[node name="DialoguePlayer" parent="Node2D/Enviroment/IDesk" instance=ExtResource( 17 )]
 follow_viewport_enable = true
 dialogue_file = "res://Scenes/Charater scenes/Student/jsons/IDesk.json"
 
 [node name="Bulletin Board" parent="Node2D/Enviroment" instance=ExtResource( 20 )]
 transform = Transform( -0.390375, 0, -0.315051, 0, 0.501647, 0, 0.315051, 0, -0.390375, -17.7717, 14.0179, -9.26607 )
 
-[node name="Dialogueplayer" parent="Node2D/Enviroment/Bulletin Board" instance=ExtResource( 17 )]
+[node name="DialoguePlayer" parent="Node2D/Enviroment/Bulletin Board" instance=ExtResource( 17 )]
 follow_viewport_enable = true
 dialogue_file = "res://Scenes/Charater scenes/Student/jsons/Bulletin Board.json"
 
 [node name="Bully" parent="Node2D/Enviroment" instance=ExtResource( 14 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -28.41, 12.458, -3.21564 )
 
-[node name="Dialogueplayer" parent="Node2D/Enviroment/Bully" instance=ExtResource( 17 )]
+[node name="DialoguePlayer" parent="Node2D/Enviroment/Bully" instance=ExtResource( 17 )]
 follow_viewport_enable = true
 dialogue_file = "res://Scenes/Charater scenes/Student/jsons/Bully.json"
 
 [node name="Hallway_Door*" parent="Node2D/Enviroment" instance=ExtResource( 29 )]
 transform = Transform( 0.430264, 0, 0, 0, 1, 0, 0, 0, 1, -22.4831, 13.2362, -21.9703 )
 
-[node name="Dialogueplayer" parent="Node2D/Enviroment/Hallway_Door*" instance=ExtResource( 17 )]
+[node name="DialoguePlayer" parent="Node2D/Enviroment/Hallway_Door*" instance=ExtResource( 17 )]
 follow_viewport_enable = true
 dialogue_file = "res://scenes/Charater scenes/Student/jsons/Door tutorial.json"
 
@@ -326,27 +326,28 @@ transform = Transform( 0.996461, 0, 0, 0, 0.960988, 0, 0, 0, 1.81984, -7.648, 7.
 [connection signal="timeout" from="MCSRevengeTransport/BossBattleTimer" to="MCSRevengeTransport" method="_on_Timer_timeout"]
 [connection signal="input_event" from="MCSRevengeTransport/CSGSphere/Area" to="MCSRevengeTransport" method="_on_Area_input_event"]
 [connection signal="timeout" from="Timer" to="Knob1" method="_on_Timer_timeout"]
-[connection signal="body_entered" from="Node2D/Enviroment/Mentor" to="Node2D/Enviroment/Mentor/Dialogueplayer" method="_on_Mentor_body_entered"]
-[connection signal="ready" from="Node2D/Enviroment/Mentor/Dialogueplayer" to="Node2D/Enviroment/Mentor/Dialogueplayer" method="_on_Dialogueplayer_ready"]
-[connection signal="body_entered" from="Node2D/Enviroment/GC" to="Node2D/Enviroment/GC/Dialogueplayer" method="_on_GC_body_entered"]
-[connection signal="ready" from="Node2D/Enviroment/GC/Dialogueplayer" to="Node2D/Enviroment/GC/Dialogueplayer" method="_on_Dialogueplayer_ready"]
-[connection signal="body_entered" from="Node2D/Enviroment/Laura" to="Node2D/Enviroment/Laura/Dialogueplayer" method="_on_Laura_body_entered"]
-[connection signal="ready" from="Node2D/Enviroment/Laura/Dialogueplayer" to="Node2D/Enviroment/Laura/Dialogueplayer" method="_on_Dialogueplayer_ready"]
-[connection signal="body_entered" from="Node2D/Enviroment/Student" to="Node2D/Enviroment/Student/Dialogueplayer" method="_on_Student_body_entered"]
+[connection signal="body_entered" from="Node2D/Enviroment/Mentor" to="Node2D/Enviroment/Mentor/DialoguePlayer" method="_on_Mentor_body_entered"]
+[connection signal="ready" from="Node2D/Enviroment/Mentor/DialoguePlayer" to="Node2D/Enviroment/Mentor/DialoguePlayer" method="_on_Dialogueplayer_ready"]
+[connection signal="body_entered" from="Node2D/Enviroment/GC" to="Node2D/Enviroment/GC/DialoguePlayer" method="_on_GC_body_entered"]
+[connection signal="ready" from="Node2D/Enviroment/GC/DialoguePlayer" to="Node2D/Enviroment/GC/DialoguePlayer" method="_on_Dialogueplayer_ready"]
+[connection signal="body_entered" from="Node2D/Enviroment/Laura" to="Node2D/Enviroment/Laura/DialoguePlayer" method="_on_Laura_body_entered"]
+[connection signal="ready" from="Node2D/Enviroment/Laura/DialoguePlayer" to="Node2D/Enviroment/Laura/DialoguePlayer" method="_on_Dialogueplayer_ready"]
+[connection signal="body_entered" from="Node2D/Enviroment/Student" to="Node2D/Enviroment/Student/DialoguePlayer" method="_on_Student_body_entered"]
 [connection signal="body_exited" from="Node2D/Enviroment/Student" to="Node2D/Enviroment/Student" method="_on_Student_body_exited"]
-[connection signal="ready" from="Node2D/Enviroment/Student/Dialogueplayer" to="Node2D/Enviroment/Student/Dialogueplayer" method="_on_Dialogueplayer_ready"]
-[connection signal="body_entered" from="Node2D/Enviroment/StudentI" to="Node2D/Enviroment/StudentI/Dialogueplayer" method="_on_StudentI_body_entered"]
+[connection signal="ready" from="Node2D/Enviroment/Student/DialoguePlayer" to="Node2D/Enviroment/Student/DialoguePlayer" method="_on_Dialogueplayer_ready"]
+[connection signal="body_entered" from="Node2D/Enviroment/StudentI" to="Node2D/Enviroment/StudentI/DialoguePlayer" method="_on_StudentI_body_entered"]
 [connection signal="body_exited" from="Node2D/Enviroment/StudentI" to="Node2D/Enviroment/StudentI" method="_on_StudentI_body_exited"]
-[connection signal="ready" from="Node2D/Enviroment/StudentI/Dialogueplayer" to="Node2D/Enviroment/StudentI/Dialogueplayer" method="_on_Dialogueplayer_ready"]
-[connection signal="body_entered" from="Node2D/Enviroment/StudentII" to="Node2D/Enviroment/StudentII/Dialogueplayer" method="_on_StudentII_body_entered"]
+[connection signal="ready" from="Node2D/Enviroment/StudentI/DialoguePlayer" to="Node2D/Enviroment/StudentI/DialoguePlayer" method="_on_Dialogueplayer_ready"]
+[connection signal="body_entered" from="Node2D/Enviroment/StudentII" to="Node2D/Enviroment/StudentII/DialoguePlayer" method="_on_StudentII_body_entered"]
 [connection signal="body_exited" from="Node2D/Enviroment/StudentII" to="Node2D/Enviroment/StudentII" method="_on_StudentII_body_exited"]
-[connection signal="ready" from="Node2D/Enviroment/StudentII/Dialogueplayer" to="Node2D/Enviroment/StudentII/Dialogueplayer" method="_on_Dialogueplayer_ready"]
-[connection signal="body_entered" from="Node2D/Enviroment/IDesk" to="Node2D/Enviroment/StudentII/Dialogueplayer" method="_on_IDesk_body_entered"]
-[connection signal="body_entered" from="Node2D/Enviroment/IDesk" to="Node2D/Enviroment/IDesk/Dialogueplayer" method="_on_IDesk_body_entered"]
-[connection signal="ready" from="Node2D/Enviroment/IDesk/Dialogueplayer" to="Node2D/Enviroment/IDesk/Dialogueplayer" method="_on_Dialogueplayer_ready"]
-[connection signal="body_entered" from="Node2D/Enviroment/Bulletin Board" to="Node2D/Enviroment/Bulletin Board/Dialogueplayer" method="_on_Bulletin_Board_body_entered"]
+[connection signal="ready" from="Node2D/Enviroment/StudentII/DialoguePlayer" to="Node2D/Enviroment/StudentII/DialoguePlayer" method="_on_Dialogueplayer_ready"]
+[connection signal="body_entered" from="Node2D/Enviroment/IDesk" to="Node2D/Enviroment/StudentII/DialoguePlayer" method="_on_IDesk_body_entered"]
+[connection signal="body_entered" from="Node2D/Enviroment/IDesk" to="Node2D/Enviroment/IDesk/DialoguePlayer" method="_on_IDesk_body_entered"]
+[connection signal="ready" from="Node2D/Enviroment/IDesk/DialoguePlayer" to="Node2D/Enviroment/IDesk/DialoguePlayer" method="_on_Dialogueplayer_ready"]
+[connection signal="body_entered" from="Node2D/Enviroment/Bulletin Board" to="Node2D/Enviroment/Bulletin Board/DialoguePlayer" method="_on_Bulletin_Board_body_entered"]
 [connection signal="body_exited" from="Node2D/Enviroment/Bulletin Board" to="Node2D/Enviroment/Bulletin Board" method="_on_Bulletin_Board_body_exited"]
-[connection signal="ready" from="Node2D/Enviroment/Bulletin Board/Dialogueplayer" to="Node2D/Enviroment/Bulletin Board/Dialogueplayer" method="_on_Dialogueplayer_ready"]
-[connection signal="body_entered" from="Node2D/Enviroment/Bully" to="Node2D/Enviroment/Mentor/Dialogueplayer" method="_on_Bully_body_entered"]
-[connection signal="ready" from="Node2D/Enviroment/Bully/Dialogueplayer" to="Node2D/Enviroment/Bully/Dialogueplayer" method="_on_Dialogueplayer_ready"]
-[connection signal="ready" from="Node2D/Enviroment/Hallway_Door*/Dialogueplayer" to="Node2D/Enviroment/Hallway_Door*/Dialogueplayer" method="_on_Dialogueplayer_ready"]
+[connection signal="ready" from="Node2D/Enviroment/Bulletin Board/DialoguePlayer" to="Node2D/Enviroment/Bulletin Board/DialoguePlayer" method="_on_Dialogueplayer_ready"]
+[connection signal="body_entered" from="Node2D/Enviroment/Bully" to="Node2D/Enviroment/Mentor/DialoguePlayer" method="_on_Bully_body_entered"]
+[connection signal="ready" from="Node2D/Enviroment/Bully/DialoguePlayer" to="Node2D/Enviroment/Bully/DialoguePlayer" method="_on_Dialogueplayer_ready"]
+[connection signal="body_entered" from="Node2D/Enviroment/Hallway_Door*" to="Node2D/Enviroment/Hallway_Door*/DialoguePlayer" method="_on_Hallway_Door_body_entered"]
+[connection signal="ready" from="Node2D/Enviroment/Hallway_Door*/DialoguePlayer" to="Node2D/Enviroment/Hallway_Door*/DialoguePlayer" method="_on_Dialogueplayer_ready"]

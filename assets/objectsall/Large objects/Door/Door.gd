@@ -14,7 +14,6 @@ func find_and_use_dialogue():
 		if not dialogue_player.next_line():
 			# print("now changing target")
 			target = 0
-			
 
 func _on_Door_tree_exited():
 	dialogue_player = get_node_or_null("DialoguePlayer")

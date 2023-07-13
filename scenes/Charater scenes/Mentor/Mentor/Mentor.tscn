@@ -81,3 +81,5 @@ shape = SubResource( 2 )
 [node name="CollisionShape2" type="CollisionShape" parent="."]
 transform = Transform( 3.20654, 0, 0, 0, 3.61519, 0, 0, 0, 3.01906, 0, 0, 0 )
 shape = SubResource( 2 )
+
+[connection signal="body_exited" from="." to="." method="_on_Mentor_body_exited"]
