@@ -10,7 +10,7 @@ export var paused = true# Declare member variables here. Examples:
 func _ready():
 	pass # Replace with function body.
 
-
+var already_run = false
 func _physics_process(delta):
 	# print(paused)
 	pass
@@ -19,9 +19,10 @@ func _physics_process(delta):
 		if color.a > 0.3:	
 			color = Color(0, 0, 0, color.a - delta/10)# Cd every frame. 'delta' is the elapsed time since the previous frame.
 			#print(color)
-		else:
+		elif not already_run:
 			visible = false
 			paused = true
+			already_run = true
 			get_node("/root/RootScene/BASEMENT/go to vent text").visible = true
 			#print(get_node("/root/RootScene").get_children())
 			get_node("/root/RootScene/OFFICE").visible = true

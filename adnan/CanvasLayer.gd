@@ -1,4 +1,4 @@
-extends CanvasLayer
+extends Area
 
 
 # Declare member variables here. Examples:
@@ -9,7 +9,7 @@ extends CanvasLayer
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# print($NinePatchRect)
-	$InstructionsBackground.visible = false
+	#$InstructionsBackground.visible = false
 	var n = get_node("/root/RootScene/BASEMENT/ColorRect")
 	# print(n)
 	get_node("/root/RootScene/BASEMENT/ColorRect").visible = false
@@ -31,9 +31,10 @@ func _on_Area_body_entered(body):
 		get_node("/root/RootScene/BASEMENT/ColorRect").visible = true
 		get_node("/root/RootScene/BASEMENT/ColorRect/ColorRectTimer/").start(3)
 		get_node("/root/RootScene/BASEMENT/go to vent text")
-		$InstructionsBackground.visible = true
+		#$InstructionsBackground.visible = true
 		#get_node("/root/RootScene/BASEMENT/Instructions/InstructionsTimer").start(1)
 
 
 func _on_InstructionsTimer_timeout():
-	get_parent().get_node("Instructions").visible = false
+	#get_parent().get_node("Instructions").visible = false
+	pass

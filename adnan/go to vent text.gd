@@ -18,6 +18,7 @@ var gotovent_shown = false
 
 func _on_Area2_body_entered(body):
 	if body.name == "MC" and gotovent_shown == false:
+
 		get_node("/root/RootScene/BASEMENT/go to vent text/Timer").start(5)
 		gotovent_shown = true
 		

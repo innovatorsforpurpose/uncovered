@@ -71,6 +71,7 @@ font_data = ExtResource( 11 )
 script = ExtResource( 19 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 show_behind_parent = true
 margin_left = -29.0
 margin_top = -123.0
@@ -79,34 +80,32 @@ margin_bottom = 881.0
 color = Color( 0.492188, 0.492188, 0.492188, 1 )
 
 [node name="winner" type="MarginContainer" parent="."]
-visible = false
-margin_left = 271.0
-margin_top = 636.0
-margin_right = 969.0
-margin_bottom = 837.0
+margin_left = 335.0
+margin_top = -1.0
+margin_right = 1017.0
+margin_bottom = 57.0
 
 [node name="Panel" type="Panel" parent="winner"]
-margin_right = 698.0
-margin_bottom = 201.0
+margin_right = 682.0
+margin_bottom = 58.0
 custom_styles/panel = SubResource( 10 )
 
 [node name="MarginContainer" type="MarginContainer" parent="winner"]
-margin_right = 698.0
-margin_bottom = 201.0
+margin_right = 682.0
+margin_bottom = 58.0
 
 [node name="Panel" type="Panel" parent="winner/MarginContainer"]
-visible = false
-margin_right = 698.0
-margin_bottom = 201.0
+margin_right = 682.0
+margin_bottom = 58.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="winner/MarginContainer"]
-margin_right = 698.0
-margin_bottom = 201.0
+margin_right = 682.0
+margin_bottom = 58.0
 
 [node name="Label" type="Label" parent="winner/MarginContainer/HBoxContainer"]
-margin_top = 78.0
+margin_top = 6.0
 margin_right = 682.0
-margin_bottom = 123.0
+margin_bottom = 51.0
 custom_fonts/font = SubResource( 11 )
 text = "  YOU DID IT, ITS WORKING. AGAIN !!!!!!!"
 
@@ -344,6 +343,9 @@ margin_bottom = 92.0
 custom_fonts/font = SubResource( 9 )
 text = "  Drag and drop the circles in the right area 
   to repair the PC!"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 509, 301 )
 
 [connection signal="mouse_entered" from="Box/reddrag" to="Box/reddrag" method="_on_KinematicBody2D_mouse_entered"]
 [connection signal="mouse_exited" from="Box/reddrag" to="Box/reddrag" method="_on_KinematicBody2D_mouse_exited"]
