@@ -7,7 +7,8 @@ var dialogue_player = null
 
 func _input(event):
 	if event.is_action_pressed("game_usage") and len(get_overlapping_bodies()) > 1:
-		find_and_use_dialogue()
+		pass
+		#find_and_use_dialogue()
 func find_and_use_dialogue():
 	dialogue_player = get_node_or_null("DialoguePlayer")
 	if dialogue_player:

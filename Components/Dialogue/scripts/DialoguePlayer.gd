@@ -34,7 +34,7 @@ func next_line():
 	$NinePatchRect/Name.text = dialogues[current_dialogue_id]['name']
 	$NinePatchRect/Message.text = dialogues[current_dialogue_id]['text']
 	$NinePatchRect.visible = true
-	current_dialogue_id += 1	
+	current_dialogue_id += 1
 	if  current_dialogue_id >= len(dialogues):
 		current_dialogue_id = len(dialogues) - 1
 		$Timer.start()
@@ -61,7 +61,7 @@ func toggle_the_player(on):
 	var player = get_tree().get_root().find_node("MC", true, false)
 	if player:
 		player.set_active(on)
-	
+
 func _on_Mentor_body_entered(_body):
 	_ready()
 

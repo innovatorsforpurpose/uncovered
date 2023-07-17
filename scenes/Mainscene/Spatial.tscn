@@ -240,8 +240,6 @@ transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -24.4266, 12.458, 4.3927
 [node name="DialoguePlayer" parent="Node2D/Enviroment/Mentor" instance=ExtResource( 17 )]
 follow_viewport_enable = true
 
-[node name="StaticBody" type="StaticBody" parent="Node2D/Enviroment/Mentor"]
-
 [node name="GC" parent="Node2D/Enviroment" instance=ExtResource( 6 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -40.2284, 12.458, -5.783 )
 

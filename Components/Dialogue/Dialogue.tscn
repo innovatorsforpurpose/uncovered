@@ -80,7 +80,7 @@ script = ExtResource( 5 )
 dialogue_file = "res://jsons/Mc/Mc.json"
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.05
+wait_time = 0.005
 one_shot = true
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]

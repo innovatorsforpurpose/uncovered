@@ -9,15 +9,17 @@ var dialogue_player = null
 
 func _input(event):
 	if event.is_action_pressed("game_usage") and len(get_overlapping_bodies()) > 1:
+		pass
 		find_and_use_dialogue()
+
 func find_and_use_dialogue():
 	dialogue_player = get_node_or_null("DialoguePlayer")
 	print(dialogue_player)
 	if dialogue_player:
 		if not dialogue_player.next_line():
-			# print("now changing target")
+			#print("now changing target")
 			target = 1
-			
+
 func _on_Mentor_body_exited(_body):
 	dialogue_player = get_node_or_null("DialoguePlayer")
 	if dialogue_player:

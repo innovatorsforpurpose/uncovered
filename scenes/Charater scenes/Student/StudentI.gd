@@ -9,8 +9,9 @@ var dialogue_player = null
 
 func _input(event):
 	if event.is_action_pressed("game_usage") and len(get_overlapping_bodies()) > 1:
-		print(get_overlapping_bodies())
-		find_and_use_dialogue()
+		pass
+		#print(get_overlapping_bodies())
+		#find_and_use_dialogue()
 func find_and_use_dialogue():
 	dialogue_player = get_node_or_null("DialoguePlayer")
 	if dialogue_player:
@@ -18,8 +19,7 @@ func find_and_use_dialogue():
 			# print("now changing target")
 			target = 1
 
-# warning-ignore:unused_argument
-func _on_StudentI_body_exited(body):
+func _on_StudentI_body_exited(_body):
 	dialogue_player = get_node_or_null("DialoguePlayer")
 	if dialogue_player:
 		dialogue_player.reset()
