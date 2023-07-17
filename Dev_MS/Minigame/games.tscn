@@ -80,6 +80,7 @@ margin_bottom = 881.0
 color = Color( 0.492188, 0.492188, 0.492188, 1 )
 
 [node name="winner" type="MarginContainer" parent="."]
+visible = false
 margin_left = 335.0
 margin_top = -1.0
 margin_right = 1017.0

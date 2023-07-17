@@ -216,4 +216,7 @@ transform = Transform( -1.20503, 0, 0, 0, 0.963988, 1.09926e-07, 0, -1.45558e-07
 transform = Transform( 15.733, 0, 0, 0, 4.88744, 2.95586e-12, 0, -2.27374e-13, 26.4285, -2.65062, 1.00136, 1.13063 )
 shape = SubResource( 23 )
 
+[node name="Minigame Timer" type="Timer" parent="."]
+
 [connection signal="body_entered" from="Spatial/Area" to="Node2D" method="_on_Area_body_entered"]
+[connection signal="timeout" from="Minigame Timer" to="Node2D" method="_on_Minigame_Timer_timeout"]

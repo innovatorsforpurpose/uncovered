@@ -17,7 +17,7 @@ func _on_green_area_body_entered():
 	if blueline and redline and greenline and yellowline:
 		print("done")
 		get_node("winner").visible = true
-		
+		get_node("/root/RootScene/OFFICE/Minigame Timer").start(3)
 
 
 
@@ -50,9 +50,14 @@ func _on_Area_body_entered(body):
 		print("got here 2")
 		show_minigame = true
 		get_node("/root/RootScene/OFFICE/Node2D").visible = true
-		get_node("/root/RootScene/BASEMENT/go to vent text").visible = false
+		get_node("/root/RootScene/BASEMENT/Conversation").visible = false
 
 		pass # Replace with function body.
 
 
 
+
+
+func _on_Minigame_Timer_timeout():
+	visible = false
+	 # Replace with function body.
