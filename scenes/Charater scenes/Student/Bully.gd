@@ -4,12 +4,15 @@ var target = 0
 var velocity = Vector3(0,0,0)
 var speed = 0.2
 var path = []
-
+var currently_colliding = false
 var dialogue_player = null
 
 func _input(event):
-	if event.is_action_pressed("game_usage") and len(get_overlapping_bodies()) > 1:
+	if event.is_action_pressed("game_usage") and currently_colliding:
 		find_and_use_dialogue()
+		#print("in_area_bully")
+		#print(currently_colliding)
+	
 func find_and_use_dialogue():
 	dialogue_player = get_node_or_null("DialoguePlayer")
 	if dialogue_player:
@@ -21,11 +24,13 @@ func _on_Bully_body_exited(_body):
 	dialogue_player = get_node_or_null("DialoguePlayer")
 	if dialogue_player:
 		dialogue_player.reset()
+
 func _process(_delta):
 	if len(get_overlapping_bodies()) == 0:
 		dialogue_player = get_node_or_null("DialoguePlayer")
 		if dialogue_player:
 			dialogue_player.reset()
+
 func _physics_process(_delta):
 	if target == 0 and path.size() == 0:
 		path = [Vector3(-20,12.458,-3),Vector3(-22,12.458,-5),Vector3(-25,12.458,-8),Vector3(-28.41,12.458,-3.216)]
@@ -41,3 +46,11 @@ func _physics_process(_delta):
 			velocity = velocity.normalized() * speed
 	transform.origin += velocity
 
+func _on_Area_body_entered(body):
+
+	if body.name == "MC":
+		currently_colliding = true
+
+
+func _on_Area_body_exited(_body):
+	currently_colliding = false

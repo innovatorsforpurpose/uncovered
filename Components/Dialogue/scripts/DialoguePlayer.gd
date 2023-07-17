@@ -17,7 +17,7 @@ func play():
 	if is_dialogue_active:
 		return
 	dialogues = load_dialogue()
-	# print(dialogues)
+	#print(dialogues)
 	if dialogues == null:
 		return
 	is_dialogue_active = true
@@ -28,13 +28,14 @@ func reset():
 	current_dialogue_id = -1
 
 func next_line():
-	#print("line")
-	#print(current_dialogue_id)
+
 	toggle_the_player(false)
 	$NinePatchRect/Name.text = dialogues[current_dialogue_id]['name']
 	$NinePatchRect/Message.text = dialogues[current_dialogue_id]['text']
 	$NinePatchRect.visible = true
 	current_dialogue_id += 1
+	print(len(dialogues))
+	print(current_dialogue_id)
 	if  current_dialogue_id >= len(dialogues):
 		current_dialogue_id = len(dialogues) - 1
 		$Timer.start()

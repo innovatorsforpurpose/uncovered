@@ -191,10 +191,10 @@ script = ExtResource( 21 )
 
 [node name="Timer" type="Timer" parent="."]
 
-[node name="StaticBody" type="StaticBody" parent="."]
+[node name="Floor" type="StaticBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.6082, -3.20107, -1.29853 )
 
-[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="Floor"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.82414, -1.45742, -1.71461 )
 shape = SubResource( 7 )
 
@@ -212,13 +212,6 @@ transform = Transform( -0.999991, 0, 0.00427596, 0, 1, 0, -0.00427596, 0, -0.999
 
 [node name="Main_Table" parent="." instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.5448, 6.65374, -23.299 )
-
-[node name="StaticBody2" type="StaticBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.26708, 7.39091, -11.864 )
-
-[node name="CollisionShape" type="CollisionShape" parent="StaticBody2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -46.3814, -7.25454, -55.5926 )
-shape = SubResource( 8 )
 
 [node name="office-3" parent="." instance=ExtResource( 5 )]
 transform = Transform( 0.962766, 0, 0, 0, 1, 0, 0, 0, 0.967171, -36.3563, 7.60737, -24.461 )
@@ -241,7 +234,7 @@ transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -24.4266, 12.458, 4.3927
 follow_viewport_enable = true
 
 [node name="GC" parent="Node2D/Enviroment" instance=ExtResource( 6 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -40.2284, 12.458, -5.783 )
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -38.8374, 13.1428, -9.96664 )
 
 [node name="DialoguePlayer" parent="Node2D/Enviroment/GC" instance=ExtResource( 17 )]
 follow_viewport_enable = true

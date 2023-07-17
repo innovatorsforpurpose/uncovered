@@ -4,17 +4,20 @@ var target = 0
 var velocity = Vector3(0,0,0)
 var speed = 0.2
 var path = []
-
+var currently_colliding = false
 var dialogue_player = null
 
 func _input(event):
-	if event.is_action_pressed("game_usage") and len(get_overlapping_bodies()) > 1:
-		pass
+	if event.is_action_pressed("game_usage") and currently_colliding:
 		find_and_use_dialogue()
+		#print("in_area_Mentor")
+		#print(currently_colliding)
+
+
 
 func find_and_use_dialogue():
 	dialogue_player = get_node_or_null("DialoguePlayer")
-	print(dialogue_player)
+	#print(dialogue_player)
 	if dialogue_player:
 		if not dialogue_player.next_line():
 			#print("now changing target")
@@ -37,7 +40,7 @@ func _physics_process(_delta):
 	if path.size() > 0:
 		velocity = Vector3(path[0].x - transform.origin.x, path[0].y - transform.origin.y, path[0].z - transform.origin.z)
 		var distance =  velocity.length()
-		# print(distance)
+		#print(distance)
 		if distance <= speed:
 			target = 0 
 			path = path.slice(1,path.size())
@@ -45,3 +48,12 @@ func _physics_process(_delta):
 		else:
 			velocity = velocity.normalized() * speed
 	transform.origin += velocity
+
+
+func _on_Area_body_entered(body):
+	if body.name == "MC":
+		currently_colliding = true
+
+
+func _on_Area_body_exited(body):
+	currently_colliding = false
