@@ -44,7 +44,7 @@ func _physics_process(_delta):
 			velocity = Vector3(0,0,0)
 		else:
 			velocity = velocity.normalized() * speed
-	transform.origin += velocity
+	# transform.origin += velocity
 
 func _on_Area_body_entered(body):
 

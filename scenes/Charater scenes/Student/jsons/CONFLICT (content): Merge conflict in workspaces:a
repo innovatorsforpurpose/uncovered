@@ -1,0 +1,17 @@
+CONFLICT (content): Merge conflict in workspaces/adnan/basement project.tscn
+CONFLICT (content): Merge conflict in workspaces/adnan/CanvasLayer.gd
+CONFLICT (content): Merge conflict in workspaces/Dev_MS/Minigame/Assets/yellow-dot-md.png.import
+CONFLICT (content): Merge conflict in workspaces/Dev_MS/Minigame/Assets/red-screen.png.import
+CONFLICT (content): Merge conflict in workspaces/Dev_MS/Minigame/Assets/circle-clip-art-2.png.import
+CONFLICT (content): Merge conflict in workspaces/Dev_MS/Minigame/Assets/Untitled-1-green-bar.jpeg.importCONFLICT (content): Merge conflict in workspaces/Dev_MS/Minigame/Assets/Screen Shot 2023-01-25 at 6.22.10 PM.png.import
+CONFLICT (content): Merge conflict in workspaces/Dev_MS/Minigame/Assets/Screen Shot 2023-01-25 at 5.48.52 PM.png.import
+CONFLICT (content): Merge conflict in workspaces/Dev_MS/Minigame/Assets/Motherboard-Lineart-Drawing.webp.import
+CONFLICT (content): Merge conflict in workspaces/Dev_MS/Minigame/Assets/173782_green-circle-png.png.import
+CONFLICT (rename/delete): Dev_MS/Minigame/project.godot deleted in HEAD and renamed to uncovered-motherboard-trigger/Dev_MS/Minigame/project.script.godot in basement-office. Version basement-office of uncovered-motherboard-trigger/Dev_MS/Minigame/project.script.godot left in tree.
+CONFLICT (content): Merge conflict in scenes/transitionobjects/transitionobject/Transition_Object.gd
+CONFLICT (modify/delete): scenes/Hall/icon.png.import deleted in HEAD and modified in basement-office. Version basement-office of scenes/Hall/icon.png.import left in tree.
+CONFLICT (modify/delete): other parts of the hallway/Image_0.001.png.import deleted in HEAD and modified in basement-office. Version basement-office of other parts of the hallway/Image_0.001.png.import left in tree.
+CONFLICT (content): Merge conflict in minigames/BossBattle/Spatial.tscn
+CONFLICT (content): Merge conflict in minigames/BossBattle/MC.png.import
+CONFLICT (content): Merge conflict in assets/objectsall/Large objects/Door/hallwaydoor.tscn
+CONFLICT (content): Merge conflict in Components/Image_1.001.jpg.import
