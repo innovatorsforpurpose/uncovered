@@ -17,7 +17,7 @@ func _on_green_area_body_entered():
 	if blueline and redline and greenline and yellowline:
 		print("done")
 		get_node("winner").visible = true
-		get_node("/root/RootScene/OFFICE/Minigame Timer").start(3)
+		get_node("/root/RootScene/OFFICE/Minigame Timer").start(5)
 
 
 

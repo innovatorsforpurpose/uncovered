@@ -249,7 +249,7 @@ transform = Transform( -0.999991, 0, 0.00427596, 0, 1, 0, -0.00427596, 0, -0.999
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.5448, 6.65374, -23.299 )
 
 [node name="StaticBody2" type="StaticBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.26708, 7.39091, -11.864 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.26584, 7.33924, -11.8516 )
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -46.3814, -7.25454, -55.5926 )
@@ -262,7 +262,7 @@ transform = Transform( 0.75, 0, 0, 0, 0.937307, 0, 0, 0, 1.6731, -9.74579, 7.471
 transform = Transform( 0.962766, 0, 0, 0, 1, 0, 0, 0, 0.967171, -36.3563, 7.60737, -24.461 )
 
 [node name="BASEMENT" parent="." instance=ExtResource( 29 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.2429, 0.619236, -52.1727 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.4182, 0.198606, -50.7483 )
 
 [node name="Node2D" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00904, 0 )
