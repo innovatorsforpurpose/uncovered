@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Charater scenes/Student/StudentI.gd" type="Script" id=1]
 [ext_resource path="res://workspaces/Dev_BA/janitor.glb" type="PackedScene" id=2]
 
 [sub_resource type="ConvexPolygonShape" id=1]
+points = PoolVector3Array( -1, -1, -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, -1, 1, 1, 1, -1, -1, -1, -1, 1, -1, 1, -1 )
+
+[sub_resource type="ConvexPolygonShape" id=3]
 points = PoolVector3Array( -1, -1, -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, -1, 1, 1, 1, -1, -1, -1, -1, 1, -1, 1, -1 )
 
 [sub_resource type="BoxShape" id=2]
@@ -23,16 +26,24 @@ transform = Transform( 0.219203, 0, 0, 0, 0.219203, 0, 0, 0, 0.219203, 0, 0, 0 )
 transform = Transform( 0.191332, 0, 0, 0, 0.216682, 0, 0, 0, 0.163782, 0, 0, 0 )
 
 [node name="VisibilityNotifier" type="VisibilityNotifier" parent="StaticBody"]
-transform = Transform( 0.263597, 0, 0, 0, 3.21492, 0, 0, 0, 0.22059, 0, 0, 0 )
-aabb = AABB( -5.56889, -1, -5.0753, 11.1378, 2, 10.1506 )
+transform = Transform( 1.05, 0, 0, 0, 3.04159, 0, 0, 0, 0.85, 0, 0, 0 )
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
-transform = Transform( 1.2436, 0, 0, 0, 2.86226, 0, 0, 0, 0.885465, 0, 0, 0 )
+transform = Transform( 1.05, 0, 0, 0, 3.04159, 0, 0, 0, 0.85, 0, 0, 0 )
 shape = SubResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="CollisionShape2" type="CollisionShape" parent="."]
 transform = Transform( 0.613514, 0, 0, 0, 0.783346, 0, 0, 0, 0.494468, 0, 0, 0 )
-shape = SubResource( 1 )
+shape = SubResource( 3 )
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="Area" type="Area" parent="."]
 transform = Transform( 0.182794, 0, 0, 0, 1.73825, 0, 0, 0, 0.171282, 0, 0, 0 )
