@@ -32,7 +32,6 @@ func _on_Timer_timeout():
 	#print("transition")
 	var success = ProjectSettings.load_resource_pack("res://packs/UncoveredMinigame.zip")
 	if success:
-<<<<<<< HEAD:scenes/transitionobjects/transitionobject/Transition_Object.gd
 		return get_tree().change_scene("res://Scenes/CreationScene.tscn")
 func door_entered(body):
 	if body.name == "MC":
@@ -40,4 +39,3 @@ func door_entered(body):
 		# print("I am here sir i have done it ")
 		get_node("/root/RootScene/Door1/AnimationPlayer").play("open")
 		get_node("/root/RootScene/Timer").start(1.2)
->>>>>>> bo2:scenes/Hall/Transition_Object.gd

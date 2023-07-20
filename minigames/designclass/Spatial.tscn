@@ -29,8 +29,6 @@
 [ext_resource path="res://minigames/designclass/Transition_Object_BossBattle.gd" type="Script" id=28]
 [ext_resource path="res://Components/atrium/assets/Atrium.glb" type="PackedScene" id=29]
 
-
-
 [sub_resource type="Animation" id=1]
 length = 0.001
 tracks/0/type = "value"
