@@ -11,15 +11,17 @@ func _ready():
 	pass # Replace with function body.
 
 
-
+var gotovent_shown = false
 #func _process(delta):
 #	pass
 
 
 func _on_Area2_body_entered(body):
-	if body.name == "MC":
+	if body.name == "MC" and gotovent_shown == false:
+
 		get_node("/root/RootScene/BASEMENT/go to vent text/Timer").start(5)
-	
+		gotovent_shown = true
+		
 	pass # Replace with function body.
 
 

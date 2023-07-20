@@ -69,3 +69,17 @@ mesh = SubResource( 2 )
 [node name="Cube336" type="MeshInstance" parent="RootNode"]
 transform = Transform( 207.575, 0, 0, 0, -7.42344e-05, 207.574, 0, -207.574, -7.42344e-05, -29.0502, -0.429555, -11.736 )
 mesh = SubResource( 3 )
+<<<<<<< HEAD:assets/objectsall/Large objects/Door/hallwaydoor.tscn
+=======
+
+[node name="StaticBody" type="StaticBody" parent="RootNode"]
+
+[node name="door#2005" type="MeshInstance" parent="RootNode/StaticBody"]
+transform = Transform( 0.0248949, 12.7007, 2.77637e-06, 3.85836e-07, -3.02809e-06, 13.3085, 12.9465, -0.0244219, 0, 0, 0, 0 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+
+[node name="CollisionShape" type="CollisionShape" parent="RootNode/StaticBody"]
+transform = Transform( 0.0248949, 12.7007, 2.77637e-06, 3.85836e-07, -3.02809e-06, 13.3085, 12.9465, -0.0244219, 0, 0.39061, 0.00785112, -0.521198 )
+shape = SubResource( 4 )
+>>>>>>> bo2:scenes/Hall/Hallway Door.tscn

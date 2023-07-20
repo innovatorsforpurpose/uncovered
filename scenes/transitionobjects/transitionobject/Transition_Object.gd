@@ -28,15 +28,16 @@ func _on_Area_input_event(_camera, event, _position, _normal, _shape_idx):
 			get_node("/root/RootScene/Door1/AnimationPlayer").play("open")
 			get_node("/root/RootScene/Timer").start(2)
 
-
 func _on_Timer_timeout():
 	#print("transition")
 	var success = ProjectSettings.load_resource_pack("res://packs/UncoveredMinigame.zip")
 	if success:
+<<<<<<< HEAD:scenes/transitionobjects/transitionobject/Transition_Object.gd
 		return get_tree().change_scene("res://Scenes/CreationScene.tscn")
-	else:
-		print("could not load uncovered minigame")
-
-
-func _on_Student_body_entered(_body):
-	pass # Replace with function body.
+func door_entered(body):
+	if body.name == "MC":
+		$CSGSphere.visible = false
+		# print("I am here sir i have done it ")
+		get_node("/root/RootScene/Door1/AnimationPlayer").play("open")
+		get_node("/root/RootScene/Timer").start(1.2)
+>>>>>>> bo2:scenes/Hall/Transition_Object.gd

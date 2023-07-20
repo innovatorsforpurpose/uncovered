@@ -14,9 +14,7 @@ func _on_Area2D_body_entered(body):
 	visible = true 
 	print("bodyname")
 	if body.name == "yellowdrag":
-		get_node("/root/Node2D").yellowline = true
-	get_node("/root/Node2D")._on_green_area_body_entered()
+		get_node("/root/RootScene/OFFICE/Node2D").yellowline = true
+	get_node("/root/RootScene/OFFICE/Node2D")._on_green_area_body_entered()
 
 
-func _on_Area2D_body_exited(_body):
-	visible = false 

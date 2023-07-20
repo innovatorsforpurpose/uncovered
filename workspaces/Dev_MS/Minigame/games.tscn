@@ -1,26 +1,30 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=36 format=2]
 
-[ext_resource path="res://Scripts/bottom.gd" type="Script" id=1]
-[ext_resource path="res://Assets/circle-clip-art-2.png" type="Texture" id=2]
-[ext_resource path="res://Scripts/LongBlue.gd" type="Script" id=3]
-[ext_resource path="res://Scripts/mid.gd" type="Script" id=4]
-[ext_resource path="res://Scripts/Longbar.gd" type="Script" id=5]
-[ext_resource path="res://Assets/Screen Shot 2023-01-25 at 5.48.52 PM.png" type="Texture" id=6]
-[ext_resource path="res://Scripts/Shortbar.gd" type="Script" id=7]
-[ext_resource path="res://Scripts/KinematicBody2D.gd" type="Script" id=8]
-[ext_resource path="res://Assets/173782_green-circle-png.png" type="Texture" id=9]
-[ext_resource path="res://Assets/Untitled-1-green-bar.jpeg" type="Texture" id=10]
-[ext_resource path="res://Assets/battlenet.ttf" type="DynamicFontData" id=11]
-[ext_resource path="res://Assets/images.png" type="Texture" id=12]
-[ext_resource path="res://Assets/yellow-dot-md.png" type="Texture" id=13]
-[ext_resource path="res://Assets/red-screen.png" type="Texture" id=14]
-[ext_resource path="res://Assets/6Tp5aB97c.png" type="Texture" id=15]
-[ext_resource path="res://Scripts/Sprite.gd" type="Script" id=16]
-[ext_resource path="res://Scripts/top.gd" type="Script" id=17]
-[ext_resource path="res://Scripts/ShortBlue.gd" type="Script" id=18]
-[ext_resource path="res://Scripts/Node2.gd" type="Script" id=19]
-[ext_resource path="res://Assets/1st34.png" type="Texture" id=20]
-[ext_resource path="res://Assets/Motherboard-Lineart-Drawing.webp" type="Texture" id=21]
+[ext_resource path="res://Dev_MS/Minigame/Scripts/bottom.gd" type="Script" id=1]
+[ext_resource path="res://Dev_MS/Minigame/Assets/circle-clip-art-2.png" type="Texture" id=2]
+[ext_resource path="res://Dev_MS/Minigame/Scripts/LongBlue.gd" type="Script" id=3]
+[ext_resource path="res://Dev_MS/Minigame/Scripts/mid.gd" type="Script" id=4]
+[ext_resource path="res://Dev_MS/Minigame/Scripts/Longbar.gd" type="Script" id=5]
+[ext_resource path="res://Dev_MS/Minigame/Assets/Screen Shot 2023-01-25 at 5.48.52 PM.png" type="Texture" id=6]
+[ext_resource path="res://Dev_MS/Minigame/Scripts/Shortbar.gd" type="Script" id=7]
+[ext_resource path="res://Dev_MS/Minigame/Scripts/KinematicBody2D.gd" type="Script" id=8]
+[ext_resource path="res://Dev_MS/Minigame/Assets/173782_green-circle-png.png" type="Texture" id=9]
+[ext_resource path="res://Dev_MS/Minigame/Assets/Untitled-1-green-bar.jpeg" type="Texture" id=10]
+[ext_resource path="res://Dev_MS/Minigame/Assets/battlenet.ttf" type="DynamicFontData" id=11]
+[ext_resource path="res://Dev_MS/Minigame/Assets/images.png" type="Texture" id=12]
+[ext_resource path="res://Dev_MS/Minigame/Assets/yellow-dot-md.png" type="Texture" id=13]
+[ext_resource path="res://Dev_MS/Minigame/Assets/red-screen.png" type="Texture" id=14]
+[ext_resource path="res://Dev_MS/Minigame/Assets/6Tp5aB97c.png" type="Texture" id=15]
+[ext_resource path="res://Dev_MS/Minigame/Scripts/Sprite.gd" type="Script" id=16]
+[ext_resource path="res://Dev_MS/Minigame/Scripts/top.gd" type="Script" id=17]
+[ext_resource path="res://Dev_MS/Minigame/Scripts/ShortBlue.gd" type="Script" id=18]
+[ext_resource path="res://Dev_MS/Minigame/Scripts/Node2.gd" type="Script" id=19]
+[ext_resource path="res://Dev_MS/Minigame/Assets/1st34.png" type="Texture" id=20]
+[ext_resource path="res://Dev_MS/Minigame/Assets/Motherboard-Lineart-Drawing.webp" type="Texture" id=21]
+[ext_resource path="res://Dev_MS/Minigame/Motherboard-Lineart-Drawing.gd" type="Script" id=22]
+[ext_resource path="res://Dev_MS/Minigame/Instructions.gd" type="Script" id=23]
+[ext_resource path="res://Dev_MS/Minigame/Sprite2.gd" type="Script" id=24]
+[ext_resource path="res://Dev_MS/Minigame/Sprite.gd" type="Script" id=25]
 
 [sub_resource type="StyleBoxFlat" id=10]
 bg_color = Color( 0, 0, 0, 1 )
@@ -77,33 +81,32 @@ color = Color( 0.492188, 0.492188, 0.492188, 1 )
 
 [node name="winner" type="MarginContainer" parent="."]
 visible = false
-margin_left = 271.0
-margin_top = 636.0
-margin_right = 969.0
-margin_bottom = 837.0
+margin_left = 335.0
+margin_top = -1.0
+margin_right = 1017.0
+margin_bottom = 57.0
 
 [node name="Panel" type="Panel" parent="winner"]
-margin_right = 698.0
-margin_bottom = 201.0
+margin_right = 682.0
+margin_bottom = 58.0
 custom_styles/panel = SubResource( 10 )
 
 [node name="MarginContainer" type="MarginContainer" parent="winner"]
-margin_right = 698.0
-margin_bottom = 201.0
+margin_right = 682.0
+margin_bottom = 58.0
 
 [node name="Panel" type="Panel" parent="winner/MarginContainer"]
-visible = false
-margin_right = 698.0
-margin_bottom = 201.0
+margin_right = 682.0
+margin_bottom = 58.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="winner/MarginContainer"]
-margin_right = 698.0
-margin_bottom = 201.0
+margin_right = 682.0
+margin_bottom = 58.0
 
 [node name="Label" type="Label" parent="winner/MarginContainer/HBoxContainer"]
-margin_top = 78.0
+margin_top = 6.0
 margin_right = 682.0
-margin_bottom = 123.0
+margin_bottom = 51.0
 custom_fonts/font = SubResource( 11 )
 text = "  YOU DID IT, ITS WORKING. AGAIN !!!!!!!"
 
@@ -115,6 +118,7 @@ scale = Vector2( 0.2188, 0.1977 )
 texture = ExtResource( 21 )
 normal_map = ExtResource( 21 )
 offset = Vector2( 2010.97, 1213.96 )
+script = ExtResource( 22 )
 
 [node name="Box" type="KinematicBody2D" parent="."]
 show_behind_parent = true
@@ -123,6 +127,7 @@ show_behind_parent = true
 position = Vector2( 564, 496 )
 scale = Vector2( 0.866667, 0.914286 )
 texture = ExtResource( 12 )
+script = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Box"]
 visible = false
@@ -196,6 +201,7 @@ position = Vector2( 464, 88 )
 [node name="Sprite" type="Sprite" parent="Still Green"]
 scale = Vector2( 0.0966666, 0.103333 )
 texture = ExtResource( 9 )
+script = ExtResource( 25 )
 
 [node name="Shortbar" type="Sprite" parent="Still Green"]
 visible = false
@@ -238,6 +244,7 @@ script = ExtResource( 3 )
 [node name="Sprite" type="Sprite" parent="Still Blue"]
 scale = Vector2( 0.16, 0.158167 )
 texture = ExtResource( 2 )
+script = ExtResource( 25 )
 
 [node name="Blue area" type="Area2D" parent="Still Blue"]
 position = Vector2( 99, 244 )
@@ -258,6 +265,7 @@ script = ExtResource( 16 )
 [node name="Sprite2" type="Sprite" parent="Still Red"]
 scale = Vector2( 0.021125, 0.0224375 )
 texture = ExtResource( 15 )
+script = ExtResource( 24 )
 
 [node name="red area" type="Area2D" parent="Still Red"]
 position = Vector2( 0.875, -415.562 )
@@ -301,6 +309,7 @@ shape = SubResource( 7 )
 [node name="Sprite" type="Sprite" parent="Still yeller"]
 scale = Vector2( 0.209542, 0.144433 )
 texture = ExtResource( 13 )
+script = ExtResource( 25 )
 
 [node name="Instructions" type="MarginContainer" parent="."]
 anchor_right = 1.0
@@ -310,6 +319,7 @@ margin_top = 96.0
 margin_right = 376.0
 margin_bottom = 232.0
 rect_scale = Vector2( 1.00117, 1 )
+script = ExtResource( 23 )
 
 [node name="Panel" type="Panel" parent="Instructions"]
 margin_right = 378.0
@@ -334,6 +344,9 @@ margin_bottom = 92.0
 custom_fonts/font = SubResource( 9 )
 text = "  Drag and drop the circles in the right area 
   to repair the PC!"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 509, 301 )
 
 [connection signal="mouse_entered" from="Box/reddrag" to="Box/reddrag" method="_on_KinematicBody2D_mouse_entered"]
 [connection signal="mouse_exited" from="Box/reddrag" to="Box/reddrag" method="_on_KinematicBody2D_mouse_exited"]

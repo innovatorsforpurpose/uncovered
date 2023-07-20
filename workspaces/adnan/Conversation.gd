@@ -16,9 +16,9 @@ var counter = 1
 func _process(_delta):
 	
 	if Input.is_action_just_pressed("game_usage") and counter < 8:
-		print (counter)
-		get_node("/root/RootScene/BASEMENT/Converstaion/Node2D/Instructions/MarginContainer/HBoxContainer/Label" + str(counter)).visible = false
-		get_node("/root/RootScene/BASEMENT/Converstaion/Node2D/Instructions/MarginContainer/HBoxContainer/Label" + str(counter + 1)).visible = true
+		#print (counter)
+		get_node("/root/RootScene/BASEMENT/Conversation/Node2D/Instructions/MarginContainer/HBoxContainer/Label" + str(counter)).visible = false
+		get_node("/root/RootScene/BASEMENT/Conversation/Node2D/Instructions/MarginContainer/HBoxContainer/Label" + str(counter + 1)).visible = true
 		counter += 1
 	elif Input.is_action_just_pressed("game_usage"):
 		dialogue_done = true		
@@ -32,8 +32,8 @@ func _process(_delta):
 var dialogue_done = false
 func _on_Area3_body_entered(body):
 	if body.name == "MC" and !dialogue_done:
-		get_node("/root/RootScene/BASEMENT/Converstaion").visible = true
+		get_node("/root/RootScene/BASEMENT/Conversation").visible = true
 	elif dialogue_done:
-		get_node("/root/RootScene/BASEMENT/Converstaion").visible = true
+		get_node("/root/RootScene/BASEMENT/Conversation").visible = true
 				
 	pass # Replace with function body.

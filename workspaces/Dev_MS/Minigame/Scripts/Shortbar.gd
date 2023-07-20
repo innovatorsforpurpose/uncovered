@@ -6,8 +6,8 @@ extends Sprite
 func _on_Area2D_body_entered(body):
 	visible = true
 	if body.name == "greendrag":
-		get_node("/root/Node2D").greenline = true
-	get_node("/root/Node2D")._on_green_area_body_entered()
+		get_node("/root/RootScene/OFFICE/Node2D").greenline = true
+	get_node("/root/RootScene/OFFICE/Node2D")._on_green_area_body_entered()
 
 
 func _on_Area2D_body_exited(_body):

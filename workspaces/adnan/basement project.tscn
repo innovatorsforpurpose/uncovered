@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://workspaces/adnan/Camera.gd" type="Script" id=1]
 [ext_resource path="res://Components/basement/2.glb" type="PackedScene" id=2]
@@ -12,13 +12,13 @@
 [ext_resource path="res://workspaces/adnan/ColorRect.gd" type="Script" id=10]
 [ext_resource path="res://workspaces/adnan/Conversation.gd" type="Script" id=11]
 [ext_resource path="res://workspaces/Dev_MS/Minigame/Assets/battlenet.ttf" type="DynamicFontData" id=12]
-
+[ext_resource path="res://basement_Door.tscn" type="PackedScene" id=13]
 
 [sub_resource type="BoxShape" id=11]
 extents = Vector3( 4.85664, 2, 0.574707 )
 
 [sub_resource type="CubeMesh" id=10]
-size = Vector3( 10, 2, 0 )
+size = Vector3( 10, 3, 0 )
 
 [sub_resource type="SpatialMaterial" id=12]
 albedo_texture = ExtResource( 3 )
@@ -31,7 +31,7 @@ albedo_texture = ExtResource( 3 )
 
 [sub_resource type="CubeMesh" id=1]
 material = SubResource( 13 )
-size = Vector3( 10, 2, 0 )
+size = Vector3( 10, 3, 0 )
 
 [sub_resource type="SpatialMaterial" id=17]
 albedo_texture = ExtResource( 5 )
@@ -51,68 +51,17 @@ albedo_texture = ExtResource( 3 )
 
 [sub_resource type="CubeMesh" id=5]
 material = SubResource( 15 )
-size = Vector3( 10, 2, 0 )
+size = Vector3( 10, 3, 0 )
 
 [sub_resource type="SpatialMaterial" id=16]
 albedo_texture = ExtResource( 3 )
 
 [sub_resource type="CubeMesh" id=6]
 material = SubResource( 16 )
-size = Vector3( 10, 2, 0 )
+size = Vector3( 4.1, 3, 1 )
 
 [sub_resource type="BoxShape" id=8]
-extents = Vector3( 5.40374, 1, 0.287476 )
-
-[sub_resource type="CanvasItemMaterial" id=21]
-
-[sub_resource type="GDScript" id=22]
-
-[sub_resource type="StreamTexture" id=23]
-flags = 7
-
-[sub_resource type="VisualShaderNodeTexture" id=24]
-texture = SubResource( 23 )
-
-[sub_resource type="VisualShaderNodeScalarConstant" id=19]
-constant = 3.508
-
-[sub_resource type="VisualShader" id=20]
-code = "shader_type spatial;
-render_mode specular_schlick_ggx, async_visible;
-
-
-
-
-void vertex() {
-// Output:0
-
-}
-
-void fragment() {
-// Scalar:4
-	float n_out4p0 = 3.508000;
-
-// Output:0
-	ALPHA = n_out4p0;
-
-}
-
-void light() {
-// Output:0
-
-}
-"
-graph_offset = Vector2( -327.667, 70.5978 )
-nodes/fragment/2/node = SubResource( 24 )
-nodes/fragment/2/position = Vector2( -420, 380 )
-nodes/fragment/4/node = SubResource( 19 )
-nodes/fragment/4/position = Vector2( -120, 240 )
-nodes/fragment/connections = PoolIntArray( 4, 0, 0, 1 )
-
-[sub_resource type="ShaderMaterial" id=25]
-next_pass = SubResource( 21 )
-shader = SubResource( 20 )
-script = SubResource( 22 )
+extents = Vector3( 1.91978, 1, 0.287476 )
 
 [sub_resource type="BoxShape" id=26]
 extents = Vector3( 0.355751, 1.11831, 0.328131 )
@@ -132,10 +81,10 @@ border_color = Color( 0.972549, 0.968627, 0.968627, 1 )
 size = 25
 font_data = ExtResource( 12 )
 
-[sub_resource type="Gradient" id=28]
+[sub_resource type="Gradient" id=42]
 
 [sub_resource type="GradientTexture" id=29]
-gradient = SubResource( 28 )
+gradient = SubResource( 42 )
 
 [sub_resource type="BoxShape" id=30]
 extents = Vector3( 1.38692, 1, 1 )
@@ -152,17 +101,82 @@ shader = SubResource( 31 )
 gradient = SubResource( 33 )
 fill_from = Vector2( 1, 0 )
 
+[sub_resource type="BoxShape" id=37]
+
+[sub_resource type="SpatialMaterial" id=38]
+albedo_texture = ExtResource( 3 )
+
+[sub_resource type="CubeMesh" id=39]
+material = SubResource( 38 )
+size = Vector3( 10, 0.5, 1 )
+
+[sub_resource type="Skin" id=40]
+
+[sub_resource type="SpatialMaterial" id=41]
+albedo_texture = ExtResource( 3 )
+
 [node name="BASEMENT" type="Spatial"]
 
 [node name="StaticBody" type="StaticBody" parent="."]
-transform = Transform( 0.00113447, 0, 0.999999, 0, 1, 0, -0.999999, 0, 0.00113447, 4.98717, 1.02011, 5.03261 )
+transform = Transform( 0.00113447, 0, 0, 0, 1, 0, -0.999999, 0, 0, 4.98717, 1.02011, 5.03261 )
+visible = false
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0111179, -0.775808, -9.79971 )
 shape = SubResource( 11 )
 
 [node name="MeshInstance3" type="MeshInstance" parent="StaticBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01127, 0, -9.93575 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0112677, 0.43484, -9.93575 )
+mesh = SubResource( 10 )
+material/0 = SubResource( 12 )
+
+[node name="StaticBody6" type="StaticBody" parent="."]
+transform = Transform( 0.46, 0, 0, 0, 1, 0, 0, 0, 0, -3.29133, 1.01414, 10.4039 )
+visible = false
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0111179, -0.775808, -9.79971 )
+shape = SubResource( 11 )
+
+[node name="MeshInstance3" type="MeshInstance" parent="StaticBody6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0112677, 0.43484, -9.93575 )
+mesh = SubResource( 10 )
+material/0 = SubResource( 12 )
+
+[node name="StaticBody5" type="StaticBody" parent="."]
+transform = Transform( 0.4, 0, 0, 0, 1, 0, 0, 0, 0, 2.98614, 1.02011, 9.99054 )
+visible = false
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0111179, -0.775808, -9.79971 )
+shape = SubResource( 11 )
+
+[node name="MeshInstance3" type="MeshInstance" parent="StaticBody5"]
+transform = Transform( 0.16, 0, 0, 0, 1, 0, 0, 0, 0, -0.0018028, 0.43484, 0 )
+mesh = SubResource( 10 )
+material/0 = SubResource( 12 )
+
+[node name="StaticBody4" type="StaticBody" parent="."]
+transform = Transform( -1, 0, 0, 0, 1, 0, -0.00061086, 0, 0, 0.0834255, 1.02011, 0.10955 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0111179, -0.775808, -9.79971 )
+shape = SubResource( 11 )
+
+[node name="MeshInstance3" type="MeshInstance" parent="StaticBody4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0112677, 0.43484, -9.93575 )
+mesh = SubResource( 10 )
+material/0 = SubResource( 12 )
+
+[node name="StaticBody3" type="StaticBody" parent="."]
+transform = Transform( 0.00113447, 0, 0, 0, 1, 0, -0.999999, 0, 0, -4.94008, 1.02011, 5.03261 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody3"]
+transform = Transform( 1.28702e-06, 0, 0, 0, 1, 0, -0.00113447, 0, 0, -1.39698e-08, -0.775808, 1.23978e-05 )
+shape = SubResource( 11 )
+
+[node name="MeshInstance3" type="MeshInstance" parent="StaticBody3"]
+transform = Transform( 1.65643e-12, 0, 0, 0, 1, 0, -1.46009e-09, 0, 0, 0, 0.43484, 0 )
 mesh = SubResource( 10 )
 material/0 = SubResource( 12 )
 
@@ -172,7 +186,7 @@ material/0 = SubResource( 12 )
 shape = SubResource( 7 )
 
 [node name="MeshInstance" type="MeshInstance" parent="FrontWall"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.02304, 0.0783124 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.50069, 0.0783124 )
 mesh = SubResource( 1 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="."]
@@ -181,10 +195,10 @@ mesh = SubResource( 18 )
 skeleton = NodePath("Floor")
 
 [node name="Floor" type="StaticBody" parent="MeshInstance2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.53674e-07, -5.06023 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0108705, -5.06023 )
 
 [node name="CollisionShape" type="CollisionShape" parent="MeshInstance2/Floor"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.21707 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.53674e-07, 3.51551 )
 shape = SubResource( 4 )
 
 [node name="Camera" type="Camera" parent="."]
@@ -200,11 +214,15 @@ transform = Transform( 0.00113447, 0, 0.999999, 0, 1, 0, -0.999999, 0, 0.0011344
 shape = SubResource( 9 )
 
 [node name="MeshInstance" type="MeshInstance" parent="LeftWall"]
-transform = Transform( 0.00113447, 0, 0.999999, 0, 1, 0, -0.999999, 0, 0.00113447, 4.98717, 1.02011, 4.98443 )
+transform = Transform( 0.00113447, 0, 0.999999, 0, 1, 0, -0.999999, 0, 0.00113447, 4.98717, 1.52426, 4.98443 )
+mesh = SubResource( 5 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="LeftWall"]
+transform = Transform( 0.00113447, 0, 0.999999, 0, 1, 0, -0.999999, 0, 0.00113447, -5.00717, 1.52426, 4.98443 )
 mesh = SubResource( 5 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.983692, 10.04 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.91677, 1.49972, 10.04 )
 mesh = SubResource( 6 )
 skeleton = NodePath("StaticBody")
 
@@ -212,19 +230,33 @@ skeleton = NodePath("StaticBody")
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.983692, 1.69942 )
 
 [node name="CollisionShape" type="CollisionShape" parent="MeshInstance/StaticBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.983692, -1.69942 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00516731, -1.69942 )
+shape = SubResource( 8 )
+
+[node name="MeshInstance3" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.98556, 1.51549, 10.04 )
+mesh = SubResource( 6 )
+skeleton = NodePath("StaticBody")
+
+[node name="StaticBody" type="StaticBody" parent="MeshInstance3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.983692, 1.69942 )
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance3/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00516731, -1.69942 )
+shape = SubResource( 8 )
+
+[node name="StaticBody2" type="StaticBody" parent="MeshInstance3"]
+transform = Transform( 3, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.983692, 5.15354 )
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance3/StaticBody2"]
+transform = Transform( -0.00495675, 0, 0.333329, 0, 1, 0, -2.99996, 0, -0.00495675, -2.64811, 0.00516731, -10.7109 )
 shape = SubResource( 8 )
 
 [node name="steampunk_lamps" parent="." instance=ExtResource( 4 )]
 transform = Transform( 0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 2.90018, -0.0070684, 0.198902 )
 
-[node name="vent" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -4.05081, 1.51814, 9.87746 )
-
-[node name="hiii" parent="vent" instance=ExtResource( 6 )]
-transform = Transform( -0.999961, 0, -0.0088487, 0, 1, 0, 0.0088487, 0, -0.999961, -0.0305386, -0.0479746, -1.41861 )
-
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 margin_left = -33.0
 margin_top = -50.0
 margin_right = 1069.0
@@ -234,27 +266,13 @@ script = ExtResource( 10 )
 
 [node name="ColorRectTimer" type="Timer" parent="ColorRect"]
 
-[node name="Instructions" type="CanvasLayer" parent="."]
-script = ExtResource( 7 )
-
-[node name="InstructionsTimer" type="Timer" parent="Instructions"]
+[node name="InstructionsTimer" type="Timer" parent="."]
 wait_time = 0.05
 one_shot = true
 
-[node name="InstructionsBackground" type="NinePatchRect" parent="Instructions"]
-material = SubResource( 25 )
-margin_left = 363.0
-margin_top = 195.0
-margin_right = 605.92
-margin_bottom = 278.6
-rect_scale = Vector2( 1.58803, 1.27942 )
-region_rect = Rect2( 1529, 746, 1, 0 )
-__meta__ = {
-"_edit_use_anchors_": true
-}
-
 [node name="Area" type="Area" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.054574, 2.55721, -0.35714 )
+script = ExtResource( 7 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
 transform = Transform( 30, 0, 0, 0, 1, 0, 0, 0, 30, 0.149956, -1.97036, 4.48581 )
@@ -331,15 +349,15 @@ text = "go to vent "
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3104, 1.19039, 8.39414 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Area3"]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -1.50762, -1.63169, 1.96011 )
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -1.50762, 0.758185, 1.96011 )
 shape = SubResource( 30 )
 
-[node name="Converstaion" type="CanvasLayer" parent="."]
+[node name="Conversation" type="CanvasLayer" parent="."]
 script = ExtResource( 11 )
 
-[node name="Node2D" type="Node2D" parent="Converstaion"]
+[node name="Node2D" type="Node2D" parent="Conversation"]
 
-[node name="Instructions" type="MarginContainer" parent="Converstaion/Node2D"]
+[node name="Instructions" type="MarginContainer" parent="Conversation/Node2D"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -2.0
@@ -348,23 +366,23 @@ margin_right = 376.0
 margin_bottom = 232.0
 rect_scale = Vector2( 1.00117, 1 )
 
-[node name="Panel" type="Panel" parent="Converstaion/Node2D/Instructions"]
+[node name="Panel" type="Panel" parent="Conversation/Node2D/Instructions"]
 margin_right = 640.0
 margin_bottom = 136.0
 custom_styles/panel = SubResource( 35 )
 
-[node name="MarginContainer" type="MarginContainer" parent="Converstaion/Node2D/Instructions"]
+[node name="MarginContainer" type="MarginContainer" parent="Conversation/Node2D/Instructions"]
 margin_right = 640.0
 margin_bottom = 136.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Converstaion/Node2D/Instructions/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Conversation/Node2D/Instructions/MarginContainer"]
 margin_right = 640.0
 margin_bottom = 136.0
 __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="Label1" type="Label" parent="Converstaion/Node2D/Instructions/MarginContainer/HBoxContainer"]
+[node name="Label1" type="Label" parent="Conversation/Node2D/Instructions/MarginContainer/HBoxContainer"]
 margin_top = 30.0
 margin_right = 640.0
 margin_bottom = 105.0
@@ -373,7 +391,7 @@ text = "  ???: So, my friend, our plan is working perfectly. The students are be
  more and more sluggish by the day. 
 "
 
-[node name="Label2" type="Label" parent="Converstaion/Node2D/Instructions/MarginContainer/HBoxContainer"]
+[node name="Label2" type="Label" parent="Conversation/Node2D/Instructions/MarginContainer/HBoxContainer"]
 visible = false
 margin_left = 644.0
 margin_top = 17.0
@@ -385,7 +403,7 @@ text = "  ???: Yes, indeed. Our sedative-laced water fountains are doing wonders
 	  right into our trap.
  "
 
-[node name="Label3" type="Label" parent="Converstaion/Node2D/Instructions/MarginContainer/HBoxContainer"]
+[node name="Label3" type="Label" parent="Conversation/Node2D/Instructions/MarginContainer/HBoxContainer"]
 visible = false
 margin_left = 1297.0
 margin_top = 17.0
@@ -397,7 +415,7 @@ text = "  ???: It's the perfect way to subdue them
   the entire school will be under our control.
 "
 
-[node name="Label4" type="Label" parent="Converstaion/Node2D/Instructions/MarginContainer/HBoxContainer"]
+[node name="Label4" type="Label" parent="Conversation/Node2D/Instructions/MarginContainer/HBoxContainer"]
 visible = false
 margin_left = 1660.0
 margin_top = 17.0
@@ -409,7 +427,7 @@ text = "  ???: Yes, and with the students weakened and sedated,
   They won't even know what hit them.
 "
 
-[node name="Label5" type="Label" parent="Converstaion/Node2D/Instructions/MarginContainer/HBoxContainer"]
+[node name="Label5" type="Label" parent="Conversation/Node2D/Instructions/MarginContainer/HBoxContainer"]
 visible = false
 margin_left = 2193.0
 margin_top = 17.0
@@ -421,7 +439,7 @@ text = "  ???: Exactly. It's the ultimate scheme - taking advantage
   They won't suspect a thing.
 "
 
-[node name="Label6" type="Label" parent="Converstaion/Node2D/Instructions/MarginContainer/HBoxContainer"]
+[node name="Label6" type="Label" parent="Conversation/Node2D/Instructions/MarginContainer/HBoxContainer"]
 visible = false
 margin_left = 2737.0
 margin_top = 17.0
@@ -433,7 +451,7 @@ text = "  ???: It's brilliant. We'll continue to dose the water fountains
   stand in our way.
 "
 
-[node name="Label7" type="Label" parent="Converstaion/Node2D/Instructions/MarginContainer/HBoxContainer"]
+[node name="Label7" type="Label" parent="Conversation/Node2D/Instructions/MarginContainer/HBoxContainer"]
 visible = false
 margin_left = 3235.0
 margin_top = 30.0
@@ -444,7 +462,7 @@ text = "  ???: To our success! The students won't
   know what hit them until it's too late.
 "
 
-[node name="Label8" type="Label" parent="Converstaion/Node2D/Instructions/MarginContainer/HBoxContainer"]
+[node name="Label8" type="Label" parent="Conversation/Node2D/Instructions/MarginContainer/HBoxContainer"]
 visible = false
 margin_left = 3590.0
 margin_top = 17.0
@@ -456,7 +474,7 @@ text = "  ???: Cheers to that! The sedated students
   with an iron fist.
 "
 
-[node name="NinePatchRect" type="NinePatchRect" parent="Converstaion"]
+[node name="NinePatchRect" type="NinePatchRect" parent="Conversation"]
 visible = false
 modulate = Color( 0.764706, 0.0823529, 0.0823529, 1 )
 self_modulate = Color( 0.8, 0.0823529, 0.0823529, 1 )
@@ -468,7 +486,7 @@ margin_right = 924.0
 margin_bottom = 496.0
 texture = SubResource( 34 )
 
-[node name="Text1" type="RichTextLabel" parent="Converstaion"]
+[node name="Text1" type="RichTextLabel" parent="Conversation"]
 visible = false
 margin_left = 356.0
 margin_top = 269.0
@@ -476,7 +494,7 @@ margin_right = 782.0
 margin_bottom = 521.0
 text = "1"
 
-[node name="Text2" type="RichTextLabel" parent="Converstaion"]
+[node name="Text2" type="RichTextLabel" parent="Conversation"]
 visible = false
 margin_left = 356.0
 margin_top = 269.0
@@ -484,7 +502,7 @@ margin_right = 782.0
 margin_bottom = 521.0
 text = "2"
 
-[node name="Text3" type="RichTextLabel" parent="Converstaion"]
+[node name="Text3" type="RichTextLabel" parent="Conversation"]
 visible = false
 margin_left = 356.0
 margin_top = 269.0
@@ -492,7 +510,7 @@ margin_right = 782.0
 margin_bottom = 521.0
 text = "3"
 
-[node name="Text4" type="RichTextLabel" parent="Converstaion"]
+[node name="Text4" type="RichTextLabel" parent="Conversation"]
 visible = false
 margin_left = 356.0
 margin_top = 269.0
@@ -500,7 +518,7 @@ margin_right = 782.0
 margin_bottom = 521.0
 text = "4"
 
-[node name="Text5" type="RichTextLabel" parent="Converstaion"]
+[node name="Text5" type="RichTextLabel" parent="Conversation"]
 visible = false
 margin_left = 356.0
 margin_top = 269.0
@@ -508,9 +526,32 @@ margin_right = 782.0
 margin_bottom = 521.0
 text = "5"
 
+[node name="StaticBody2" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.71775, 6.82555 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0640452, 0, 0.0114937 )
+shape = SubResource( 37 )
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody2/CollisionShape"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00465107, -0.948774, 3.20531 )
+mesh = SubResource( 39 )
+skin = SubResource( 40 )
+skeleton = NodePath("")
+material/0 = SubResource( 41 )
+
+[node name="Basement_Door" parent="." instance=ExtResource( 13 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.798344, 0.624369, 9.78671 )
+
+[node name="2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.57566, 2.34604, 10.5908 )
+
+[node name="hiii" parent="2" instance=ExtResource( 6 )]
+transform = Transform( -0.999149, 0, -0.041248, 0, 1, 0, 0.041248, 0, -0.999149, -0.0823364, -0.0169044, -1.40886 )
+
 [connection signal="timeout" from="ColorRect/ColorRectTimer" to="ColorRect" method="_on_ColorRectTimer_timeout"]
-[connection signal="timeout" from="Instructions/InstructionsTimer" to="Instructions" method="_on_InstructionsTimer_timeout"]
-[connection signal="body_entered" from="Area" to="Instructions" method="_on_Area_body_entered"]
+[connection signal="timeout" from="InstructionsTimer" to="Area" method="_on_InstructionsTimer_timeout"]
+[connection signal="body_entered" from="Area" to="Area" method="_on_Area_body_entered"]
 [connection signal="body_entered" from="Area2" to="go to vent text" method="_on_Area2_body_entered"]
 [connection signal="timeout" from="go to vent text/Timer" to="go to vent text" method="_on_Timer_timeout"]
-[connection signal="body_entered" from="Area3" to="Converstaion" method="_on_Area3_body_entered"]
+[connection signal="body_entered" from="Area3" to="Conversation" method="_on_Area3_body_entered"]
