@@ -18,9 +18,9 @@ func _ready():
 #	pass
 
 
-func _on_Area_input_event(camera, event, position, normal, shape_idx):
+func _on_Area_input_event(_camera, _event, _position, _normal, _shape_idx):
 	pass # Replace with function body.
 
 
-func _on_Area_body_entered(body):
+func _on_Area_body_entered(_body):
 	pass # Replace with function body.

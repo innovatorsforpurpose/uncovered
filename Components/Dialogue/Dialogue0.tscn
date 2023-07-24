@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=2]
 
-[ext_resource path="res://assets/fonts/battlenet/battlenetcopy.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://workspaces/Dev_MS/Minigame/Assets/battlenet.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/fonts/Cairo/static/Cairo-ExtraLight.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://scenes/oldscenes/images/A_black_image.jpg.png" type="Texture" id=3]
 [ext_resource path="res://assets/fonts/battlenet/new_dynamicfont.tres" type="DynamicFont" id=4]

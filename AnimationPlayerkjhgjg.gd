@@ -17,7 +17,7 @@ var animation_played = false
 #	pass
 
 
-func _on_Area_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+func _on_Area_body_shape_entered(_body_rid, body, _body_shape_index, _local_shape_index):
 	if body.name == "MC" and animation_played == false:	
 		get_node('.').play("open")
 		animation_played = true 

@@ -697,7 +697,7 @@ mesh = SubResource( 26 )
 material/0 = SubResource( 42 )
 
 [node name="hallwayWall" type="MeshInstance" parent="."]
-transform = Transform( 3.05568, 0, 0, 0, 3.05568, 0, 0, 0, 3.05568, -1.56481, 2.20533, -1.21529 )
+transform = Transform( 3.05568, 0, 0, 0, 3.05568, 0, 0, 0, 3.05568, -1.56481, 2.20533, -1.35822 )
 mesh = SubResource( 27 )
 material/0 = SubResource( 43 )
 

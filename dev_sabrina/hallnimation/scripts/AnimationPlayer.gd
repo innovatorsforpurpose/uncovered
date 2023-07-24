@@ -6,7 +6,7 @@ func _ready():
 		#get_node("$AnimationPlayer").play("floorcube000")
 	pass
 
-func _on_Area2_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+func _on_Area2_body_shape_entered(_body_rid, body, _body_shape_index, _local_shape_index):
 	if body.name == "MC":	
 		get_node('.').play("Animation")
 			

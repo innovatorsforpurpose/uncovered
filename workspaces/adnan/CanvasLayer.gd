@@ -10,7 +10,7 @@ extends Area
 func _ready():
 	#print($NinePatchRect)
 	#$InstructionsBackground.visible = false
-	var n = get_node("/root/RootScene/BASEMENT/ColorRect")
+	var _n = get_node("/root/RootScene/BASEMENT/ColorRect")
 	#print(n)
 	get_node("/root/RootScene/BASEMENT/ColorRect").visible = false
 	pass # Replace with function body.
@@ -18,7 +18,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 var instructions_shown = false
 

@@ -53,5 +53,5 @@ func _on_Area_body_entered(body):
 		currently_colliding = true
 
 
-func _on_Area_body_exited(body):
+func _on_Area_body_exited(_body):
 	currently_colliding = false

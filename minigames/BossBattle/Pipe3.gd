@@ -1,6 +1,6 @@
 extends Sprite
 
-const bulletPath = preload ('res://Bullet.tscn')
+const bulletPath = preload ('res://minigames/Bossbattle/Bullet.tscn')
 
 func ready():
 	pass

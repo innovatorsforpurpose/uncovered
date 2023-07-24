@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://Scenes/Charater scenes/Mentor/Mentor/Mentor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://workspaces/adnan/basement project.tscn" type="PackedScene" id=2]
@@ -31,6 +31,7 @@
 [ext_resource path="res://scenes/Charater scenes/Student/Hallway_Door*.tscn" type="PackedScene" id=29]
 [ext_resource path="res://scenes/Charater scenes/Student/Welcome.tscn" type="PackedScene" id=30]
 [ext_resource path="res://Components/Office/OFFICE.tscn" type="PackedScene" id=31]
+[ext_resource path="res://dev_sabrina/hallnimation/hallwayhopeful1.tscn" type="PackedScene" id=32]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -131,11 +132,8 @@ extents = Vector3( 95.2636, 10.2224, 62.9712 )
 [node name="RootScene" type="Spatial"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0466938, 6.2102, 18.9819 )
 
-[node name="Classroom_HALLWAY" parent="." instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.90735e-06, 7.60065, 12.0768 )
-
-[node name="Classroom_HALLWAY2" parent="." instance=ExtResource( 19 )]
-transform = Transform( -0.00991333, -0.00277475, 0.999947, 1.45785e-05, 0.999996, 0.00277503, -0.999951, 4.20874e-05, -0.00991325, 12.8519, 3.63728, -96.4565 )
+[node name="BASEMENT_HALLWAY" parent="." instance=ExtResource( 19 )]
+transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -51.4, 2.65295, -84.1136 )
 
 [node name="Door1" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.4456, 6.612, -42.3292 )
@@ -148,7 +146,7 @@ anims/open = SubResource( 2 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.5682, 6.612, -53.8644 )
 
 [node name="Classroom_HALLWAY_door" parent="Door2" instance=ExtResource( 24 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00915527, 0.414001, 1.377 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00915527, 0.414001, 1.03893 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Door2"]
 anims/RESET = SubResource( 3 )
@@ -158,14 +156,14 @@ anims/open = SubResource( 4 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.6063, 6.612, -66.8241 )
 
 [node name="Classroom_HALLWAY_door" parent="Door3" instance=ExtResource( 24 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00915527, 0.414001, 1.377 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.05266, 0.0496426, 0.414001, 3.744 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Door3"]
 anims/RESET = SubResource( 5 )
 anims/open = SubResource( 6 )
 
 [node name="Knob1" parent="." instance=ExtResource( 4 )]
-transform = Transform( 0.128424, 0, 0, 0, 0.10088, 0, 0, 0, 0.103299, -22.4065, 7.01012, -40.8946 )
+transform = Transform( -5.61359e-09, 0, -0.103299, 0, 0.127286, 0, 0.128424, 0, -4.51534e-09, -22.4605, 7.02222, -42.1509 )
 
 [node name="MCSRevengeTransport" type="Spatial" parent="."]
 transform = Transform( 0.128424, 0, 0, 0, 0.10088, 0, 0, 0, 0.103299, -32.6436, 7.72239, -24.4908 )
@@ -184,17 +182,17 @@ shape = SubResource( 8 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.98928 )
 
 [node name="Knob2" parent="." instance=ExtResource( 4 )]
-transform = Transform( 0.128424, 0, 0, 0, 0.10088, 0, 0, 0, 0.103299, -22.5564, 7.0205, -52.4807 )
+transform = Transform( -5.61359e-09, 0, -0.103299, 0, 0.121788, 0, 0.128424, 0, -4.51534e-09, -22.5564, 7.0205, -52.8225 )
 script = ExtResource( 18 )
 
 [node name="Knob3" parent="." instance=ExtResource( 4 )]
-transform = Transform( 0.128424, 0, 0, 0, 0.10088, 0, 0, 0, 0.103299, -22.5826, 7.01692, -65.4476 )
+transform = Transform( -5.61359e-09, 0, -0.103299, 0, 0.138535, 0, 0.118936, 0, -4.18175e-09, -22.5651, 7.01692, -63.0788 )
 script = ExtResource( 21 )
 
 [node name="Timer" type="Timer" parent="."]
 
 [node name="Floor" type="StaticBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.6082, -3.20107, -1.29853 )
+transform = Transform( 1, 0, 0, 0, 0.021, 0, 0, 0, 0.691089, -24.7082, 4.99893, 1.80147 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Floor"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.82414, -1.45742, -1.71461 )
@@ -219,7 +217,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.5448, 6.65374, -23.299 )
 transform = Transform( 0.962766, 0, 0, 0, 1, 0, 0, 0, 0.967171, -36.3563, 7.60737, -24.461 )
 
 [node name="BASEMENT" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.8567, 2.69703, -75.4432 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.9858, 0.53457, -50.8628 )
 
 [node name="Node2D" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00904, 0 )
@@ -230,41 +228,41 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00904, 0 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.517, 12.458, 11.11 )
 
 [node name="Mentor" parent="Node2D/Enviroment" instance=ExtResource( 1 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -24.4266, 12.458, 4.39275 )
+transform = Transform( 0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.5, -24.4266, 12.958, 4.39275 )
 
 [node name="DialoguePlayer" parent="Node2D/Enviroment/Mentor" instance=ExtResource( 17 )]
 follow_viewport_enable = true
 
 [node name="GC" parent="Node2D/Enviroment" instance=ExtResource( 6 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -38.8374, 13.1428, -9.96664 )
+transform = Transform( 0.475, 0, 0, 0, 0.475, 0, 0, 0, 0.5, -38.8374, 13.0428, -9.96664 )
 
 [node name="DialoguePlayer" parent="Node2D/Enviroment/GC" instance=ExtResource( 17 )]
 follow_viewport_enable = true
 dialogue_file = "res://jsons/GC/GC.json"
 
 [node name="Laura" parent="Node2D/Enviroment" instance=ExtResource( 12 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -24.504, 12.458, -43.349 )
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -23.6691, 12.8397, -16.1462 )
 
 [node name="DialoguePlayer" parent="Node2D/Enviroment/Laura" instance=ExtResource( 17 )]
 follow_viewport_enable = true
 dialogue_file = "res://jsons/Laura/Laura.json"
 
 [node name="Student" parent="Node2D/Enviroment" instance=ExtResource( 9 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.5819, 12.4289, -6.10306 )
+transform = Transform( 0.4675, 0, 0, 0, 0.44, 0, 0, 0, 0.45, -20.5819, 12.9289, -6.10306 )
 
 [node name="DialoguePlayer" parent="Node2D/Enviroment/Student" instance=ExtResource( 17 )]
 follow_viewport_enable = true
 dialogue_file = "res://Scenes/Charater scenes/Student/jsons/Student.json"
 
 [node name="StudentI" parent="Node2D/Enviroment" instance=ExtResource( 16 )]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -19.8679, 12.458, 0.481759 )
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -19.8679, 12.948, 0.481759 )
 
 [node name="DialoguePlayer" parent="Node2D/Enviroment/StudentI" instance=ExtResource( 17 )]
 follow_viewport_enable = true
 dialogue_file = "res://Scenes/Charater scenes/Student/jsons/studentI.json"
 
 [node name="StudentII" parent="Node2D/Enviroment" instance=ExtResource( 7 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -30.6004, 12.4576, -6.41473 )
+transform = Transform( 0.45125, 0, 0, 0, 0.45125, 0, 0, 0, 0.5, -30.6004, 13.0076, -6.41473 )
 
 [node name="DialoguePlayer" parent="Node2D/Enviroment/StudentII" instance=ExtResource( 17 )]
 follow_viewport_enable = true
@@ -285,14 +283,14 @@ follow_viewport_enable = true
 dialogue_file = "res://Scenes/Charater scenes/Student/jsons/Bulletin Board.json"
 
 [node name="Bully" parent="Node2D/Enviroment" instance=ExtResource( 14 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -28.41, 12.458, -3.21564 )
+transform = Transform( 0.475, 0, 0, 0, 0.475, 0, 0, 0, 0.5, -28.41, 13.048, -3.21564 )
 
 [node name="DialoguePlayer" parent="Node2D/Enviroment/Bully" instance=ExtResource( 17 )]
 follow_viewport_enable = true
 dialogue_file = "res://Scenes/Charater scenes/Student/jsons/Bully.json"
 
 [node name="Hallway_Door*" parent="Node2D/Enviroment" instance=ExtResource( 29 )]
-transform = Transform( 0.430264, 0, 0, 0, 1, 0, 0, 0, 1, -22.4831, 13.2362, -21.9703 )
+transform = Transform( 0.430264, 0, 0, 0, 1, 0, 0, 0, 1.05, -22.4831, 13.2362, -23.1703 )
 
 [node name="DialoguePlayer" parent="Node2D/Enviroment/Hallway_Door*" instance=ExtResource( 17 )]
 follow_viewport_enable = true
@@ -318,7 +316,14 @@ transform = Transform( 0.996461, 0, 0, 0, 0.960988, 0, 0, 0, 1.81984, -7.648, 7.
 
 [node name="Welcome" parent="." instance=ExtResource( 30 )]
 
+[node name="hallwayhopeful" parent="." instance=ExtResource( 32 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.396, 5.08076, -53.0685 )
+__meta__ = {
+"_editor_description_": ""
+}
+
 [node name="OFFICE" parent="." instance=ExtResource( 31 )]
+transform = Transform( 1.16249, 0, 0, 0, 1.46552, 0, 0, 0, 0.965602, -33.623, 0.551271, -18.8974 )
 
 [connection signal="timeout" from="MCSRevengeTransport/BossBattleTimer" to="MCSRevengeTransport" method="_on_Timer_timeout"]
 [connection signal="input_event" from="MCSRevengeTransport/CSGSphere/Area" to="MCSRevengeTransport" method="_on_Area_input_event"]

@@ -20,7 +20,7 @@ func _process(delta):
 #func _process(delta):
 #	pass
 
-func _on_Area_input_event(_camera, event, _position, _normal, _shape_idx):
+func _on_Area_input_event(camera, event, position, normal, shape_idx):
 	if event is InputEventMouseButton:
 		if event.button_index ==BUTTON_LEFT and event.pressed == true:
 			$CSGSphere.visible = false
@@ -33,6 +33,6 @@ func _on_Timer_timeout():
 	#print("transition")
 	var success = true# ProjectSettings.load_resource_pack("res://packs/UncoveredMinigame.zip")
 	if success:
-		return get_tree().change_scene("res://Bossgame_.tscn")
+		return get_tree().change_scene("res://minigames/BossBattle/Bossgame_.tscn")
 	else:
 		print("could not load uncovered minigame")
