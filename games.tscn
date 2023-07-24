@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://workspaces/Dev_MS/Minigame/Scripts/Node2.gd" type="Script" id=1]
 [ext_resource path="res://workspaces/Dev_MS/Minigame/Scripts/ShortBlue.gd" type="Script" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://workspaces/Dev_MS/Minigame/Scripts/KinematicBody2D.gd" type="Script" id=19]
 [ext_resource path="res://workspaces/Dev_MS/Minigame/Scripts/bottom.gd" type="Script" id=20]
 [ext_resource path="res://workspaces/Dev_MS/Minigame/Scripts/mid.gd" type="Script" id=21]
+[ext_resource path="res://assets/fonts/battlenet/battlenetcopy.ttf" type="DynamicFontData" id=22]
 
 [sub_resource type="StyleBoxFlat" id=10]
 bg_color = Color( 0, 0, 0, 1 )
@@ -32,7 +33,7 @@ border_color = Color( 1, 1, 1, 1 )
 
 [sub_resource type="DynamicFont" id=11]
 size = 50
-font_data = ExtResource( 11 )
+font_data = ExtResource( 22 )
 
 [sub_resource type="RectangleShape2D" id=2]
 
@@ -76,32 +77,33 @@ margin_bottom = 881.0
 color = Color( 0.492188, 0.492188, 0.492188, 1 )
 
 [node name="winner" type="MarginContainer" parent="."]
-margin_left = 271.0
-margin_top = 636.0
-margin_right = 969.0
-margin_bottom = 837.0
+visible = false
+margin_left = 335.0
+margin_top = -1.0
+margin_right = 1017.0
+margin_bottom = 57.0
 
 [node name="Panel" type="Panel" parent="winner"]
-margin_right = 698.0
-margin_bottom = 201.0
+margin_right = 682.0
+margin_bottom = 58.0
 custom_styles/panel = SubResource( 10 )
 
 [node name="MarginContainer" type="MarginContainer" parent="winner"]
-margin_right = 698.0
-margin_bottom = 201.0
+margin_right = 682.0
+margin_bottom = 58.0
 
 [node name="Panel" type="Panel" parent="winner/MarginContainer"]
-margin_right = 698.0
-margin_bottom = 201.0
+margin_right = 682.0
+margin_bottom = 58.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="winner/MarginContainer"]
-margin_right = 698.0
-margin_bottom = 201.0
+margin_right = 682.0
+margin_bottom = 58.0
 
 [node name="Label" type="Label" parent="winner/MarginContainer/HBoxContainer"]
-margin_top = 99.0
-margin_right = 40.0
-margin_bottom = 101.0
+margin_top = 6.0
+margin_right = 682.0
+margin_bottom = 51.0
 custom_fonts/font = SubResource( 11 )
 text = "  YOU DID IT, ITS WORKING. AGAIN !!!!!!!"
 

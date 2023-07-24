@@ -26,8 +26,7 @@ func _physics_process(delta):
 			get_node("/root/RootScene/BASEMENT/go to vent text").visible = true
 			#print(get_node("/root/RootScene").get_children())
 			get_node("/root/RootScene/OFFICE").visible = true
-			
-		
+
 #func _process(delta):
 #	pass
 
