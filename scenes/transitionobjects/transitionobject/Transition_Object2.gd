@@ -5,7 +5,6 @@ var seconds = 0
 # var a = 2
 # var b = "text"
 var STOP = 0
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass# Replace with function body.
@@ -19,18 +18,26 @@ func _process(delta):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
-func _on_Area_input_event(_camera, event, _position, _normal, _shape_idx):
+func _on_Area_input_event(camera, event, position, normal, shape_idx):
 	if event is InputEventMouseButton:
 		if event.button_index ==BUTTON_LEFT and event.pressed == true:
 			$CSGSphere.visible = false
 			# print("I am here sir i have done it ")
-			get_node("/root/RootScene/Door2/AnimationPlayer").play("open")
-			get_node("/root/RootScene/Timer").start(3000000)
-
+			get_node("/root/RootScene/Door1/AnimationPlayer").play("open")
+			get_node("/root/RootScene/Timer").start(2)
 
 func _on_Timer_timeout():
-	# print("transition 2")
-	pass
-	return get_tree().change_scene("res://scenes/Hall/CreationScene.tscn")
-#switch to a different game
+	#print("transition")
+	var success = ProjectSettings.load_resource_pack("res://packs/UncoveredMinigame.zip")
+	if success:
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		get_tree().change_scene("res://Scenes/CreationScene.tscn")
+	else:
+		print("could not load uncovered minigame")
+
+func _on_Hallway_Door_body_entered(body):
+	if body.name == "MC":
+		$CSGSphere.visible = false
+		# print("I am here sir i have done it ")
+		get_node("/root/RootScene/Door1/AnimationPlayer").play("open")
+		get_node("/root/RootScene/Timer").start(1.2)

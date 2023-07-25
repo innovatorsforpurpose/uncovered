@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://Scenes/Charater scenes/Mentor/Mentor/Mentor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://workspaces/adnan/basement project.tscn" type="PackedScene" id=2]
@@ -62,6 +62,8 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Vector3( 0, 0, 0 ), Vector3( 0, 7.5, 0 ), Vector3( 0, 15, 0 ), Vector3( 0, 22.5, 0 ), Vector3( 0, 30, 0 ), Vector3( 0, 37.5, 0 ), Vector3( 0, 45, 0 ), Vector3( 0, 52.5, 0 ), Vector3( 0, 60, 0 ), Vector3( 0, 67.5, 0 ), Vector3( 0, 75, 0 ) ]
 }
+
+[sub_resource type="BoxShape" id=9]
 
 [sub_resource type="Animation" id=3]
 length = 0.001
@@ -136,21 +138,37 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0466938, 6.2102, 18.9819 )
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -51.4, 2.65295, -84.1136 )
 
 [node name="Door1" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.4456, 6.612, -42.3292 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.06532, -22.4456, 6.612, -43.6508 )
+
+[node name="Classroom_HALLWAY_door" parent="Door1" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.34, 1.38 )
+visible = false
+
+[node name="Hallway_Door*" parent="Door1" instance=ExtResource( 29 )]
+transform = Transform( 0.430264, 0, 0, 0, 1, 0, 0, 0, 1.05, 0.2, 0.34, 1.38 )
+
+[node name="DialoguePlayer" parent="Door1/Hallway_Door*" instance=ExtResource( 17 )]
+follow_viewport_enable = true
+dialogue_file = "res://scenes/Charater scenes/Student/jsons/Door tutorial.json"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Door1"]
 anims/RESET = SubResource( 1 )
 anims/open = SubResource( 2 )
 
+[node name="Area" type="Area" parent="Door1"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Door1/Area"]
+shape = SubResource( 9 )
+
 [node name="Door2" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.5682, 6.612, -53.8644 )
-
-[node name="Classroom_HALLWAY_door" parent="Door2" instance=ExtResource( 24 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00915527, 0.414001, 1.03893 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Door2"]
 anims/RESET = SubResource( 3 )
 anims/open = SubResource( 4 )
+
+[node name="Classroom_HALLWAY_door" parent="Door2" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0191231, 0.414001, 1.03893 )
 
 [node name="Door3" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.6063, 6.612, -66.8241 )
@@ -161,9 +179,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.05266, 0.0496426, 0.414001, 3.7
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Door3"]
 anims/RESET = SubResource( 5 )
 anims/open = SubResource( 6 )
-
-[node name="Knob1" parent="." instance=ExtResource( 4 )]
-transform = Transform( -5.61359e-09, 0, -0.103299, 0, 0.127286, 0, 0.128424, 0, -4.51534e-09, -22.4605, 7.02222, -42.1509 )
 
 [node name="MCSRevengeTransport" type="Spatial" parent="."]
 transform = Transform( 0.128424, 0, 0, 0, 0.10088, 0, 0, 0, 0.103299, -32.6436, 7.72239, -24.4908 )
@@ -181,8 +196,8 @@ shape = SubResource( 8 )
 [node name="Camera" type="Camera" parent="MCSRevengeTransport"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.98928 )
 
-[node name="Knob2" parent="." instance=ExtResource( 4 )]
-transform = Transform( -5.61359e-09, 0, -0.103299, 0, 0.121788, 0, 0.128424, 0, -4.51534e-09, -22.5564, 7.0205, -52.8225 )
+[node name="Knob1" parent="." instance=ExtResource( 4 )]
+transform = Transform( -8.85853e-09, 0, -0.103299, 0, 0.192188, 0, 0.20266, 0, -4.51534e-09, -22.4794, 7.0205, -42.1915 )
 script = ExtResource( 18 )
 
 [node name="Knob3" parent="." instance=ExtResource( 4 )]
@@ -289,13 +304,6 @@ transform = Transform( 0.475, 0, 0, 0, 0.475, 0, 0, 0, 0.5, -28.41, 13.048, -3.2
 follow_viewport_enable = true
 dialogue_file = "res://Scenes/Charater scenes/Student/jsons/Bully.json"
 
-[node name="Hallway_Door*" parent="Node2D/Enviroment" instance=ExtResource( 29 )]
-transform = Transform( 0.430264, 0, 0, 0, 1, 0, 0, 0, 1.05, -22.4831, 13.2362, -23.1703 )
-
-[node name="DialoguePlayer" parent="Node2D/Enviroment/Hallway_Door*" instance=ExtResource( 17 )]
-follow_viewport_enable = true
-dialogue_file = "res://scenes/Charater scenes/Student/jsons/Door tutorial.json"
-
 [node name="Knob4" parent="." instance=ExtResource( 4 )]
 transform = Transform( 0.0164927, 0, 0, 0, 0.0101768, 0, 0, 0, 0.0106707, -25.284, 7.7173, -45.119 )
 
@@ -325,6 +333,9 @@ __meta__ = {
 [node name="OFFICE" parent="." instance=ExtResource( 31 )]
 transform = Transform( 1.16249, 0, 0, 0, 1.46552, 0, 0, 0, 0.965602, -33.623, 0.551271, -18.8974 )
 
+[connection signal="body_entered" from="Door1/Hallway_Door*" to="Knob1" method="_on_Hallway_Door_body_entered"]
+[connection signal="ready" from="Door1/Hallway_Door*/DialoguePlayer" to="Door1/Hallway_Door*/DialoguePlayer" method="_on_Dialogueplayer_ready"]
+[connection signal="body_entered" from="Door1/Area" to="Knob1" method="_on_Area_body_entered"]
 [connection signal="timeout" from="MCSRevengeTransport/BossBattleTimer" to="MCSRevengeTransport" method="_on_Timer_timeout"]
 [connection signal="input_event" from="MCSRevengeTransport/CSGSphere/Area" to="MCSRevengeTransport" method="_on_Area_input_event"]
 [connection signal="timeout" from="Timer" to="Knob1" method="_on_Timer_timeout"]
@@ -351,5 +362,3 @@ transform = Transform( 1.16249, 0, 0, 0, 1.46552, 0, 0, 0, 0.965602, -33.623, 0.
 [connection signal="ready" from="Node2D/Enviroment/Bulletin Board/DialoguePlayer" to="Node2D/Enviroment/Bulletin Board/DialoguePlayer" method="_on_Dialogueplayer_ready"]
 [connection signal="body_entered" from="Node2D/Enviroment/Bully" to="Node2D/Enviroment/Mentor/DialoguePlayer" method="_on_Bully_body_entered"]
 [connection signal="ready" from="Node2D/Enviroment/Bully/DialoguePlayer" to="Node2D/Enviroment/Bully/DialoguePlayer" method="_on_Dialogueplayer_ready"]
-[connection signal="body_entered" from="Node2D/Enviroment/Hallway_Door*" to="Node2D/Enviroment/Hallway_Door*/DialoguePlayer" method="_on_Hallway_Door_body_entered"]
-[connection signal="ready" from="Node2D/Enviroment/Hallway_Door*/DialoguePlayer" to="Node2D/Enviroment/Hallway_Door*/DialoguePlayer" method="_on_Dialogueplayer_ready"]
