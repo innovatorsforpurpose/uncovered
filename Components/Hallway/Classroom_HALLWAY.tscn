@@ -1,20 +1,6 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://minigames/designclass/Material_053.material" type="Material" id=2]
-
-[sub_resource type="ArrayMesh" id=3]
-blend_shape_mode = 0
-surfaces/0 = {
-"aabb": AABB( -0.0140515, 0.198833, 0.00493103, 0.00405145, 0.182562, 0.00506897 ),
-"array_data": PoolByteArray( 14, 56, 102, 188, 141, 239, 193, 62, 128, 148, 161, 59, 127, 56, 56, 193, 189, 56, 7, 58, 10, 215, 35, 188, 228, 154, 75, 62, 10, 215, 35, 60, 127, 56, 56, 193, 0, 57, 0, 60, 10, 215, 35, 188, 57, 70, 195, 62, 10, 215, 35, 60, 127, 56, 56, 193, 0, 57, 0, 58, 14, 56, 102, 188, 141, 239, 193, 62, 128, 148, 161, 59, 127, 56, 56, 193, 189, 56, 7, 58, 14, 56, 102, 188, 61, 72, 78, 62, 128, 148, 161, 59, 127, 56, 56, 193, 189, 56, 248, 59, 10, 215, 35, 188, 228, 154, 75, 62, 10, 215, 35, 60, 127, 56, 56, 193, 0, 57, 0, 60 ),
-"array_index_data": PoolByteArray( 0, 0, 1, 0, 2, 0, 3, 0, 4, 0, 5, 0 ),
-"blend_shape_data": [  ],
-"format": 2194711,
-"index_count": 6,
-"primitive": 4,
-"skeleton_aabb": [  ],
-"vertex_count": 6
-}
 
 [sub_resource type="ArrayMesh" id=4]
 blend_shape_mode = 0
@@ -49,15 +35,27 @@ extents = Vector3( 0.001, 0.0264457, 0.00799164 )
 [sub_resource type="BoxShape" id=20]
 extents = Vector3( 0.001, 0.00670762, 0.0112974 )
 
+[sub_resource type="ArrayMesh" id=3]
+blend_shape_mode = 0
+surfaces/0 = {
+"aabb": AABB( -0.0140515, 0.198833, 0.00493103, 0.00405145, 0.182562, 0.00506897 ),
+"array_data": PoolByteArray( 14, 56, 102, 188, 141, 239, 193, 62, 128, 148, 161, 59, 127, 56, 56, 193, 189, 56, 7, 58, 10, 215, 35, 188, 228, 154, 75, 62, 10, 215, 35, 60, 127, 56, 56, 193, 0, 57, 0, 60, 10, 215, 35, 188, 57, 70, 195, 62, 10, 215, 35, 60, 127, 56, 56, 193, 0, 57, 0, 58, 14, 56, 102, 188, 141, 239, 193, 62, 128, 148, 161, 59, 127, 56, 56, 193, 189, 56, 7, 58, 14, 56, 102, 188, 61, 72, 78, 62, 128, 148, 161, 59, 127, 56, 56, 193, 189, 56, 248, 59, 10, 215, 35, 188, 228, 154, 75, 62, 10, 215, 35, 60, 127, 56, 56, 193, 0, 57, 0, 60 ),
+"array_index_data": PoolByteArray( 0, 0, 1, 0, 2, 0, 3, 0, 4, 0, 5, 0 ),
+"blend_shape_data": [  ],
+"format": 2194711,
+"index_count": 6,
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 6
+}
+
+[sub_resource type="BoxShape" id=22]
+
 [node name="BASEMENT_HALLWAY" type="Spatial"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.60065, 12.0128 )
 
 [node name="RootNode" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.48313, 0, 9.04965 )
-
-[node name="Cube320" type="MeshInstance" parent="RootNode"]
-transform = Transform( 207.575, 0, 0, 0, -7.42344e-05, 207.574, 0, -207.574, -7.42344e-05, -29.0502, -0.429555, -11.736 )
-mesh = SubResource( 3 )
 
 [node name="Cube325" type="MeshInstance" parent="RootNode"]
 transform = Transform( 207.575, 0, 0, 0, -7.42344e-05, 207.574, 0, -207.574, -7.42344e-05, -29.2123, -0.00120258, -11.5808 )
@@ -107,3 +105,14 @@ shape = SubResource( 19 )
 [node name="East Wall" type="CollisionShape" parent="RootNode/Cube325/Door Wall 4"]
 transform = Transform( 1, 0, 0, 0, 1, -8.52651e-14, 0, 8.52651e-14, 1, 0.0110037, 0.375512, 1.2666e-07 )
 shape = SubResource( 20 )
+
+[node name="Cube320" type="MeshInstance" parent="RootNode/Cube325"]
+transform = Transform( 1, 0, 0, 0, 1, -2.84217e-14, 0, 2.84217e-14, 1, 0.000780918, 0.000747692, -0.00206361 )
+mesh = SubResource( 3 )
+skeleton = NodePath("../..")
+
+[node name="Floor" type="StaticBody" parent="RootNode/Cube325"]
+
+[node name="CollisionShape" type="CollisionShape" parent="RootNode/Cube325/Floor"]
+transform = Transform( -0.0197749, 0, 0, 0, 0.0934936, 3.34344e-08, 0, 3.34343e-08, 4.56114e-06, 5.99995e-05, 0.291149, -0.00985903 )
+shape = SubResource( 22 )

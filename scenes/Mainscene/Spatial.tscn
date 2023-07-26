@@ -138,11 +138,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0466938, 6.2102, 18.9819 )
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -51.4, 2.65295, -84.1136 )
 
 [node name="Door1" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.06532, -22.4456, 6.612, -43.6508 )
-
-[node name="Classroom_HALLWAY_door" parent="Door1" instance=ExtResource( 24 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.34, 1.38 )
-visible = false
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.06532, -22.7066, 6.612, -43.6508 )
 
 [node name="Hallway_Door*" parent="Door1" instance=ExtResource( 29 )]
 transform = Transform( 0.430264, 0, 0, 0, 1, 0, 0, 0, 1.05, 0.2, 0.34, 1.38 )
@@ -176,9 +172,17 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.6063, 6.612, -66.8241 )
 [node name="Classroom_HALLWAY_door" parent="Door3" instance=ExtResource( 24 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.05266, 0.0496426, 0.414001, 3.744 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Door3"]
+[node name="Basement_doorI" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.6063, 6.612, -66.8241 )
+visible = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Basement_doorI"]
+root_node = NodePath("../../Door3")
 anims/RESET = SubResource( 5 )
 anims/open = SubResource( 6 )
+
+[node name="Classroom_HALLWAY_door" parent="Basement_doorI" instance=ExtResource( 24 )]
+transform = Transform( -4.56413e-08, 0, -1.0985, 0, 0.748, 0, 1.04415, 0, -4.80168e-08, -3.99892, -4.98146, 25.7295 )
 
 [node name="MCSRevengeTransport" type="Spatial" parent="."]
 transform = Transform( 0.128424, 0, 0, 0, 0.10088, 0, 0, 0, 0.103299, -32.6436, 7.72239, -24.4908 )
@@ -197,7 +201,7 @@ shape = SubResource( 8 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.98928 )
 
 [node name="Knob1" parent="." instance=ExtResource( 4 )]
-transform = Transform( -8.85853e-09, 0, -0.103299, 0, 0.192188, 0, 0.20266, 0, -4.51534e-09, -22.4794, 7.0205, -42.1915 )
+transform = Transform( -8.85853e-09, 0, -0.103299, 0, 0.192188, 0, 0.20266, 0, -4.51534e-09, -22.4892, 6.94815, -42.1915 )
 script = ExtResource( 18 )
 
 [node name="Knob3" parent="." instance=ExtResource( 4 )]
@@ -240,7 +244,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00904, 0 )
 [node name="Enviroment" type="CanvasLayer" parent="Node2D"]
 
 [node name="MC" parent="Node2D/Enviroment" instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.517, 12.458, 11.11 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.517, 13.6, 11.11 )
 
 [node name="Mentor" parent="Node2D/Enviroment" instance=ExtResource( 1 )]
 transform = Transform( 0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.5, -24.4266, 12.958, 4.39275 )
@@ -305,7 +309,9 @@ follow_viewport_enable = true
 dialogue_file = "res://Scenes/Charater scenes/Student/jsons/Bully.json"
 
 [node name="Knob4" parent="." instance=ExtResource( 4 )]
-transform = Transform( 0.0164927, 0, 0, 0, 0.0101768, 0, 0, 0, 0.0106707, -25.284, 7.7173, -45.119 )
+transform = Transform( 0.266818, 0, 0, 0, 0.271882, 0, 0, 0, 0.123206, -26.6037, 1.6175, -41.1731 )
+visible = false
+script = ExtResource( 21 )
 
 [node name="Whiteboard" parent="." instance=ExtResource( 23 )]
 transform = Transform( 0.999963, 0, 0.00863927, 0, 1, 0, -0.00863927, 0, 0.999963, -17.416, 7.99107, -31.8914 )
@@ -331,7 +337,7 @@ __meta__ = {
 }
 
 [node name="OFFICE" parent="." instance=ExtResource( 31 )]
-transform = Transform( 1.16249, 0, 0, 0, 1.46552, 0, 0, 0, 0.965602, -33.623, 0.551271, -18.8974 )
+transform = Transform( 1.16249, 0, 0, 0, 1.38602, 0, 0, 0, 0.990347, -33.3841, 0.609154, -18.9031 )
 
 [connection signal="body_entered" from="Door1/Hallway_Door*" to="Knob1" method="_on_Hallway_Door_body_entered"]
 [connection signal="ready" from="Door1/Hallway_Door*/DialoguePlayer" to="Door1/Hallway_Door*/DialoguePlayer" method="_on_Dialogueplayer_ready"]
@@ -345,6 +351,7 @@ transform = Transform( 1.16249, 0, 0, 0, 1.46552, 0, 0, 0, 0.965602, -33.623, 0.
 [connection signal="ready" from="Node2D/Enviroment/GC/DialoguePlayer" to="Node2D/Enviroment/GC/DialoguePlayer" method="_on_Dialogueplayer_ready"]
 [connection signal="body_entered" from="Node2D/Enviroment/Laura" to="Node2D/Enviroment/Laura/DialoguePlayer" method="_on_Laura_body_entered"]
 [connection signal="ready" from="Node2D/Enviroment/Laura/DialoguePlayer" to="Node2D/Enviroment/Laura/DialoguePlayer" method="_on_Dialogueplayer_ready"]
+[connection signal="body_entered" from="Node2D/Enviroment/Student" to="MCSRevengeTransport" method="_on_Student_body_entered"]
 [connection signal="body_entered" from="Node2D/Enviroment/Student" to="Node2D/Enviroment/Student/DialoguePlayer" method="_on_Student_body_entered"]
 [connection signal="body_exited" from="Node2D/Enviroment/Student" to="Node2D/Enviroment/Student" method="_on_Student_body_exited"]
 [connection signal="ready" from="Node2D/Enviroment/Student/DialoguePlayer" to="Node2D/Enviroment/Student/DialoguePlayer" method="_on_Dialogueplayer_ready"]

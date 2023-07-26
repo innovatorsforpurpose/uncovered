@@ -62,14 +62,14 @@ skeleton = NodePath("")
 [node name="StaticBody" type="StaticBody" parent="."]
 
 [node name="CollisionShape2" type="CollisionShape" parent="StaticBody"]
-transform = Transform( 0.453367, 0, 0, 0, 2.68939, 0, 0, 0, 1.93518, 0, 0.275924, -0.56013 )
+transform = Transform( 0.0257025, 0, 0, 0, 2.68939, 0, 0, 0, 1.93518, 0.181193, 0.275924, -0.56013 )
 shape = SubResource( 5 )
 
 [node name="VisibilityNotifier" type="VisibilityNotifier" parent="StaticBody"]
-transform = Transform( 1.54557, 0, 0, 0, 2.20665, 0, 0, 0, 1.54557, 0, 0, -0.701232 )
+transform = Transform( 9.2771, 0, 0, 0, 3.76369, 0, 0, 0, 3.5271, 0, 0, -0.701232 )
 
 [node name="CollisionShape1" type="CollisionShape" parent="."]
-transform = Transform( 3.70943, 0, 0, 0, 3.02962, 0, 0, 0, 1.59284, 0, 0, -0.577325 )
+transform = Transform( 9.65171, 0, 0, 0, 4.73255, 0, 0, 0, 3.58444, 0, 0, -0.577325 )
 shape = SubResource( 6 )
 
 [connection signal="body_exited" from="." to="." method="_on_Hallway_Door_body_exited"]

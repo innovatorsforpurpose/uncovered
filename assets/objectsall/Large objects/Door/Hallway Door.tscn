@@ -25,18 +25,6 @@ transform = Transform( 1.61034, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="RootNode" type="Spatial" parent="."]
 
-[node name="Light007" type="Spatial" parent="RootNode"]
-transform = Transform( -29.0865, -77.1101, 56.6393, -5.51891, 60.4525, 79.4672, -95.5171, 19.9884, -21.8391, 54.7951, 5.90386, -25.6683 )
-
-[node name="Camera007" type="Spatial" parent="RootNode"]
-transform = Transform( 68.5921, -32.4013, 65.1558, -1.49012e-06, 89.5396, 44.5271, -72.7676, -30.5421, 61.417, -426.732, 4.95831, 6.92579 )
-
-[node name="Light015" type="Spatial" parent="RootNode"]
-transform = Transform( -29.0865, -77.1101, 56.6393, -5.51891, 60.4525, 79.4672, -95.5171, 19.9884, -21.8391, 75.7864, 5.90386, -1.00545 )
-
-[node name="Camera015" type="Spatial" parent="RootNode"]
-transform = Transform( 68.5921, -32.4013, 65.1558, -1.49012e-06, 89.5396, 44.5271, -72.7676, -30.5421, 61.417, -426.732, 4.95831, 6.92579 )
-
 [node name="Door" type="Area" parent="RootNode"]
 transform = Transform( 0.430264, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 script = ExtResource( 2 )

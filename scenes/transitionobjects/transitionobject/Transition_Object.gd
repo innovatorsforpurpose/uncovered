@@ -35,3 +35,7 @@ func _on_Timer_timeout():
 		return get_tree().change_scene("res://minigames/BossBattle/Bossgame_.tscn")
 	else:
 		print("could not load uncovered minigame")
+
+
+func _on_Area_body_entered(body):
+	pass # Replace with function body.

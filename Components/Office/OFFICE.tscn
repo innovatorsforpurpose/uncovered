@@ -115,7 +115,7 @@ skeleton = NodePath("")
 material/0 = SubResource( 14 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Floor"]
-transform = Transform( 4, 0, 0, 0, 0.5, 0, 0, 0, 4, 0, -0.385062, 0 )
+transform = Transform( 4, 0, 0, 0, 0.0100788, 0, 0, 0, 4, 0, -0.0197747, 0 )
 shape = SubResource( 3 )
 
 [node name="Wall 1" type="StaticBody" parent="."]
