@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Material_014.material" type="Material" id=1]
-[ext_resource path="res://Material_016.material" type="Material" id=2]
-[ext_resource path="res://Material_015.material" type="Material" id=3]
+[ext_resource path="res://Components/atrium/assets/Material_015.material" type="Material" id=1]
+[ext_resource path="res://Components/atrium/assets/Material_014.material" type="Material" id=2]
+[ext_resource path="res://Components/Classroom L1/Material_016.material" type="Material" id=3]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "Atrium_Cube007"
@@ -13,7 +13,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 36,
-"material": ExtResource( 1 ),
+"material": ExtResource( 2 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 23
@@ -25,7 +25,7 @@ surfaces/1 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 603,
-"material": ExtResource( 3 ),
+"material": ExtResource( 1 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 570
@@ -37,7 +37,7 @@ surfaces/2 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 30,
-"material": ExtResource( 2 ),
+"material": ExtResource( 3 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 12

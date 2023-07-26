@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://Scenes/Charater scenes/Mentor/Mentor/Mentor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://workspaces/adnan/basement project.tscn" type="PackedScene" id=2]
@@ -96,36 +96,6 @@ tracks/0/keys = {
 "values": [ Vector3( 0, 0, 0 ), Vector3( 0, 7.5, 0 ), Vector3( 0, 15, 0 ), Vector3( 0, 22.5, 0 ), Vector3( 0, 30, 0 ), Vector3( 0, 37.5, 0 ), Vector3( 0, 45, 0 ), Vector3( 0, 52.5, 0 ), Vector3( 0, 60, 0 ), Vector3( 0, 67.5, 0 ), Vector3( 0, 75, 0 ) ]
 }
 
-[sub_resource type="Animation" id=5]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:rotation_degrees")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector3( 0, 0, 0 ) ]
-}
-
-[sub_resource type="Animation" id=6]
-resource_name = "open"
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:rotation_degrees")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 7.5, 0 ), Vector3( 0, 15, 0 ), Vector3( 0, 22.5, 0 ), Vector3( 0, 30, 0 ), Vector3( 0, 37.5, 0 ), Vector3( 0, 45, 0 ), Vector3( 0, 52.5, 0 ), Vector3( 0, 60, 0 ), Vector3( 0, 67.5, 0 ), Vector3( 0, 75, 0 ) ]
-}
-
 [sub_resource type="SphereShape" id=8]
 radius = 0.967927
 
@@ -175,18 +145,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.6063, 6.612, -66.8241 )
 
 [node name="Classroom_HALLWAY_door" parent="Door3" instance=ExtResource( 24 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.05266, 0.0496426, 0.414001, 3.744 )
-
-[node name="Basement_doorI" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.6063, 6.612, -66.8241 )
-visible = false
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Basement_doorI"]
-root_node = NodePath("../../Door3")
-anims/RESET = SubResource( 5 )
-anims/open = SubResource( 6 )
-
-[node name="Classroom_HALLWAY_door" parent="Basement_doorI" instance=ExtResource( 24 )]
-transform = Transform( -4.56413e-08, 0, -1.0985, 0, 0.748, 0, 1.04415, 0, -4.80168e-08, -3.99892, -4.98146, 25.7295 )
 
 [node name="MCSRevengeTransport" type="Spatial" parent="."]
 transform = Transform( 0.128424, 0, 0, 0, 0.10088, 0, 0, 0, 0.103299, -32.6436, 7.72239, -24.4908 )
@@ -256,27 +214,28 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00904, 0 )
 [node name="Enviroment" type="CanvasLayer" parent="Node2D"]
 
 [node name="MC" parent="Node2D/Enviroment" instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1.41956, 0, 0, 0, 1, -25.2175, 14.8352, 18.525 )
+transform = Transform( 1, 0, 0, 0, 1.41956, 0, 0, 0, 1, -26.7679, 8.55634, 13.1173 )
 
 [node name="Mentor" parent="Node2D/Enviroment" instance=ExtResource( 1 )]
 transform = Transform( 0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.5, -25.3264, 12.968, 10 )
 
 [node name="DialoguePlayer" parent="Node2D/Enviroment/Mentor" instance=ExtResource( 17 )]
 follow_viewport_enable = true
+dialogue_file = "res://scenes/Charater scenes/Mentor/Mc/Mc.json"
 
 [node name="GC" parent="Node2D/Enviroment" instance=ExtResource( 6 )]
 transform = Transform( 0.308545, 0, -0.380152, 0, 0.475, 0, 0.361144, 0, 0.324784, -42.1676, 13.0428, -8.58389 )
 
 [node name="DialoguePlayer" parent="Node2D/Enviroment/GC" instance=ExtResource( 17 )]
 follow_viewport_enable = true
-dialogue_file = "res://jsons/GC/GC.json"
+dialogue_file = "res://scenes/Charater scenes/GC/GC/GC.json"
 
 [node name="Laura" parent="Node2D/Enviroment" instance=ExtResource( 12 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -23.6691, 12.8397, -16.1462 )
 
 [node name="DialoguePlayer" parent="Node2D/Enviroment/Laura" instance=ExtResource( 17 )]
 follow_viewport_enable = true
-dialogue_file = "res://jsons/Laura/Laura.json"
+dialogue_file = "res://scenes/Charater scenes/Laura/Laura/Laura.json"
 
 [node name="Student" parent="Node2D/Enviroment" instance=ExtResource( 9 )]
 transform = Transform( 0.4675, 0, 0, 0, 0.44, 0, 0, 0, 0.45, -20.5819, 12.9289, -6.10306 )
