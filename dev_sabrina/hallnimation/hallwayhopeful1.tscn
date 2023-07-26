@@ -678,7 +678,7 @@ mesh = SubResource( 22 )
 material/0 = SubResource( 39 )
 
 [node name="darkness_simulator" type="MeshInstance" parent="."]
-transform = Transform( 4.162, 0, 0, 0, 0.1, 0, 0, 0, 4.162, -3.87669, -0.101463, 5.92342 )
+transform = Transform( 4.162, 0, 0, 0, 0.1, 0, 0, 0, 4.162, -3.87669, -0.101463, 5.7998 )
 mesh = SubResource( 23 )
 
 [node name="painting003" type="MeshInstance" parent="."]

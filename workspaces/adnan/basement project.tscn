@@ -527,14 +527,14 @@ margin_bottom = 521.0
 text = "5"
 
 [node name="StaticBody2" type="StaticBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.71775, 6.82555 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.77448, 6.82555 )
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0640452, 0, 0.0114937 )
+transform = Transform( 5.11146, 0, 0, 0, 0.0687121, 0, 0, 0, 1, 0.0640452, -0.756773, 3.2549 )
 shape = SubResource( 37 )
 
 [node name="MeshInstance" type="MeshInstance" parent="StaticBody2/CollisionShape"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00465107, -0.948774, 3.20531 )
+transform = Transform( 0.195639, 0, 0, 0, 14.5535, 0, 0, 0, 1, -0.000909929, -2.79428, -0.0380926 )
 mesh = SubResource( 39 )
 skin = SubResource( 40 )
 skeleton = NodePath("")

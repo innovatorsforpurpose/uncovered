@@ -188,7 +188,7 @@ transform = Transform( -0.0223397, 0, 1.99987, 0, 2, 0, -1.99987, 0, -0.0223397,
 shape = SubResource( 20 )
 
 [node name="Office_Door" parent="." instance=ExtResource( 2 )]
-transform = Transform( -0.999971, 0, 0.00766189, 0, 1, 0, -0.00766189, 0, -0.999971, 4.09701, 0.633687, 0.655971 )
+transform = Transform( -0.999971, 0, 0.00766189, 0, 1, 0, -0.00766189, 0, -0.999971, 3.98137, 0.633687, 0.655085 )
 
 [node name="StaticBody" type="StaticBody" parent="."]
 transform = Transform( -0.999971, 0, 0.00766189, 0, 1, 0, -0.00766189, 0, -0.999971, 4.09701, 6.2223, 0.655971 )

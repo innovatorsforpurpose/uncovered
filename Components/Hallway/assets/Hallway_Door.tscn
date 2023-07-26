@@ -69,7 +69,7 @@ shape = SubResource( 5 )
 transform = Transform( 9.2771, 0, 0, 0, 3.76369, 0, 0, 0, 3.5271, 0, 0, -0.701232 )
 
 [node name="CollisionShape1" type="CollisionShape" parent="."]
-transform = Transform( 9.65171, 0, 0, 0, 4.73255, 0, 0, 0, 3.58444, 0, 0, -0.577325 )
+transform = Transform( 9.65171, 0, 0, 0, 2.27036, 0, 0, 0, 3.58444, 0, 0, -0.577325 )
 shape = SubResource( 6 )
 
 [connection signal="body_exited" from="." to="." method="_on_Hallway_Door_body_exited"]
