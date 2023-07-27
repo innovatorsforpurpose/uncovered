@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Dev_MS/Minigame/Instructions.gd" type="Script" id=1]
 [ext_resource path="res://workspaces/Dev_MS/Minigame/Scripts/KinematicBody2D.gd" type="Script" id=2]
@@ -16,12 +16,12 @@
 [ext_resource path="res://workspaces/Dev_MS/Minigame/Assets/images.png" type="Texture" id=14]
 [ext_resource path="res://workspaces/Dev_MS/Minigame/Assets/173782_green-circle-png.png" type="Texture" id=15]
 [ext_resource path="res://workspaces/Dev_MS/Minigame/Assets/Screen Shot 2023-01-25 at 5.48.52 PM.png" type="Texture" id=16]
-[ext_resource path="res://Dev_MS/Minigame/Assets/battlenet.ttf" type="DynamicFontData" id=17]
 [ext_resource path="res://workspaces/Dev_MS/Minigame/Assets/6Tp5aB97c.png" type="Texture" id=18]
 [ext_resource path="res://workspaces/Dev_MS/Minigame/Assets/red-screen.png" type="Texture" id=19]
 [ext_resource path="res://workspaces/Dev_MS/Minigame/Assets/Untitled-1-green-bar.jpeg" type="Texture" id=20]
 [ext_resource path="res://workspaces/Dev_MS/Minigame/Assets/yellow-dot-md.png" type="Texture" id=21]
 [ext_resource path="res://workspaces/Dev_MS/Minigame/Scripts/bottom.gd" type="Script" id=22]
+[ext_resource path="res://workspaces/Dev_MS/Minigame/Assets/1st34.png" type="Texture" id=23]
 
 [sub_resource type="StyleBoxFlat" id=10]
 bg_color = Color( 0, 0, 0, 1 )
@@ -59,10 +59,6 @@ border_width_top = 10
 border_width_right = 10
 border_width_bottom = 10
 border_color = Color( 0.972549, 0.968627, 0.968627, 1 )
-
-[sub_resource type="DynamicFont" id=9]
-size = 25
-font_data = ExtResource( 17 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 6 )
@@ -271,18 +267,21 @@ scale = Vector2( 0.677279, 0.978412 )
 visible = false
 position = Vector2( 208.186, -5.11035 )
 scale = Vector2( 1.28936, 0.115772 )
+texture = ExtResource( 23 )
 script = ExtResource( 22 )
 
 [node name="mid" type="Sprite" parent="Still Yellow"]
 visible = false
 position = Vector2( 377.983, -65.4121 )
 scale = Vector2( 0.0830415, 0.718563 )
+texture = ExtResource( 23 )
 script = ExtResource( 5 )
 
 [node name="top" type="Sprite" parent="Still Yellow"]
 visible = false
 position = Vector2( 289.393, -113.449 )
 scale = Vector2( 0.552537, 0.143713 )
+texture = ExtResource( 23 )
 script = ExtResource( 10 )
 
 [node name="yellow area" type="Area2D" parent="Still Yellow"]
@@ -325,12 +324,11 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Instructions/MarginContainer/HBoxContainer"]
-margin_top = 64.0
-margin_right = 46.0
-margin_bottom = 71.0
-custom_fonts/font = SubResource( 9 )
-text = "  Drag and drop the circles in the right area 
-  to repair the PC!"
+margin_top = 52.0
+margin_right = 297.0
+margin_bottom = 83.0
+text = "       Drag and drop the circles in the right area 
+       to repair the PC!      "
 
 [connection signal="mouse_entered" from="Box/reddrag" to="Box/reddrag" method="_on_KinematicBody2D_mouse_entered"]
 [connection signal="mouse_exited" from="Box/reddrag" to="Box/reddrag" method="_on_KinematicBody2D_mouse_exited"]
