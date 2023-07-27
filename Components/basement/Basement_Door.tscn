@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Components/Hallway/assets/Hallway_Door.tscn" type="PackedScene" id=1]
-[ext_resource path="res://AnimationPlayerkjhgjg.gd" type="Script" id=2]
+[ext_resource path="res://Components/basement/AnimationPlayerkjhgjg.gd" type="Script" id=2]
 [ext_resource path="res://scenes/transitionobjects/transitionobject/Transition_Object.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/transitionobjects/transitionobject/Transition_Object3.gd" type="Script" id=4]
 
