@@ -2,12 +2,12 @@
 
 [ext_resource path="res://assets/objectsall/Smaller Objects/electronics/Computer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Components/basement/basement_door.tscn" type="PackedScene" id=2]
-[ext_resource path="res://OFFICE.gd" type="Script" id=3]
+[ext_resource path="res://Components/basement/OFFICE.gd" type="Script" id=3]
 [ext_resource path="res://workspaces/Dev_BA/Material_016.material" type="Material" id=4]
 [ext_resource path="res://Components/basement/Tiles05/Tiles05_COL_VAR1_1K.jpg" type="Texture" id=5]
-[ext_resource path="res://workspaces/Dev_MS/Minigame/games.tscn" type="PackedScene" id=6]
+[ext_resource path="res://workspaces/Dev_MS/Repair PC/games.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/objectsall/Large objects/desks/Teachers_desk .fbx" type="PackedScene" id=7]
-[ext_resource path="res://entities/Objects/Large objects/Chair/chair.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/objectsall/Large objects/Chair/chairI.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Components/basement/Tiles05/StoneBricksBeige015/StoneBricksBeige015_AO_2K.jpg" type="Texture" id=9]
 
 [sub_resource type="SpatialMaterial" id=7]

@@ -1,18 +1,19 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://workspaces/adnan/Camera.gd" type="Script" id=1]
 [ext_resource path="res://Components/basement/2.glb" type="PackedScene" id=2]
 [ext_resource path="res://Components/basement/photos_2022_5_17_fst_wall-decay-scratches (1).jpg" type="Texture" id=3]
-[ext_resource path="res://minigames/BossBattleII/steampunk_lamps.glb" type="PackedScene" id=4]
+[ext_resource path="res://assets/objectsall/Large objects/Lamps/Steampunk-Lamps-Materials/steampunk_lamps.glb" type="PackedScene" id=4]
 [ext_resource path="res://workspaces/adnan/asphalt_02_diff_4k.jpg" type="Texture" id=5]
 [ext_resource path="res://Components/basement/hiii.glb" type="PackedScene" id=6]
 [ext_resource path="res://workspaces/adnan/CanvasLayer.gd" type="Script" id=7]
 [ext_resource path="res://workspaces/adnan/go to vent text.gd" type="Script" id=8]
-[ext_resource path="res://minigames/BossBattleII/material.material" type="Material" id=9]
+[ext_resource path="res://assets/objectsall/Large objects/Lamps/Steampunk-Lamps-Materials/material.material" type="Material" id=9]
 [ext_resource path="res://workspaces/adnan/ColorRect.gd" type="Script" id=10]
 [ext_resource path="res://workspaces/adnan/Conversation.gd" type="Script" id=11]
-[ext_resource path="res://workspaces/Dev_MS/Minigame/Assets/battlenet.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://workspaces/Dev_MS/Repair PC/Assets/battlenet.ttf" type="DynamicFontData" id=12]
 [ext_resource path="res://Components/basement/basement_door.tscn" type="PackedScene" id=13]
+[ext_resource path="res://assets/objectsall/Large objects/Lamps/Steampunk-Lamps-Materials/material_0.material" type="Material" id=14]
 
 [sub_resource type="BoxShape" id=11]
 extents = Vector3( 4.85664, 2, 0.574707 )
@@ -128,7 +129,7 @@ shape = SubResource( 11 )
 [node name="MeshInstance3" type="MeshInstance" parent="StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0112677, 0.43484, -9.93575 )
 mesh = SubResource( 10 )
-material/0 = SubResource( 12 )
+material/0 = ExtResource( 14 )
 
 [node name="StaticBody6" type="StaticBody" parent="."]
 transform = Transform( 0.46, 0, 0, 0, 1, 0, 0, 0, 0, -3.29133, 1.01414, 10.4039 )

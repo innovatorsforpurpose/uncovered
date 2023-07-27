@@ -26,7 +26,7 @@
 [ext_resource path="res://assets/objectsall/Large objects/Door/Hallway Door.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Components/Classroom L1/classroom_teacher_Desk.fbx" type="PackedScene" id=25]
 [ext_resource path="res://Components/Hallway/atrium_dead_end.tscn" type="PackedScene" id=26]
-[ext_resource path="res://packs/Text.fbx" type="PackedScene" id=27]
+[ext_resource path="res://assets/packs/Text.fbx" type="PackedScene" id=27]
 [ext_resource path="res://minigames/designclass/Transition_Object_BossBattle.gd" type="Script" id=28]
 [ext_resource path="res://scenes/Charater scenes/Student/Hallway_Door*.tscn" type="PackedScene" id=29]
 [ext_resource path="res://scenes/Charater scenes/Student/Welcome.tscn" type="PackedScene" id=30]
@@ -260,20 +260,21 @@ transform = Transform( 0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.5, -25.3264, 12.968, 10 )
 
 [node name="DialoguePlayer" parent="Node2D/Enviroment/Mentor" instance=ExtResource( 17 )]
 follow_viewport_enable = true
+dialogue_file = "res://scenes/Charater scenes/Mentor/Mc/Mc.json"
 
 [node name="GC" parent="Node2D/Enviroment" instance=ExtResource( 6 )]
 transform = Transform( 0.308545, 0, -0.380152, 0, 0.475, 0, 0.361144, 0, 0.324784, -42.1676, 13.0428, -8.58389 )
 
 [node name="DialoguePlayer" parent="Node2D/Enviroment/GC" instance=ExtResource( 17 )]
 follow_viewport_enable = true
-dialogue_file = "res://jsons/GC/GC.json"
+dialogue_file = "res://scenes/Charater scenes/GC/GC/GC.json"
 
 [node name="Laura" parent="Node2D/Enviroment" instance=ExtResource( 12 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -23.6691, 12.8397, -16.1462 )
 
 [node name="DialoguePlayer" parent="Node2D/Enviroment/Laura" instance=ExtResource( 17 )]
 follow_viewport_enable = true
-dialogue_file = "res://jsons/Laura/Laura.json"
+dialogue_file = "res://scenes/Charater scenes/Laura/Laura/Laura.json"
 
 [node name="Student" parent="Node2D/Enviroment" instance=ExtResource( 9 )]
 transform = Transform( 0.4675, 0, 0, 0, 0.44, 0, 0, 0, 0.45, -20.5819, 12.9289, -6.10306 )

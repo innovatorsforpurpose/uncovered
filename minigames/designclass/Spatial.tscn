@@ -25,7 +25,7 @@
 [ext_resource path="res://assets/objectsall/Large objects/Door/Hallway Door.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Components/Classroom L1/classroom_teacher_Desk.fbx" type="PackedScene" id=25]
 [ext_resource path="res://Components/Hallway/atrium_dead_end.tscn" type="PackedScene" id=26]
-[ext_resource path="res://packs/Text.fbx" type="PackedScene" id=27]
+[ext_resource path="res://assets/packs/Text.fbx" type="PackedScene" id=27]
 [ext_resource path="res://minigames/designclass/Transition_Object_BossBattle.gd" type="Script" id=28]
 [ext_resource path="res://Components/atrium/assets/Atrium.glb" type="PackedScene" id=29]
 
