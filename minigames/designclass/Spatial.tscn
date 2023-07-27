@@ -1,7 +1,7 @@
 [gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://Scenes/Charater scenes/Mentor/Mentor/Mentor.tscn" type="PackedScene" id=1]
-[ext_resource path="res://workspaces/adnan/basement project.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Components/basement/basement project.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Components/Hallway/Classroom_hallway_main_dead_end_door.fbx" type="PackedScene" id=3]
 [ext_resource path="res://scenes/transitionobjects/transitionobject/Transition_Object.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Components/Office/mainscenes/office-3.tscn" type="PackedScene" id=5]

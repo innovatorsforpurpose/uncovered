@@ -1,27 +1,27 @@
 [gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://Scenes/Charater scenes/Mentor/Mentor/Mentor.tscn" type="PackedScene" id=1]
-[ext_resource path="res://workspaces/adnan/basement project.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Components/basement/basement project.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Components/Hallway/Classroom_hallway_main_dead_end_door.fbx" type="PackedScene" id=3]
 [ext_resource path="res://scenes/transitionobjects/transitionobject/Transition_Object.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Components/Office/mainscenes/office-3.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Charater scenes/GC/GC.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/Charater scenes/Student/StudentII.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/Charater scenes/Student/StudentII.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/objectsall/Large objects/chairsdesks/classroom_chairs_and_Desks.fbx" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/Charater scenes/Student/Student.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/Charater scenes/Student/Student.tscn" type="PackedScene" id=9]
 [ext_resource path="res://characters/MC/MC.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Components/Classroom L1/Classroom.fbx" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Charater scenes/Laura/Laura.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Scenes/Charater scenes/Student/IDesk.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Scenes/Charater scenes/Student/Bully.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/Charater scenes/Student/IDesk.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/Charater scenes/Student/Bully.tscn" type="PackedScene" id=14]
 [ext_resource path="res://assets/objectsall/Large objects/tables/Main_Table.fbx" type="PackedScene" id=15]
-[ext_resource path="res://Scenes/Charater scenes/Student/StudentI.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scenes/Charater scenes/Student/StudentI.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Components/Dialogue/Dialogue.tscn" type="PackedScene" id=17]
 [ext_resource path="res://scenes/transitionobjects/transitionobject/Transition_Object2.gd" type="Script" id=18]
 [ext_resource path="res://Components/Hallway/Classroom_HALLWAY.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Scenes/Charater scenes/Student/Bulletin Board.tscn" type="PackedScene" id=20]
+[ext_resource path="res://scenes/Charater scenes/Student/Bulletin Board.tscn" type="PackedScene" id=20]
 [ext_resource path="res://scenes/transitionobjects/transitionobject/Transition_Object3.gd" type="Script" id=21]
-[ext_resource path="res://Components/atrium/Atrium.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Components/atrium/Scenes/Atrium.tscn" type="PackedScene" id=22]
 [ext_resource path="res://assets/objectsall/Large objects/whiteboards/Whiteboard.fbx" type="PackedScene" id=23]
 [ext_resource path="res://assets/objectsall/Large objects/Door/Hallway Door.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Components/Classroom L1/classroom_teacher_Desk.fbx" type="PackedScene" id=25]
@@ -30,9 +30,9 @@
 [ext_resource path="res://minigames/designclass/Transition_Object_BossBattle.gd" type="Script" id=28]
 [ext_resource path="res://scenes/Charater scenes/Student/Hallway_Door*.tscn" type="PackedScene" id=29]
 [ext_resource path="res://scenes/Charater scenes/Student/Welcome.tscn" type="PackedScene" id=30]
-[ext_resource path="res://Components/Office/OFFICE.tscn" type="PackedScene" id=31]
-[ext_resource path="res://dev_sabrina/hallnimation/hallwayhopeful1.tscn" type="PackedScene" id=32]
-[ext_resource path="res://basement_Door.tscn" type="PackedScene" id=33]
+[ext_resource path="res://Components/basement/OFFICE.tscn" type="PackedScene" id=31]
+[ext_resource path="res://workspaces/dev_sabrina/hallnimation/hallwayhopeful1.tscn" type="PackedScene" id=32]
+[ext_resource path="res://Components/basement/basement_door.tscn" type="PackedScene" id=33]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -244,9 +244,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.5448, 6.65374, -23.299 )
 [node name="office-3" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1.37612, 0, 0, 0, 1.00371, 0, 0, 0, 1.35421, -42.1194, 7.60737, -20.8393 )
 
-[node name="Basement_Door2" parent="." instance=ExtResource( 33 )]
-transform = Transform( -1, 0, -1.58187e-07, 0, 1.41482, 0, 1.50996e-07, 0, -1.04763, -28.9453, 1.40871, -29.7088 )
-
 [node name="BASEMENT" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.9858, 0.53457, -50.8628 )
 
@@ -352,7 +349,13 @@ __meta__ = {
 transform = Transform( 1.16249, 0, 0, 0, 1.38602, 0, 0, 0, 1.03559, -33.3841, 0.470384, -18.8539 )
 
 [node name="Basement_Door" parent="." instance=ExtResource( 33 )]
-transform = Transform( -1, 0, -1.58187e-07, 0, 1.42076, 0, 1.50996e-07, 0, -1.04763, -28.8578, 1.41948, -5.21096 )
+transform = Transform( -1, 0, -1.61513e-07, 0, 1.52364, 0, 1.50996e-07, 0, -1.06965, -28.9113, 1.33722, -5.1639 )
+
+[node name="Basement_Door3" parent="." instance=ExtResource( 33 )]
+transform = Transform( -1, 0, -1.60568e-07, 0, 1.73798, 0, 1.50996e-07, 0, -1.0634, -29.3118, 1.00479, -29.6314 )
+
+[node name="Basement_Door2" parent="." instance=ExtResource( 33 )]
+transform = Transform( -1, 0, -1.61513e-07, 0, 1.52364, 0, 1.50996e-07, 0, -1.06965, -28.9113, 1.33722, -5.1639 )
 
 [connection signal="body_entered" from="Door1/Hallway_Door*" to="Knob1" method="_on_Hallway_Door_body_entered"]
 [connection signal="ready" from="Door1/Hallway_Door*/DialoguePlayer" to="Door1/Hallway_Door*/DialoguePlayer" method="_on_Dialogueplayer_ready"]
