@@ -7,8 +7,8 @@ extends StaticBody2D
 
 
 func _on_Area2D_body_entered(body):
-	print("In body enterd")
-	print(body)
+	#print("In body enterd")
+	#print(body)
 	
 	if "bullet" == body.name:
 		body.queue_free()

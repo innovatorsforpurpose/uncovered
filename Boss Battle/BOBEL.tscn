@@ -1,17 +1,37 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Boss Battle/BUUUUBEL.png" type="Texture" id=1]
+[ext_resource path="res://Boss Battle/BOBEL.gd" type="Script" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 426.4
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
 
-[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+[node name="bobel_body" type="KinematicBody2D" parent="."]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+[node name="Node2D" type="RichTextLabel" parent="bobel_body"]
+margin_left = -220.0
+margin_top = -111.0
+margin_right = -190.0
+margin_bottom = -78.0
+rect_scale = Vector2( 18.3785, 18.2388 )
+custom_colors/default_color = Color( 0.839216, 0.0627451, 0.0627451, 1 )
+text = "9+7
+"
 
-[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
+[node name="bobel_area" type="Area2D" parent="bobel_body"]
+
+[node name="bobel_Shape" type="CollisionShape2D" parent="bobel_body/bobel_area"]
+shape = SubResource( 1 )
+
+[node name="bobel_pic" type="Sprite" parent="bobel_body"]
 rotation = 0.813926
 scale = Vector2( 0.614733, 0.628392 )
 texture = ExtResource( 1 )
+
+[connection signal="body_entered" from="bobel_body/bobel_area" to="." method="_on_Area2D_body_entered"]

@@ -6,13 +6,13 @@ var velocity = Vector2()
 var collision
 func get_input():	
 	velocity = Vector2(0, 0)
-	if Input.is_action_pressed("right"):
+	if Input.is_action_pressed("ui_right"):
 		velocity.x += 100
-	if Input.is_action_pressed("left"):
+	if Input.is_action_pressed("ui_left"):
 		velocity.x -= 100
-	if Input.is_action_pressed("up"):
+	if Input.is_action_pressed("ui_up"):
 		velocity.y -= 100
-	if Input.is_action_pressed("down"):
+	if Input.is_action_pressed("ui_down"):
 		velocity.y += 100
 	
 	#if Input.is_action_pressed("spacebar") and is_on_floor():
