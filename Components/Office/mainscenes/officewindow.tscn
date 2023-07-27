@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Components/Material_059.material" type="Material" id=1]
+[ext_resource path="res://Components/basement/Images-Materials/Material_059.material" type="Material" id=1]
 
 [sub_resource type="ArrayMesh" id=1]
 blend_shape_mode = 0
