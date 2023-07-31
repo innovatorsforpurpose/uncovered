@@ -25,11 +25,11 @@ extents = Vector3( 1.50277, 1, 1 )
 [sub_resource type="BoxShape" id=4]
 
 [node name="Door" type="Area"]
-transform = Transform( 0.430264, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform = Transform( 0.430264, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.55782 )
 script = ExtResource( 1 )
 
 [node name="Rootscene" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.121646 )
 
 [node name="door#2005" type="MeshInstance" parent="Rootscene"]
 transform = Transform( 0.0248949, 12.7007, 2.77637e-06, 3.85836e-07, -3.02809e-06, 13.3085, 12.9465, -0.0244219, 0, 0, 0, 0 )
@@ -40,7 +40,7 @@ skeleton = NodePath("../../..")
 transform = Transform( 0.341821, 0, 0, 0, 1.41684, 0, 0, 0, 0.466026, 0, 0, -0.630214 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Rootscene/Area"]
-transform = Transform( 25.5014, 0, 0, 0, 2.86226, 0, 0, 0, 3.86788, 0, 0, 0 )
+transform = Transform( 10.3825, 0, 0, 0, 2.86226, 0, 0, 0, 3.86788, 0, 0, -0.0931083 )
 shape = SubResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Rootscene"]
@@ -51,14 +51,14 @@ transform = Transform( 1.96215e-06, -9.81785e-11, 0.251795, 0.00104022, -5.20462
 shape = SubResource( 2 )
 
 [node name="VisibilityNotifier" type="VisibilityNotifier" parent="Rootscene/StaticBody"]
-transform = Transform( 0.000229555, -6.83722e-11, 0.119381, 0.121691, -3.62454e-08, -0.000234001, 2.76818e-08, 0.165808, -3.5143e-09, -0.0541636, 0.000106167, 1.59445e-09 )
+transform = Transform( 0.000479402, -6.83721e-11, 0.119381, 0.25414, -3.62454e-08, -0.000234001, 5.78106e-08, 0.165808, -3.5143e-09, -0.0541636, 0.000106167, 1.59445e-09 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, -1.65141e-14, -6.31287e-15, 2.84217e-14, 1, -3.55271e-15, 0, 0, 1, 0, 0, 0 )
+transform = Transform( 1, -1.65141e-14, -6.31287e-15, 2.84217e-14, 1, -3.55271e-15, 0, 0, 1, 0, 0, -1.20863 )
 shape = SubResource( 4 )
 
 [node name="VisibilityNotifier" type="VisibilityNotifier" parent="."]
-transform = Transform( 7.33246, 0, 0, 0, 4.43738, 0, 0, 0, 4.19625, 0, 0, 0 )
+transform = Transform( 3.68331, 0, 0, 0, 4.43738, 0, 0, 0, 4.19625, 0, 0, 0 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 0.115844, 0, -2.32127, 0, 1, 0, 0.998757, 0, 0.0498434, -4.42617, 0, 0 )
