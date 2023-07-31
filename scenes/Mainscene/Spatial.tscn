@@ -9,7 +9,7 @@
 [ext_resource path="res://scenes/Charater scenes/Student/StudentII.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/objectsall/Large objects/chairsdesks/classroom_chairs_and_Desks.fbx" type="PackedScene" id=8]
 [ext_resource path="res://scenes/Charater scenes/Student/Student.tscn" type="PackedScene" id=9]
-[ext_resource path="res://characters/MC/MC.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/Charater scenes/MC/MC.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Components/Classroom L1/Classroom.fbx" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Charater scenes/Laura/Laura.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scenes/Charater scenes/Student/IDesk.tscn" type="PackedScene" id=13]
