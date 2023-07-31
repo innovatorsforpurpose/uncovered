@@ -2,9 +2,9 @@
 
 [ext_resource path="res://Boss Battle/Boss_.gd" type="Script" id=1]
 [ext_resource path="res://Boss Battle/Camera2D.gd" type="Script" id=2]
-[ext_resource path="res://KinematicBody2D.gd" type="Script" id=3]
+[ext_resource path="res://minigames/BossBattle/KinematicBody2D.gd" type="Script" id=3]
 [ext_resource path="res://Boss Battle/MCC.png" type="Texture" id=4]
-[ext_resource path="res://maxresdefault.jpg" type="Texture" id=5]
+[ext_resource path="res://minigames/BossBattle/maxresdefault.jpg" type="Texture" id=5]
 [ext_resource path="res://Boss Battle/Mentor.png" type="Texture" id=6]
 [ext_resource path="res://Boss Battle/Bosspath_.gd" type="Script" id=7]
 [ext_resource path="res://Boss Battle/Bottom_code.gd" type="Script" id=8]
