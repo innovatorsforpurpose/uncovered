@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://minigames/BossBattle/Boss_.gd" type="Script" id=1]
 [ext_resource path="res://minigames/BossBattle/Camera2D.gd" type="Script" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://minigames/BossBattle/Pipe3.gd" type="Script" id=13]
 [ext_resource path="res://minigames/BossBattle/Pipe1.gd" type="Script" id=14]
 [ext_resource path="res://minigames/BossBattle/Bossshoot.gd" type="Script" id=15]
+[ext_resource path="res://minigames/BossBattle/BOBEL.gd" type="Script" id=16]
 
 [sub_resource type="TileSet" id=1]
 0/name = "maxresdefault.jpg 0"
@@ -175,13 +176,14 @@ position = Vector2( -1163, -1087 )
 scale = Vector2( 100, 100 )
 
 [node name="MATH" parent="." instance=ExtResource( 10 )]
-position = Vector2( 702, 2504 )
+position = Vector2( 716, 2577 )
+script = ExtResource( 16 )
 
 [node name="Node2D" type="RichTextLabel" parent="MATH"]
-margin_left = -220.0
-margin_top = -111.0
-margin_right = -190.0
-margin_bottom = -78.0
+margin_left = 829.0
+margin_top = -112.0
+margin_right = 859.0
+margin_bottom = -79.0
 rect_scale = Vector2( 18.3785, 18.2388 )
 custom_colors/default_color = Color( 0.839216, 0.0627451, 0.0627451, 1 )
 text = "9+7
@@ -206,3 +208,4 @@ texture = ExtResource( 11 )
 script = ExtResource( 13 )
 
 [connection signal="body_entered" from="Bottom/Area2D" to="Bottom" method="_on_Area2D_body_entered"]
+[connection signal="child_exiting_tree" from="MATH" to="MATH" method="_on_MATH_child_exiting_tree"]
