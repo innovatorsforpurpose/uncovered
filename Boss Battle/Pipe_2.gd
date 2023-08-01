@@ -2,8 +2,6 @@ extends Sprite
 
 const bulletPath = preload ('res://Boss Battle/Bullet.tscn')
 
-func ready():
-	pass
 	
 func _process(delta):
 	if Input.is_action_just_pressed("ui_accept"):
@@ -24,5 +22,3 @@ func shoot():
 	
 
 
-func _on_Area2D_body_entered(body):
-	print("Pipe1 entered")
