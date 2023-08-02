@@ -1,17 +1,27 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Boss Battle/BUUUUBEL.png" type="Texture" id=1]
 [ext_resource path="res://assets/fonts/battlenet/new_dynamicfont.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Boss Battle/DialogueBoxI.gd" type="Script" id=3]
+[ext_resource path="res://Boss Battle/Checkmark.jpeg" type="Texture" id=4]
+[ext_resource path="res://Boss Battle/Crossed Circle.png" type="Texture" id=5]
+[ext_resource path="res://Boss Battle/Button 1.gd" type="Script" id=6]
+[ext_resource path="res://Boss Battle/Button 2.gd" type="Script" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 
-[sub_resource type="ImageTexture" id=2]
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 532.694, 89.2064 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 531.733, 91.0911 )
 
 [node name="Node2D" type="Node2D"]
-position = Vector2( 548, 345 )
+position = Vector2( 497, 301 )
+scale = Vector2( 0.649763, 0.795907 )
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+visible = false
 __meta__ = {
 "_edit_group_": true
 }
@@ -34,7 +44,31 @@ margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 3 )
 
+[node name="DialogueCenter2" type="MarginContainer" parent="Control/DialogueBox"]
+visible = false
+margin_left = -872.626
+margin_top = -513.879
+margin_right = -832.626
+margin_bottom = -473.879
+rect_scale = Vector2( 45.0142, 27.3169 )
+
+[node name="ColorRect" type="ColorRect" parent="Control/DialogueBox/DialogueCenter2"]
+margin_right = 40.0
+margin_bottom = 40.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Control/DialogueBox/DialogueCenter2"]
+margin_right = 40.0
+margin_bottom = 40.0
+border_color = Color( 1, 1, 1, 1 )
+border_width = 2.4
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control/DialogueBox/DialogueCenter2"]
+margin_right = 40.0
+margin_bottom = 40.0
+
 [node name="DialogueCenter" type="MarginContainer" parent="Control/DialogueBox"]
+visible = false
 margin_left = -700.0
 margin_top = -324.0
 margin_right = -660.0
@@ -52,7 +86,25 @@ margin_bottom = 40.0
 border_color = Color( 1, 1, 1, 1 )
 border_width = 2.4
 
+[node name="NinePatchRect" type="NinePatchRect" parent="Control/DialogueBox/DialogueCenter"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 4 )
+
+[node name="Instuctions" type="Label" parent="Control/DialogueBox"]
+visible = false
+margin_left = -303.188
+margin_top = -236.209
+margin_right = -238.188
+margin_bottom = -171.209
+rect_scale = Vector2( 8.69989, 7.60147 )
+custom_fonts/font = ExtResource( 2 )
+text = "Press (T) for True,
+Press (F) for false"
+autowrap = true
+
 [node name="Question 1" type="Label" parent="Control/DialogueBox"]
+visible = false
 margin_left = -254.0
 margin_top = -68.0
 margin_right = -189.0
@@ -63,6 +115,7 @@ text = "What is AI?"
 autowrap = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control/DialogueBox"]
+visible = false
 margin_left = -586.0
 margin_top = -251.0
 margin_right = -217.0
@@ -79,7 +132,78 @@ __meta__ = {
 
 [node name="Tween" type="Tween" parent="Control/DialogueBox"]
 
-[node name="Sprite" type="Sprite" parent="Control/DialogueBox"]
-texture = SubResource( 2 )
+[node name="DialogueCenter3" type="MarginContainer" parent="Control/DialogueBox"]
+margin_left = -223.158
+margin_top = -331.697
+margin_right = -183.158
+margin_bottom = -291.697
+rect_scale = Vector2( 24.7952, 4.16331 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/DialogueBox/Sprite"]
+[node name="ColorRect" type="ColorRect" parent="Control/DialogueBox/DialogueCenter3"]
+margin_right = 40.0
+margin_bottom = 40.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Control/DialogueBox/DialogueCenter3"]
+margin_right = 40.0
+margin_bottom = 40.0
+border_color = Color( 1, 1, 1, 1 )
+border_width = 2.4
+
+[node name="Button 1" type="Sprite" parent="Control/DialogueBox/DialogueCenter3"]
+position = Vector2( 30.4141, 3.92321 )
+scale = Vector2( 0.0337969, 0.140415 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="Button 1" type="Area2D" parent="Control/DialogueBox"]
+position = Vector2( -223.158, -331.697 )
+scale = Vector2( 27.779, 12.4586 )
+script = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/DialogueBox/Button 1"]
+position = Vector2( 18.0058, 6.55512 )
+scale = Vector2( 0.0359984, 0.0802657 )
+shape = SubResource( 2 )
+
+[node name="Button 2" type="Area2D" parent="Control/DialogueBox"]
+script = ExtResource( 7 )
+
+[node name="DialogueCenter4" type="MarginContainer" parent="Control/DialogueBox/Button 2"]
+margin_left = -213.924
+margin_top = -121.874
+margin_right = -173.924
+margin_bottom = -81.8736
+rect_scale = Vector2( 24.7952, 4.16331 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="ColorRect" type="ColorRect" parent="Control/DialogueBox/Button 2/DialogueCenter4"]
+margin_right = 40.0
+margin_bottom = 40.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Control/DialogueBox/Button 2/DialogueCenter4"]
+margin_right = 40.0
+margin_bottom = 40.0
+border_color = Color( 1, 1, 1, 1 )
+border_width = 2.4
+
+[node name="Button 2" type="Sprite" parent="Control/DialogueBox/Button 2/DialogueCenter4"]
+position = Vector2( 34.3243, 19.9178 )
+scale = Vector2( 0.0306982, 0.163695 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/DialogueBox/Button 2"]
+position = Vector2( 281.641, -38.9493 )
+shape = SubResource( 3 )
+
+[node name="Button" type="Button" parent="Control/DialogueBox"]
+margin_right = 12.0
+margin_bottom = 20.0
+
+[connection signal="input_event" from="Control/DialogueBox/Button 1" to="Control/DialogueBox/Button 1" method="_input_event"]
