@@ -1,6 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Components/Hallway/Material_009.material" type="Material" id=1]
+[ext_resource path="res://Components/atrium/assets/Material_016.material" type="Material" id=2]
+[ext_resource path="res://Components/atrium/assets/Material_014.material" type="Material" id=3]
+[ext_resource path="res://Components/atrium/assets/Material_015.material" type="Material" id=4]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "atrium_dead_end_Cube349"
@@ -44,3 +47,6 @@ surfaces/2 = {
 [node name="Cube346" type="MeshInstance" parent="."]
 transform = Transform( 2.79575, 0, 0, 0, 2.076, 0, 0, 0, 2.076, 0, 0, 0 )
 mesh = SubResource( 1 )
+material/0 = ExtResource( 2 )
+material/1 = ExtResource( 4 )
+material/2 = ExtResource( 3 )

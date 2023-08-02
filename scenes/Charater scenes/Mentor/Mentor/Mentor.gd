@@ -49,10 +49,8 @@ func _physics_process(_delta):
 			velocity = velocity.normalized() * speed
 	transform.origin += velocity
 
-
 func _on_Area_body_entered(body):
-	if body.name == "MC":
-		currently_colliding = true
+	currently_colliding = true
 
 
 func _on_Area_body_exited(_body):

@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Dev_MS/Minigame/Instructions.gd" type="Script" id=1]
 [ext_resource path="res://workspaces/Dev_MS/Minigame/Scripts/KinematicBody2D.gd" type="Script" id=2]
@@ -22,6 +22,7 @@
 [ext_resource path="res://workspaces/Dev_MS/Minigame/Assets/Untitled-1-green-bar.jpeg" type="Texture" id=20]
 [ext_resource path="res://workspaces/Dev_MS/Minigame/Assets/yellow-dot-md.png" type="Texture" id=21]
 [ext_resource path="res://workspaces/Dev_MS/Minigame/Scripts/bottom.gd" type="Script" id=22]
+[ext_resource path="res://workspaces/Dev_MS/Minigame/Assets/1st34.png" type="Texture" id=23]
 
 [sub_resource type="StyleBoxFlat" id=10]
 bg_color = Color( 0, 0, 0, 1 )
@@ -271,18 +272,21 @@ scale = Vector2( 0.677279, 0.978412 )
 visible = false
 position = Vector2( 208.186, -5.11035 )
 scale = Vector2( 1.28936, 0.115772 )
+texture = ExtResource( 23 )
 script = ExtResource( 22 )
 
 [node name="mid" type="Sprite" parent="Still Yellow"]
 visible = false
 position = Vector2( 377.983, -65.4121 )
 scale = Vector2( 0.0830415, 0.718563 )
+texture = ExtResource( 23 )
 script = ExtResource( 5 )
 
 [node name="top" type="Sprite" parent="Still Yellow"]
 visible = false
 position = Vector2( 289.393, -113.449 )
 scale = Vector2( 0.552537, 0.143713 )
+texture = ExtResource( 23 )
 script = ExtResource( 10 )
 
 [node name="yellow area" type="Area2D" parent="Still Yellow"]

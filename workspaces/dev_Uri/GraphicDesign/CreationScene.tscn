@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://workspaces/dev_Uri/GraphicDesign/Scripts/PlayerMovement.gd" type="Script" id=1]
 [ext_resource path="res://workspaces/dev_Uri/GraphicDesign/Resources/Player.PNG" type="Texture" id=2]
@@ -24,7 +24,6 @@
 [ext_resource path="res://workspaces/dev_Uri/GraphicDesign/Scripts/HeartSymbol.gd" type="Script" id=22]
 [ext_resource path="res://workspaces/dev_Uri/GraphicDesign/Scripts/TriangleSymbol.gd" type="Script" id=23]
 [ext_resource path="res://workspaces/dev_Uri/GraphicDesign/Scenes/SubmitButton.gd" type="Script" id=24]
-[ext_resource path="res://workspaces/dev_Uri/GraphicDesign/Resources/Screen Shot 2022-08-02 at 2.18.53 PM.png" type="Texture" id=25]
 [ext_resource path="res://workspaces/dev_Uri/GraphicDesign/Scenes/TimerLabel.gd" type="Script" id=26]
 [ext_resource path="res://workspaces/dev_Uri/GraphicDesign/Scenes/GoBackButton.gd" type="Script" id=27]
 
@@ -39,10 +38,6 @@ extents = Vector2( 10, 4 )
 [sub_resource type="QuadMesh" id=6]
 
 [sub_resource type="QuadMesh" id=7]
-
-[sub_resource type="CanvasItemMaterial" id=8]
-
-[sub_resource type="QuadMesh" id=9]
 
 [node name="CreationScene" type="Node2D"]
 position = Vector2( 1, -1 )
@@ -212,20 +207,7 @@ margin_bottom = 303.0
 text = "Time Left: 5s"
 script = ExtResource( 26 )
 
-[node name="CompletedScreen" type="MeshInstance2D" parent="."]
-visible = false
-material = SubResource( 8 )
-position = Vector2( 514.25, 299.876 )
-scale = Vector2( 1029.5, 600.752 )
-z_index = 10
-mesh = SubResource( 9 )
-
-[node name="ThanksForPlaying" type="Sprite" parent="CompletedScreen"]
-position = Vector2( 0.00318474, -0.027288 )
-scale = Vector2( 0.000622376, 0.00106656 )
-z_index = 20
-z_as_relative = false
-texture = ExtResource( 25 )
+[node name="CompletedScreen" type="Node2D" parent="."]
 
 [connection signal="pressed" from="ResetCanvasButton" to="ResetCanvasButton" method="click"]
 [connection signal="pressed" from="GoBackButton" to="GoBackButton" method="click"]
