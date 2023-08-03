@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/A_black_image.jpg.png-f97e9adf96982338e892a3a59d2563e3.stex"
+path="res://.import/WATER (1).png-32c2989fc244ab1bd562e6a6c3160cd9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/oldscenes/images/A_black_image.jpg.png"
-dest_files=[ "res://.import/A_black_image.jpg.png-f97e9adf96982338e892a3a59d2563e3.stex" ]
+source_file="res://BossBattle/WATER (1).png"
+dest_files=[ "res://.import/WATER (1).png-32c2989fc244ab1bd562e6a6c3160cd9.stex" ]
 
 [params]
 

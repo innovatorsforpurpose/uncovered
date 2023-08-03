@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/A_black_image.jpg.png-f97e9adf96982338e892a3a59d2563e3.stex"
+path="res://.import/Crossed Circle.png-1ed68308a397df5760dfc51ca03ceb0d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/oldscenes/images/A_black_image.jpg.png"
-dest_files=[ "res://.import/A_black_image.jpg.png-f97e9adf96982338e892a3a59d2563e3.stex" ]
+source_file="res://BossBattle/Crossed Circle.png"
+dest_files=[ "res://.import/Crossed Circle.png-1ed68308a397df5760dfc51ca03ceb0d.stex" ]
 
 [params]
 

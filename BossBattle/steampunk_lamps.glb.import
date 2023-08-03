@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Classroom_hallway_main_dead_end_door.fbx-4d28dc37b305849e0296f8e2ae32f29e.scn"
+path="res://.import/steampunk_lamps.glb-1819233c7b8f7f4c38df7b3ed2c6f9f7.scn"
 
 [deps]
 
-source_file="res://scenes/Charater scenes/Student/Classroom_hallway_main_dead_end_door.fbx"
-dest_files=[ "res://.import/Classroom_hallway_main_dead_end_door.fbx-4d28dc37b305849e0296f8e2ae32f29e.scn" ]
+source_file="res://BossBattle/steampunk_lamps.glb"
+dest_files=[ "res://.import/steampunk_lamps.glb-1819233c7b8f7f4c38df7b3ed2c6f9f7.scn" ]
 
 [params]
 
