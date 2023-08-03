@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://workspaces/dev_Uri/GraphicDesign/Scripts/PlayerMovement.gd" type="Script" id=1]
 [ext_resource path="res://workspaces/dev_Uri/GraphicDesign/Resources/Player.PNG" type="Texture" id=2]
@@ -24,6 +24,7 @@
 [ext_resource path="res://workspaces/dev_Uri/GraphicDesign/Scripts/HeartSymbol.gd" type="Script" id=22]
 [ext_resource path="res://workspaces/dev_Uri/GraphicDesign/Scripts/TriangleSymbol.gd" type="Script" id=23]
 [ext_resource path="res://workspaces/dev_Uri/GraphicDesign/Scenes/SubmitButton.gd" type="Script" id=24]
+[ext_resource path="res://workspaces/dev_Uri/GraphicDesign/Resources/Screen Shot 2022-08-02 at 2.18.53 PM.png" type="Texture" id=25]
 [ext_resource path="res://workspaces/dev_Uri/GraphicDesign/Scenes/TimerLabel.gd" type="Script" id=26]
 [ext_resource path="res://workspaces/dev_Uri/GraphicDesign/Scenes/GoBackButton.gd" type="Script" id=27]
 
@@ -207,7 +208,12 @@ margin_bottom = 303.0
 text = "Time Left: 5s"
 script = ExtResource( 26 )
 
-[node name="CompletedScreen" type="Node2D" parent="."]
+[node name="CompletedScreen" type="MeshInstance2D" parent="."]
+visible = false
+
+[node name="Thank-You-For-Playing-Uncover" type="Sprite" parent="CompletedScreen"]
+position = Vector2( 510, 210 )
+texture = ExtResource( 25 )
 
 [connection signal="pressed" from="ResetCanvasButton" to="ResetCanvasButton" method="click"]
 [connection signal="pressed" from="GoBackButton" to="GoBackButton" method="click"]
