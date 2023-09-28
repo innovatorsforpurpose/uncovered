@@ -583,82 +583,82 @@ mesh = SubResource( 7 )
 material/0 = SubResource( 34 )
 
 [node name="floorcube000" type="MeshInstance" parent="."]
-transform = Transform( 1.15861, 0.0325305, 0.0573048, 0.0484951, 0.262319, -1.1294, -0.0446128, 1.12998, 0.260537, -2.29533, -4.26765, 4.81375 )
+transform = Transform( 1.16047, -0.00416394, 0, 0.00416394, 1.16047, 0, 0, 0, 1.16048, -2.29533, 0.181607, 4.8267 )
 mesh = SubResource( 3 )
 material/0 = SubResource( 31 )
 
 [node name="floorcube001" type="MeshInstance" parent="."]
-transform = Transform( 1.14764, 0.160504, -0.0623278, -0.170644, 1.11626, -0.267509, 0.0229539, 0.273713, 1.12751, -5.34746, -0.0352806, 4.81377 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -5.34746, 0.156304, 4.81377 )
 mesh = SubResource( 4 )
 material/0 = SubResource( 32 )
 
 [node name="floorcube002" type="MeshInstance" parent="."]
-transform = Transform( 1.09913, -0.350285, 0.126195, 0.36086, 1.09908, -0.0922338, -0.0916785, 0.126599, 1.14991, -0.770183, 0.0242671, 4.83686 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -0.770183, 0.305363, 4.83686 )
 mesh = SubResource( 5 )
 material/0 = SubResource( 33 )
 
 [node name="floorcube003" type="MeshInstance" parent="."]
-transform = Transform( 1.06892, 0.169938, -0.418619, -0.447194, 0.55106, -0.918185, 0.0643271, 1.00706, 0.573069, -3.82669, -4.05178, 4.82009 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -3.82669, 0.173749, 4.82009 )
 mesh = SubResource( 6 )
 material/0 = SubResource( 31 )
 
 [node name="floorcube007" type="MeshInstance" parent="."]
-transform = Transform( 0.731027, -0.73611, 0.520053, 0.897047, 0.529396, -0.511625, 0.0872896, 0.72429, 0.902496, -2.28837, -5.82334, 6.25739 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -2.28837, 0.187651, 6.28051 )
 mesh = SubResource( 8 )
 material/0 = SubResource( 31 )
 
 [node name="floorcube006" type="MeshInstance" parent="."]
-transform = Transform( 0.288233, 1.12396, -0.0186196, -0.81376, 0.221888, 0.79704, 0.775519, -0.184907, 0.843264, -5.3405, -3.07503, 6.25742 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -5.3405, 0.152907, 6.25742 )
 mesh = SubResource( 9 )
 material/0 = SubResource( 31 )
 
 [node name="floorcube005" type="MeshInstance" parent="."]
-transform = Transform( 0.624808, -0.96096, 0.18134, 0.965107, 0.640648, 0.0696544, -0.157789, 0.113309, 1.14411, -0.763223, -3.40699, 6.28051 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -0.763223, 0.301965, 6.28051 )
 mesh = SubResource( 10 )
 material/0 = SubResource( 31 )
 
 [node name="floorcube004" type="MeshInstance" parent="."]
-transform = Transform( 1.13721, 0.00723551, -0.23113, -0.199238, 0.61943, -0.960898, 0.117379, 0.981309, 0.60825, -3.81973, -4.26556, 6.26374 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -3.81973, 0.181042, 6.26374 )
 mesh = SubResource( 11 )
 material/0 = SubResource( 35 )
 
 [node name="floorcube011" type="MeshInstance" parent="."]
-transform = Transform( 0.97236, 0.602557, 0.195334, -0.307712, 0.13654, 1.11058, 0.553664, -0.982342, 0.274179, -3.81973, -2.75383, 7.80535 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -3.81973, 0.181042, 7.80535 )
 mesh = SubResource( 12 )
 material/0 = SubResource( 31 )
 
 [node name="floorcube010" type="MeshInstance" parent="."]
-transform = Transform( 0.664282, -0.86486, 0.396812, 0.916027, 0.450238, -0.552172, 0.257559, 0.629298, 0.940405, -0.763223, -5.57822, 7.82211 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -0.763223, 0.301965, 7.82211 )
 mesh = SubResource( 13 )
 material/0 = SubResource( 36 )
 
 [node name="floorcube009" type="MeshInstance" parent="."]
-transform = Transform( 0.75719, 0.874516, -0.0927304, -0.873197, 0.762172, 0.0577457, 0.104419, 0.0320966, 1.15533, -5.3405, -2.3941, 7.79903 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -5.3405, 0.152907, 7.79903 )
 mesh = SubResource( 14 )
 material/0 = SubResource( 35 )
 
 [node name="floorcube008" type="MeshInstance" parent="."]
-transform = Transform( 1.04927, -0.493905, 0.0424392, 0.122449, 0.3545, 1.0982, -0.480364, -0.988485, 0.372643, -2.28837, -5.29969, 7.799 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -2.28837, 0.190443, 7.799 )
 mesh = SubResource( 15 )
 material/0 = SubResource( 31 )
 
 [node name="floorcube015" type="MeshInstance" parent="."]
-transform = Transform( 1.1361, -0.235839, -0.0193055, 0.0620957, 0.205779, 1.1404, -0.228335, -1.11747, 0.214076, -2.28837, -2.8522, 9.334 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16037, -0.0162028, 0, 0.0162028, 1.16037, -2.28837, 0.157342, 9.334 )
 mesh = SubResource( 16 )
 material/0 = SubResource( 36 )
 
 [node name="floorcube014" type="MeshInstance" parent="."]
-transform = Transform( 1.15028, 0.0946595, 0.120873, -0.136745, 1.04706, 0.481342, -0.0697964, -0.491354, 1.04901, -5.3405, -0.299497, 9.3441 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16048, 0, 0, 0, 1.16048, -5.3405, 0.147372, 9.3441 )
 mesh = SubResource( 17 )
 material/0 = SubResource( 31 )
 
 [node name="floorcube013" type="MeshInstance" parent="."]
-transform = Transform( 0.916876, -0.679031, -0.212059, 0.567877, 0.490297, 0.885346, -0.428448, -0.803268, 0.719658, -0.763223, -8.51091, 9.35095 )
+transform = Transform( 1.16048, 0, 0, 0, 1.16013, -0.0283531, 0, 0.0283531, 1.16013, -0.763223, 0.0765009, 9.35095 )
 mesh = SubResource( 18 )
 material/0 = SubResource( 31 )
 
 [node name="floorcube012" type="MeshInstance" parent="."]
-transform = Transform( 0.987568, 0.572574, 0.208762, -0.47649, 0.477568, 0.944246, 0.379974, -0.88927, 0.641508, -3.81973, -2.92379, 9.333 )
+transform = Transform( 1.16048, 0, 0, 0, 1.15991, -0.0364515, 0, 0.0364515, 1.15991, -3.81973, 0.135506, 9.333 )
 mesh = SubResource( 19 )
 material/0 = SubResource( 31 )
 
