@@ -3,7 +3,6 @@ extends KinematicBody2D
 var dragReady = false
 var myClickPos 
 var myDistance = Vector2(0,0)
-var noOverlap = false
 
 
 func _physics_process(_delta):
@@ -17,15 +16,16 @@ func _physics_process(_delta):
 		set_position(get_global_mouse_position())
 
 func _on_KinematicBody2D_mouse_entered():
-	dragReady = true
-	get_node("../..").greendrag = true
+	get_node("../..").yellowdrag = true
+	if not( get_node("../..").bluedrag or get_node("../..").greendrag or get_node("../..").reddrag):
+		dragReady = true
 
 func _on_KinematicBody2D_mouse_exited():
 	dragReady = false
+	get_node("../..").yellowdrag = false
 
 func _on_Area2D_body_entered(_body):
-	
 	print("hello")
 
 func _on_reddrag_tree_entered():
-	noOverlap = true
+	pass

@@ -13,4 +13,5 @@ func _on_Blue_area_body_entered(body):
 
 
 func _on_Blue_area_body_exited(_body):
+	
 	visible = false

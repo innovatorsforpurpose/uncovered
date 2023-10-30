@@ -6,6 +6,10 @@ export var greenline = false
 export var yellowline = false
 
 
+export var greendrag = false
+export var reddrag = false
+export var bluedrag = false
+export var yellowdrag = false
 
 
 
