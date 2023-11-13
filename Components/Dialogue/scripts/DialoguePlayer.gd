@@ -8,16 +8,17 @@ func _on_Dialogueplayer_ready():
 var dialogues = []
 var current_dialogue_id = -1
 var is_dialogue_active = false
+var player_ready = false
 
 func _ready():
 	play()
 	$NinePatchRect.visible = false
 
 func play():
-	if is_dialogue_active:
+	if is_dialogue_active and player_ready:
 		return
 	dialogues = load_dialogue()
-	#print(dialogues)
+	#print("working")
 	if dialogues == null:
 		return
 	is_dialogue_active = true

@@ -10,7 +10,7 @@ var dialogue_player = null
 func _input(event):
 	if event.is_action_pressed("game_usage") and currently_colliding:
 		find_and_use_dialogue()
-		#print("in_area_Mentor")
+		print("in_area_Mentor")
 		#print(currently_colliding)
 
 
@@ -50,7 +50,8 @@ func _physics_process(_delta):
 	transform.origin += velocity
 
 func _on_Area_body_entered(body):
-	currently_colliding = true
+	if body.name == "MC":
+		currently_colliding = true
 
 
 func _on_Area_body_exited(_body):

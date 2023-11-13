@@ -208,7 +208,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00904, 0 )
 [node name="Enviroment" type="CanvasLayer" parent="Node2D"]
 
 [node name="MC" parent="Node2D/Enviroment" instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1.41956, 0, 0, 0, 1, -30.626, 8.79211, -0.139829 )
+transform = Transform( 1, 0, 0, 0, 1.41956, 0, 0, 0, 1, -25.4217, 12.2963, 14.6706 )
 
 [node name="Mentor" parent="Node2D/Enviroment" instance=ExtResource( 1 )]
 transform = Transform( 0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.5, -25.3264, 12.968, 10 )
