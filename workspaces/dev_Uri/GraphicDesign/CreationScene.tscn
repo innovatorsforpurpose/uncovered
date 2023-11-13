@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://workspaces/dev_Uri/GraphicDesign/Scripts/PlayerMovement.gd" type="Script" id=1]
 [ext_resource path="res://workspaces/dev_Uri/GraphicDesign/Resources/Player.PNG" type="Texture" id=2]
@@ -27,6 +27,7 @@
 [ext_resource path="res://workspaces/dev_Uri/GraphicDesign/Resources/Screen Shot 2022-08-02 at 2.18.53 PM.png" type="Texture" id=25]
 [ext_resource path="res://workspaces/dev_Uri/GraphicDesign/Scenes/TimerLabel.gd" type="Script" id=26]
 [ext_resource path="res://workspaces/dev_Uri/GraphicDesign/Scenes/GoBackButton.gd" type="Script" id=27]
+[ext_resource path="res://workspaces/dev_Uri/GraphicDesign/Timer.gd" type="Script" id=28]
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 8.625, 8.375 )
@@ -132,6 +133,11 @@ margin_bottom = 454.0
 text = "Back"
 script = ExtResource( 27 )
 
+[node name="Timer" type="Timer" parent="GoBackButton"]
+wait_time = 0.5
+one_shot = true
+script = ExtResource( 28 )
+
 [node name="GridSquare" type="MeshInstance2D" parent="."]
 position = Vector2( 42, -35 )
 scale = Vector2( 50, 50 )
@@ -217,4 +223,5 @@ texture = ExtResource( 25 )
 
 [connection signal="pressed" from="ResetCanvasButton" to="ResetCanvasButton" method="click"]
 [connection signal="pressed" from="GoBackButton" to="GoBackButton" method="click"]
+[connection signal="timeout" from="GoBackButton/Timer" to="GoBackButton" method="_on_Timer_timeout"]
 [connection signal="pressed" from="GoalHolder/StaticBody2D/SubmitButton" to="GoalHolder/StaticBody2D/SubmitButton" method="click"]

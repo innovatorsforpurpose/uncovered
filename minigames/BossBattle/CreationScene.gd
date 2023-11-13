@@ -6,7 +6,7 @@ onready var settings = get_node("/root/CreationScene/Settings")
 onready var square = get_node("/root/CreationScene/GridSquare")
 
 func _ready():
-	# print("here in creation scene")
+	print("here in creation scene2")
 	# print("I am at ", self.get_path())
 	create_grid()
 	place_symbols()
