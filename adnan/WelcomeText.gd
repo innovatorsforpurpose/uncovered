@@ -3,7 +3,7 @@ extends CanvasLayer
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	visible = true
-	get_node("/root/RootScene/Welcome/WelcomeTimer").start(12)
+	get_node("/root/RootScene/Welcome/WelcomeTimer").start(0)
 
 func _physics_process(_delta):
 	if Input.is_action_just_pressed("game_usage"):

@@ -1,7 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://adnan/WelcomeText.gd" type="Script" id=1]
 [ext_resource path="res://assets/fonts/Cairo/new_dynamicfont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://scenes/Charater scenes/Student/WelcomeTimer.gd" type="Script" id=3]
+[ext_resource path="res://scenes/Charater scenes/Student/Control_1.gd" type="Script" id=4]
+[ext_resource path="res://Image file/g3.png" type="Texture" id=5]
+[ext_resource path="res://Image file/Path3.png" type="Texture" id=6]
+[ext_resource path="res://Image file/g2.svg" type="Texture" id=7]
+[ext_resource path="res://Image file/drawing.svg.svg" type="Texture" id=8]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 1 )
@@ -15,8 +21,12 @@ border_color = Color( 1, 1, 1, 1 )
 script = ExtResource( 1 )
 
 [node name="WelcomeTimer" type="Timer" parent="."]
+wait_time = 3.5
+autostart = true
+script = ExtResource( 3 )
 
 [node name="Node2D" type="Node2D" parent="."]
+visible = false
 
 [node name="Instructions" type="MarginContainer" parent="Node2D"]
 anchor_right = 1.0
@@ -69,3 +79,100 @@ and start over.
 
 ... and don't be afraid to walk through a door or two  :)
 (avoid walls though)"
+
+[node name="Control_1" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 4 )
+
+[node name="Background" type="Panel" parent="Control_1"]
+margin_right = 1024.0
+margin_bottom = 600.0
+
+[node name="Panel" type="Panel" parent="Control_1"]
+margin_left = 135.0
+margin_top = 15.0
+margin_right = 1023.0
+margin_bottom = 217.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control_1/Panel"]
+margin_right = 884.0
+margin_bottom = 174.0
+texture = ExtResource( 8 )
+region_rect = Rect2( -1027.25, 0, 4533.08, 1378.64 )
+
+[node name="Label" type="Label" parent="Control_1/Panel"]
+margin_right = 886.0
+margin_bottom = 196.0
+
+[node name="Panel2" type="Panel" parent="Control_1"]
+margin_left = 8.0
+margin_top = 236.0
+margin_right = 921.0
+margin_bottom = 393.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control_1/Panel2"]
+margin_top = -28.0
+margin_right = 779.0
+margin_bottom = 139.0
+texture = ExtResource( 6 )
+region_rect = Rect2( 1.24512, 0, 15806.4, 4496.51 )
+
+[node name="Label" type="Label" parent="Control_1/Panel2"]
+margin_right = 40.0
+margin_bottom = 14.0
+
+[node name="Panel3" type="Panel" parent="Control_1"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control_1/Panel3"]
+margin_left = 132.0
+margin_top = 391.0
+margin_right = 1018.0
+margin_bottom = 587.0
+size_flags_vertical = 4
+texture = ExtResource( 8 )
+region_rect = Rect2( -981.553, 0, 4459.32, 1374.72 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="Control_1/Panel3"]
+margin_right = 40.0
+margin_bottom = 14.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control_1"]
+margin_left = 630.0
+margin_top = 55.0
+margin_right = 833.0
+margin_bottom = 139.0
+rect_pivot_offset = Vector2( -325, 257 )
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 3473.16, 1639.47 )
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="Control_1"]
+margin_left = 268.0
+margin_top = 247.0
+margin_right = 471.0
+margin_bottom = 331.0
+rect_pivot_offset = Vector2( -325, 257 )
+texture = ExtResource( 5 )
+region_rect = Rect2( -26.9524, 0, 3443.58, 1444.87 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="NinePatchRect3" type="NinePatchRect" parent="Control_1"]
+margin_left = 617.0
+margin_top = 446.0
+margin_right = 820.0
+margin_bottom = 530.0
+rect_pivot_offset = Vector2( -325, 257 )
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 3473.16, 1639.47 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[connection signal="timeout" from="WelcomeTimer" to="Control_1" method="_on_WelcomeTimer_timeout"]
