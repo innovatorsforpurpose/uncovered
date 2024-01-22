@@ -38,6 +38,7 @@ func _physics_process(delta):
 		Panel1.hide()
 		Panel2.hide()
 		Panel3.hide()
+		
 	elif active_dialogue == 2:
 		Back.show()
 		ID1.hide()
