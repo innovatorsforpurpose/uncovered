@@ -11,7 +11,7 @@
 [ext_resource path="res://Scenes/Charater scenes/Student/Student.tscn" type="PackedScene" id=9]
 [ext_resource path="res://characters/MC/MC.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Components/Classroom L1/Classroom.fbx" type="PackedScene" id=11]
-[ext_resource path="res://Scenes/Charater scenes/Laura/Laura.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Charater scenes/Laura/Zach.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/Charater scenes/Student/IDesk.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/Charater scenes/Student/Bully.tscn" type="PackedScene" id=14]
 [ext_resource path="res://assets/objectsall/Large objects/tables/Main_Table.fbx" type="PackedScene" id=15]

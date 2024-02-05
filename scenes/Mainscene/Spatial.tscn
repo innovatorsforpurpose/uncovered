@@ -11,7 +11,7 @@
 [ext_resource path="res://Scenes/Charater scenes/Student/Student.tscn" type="PackedScene" id=9]
 [ext_resource path="res://characters/MC/MC.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Components/Classroom L1/Classroom.fbx" type="PackedScene" id=11]
-[ext_resource path="res://Scenes/Charater scenes/Laura/Laura.tscn" type="PackedScene" id=12]
+[ext_resource path="res://characters/Zach/Zach.tscn" type="PackedScene" id=12]
 [ext_resource path="res://assets/objectsall/Large objects/Door/Door I.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/Charater scenes/Student/Bully.tscn" type="PackedScene" id=14]
 [ext_resource path="res://playerinterface.tscn" type="PackedScene" id=15]
@@ -226,13 +226,6 @@ transform = Transform( 0.308545, 0, -0.380152, 0, 0.475, 0, 0.361144, 0, 0.32478
 follow_viewport_enable = true
 dialogue_file = "res://scenes/Charater scenes/GC/GC/GC.json"
 
-[node name="Laura" parent="Node2D/Enviroment" instance=ExtResource( 12 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -23.6691, 12.8397, -16.1462 )
-
-[node name="DialoguePlayer" parent="Node2D/Enviroment/Laura" instance=ExtResource( 17 )]
-follow_viewport_enable = true
-dialogue_file = "res://scenes/Charater scenes/Laura/Laura/Laura.json"
-
 [node name="Student" parent="Node2D/Enviroment" instance=ExtResource( 9 )]
 transform = Transform( 0.4675, 0, 0, 0, 0.44, 0, 0, 0, 0.45, -20.5819, 12.9289, -6.10306 )
 
@@ -267,6 +260,9 @@ transform = Transform( 0.475, 0, 0, 0, 0.475, 0, 0, 0, 0.5, -28.41, 13.048, -3.2
 [node name="DialoguePlayer" parent="Node2D/Enviroment/Bully" instance=ExtResource( 17 )]
 follow_viewport_enable = true
 dialogue_file = "res://Scenes/Charater scenes/Student/jsons/Bully.json"
+
+[node name="Zach" parent="Node2D" instance=ExtResource( 12 )]
+transform = Transform( 0.6, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -23.4231, 5.81991, -32.3565 )
 
 [node name="Knob4" parent="." instance=ExtResource( 4 )]
 transform = Transform( 0.266818, 0, 0, 0, 0.271882, 0, 0, 0, 0.123206, -26.6037, 1.6175, -41.1731 )
@@ -325,8 +321,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.31459, -13.0618, 7.12501, -19.4
 [connection signal="ready" from="Node2D/Enviroment/Mentor/DialoguePlayer" to="Node2D/Enviroment/Mentor/DialoguePlayer" method="_on_Dialogueplayer_ready"]
 [connection signal="body_entered" from="Node2D/Enviroment/GC" to="Node2D/Enviroment/GC/DialoguePlayer" method="_on_GC_body_entered"]
 [connection signal="ready" from="Node2D/Enviroment/GC/DialoguePlayer" to="Node2D/Enviroment/GC/DialoguePlayer" method="_on_Dialogueplayer_ready"]
-[connection signal="body_entered" from="Node2D/Enviroment/Laura" to="Node2D/Enviroment/Laura/DialoguePlayer" method="_on_Laura_body_entered"]
-[connection signal="ready" from="Node2D/Enviroment/Laura/DialoguePlayer" to="Node2D/Enviroment/Laura/DialoguePlayer" method="_on_Dialogueplayer_ready"]
 [connection signal="body_entered" from="Node2D/Enviroment/Student" to="MCSRevengeTransport" method="_on_Student_body_entered"]
 [connection signal="body_entered" from="Node2D/Enviroment/Student" to="Node2D/Enviroment/Student/DialoguePlayer" method="_on_Student_body_entered"]
 [connection signal="body_exited" from="Node2D/Enviroment/Student" to="Node2D/Enviroment/Student" method="_on_Student_body_exited"]

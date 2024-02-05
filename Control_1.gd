@@ -7,16 +7,22 @@ onready var NQx = $Panel/NinePatchRect2/Label
 onready var IQx = $Panel/Backtext
 onready var IEx = $Panel/BackBoard
 
+var currently_colliding = false
 var active_dialogue = 0
+
+func _on_Area_body_entered(body):
+	if body.name == "MC":
+		currently_colliding = true
 
 func _ready() -> void:
 	pass
+
 
 func _physics_process(delta):
 	if  active_dialogue == 0 and Input.is_action_just_pressed("game_usage") == false:
 		visible = false
 
-	if Input.is_action_just_pressed("game_usage") == true:
+	if Input.is_action_just_pressed("game_usage") and currently_colliding == true:
 		active_dialogue = active_dialogue+1
 		visible = true
 
@@ -166,3 +172,7 @@ func _physics_process(delta):
 		Px.hide()
 		IDx.hide()
 		IEx.hide()
+
+func _on_Area_body_exited(body):
+	visible = false
+	currently_colliding = false

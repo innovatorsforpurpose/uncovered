@@ -16,6 +16,7 @@ bg_color = Color( 1, 1, 1, 1 )
 [node name="playerinterface" type="CanvasLayer"]
 
 [node name="Level_1" type="Control" parent="."]
+visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 rect_pivot_offset = Vector2( -822, 1045 )
