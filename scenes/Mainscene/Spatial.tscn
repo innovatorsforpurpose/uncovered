@@ -262,7 +262,7 @@ follow_viewport_enable = true
 dialogue_file = "res://Scenes/Charater scenes/Student/jsons/Bully.json"
 
 [node name="Zach" parent="Node2D" instance=ExtResource( 12 )]
-transform = Transform( 0.6, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -23.4231, 5.81991, -32.3565 )
+transform = Transform( 4.58861, 0, 0, 0, 1.00506, 0, 0, 0, 0.5, -25.6193, 5.81991, -31.2895 )
 
 [node name="Knob4" parent="." instance=ExtResource( 4 )]
 transform = Transform( 0.266818, 0, 0, 0, 0.271882, 0, 0, 0, 0.123206, -26.6037, 1.6175, -41.1731 )
@@ -285,6 +285,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -42.7721, 5.98089, -13.6491 )
 transform = Transform( 1.42428, 0, 0, 0, 0.960988, 0, 0, 0, 2.5481, -1.08552, 7.52099, -20.8106 )
 
 [node name="Welcome" parent="." instance=ExtResource( 30 )]
+visible = false
 
 [node name="hallwayhopeful" parent="." instance=ExtResource( 32 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.396, 5.26514, -53.0685 )

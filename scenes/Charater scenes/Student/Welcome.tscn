@@ -27,7 +27,6 @@ autostart = true
 script = ExtResource( 3 )
 
 [node name="Node2D" type="Node2D" parent="."]
-visible = false
 
 [node name="Instructions" type="MarginContainer" parent="Node2D"]
 anchor_right = 1.0

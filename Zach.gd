@@ -1,4 +1,4 @@
-extends Node
+extends "res://scenes/Charater scenes/Zach/Zach.gd"
 
 
 # Declare member variables here. Examples:
