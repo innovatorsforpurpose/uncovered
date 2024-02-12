@@ -59,6 +59,7 @@ func load_dialogue():
 
 func _on_Timer_timeout():
 	is_dialogue_active = false
+
 func toggle_the_player(on):
 	var player = get_tree().get_root().find_node("MC", true, false)
 	if player:

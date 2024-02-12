@@ -215,10 +215,6 @@ transform = Transform( 1, 0, 0, 0, 1.41956, 0, 0, 0, 1, -25.4217, 12.2963, 14.67
 [node name="Mentor" parent="Node2D/Enviroment" instance=ExtResource( 1 )]
 transform = Transform( 0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.5, -25.3264, 12.968, 10 )
 
-[node name="DialoguePlayer" parent="Node2D/Enviroment/Mentor" instance=ExtResource( 17 )]
-follow_viewport_enable = true
-dialogue_file = "res://scenes/Charater scenes/Mentor/Mc/Mc.json"
-
 [node name="GC" parent="Node2D/Enviroment" instance=ExtResource( 6 )]
 transform = Transform( 0.308545, 0, -0.380152, 0, 0.475, 0, 0.361144, 0, 0.324784, -42.1676, 13.0428, -8.58389 )
 
@@ -262,7 +258,7 @@ follow_viewport_enable = true
 dialogue_file = "res://Scenes/Charater scenes/Student/jsons/Bully.json"
 
 [node name="Zach" parent="Node2D" instance=ExtResource( 12 )]
-transform = Transform( 4.58861, 0, 0, 0, 1.00506, 0, 0, 0, 0.5, -25.6193, 5.81991, -31.2895 )
+transform = Transform( 4.58861, 0, 0, 0, 2.6161, 0, 0, 0, 0.5, -25.4414, 6.6995, -31.2895 )
 
 [node name="Knob4" parent="." instance=ExtResource( 4 )]
 transform = Transform( 0.266818, 0, 0, 0, 0.271882, 0, 0, 0, 0.123206, -26.6037, 1.6175, -41.1731 )
@@ -318,8 +314,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.31459, -13.0618, 7.12501, -19.4
 [connection signal="timeout" from="MCSRevengeTransport/BossBattleTimer" to="MCSRevengeTransport" method="_on_Timer_timeout"]
 [connection signal="input_event" from="MCSRevengeTransport/CSGSphere/Area" to="MCSRevengeTransport" method="_on_Area_input_event"]
 [connection signal="timeout" from="Timer" to="Knob1" method="_on_Timer_timeout"]
-[connection signal="body_entered" from="Node2D/Enviroment/Mentor" to="Node2D/Enviroment/Mentor/DialoguePlayer" method="_on_Mentor_body_entered"]
-[connection signal="ready" from="Node2D/Enviroment/Mentor/DialoguePlayer" to="Node2D/Enviroment/Mentor/DialoguePlayer" method="_on_Dialogueplayer_ready"]
 [connection signal="body_entered" from="Node2D/Enviroment/GC" to="Node2D/Enviroment/GC/DialoguePlayer" method="_on_GC_body_entered"]
 [connection signal="ready" from="Node2D/Enviroment/GC/DialoguePlayer" to="Node2D/Enviroment/GC/DialoguePlayer" method="_on_Dialogueplayer_ready"]
 [connection signal="body_entered" from="Node2D/Enviroment/Student" to="MCSRevengeTransport" method="_on_Student_body_entered"]
@@ -335,5 +329,5 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.31459, -13.0618, 7.12501, -19.4
 [connection signal="body_entered" from="Node2D/Enviroment/Bulletin Board" to="Node2D/Enviroment/Bulletin Board/DialoguePlayer" method="_on_Bulletin_Board_body_entered"]
 [connection signal="body_exited" from="Node2D/Enviroment/Bulletin Board" to="Node2D/Enviroment/Bulletin Board" method="_on_Bulletin_Board_body_exited"]
 [connection signal="ready" from="Node2D/Enviroment/Bulletin Board/DialoguePlayer" to="Node2D/Enviroment/Bulletin Board/DialoguePlayer" method="_on_Dialogueplayer_ready"]
-[connection signal="body_entered" from="Node2D/Enviroment/Bully" to="Node2D/Enviroment/Mentor/DialoguePlayer" method="_on_Bully_body_entered"]
 [connection signal="ready" from="Node2D/Enviroment/Bully/DialoguePlayer" to="Node2D/Enviroment/Bully/DialoguePlayer" method="_on_Dialogueplayer_ready"]
+[connection signal="body_entered" from="Node2D/Zach" to="Node2D/Enviroment/MC" method="_on_Zach_body_entered"]
