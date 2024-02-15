@@ -1,26 +1,16 @@
 extends Area
 var currently_colliding = false
 var dialogue_player = null
+var count = 0
+
+func toggle_the_player(on):
+	var player = get_tree().get_root().find_node("MC", true, false)
+	if player:
+		player.set_active(on)
 
 func _input(event):
 	if event.is_action_pressed("game_usage") and currently_colliding:
-		find_and_use_dialogue()
-		#print("in_area_GC")
-		#print(currently_colliding)
-
-func find_and_use_dialogue():
-	var dialogue_player = get_node_or_null("DialoguePlayer")
-	if dialogue_player:
-		dialogue_player.next_line()
-func _on_GC_body_exited(_body):
-	var dialogue_player = get_node_or_null("DialoguePlayer")
-	if dialogue_player:
-		dialogue_player.reset()
-func _process(_delta):
-	if len(get_overlapping_bodies()) == 0:
-		var dialogue_player = get_node_or_null("DialoguePlayer")
-		if dialogue_player:
-			dialogue_player.reset()
+		count = count+1
 
 func _on_Area_body_entered(body):
 	if body.name == "MC":
@@ -28,3 +18,9 @@ func _on_Area_body_entered(body):
 
 func _on_Area_body_exited(_body):
 	currently_colliding = false
+
+
+func _on_Timer_timeout():
+	count = count+1
+	if count == 3:
+		toggle_the_player(true)

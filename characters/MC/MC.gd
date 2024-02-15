@@ -54,6 +54,7 @@ func _unhandled_input(event):
 			rotate_y(-lerp(0, spin, event.relative.x/12.5))
 		if event.relative.x < 0:
 			rotate_y(-lerp(0, spin, event.relative.x/12.5))
+
 func set_active(active):
 	player_active = active
 	#print(player_active)

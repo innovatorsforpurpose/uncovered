@@ -5,7 +5,7 @@
 [ext_resource path="res://Image file/drive-download-20240125T224344Z-001/textdesign-04.png" type="Texture" id=3]
 [ext_resource path="res://Image file/drive-download-20240125T224344Z-001/textdesign-05.png" type="Texture" id=4]
 [ext_resource path="res://assets/fonts/battlenet/new_dynamicfont.tres" type="DynamicFont" id=5]
-[ext_resource path="res://characters/Zach/Timer.gd" type="Script" id=6]
+[ext_resource path="res://Scenes/Charater scenes/Mentor/Mentor/Timer1.gd" type="Script" id=6]
 [ext_resource path="res://Scenes/Charater scenes/Mentor/Mentor/MentorI.gd" type="Script" id=7]
 
 [sub_resource type="ArrayMesh" id=4]
@@ -121,7 +121,7 @@ margin_bottom = 40.0
 rect_pivot_offset = Vector2( -822, 1045 )
 script = ExtResource( 7 )
 
-[node name="Timer" type="Timer" parent="MentorI"]
+[node name="Timer1" type="Timer" parent="MentorI"]
 wait_time = 0.231
 script = ExtResource( 6 )
 
@@ -220,6 +220,8 @@ margin_bottom = 40.0
 
 [connection signal="body_exited" from="." to="." method="_on_Mentor_body_exited"]
 [connection signal="body_entered" from="Area" to="MentorI" method="_on_Area_body_entered"]
-[connection signal="body_entered" from="Area" to="MentorI/Timer" method="_on_Area_body_entered"]
+[connection signal="body_entered" from="Area" to="MentorI/Timer1" method="_on_Area_body_entered"]
 [connection signal="body_exited" from="Area" to="MentorI" method="_on_Area_body_exited"]
-[connection signal="body_exited" from="Area" to="MentorI/Timer" method="_on_Area_body_exited"]
+[connection signal="body_exited" from="Area" to="MentorI/Timer1" method="_on_Area_body_exited"]
+[connection signal="timeout" from="MentorI/Timer1" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="MentorI/Timer1" to="MentorI" method="_on_Timer_timeout"]
