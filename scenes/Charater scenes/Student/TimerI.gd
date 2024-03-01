@@ -14,7 +14,7 @@ var count = 1
 func _on_WelcomeTimer_timeout():
 	count = count+1
 	print("count",count)
-	if count == 3:
+	if count == 4:
 		stop()
 
 func _on_Area_body_exited(body):
@@ -23,11 +23,12 @@ func _on_Area_body_exited(body):
 	if currently_colliding == false:
 		print("workingII")
 		stop()
+
 func _physics_process(delta):
 	if Input.is_action_just_pressed("game_usage") and currently_colliding == true:
 		count = count+1
 	if Input.is_action_just_pressed("game_usageI") and currently_colliding == true:
-		count = 3
+		count = 4
 
 func _on_Button_pressed():
-	count = 3
+	count = 4

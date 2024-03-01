@@ -10,7 +10,6 @@ onready var IEx = $Panel/BackBoard
 var currently_colliding = false
 var active_dialogue = 0
 var move = true
-var velocity = 10
 var player = true
 
 func _ready():
@@ -83,7 +82,6 @@ func _physics_process(delta):
 		Px.hide()
 		IDx.hide()
 		IEx.hide()
-		velocity = 10
 
 func _on_Area_body_exited(body):
 	visible = false
@@ -94,8 +92,7 @@ func _on_Button_pressed():
 
 
 func _on_GC_area_entered(area):
-	pass # Replace with function body.
-
+	print("Working")
 
 func _on_GC_area_exited(area):
 	pass # Replace with function body.

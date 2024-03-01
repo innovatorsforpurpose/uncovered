@@ -218,30 +218,14 @@ transform = Transform( 0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.5, -25.3264, 12.968, 10 )
 [node name="GC" parent="Node2D/Enviroment" instance=ExtResource( 6 )]
 transform = Transform( 0.308545, 0, -0.380152, 0, 0.475, 0, 0.361144, 0, 0.324784, -42.1676, 13.0428, -8.58389 )
 
-[node name="DialoguePlayer" parent="Node2D/Enviroment/GC" instance=ExtResource( 17 )]
-follow_viewport_enable = true
-dialogue_file = "res://scenes/Charater scenes/GC/GC/GC.json"
-
 [node name="Student" parent="Node2D/Enviroment" instance=ExtResource( 9 )]
 transform = Transform( 0.4675, 0, 0, 0, 0.44, 0, 0, 0, 0.45, -20.5819, 12.9289, -6.10306 )
-
-[node name="DialoguePlayer" parent="Node2D/Enviroment/Student" instance=ExtResource( 17 )]
-follow_viewport_enable = true
-dialogue_file = "res://Scenes/Charater scenes/Student/jsons/Student.json"
 
 [node name="StudentI" parent="Node2D/Enviroment" instance=ExtResource( 16 )]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -19.8679, 12.948, 0.481759 )
 
-[node name="DialoguePlayer" parent="Node2D/Enviroment/StudentI" instance=ExtResource( 17 )]
-follow_viewport_enable = true
-dialogue_file = "res://Scenes/Charater scenes/Student/jsons/studentI.json"
-
 [node name="StudentII" parent="Node2D/Enviroment" instance=ExtResource( 7 )]
 transform = Transform( 0.45125, 0, 0, 0, 0.45125, 0, 0, 0, 0.5, -30.6004, 13.0076, -6.41473 )
-
-[node name="DialoguePlayer" parent="Node2D/Enviroment/StudentII" instance=ExtResource( 17 )]
-follow_viewport_enable = true
-dialogue_file = "res://Scenes/Charater scenes/Student/jsons/StudentII.json"
 
 [node name="Bulletin Board" parent="Node2D/Enviroment" instance=ExtResource( 20 )]
 transform = Transform( -0.390375, 0, -0.315051, 0, 0.501647, 0, 0.315051, 0, -0.390375, -15.4112, 14.0179, -7.41339 )
@@ -314,18 +298,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.31459, -13.0618, 7.12501, -19.4
 [connection signal="timeout" from="MCSRevengeTransport/BossBattleTimer" to="MCSRevengeTransport" method="_on_Timer_timeout"]
 [connection signal="input_event" from="MCSRevengeTransport/CSGSphere/Area" to="MCSRevengeTransport" method="_on_Area_input_event"]
 [connection signal="timeout" from="Timer" to="Knob1" method="_on_Timer_timeout"]
-[connection signal="body_entered" from="Node2D/Enviroment/GC" to="Node2D/Enviroment/GC/DialoguePlayer" method="_on_GC_body_entered"]
-[connection signal="ready" from="Node2D/Enviroment/GC/DialoguePlayer" to="Node2D/Enviroment/GC/DialoguePlayer" method="_on_Dialogueplayer_ready"]
 [connection signal="body_entered" from="Node2D/Enviroment/Student" to="MCSRevengeTransport" method="_on_Student_body_entered"]
-[connection signal="body_entered" from="Node2D/Enviroment/Student" to="Node2D/Enviroment/Student/DialoguePlayer" method="_on_Student_body_entered"]
 [connection signal="body_exited" from="Node2D/Enviroment/Student" to="Node2D/Enviroment/Student" method="_on_Student_body_exited"]
-[connection signal="ready" from="Node2D/Enviroment/Student/DialoguePlayer" to="Node2D/Enviroment/Student/DialoguePlayer" method="_on_Dialogueplayer_ready"]
-[connection signal="body_entered" from="Node2D/Enviroment/StudentI" to="Node2D/Enviroment/StudentI/DialoguePlayer" method="_on_StudentI_body_entered"]
 [connection signal="body_exited" from="Node2D/Enviroment/StudentI" to="Node2D/Enviroment/StudentI" method="_on_StudentI_body_exited"]
-[connection signal="ready" from="Node2D/Enviroment/StudentI/DialoguePlayer" to="Node2D/Enviroment/StudentI/DialoguePlayer" method="_on_Dialogueplayer_ready"]
-[connection signal="body_entered" from="Node2D/Enviroment/StudentII" to="Node2D/Enviroment/StudentII/DialoguePlayer" method="_on_StudentII_body_entered"]
-[connection signal="body_exited" from="Node2D/Enviroment/StudentII" to="Node2D/Enviroment/StudentII" method="_on_StudentII_body_exited"]
-[connection signal="ready" from="Node2D/Enviroment/StudentII/DialoguePlayer" to="Node2D/Enviroment/StudentII/DialoguePlayer" method="_on_Dialogueplayer_ready"]
 [connection signal="body_entered" from="Node2D/Enviroment/Bulletin Board" to="Node2D/Enviroment/Bulletin Board/DialoguePlayer" method="_on_Bulletin_Board_body_entered"]
 [connection signal="body_exited" from="Node2D/Enviroment/Bulletin Board" to="Node2D/Enviroment/Bulletin Board" method="_on_Bulletin_Board_body_exited"]
 [connection signal="ready" from="Node2D/Enviroment/Bulletin Board/DialoguePlayer" to="Node2D/Enviroment/Bulletin Board/DialoguePlayer" method="_on_Dialogueplayer_ready"]

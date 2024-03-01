@@ -53,7 +53,7 @@ __meta__ = {
 }
 
 [node name="Area" type="Area" parent="."]
-transform = Transform( 0.425373, 0, 0, 0, 1.40411, 0, 0, 0, 0.422239, 0, 0, 0 )
+transform = Transform( 0.933597, 0, 0, 0, 1.40411, 0, 0, 0, 0.882052, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
 transform = Transform( 3.44507, 0, 0, 0, 2.96484, 0, 0, 0, 4.19548, 0, 0, 0 )
@@ -69,7 +69,7 @@ rect_pivot_offset = Vector2( -822, 1045 )
 script = ExtResource( 3 )
 
 [node name="Timer" type="Timer" parent="GCI"]
-wait_time = 0.231
+wait_time = 0.5
 script = ExtResource( 4 )
 
 [node name="Panel" type="Panel" parent="GCI"]
@@ -112,14 +112,18 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="GCI/Panel/NinePatchRect2"]
-margin_left = 190.0
-margin_top = 11.0
-margin_right = 234.0
-margin_bottom = 41.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 400.0
+margin_bottom = 40.0
 custom_colors/font_color = Color( 0.721569, 0.886275, 0.823529, 1 )
 custom_fonts/font = ExtResource( 7 )
+align = 1
 autowrap = true
 clip_text = true
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="Label" type="Label" parent="GCI/Panel"]
 margin_left = 129.0
@@ -168,6 +172,11 @@ margin_bottom = 40.0
 [connection signal="area_entered" from="." to="GCI" method="_on_GC_area_entered"]
 [connection signal="area_exited" from="." to="GCI" method="_on_GC_area_exited"]
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
+[connection signal="body_entered" from="Area" to="GCI" method="_on_Area_body_entered"]
+[connection signal="body_entered" from="Area" to="GCI/Timer" method="_on_Area_body_entered"]
 [connection signal="body_exited" from="Area" to="." method="_on_Area_body_exited"]
+[connection signal="body_exited" from="Area" to="GCI" method="_on_Area_body_exited"]
+[connection signal="body_exited" from="Area" to="GCI/Timer" method="_on_Area_body_exited"]
 [connection signal="timeout" from="GCI/Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="GCI/Timer" to="GCI" method="_on_Timer_timeout"]
+[connection signal="pressed" from="GCI/Panel/Button/Button" to="GCI" method="_on_Button_pressed"]
