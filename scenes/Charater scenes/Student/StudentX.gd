@@ -111,6 +111,9 @@ func _on_Area_body_exited(body):
 
 func _on_Button_pressed():
 	 active_dialogue = 6
+	
+func _on_Button2_pressed():
+	 active_dialogue = active_dialogue+1
 
 func _on_Student_area_entered(area):
 	print("Working")

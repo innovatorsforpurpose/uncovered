@@ -13,6 +13,18 @@ func _input(event):
 	if event.is_action_pressed("game_usage") and currently_colliding:
 		print("functions")
 
+func _on_Timer_timeout():
+	count = count+1	
+
+	if Input.is_action_just_pressed("game_usage") and currently_colliding == true:
+		count = count+1
+
+	if Input.is_action_just_pressed("game_usageI") and currently_colliding == true:
+		count = 10
+
+	if count >= 10:
+		toggle_the_player(true)
+
 func toggle_the_player(on):
 	var player = get_tree().get_root().find_node("MC", true, false)
 	if player:
@@ -22,7 +34,7 @@ func _ready():
 	visible = true
 
 func _physics_process(_delta):
-	if target == 1 and path.size() == 0:
+	if count >= 10 and path.size() == 0:
 		path = [Vector3(-25.382,12.968,-1.5), Vector3(-45,12.968,-1.5), Vector3(-45,12.968,-10)]
 	if path.size() > 0:
 		PathI = 0
@@ -40,11 +52,13 @@ func _physics_process(_delta):
 
 func _on_Area_body_entered(body):
 	if body.name == "MC":
-		
 		currently_colliding = true
+
 	if currently_colliding == true and section == 1:
 		toggle_the_player(true)
 		currently_colliding = false
+
+
 
 func _on_Area_body_exited(_body):
 	section = 1
@@ -53,8 +67,8 @@ func _on_Area_body_exited(_body):
 		toggle_the_player(true)
 	
 
-func _on_Timer_timeout():
+
+
+
+func _on_Button2_pressed():
 	count = count+1
-	if count == 10:
-		target = 1
-		toggle_the_player(true)

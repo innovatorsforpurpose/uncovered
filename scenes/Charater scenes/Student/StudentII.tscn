@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scenes/Charater scenes/Student/StudentII.gd" type="Script" id=1]
 [ext_resource path="res://workspaces/Dev_BA/janitor.glb" type="PackedScene" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://Image file/drive-download-20240125T224344Z-001/textdesign-04.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/Charater scenes/Student/StudentXII.gd" type="Script" id=6]
 [ext_resource path="res://Scenes/Charater scenes/Student/TimerII.gd" type="Script" id=7]
+[ext_resource path="res://Image file/Hallwayyy 2.png" type="Texture" id=8]
+[ext_resource path="res://Image file/janitor_002.png" type="Texture" id=9]
 
 [sub_resource type="ConvexPolygonShape" id=1]
 points = PoolVector3Array( -1, -1, -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, -1, 1, 1, 1, -1, -1, -1, -1, 1, -1, 1, -1 )
@@ -17,8 +19,9 @@ extents = Vector3( 1, 1, 2.22794 )
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 1, 0, 0, 0 )
 
-[sub_resource type="StyleBoxFlat" id=4]
-bg_color = Color( 1, 1, 1, 1 )
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 2070, 1430 )
 
 [node name="StudentII" type="Area"]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.270967, -0.291812 )
@@ -40,11 +43,11 @@ transform = Transform( 1.2436, 0, 0, 0, 2.86226, 0, 0, 0, 0.885465, 0, 0, 0 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="."]
-transform = Transform( 3.20654, 0, 0, 0, 3.61519, 0, 0, 0, 3.01906, 0, 0, 0 )
+transform = Transform( 1.80458, 0, 0, 0, 3.61519, 0, 0, 0, 1.93969, 0, 0, 0 )
 shape = SubResource( 1 )
 
 [node name="Area" type="Area" parent="."]
-transform = Transform( 0.182794, 0, 0, 0, 1.73825, 0, 0, 0, 0.171282, 0, 0, 0 )
+transform = Transform( 0.182794, 0, 0, 0, 1.28631, 0, 0, 0, 0.171282, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
 transform = Transform( 8.27899, 0, 0, 0, 2.86226, 0, 0, 0, 3.86788, 0, 0, 0 )
@@ -57,7 +60,8 @@ rect_pivot_offset = Vector2( -822, 1045 )
 script = ExtResource( 6 )
 
 [node name="Timer" type="Timer" parent="StudentXII"]
-wait_time = 0.244
+wait_time = 2.7
+autostart = true
 script = ExtResource( 7 )
 
 [node name="Panel" type="Panel" parent="StudentXII"]
@@ -76,6 +80,17 @@ margin_top = -440.0
 margin_right = 964.0
 margin_bottom = 160.0
 custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="StudentXII/Panel"]
+margin_left = 585.0
+margin_top = -382.0
+margin_right = 925.0
+margin_bottom = -19.0
+rect_scale = Vector2( 1.16993, 2.2377 )
+texture = ExtResource( 9 )
 __meta__ = {
 "_editor_description_": ""
 }
@@ -149,10 +164,40 @@ self_modulate = Color( 1, 1, 1, 0 )
 margin_right = 100.0
 margin_bottom = 50.0
 
-[node name="NinePatchRect" type="NinePatchRect" parent="StudentXII/Panel"]
-margin_left = 10.0
-margin_right = 50.0
-margin_bottom = 40.0
+[node name="Button2" type="NinePatchRect" parent="StudentXII/Panel"]
+margin_left = 859.0
+margin_top = -368.0
+margin_right = 959.0
+margin_bottom = -318.0
+texture = ExtResource( 5 )
+region_rect = Rect2( 67.1929, 18.5056, 295.511, 48.545 )
+patch_margin_left = 1
+patch_margin_right = 2
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="StudentXII/Panel/Button2"]
+margin_left = 6.0
+margin_top = 7.0
+margin_right = 96.0
+margin_bottom = 38.0
+custom_colors/font_color = Color( 0.721569, 0.886275, 0.823529, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "Skip+1>"
+autowrap = true
+clip_text = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Button2" type="Button" parent="StudentXII/Panel/Button2"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_right = 100.0
+margin_bottom = 50.0
+__meta__ = {
+"_editor_description_": ""
+}
 
 [connection signal="body_entered" from="." to="StudentXII" method="_on_StudentII_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_StudentII_body_exited"]
@@ -166,3 +211,7 @@ margin_bottom = 40.0
 [connection signal="timeout" from="StudentXII/Timer" to="StudentXII" method="_on_Timer_timeout"]
 [connection signal="pressed" from="StudentXII/Panel/Button/Button" to="StudentXII" method="_on_Button_pressed"]
 [connection signal="pressed" from="StudentXII/Panel/Button/Button" to="StudentXII/Timer" method="_on_Button_pressed"]
+[connection signal="pressed" from="StudentXII/Panel/Button2/Button2" to="StudentXII" method="_on_Button2_pressed"]
+[connection signal="pressed" from="StudentXII/Panel/Button2/Button2" to="StudentXII" method="_on_Button_pressed"]
+[connection signal="pressed" from="StudentXII/Panel/Button2/Button2" to="StudentXII/Timer" method="_on_Button2_pressed"]
+[connection signal="pressed" from="StudentXII/Panel/Button2/Button2" to="StudentXII/Timer" method="_on_Button_pressed"]

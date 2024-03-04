@@ -40,6 +40,9 @@ func _physics_process(delta):
 		visible = false
 
 	elif Input.is_action_just_pressed("game_usage") and currently_colliding == true:
+		active_dialogue = active_dialogue+1
+
+	elif Input.is_action_just_pressed("game_usage") and currently_colliding == true:
 		active_dialogue = 18
 
 	elif active_dialogue == 0 and currently_colliding == true:
@@ -204,3 +207,6 @@ func _on_Area_body_exited(body):
 
 func _on_Button_pressed():
 	 active_dialogue = 18
+
+func _on_Button2_pressed():
+	 active_dialogue = active_dialogue+1

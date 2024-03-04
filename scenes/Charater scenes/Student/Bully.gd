@@ -12,7 +12,7 @@ func _input(event):
 		find_and_use_dialogue()
 		#print("in_area_bully")
 		#print(currently_colliding)
-	
+
 func find_and_use_dialogue():
 	dialogue_player = get_node_or_null("DialoguePlayer")
 	if dialogue_player:

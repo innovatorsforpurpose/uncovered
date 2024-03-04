@@ -1,7 +1,13 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scenes/Charater scenes/Student/Bulletin Board.gd" type="Script" id=1]
 [ext_resource path="res://materialassests/Material_077.material" type="Material" id=2]
+[ext_resource path="res://Scenes/Charater scenes/Student/bulletin_boardX.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Charater scenes/Student/TimerII,X.gd" type="Script" id=4]
+[ext_resource path="res://Image file/drive-download-20240125T224344Z-001/textdesign-04.png" type="Texture" id=5]
+[ext_resource path="res://Image file/drive-download-20240125T224344Z-001/textdesign-05.png" type="Texture" id=6]
+[ext_resource path="res://assets/fonts/battlenet/new_dynamicfont.tres" type="DynamicFont" id=7]
+[ext_resource path="res://Image file/Hallwayyy 2.png" type="Texture" id=8]
 
 [sub_resource type="ArrayMesh" id=1]
 blend_shape_mode = 0
@@ -23,7 +29,14 @@ surfaces/0 = {
 extents = Vector3( 2.01229, 4.66915, 4.77371 )
 
 [sub_resource type="BoxShape" id=3]
-extents = Vector3( 1, 1, 2.22794 )
+extents = Vector3( 0.91389, 1, 2.22794 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 1, 0, 0, 0 )
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 2070, 1430 )
 
 [node name="Bulletin Board" type="Area"]
 script = ExtResource( 1 )
@@ -35,17 +48,170 @@ transform = Transform( 254.654, 0, 0, 0, 414.132, 0, 0, 0, 28.63, 0, 0, 0 )
 mesh = SubResource( 1 )
 
 [node name="Collision3D" type="CollisionShape" parent="."]
+transform = Transform( 0.309814, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 shape = SubResource( 2 )
 
 [node name="VisibilityNotifier" type="VisibilityNotifier" parent="."]
+transform = Transform( 0.442326, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 aabb = AABB( -2.5984, -5.15716, -5.62185, 5.19682, 10.3143, 11.2437 )
 
 [node name="Area" type="Area" parent="."]
-transform = Transform( 0.496108, 0, 0, 0, 2.14562, 0, 0, 0, 1, 0, 0, 0 )
+transform = Transform( 0.333123, 0, 0, 0, 2.14562, 0, 0, 0, 0.680386, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
-transform = Transform( 8.27899, 0, 0, 0, 2.86226, 0, 0, 0, 3.86788, 0, 0, 0 )
+transform = Transform( 5.33598, 0, 0, 0, 2.86226, 0, 0, 0, 3.86788, 0, 0, 0 )
 shape = SubResource( 3 )
 
+[node name="bulletin_boardX" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( -822, 1045 )
+script = ExtResource( 3 )
+
+[node name="TimerII,X" type="Timer" parent="bulletin_boardX"]
+wait_time = 2.7
+autostart = true
+script = ExtResource( 4 )
+
+[node name="Panel" type="Panel" parent="bulletin_boardX"]
+margin_left = 60.0
+margin_top = 440.0
+margin_right = 100.0
+margin_bottom = 480.0
+custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="BackBoard" type="Panel" parent="bulletin_boardX/Panel"]
+margin_left = -60.0
+margin_top = -440.0
+margin_right = 964.0
+margin_bottom = 160.0
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Backtext" type="NinePatchRect" parent="bulletin_boardX/Panel"]
+margin_right = 904.0
+margin_bottom = 120.0
+texture = ExtResource( 6 )
+region_rect = Rect2( 37.764, 71.282, 941.108, 205.582 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="bulletin_boardX/Panel"]
+margin_top = -70.0
+margin_right = 410.0
+margin_bottom = -20.0
+texture = ExtResource( 5 )
+region_rect = Rect2( 67.45, 15.688, 293, 55 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="bulletin_boardX/Panel/NinePatchRect2"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 400.0
+margin_bottom = 40.0
+custom_colors/font_color = Color( 0.721569, 0.886275, 0.823529, 1 )
+custom_fonts/font = ExtResource( 7 )
+align = 1
+autowrap = true
+clip_text = true
+
+[node name="Label" type="Label" parent="bulletin_boardX/Panel"]
+margin_left = 129.0
+margin_top = 19.0
+margin_right = 747.0
+margin_bottom = 100.0
+custom_colors/font_color = Color( 0.701961, 0.878431, 0.811765, 1 )
+custom_fonts/font = ExtResource( 7 )
+autowrap = true
+clip_text = true
+
+[node name="Button" type="NinePatchRect" parent="bulletin_boardX/Panel"]
+margin_left = 858.0
+margin_top = -425.0
+margin_right = 958.0
+margin_bottom = -375.0
+texture = ExtResource( 5 )
+region_rect = Rect2( 67.1929, 18.5056, 295.511, 48.545 )
+patch_margin_left = 1
+patch_margin_right = 2
+
+[node name="Label" type="Label" parent="bulletin_boardX/Panel/Button"]
+margin_left = 20.0
+margin_top = 7.0
+margin_right = 95.0
+margin_bottom = 38.0
+custom_colors/font_color = Color( 0.721569, 0.886275, 0.823529, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Skip >"
+autowrap = true
+clip_text = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Button" type="Button" parent="bulletin_boardX/Panel/Button"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_right = 100.0
+margin_bottom = 50.0
+
+[node name="Button2" type="NinePatchRect" parent="bulletin_boardX/Panel"]
+margin_left = 859.0
+margin_top = -368.0
+margin_right = 959.0
+margin_bottom = -318.0
+texture = ExtResource( 5 )
+region_rect = Rect2( 67.1929, 18.5056, 295.511, 48.545 )
+patch_margin_left = 1
+patch_margin_right = 2
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="bulletin_boardX/Panel/Button2"]
+margin_left = 6.0
+margin_top = 7.0
+margin_right = 96.0
+margin_bottom = 38.0
+custom_colors/font_color = Color( 0.721569, 0.886275, 0.823529, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Skip+1>"
+autowrap = true
+clip_text = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Button2" type="Button" parent="bulletin_boardX/Panel/Button2"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_right = 100.0
+margin_bottom = 50.0
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="bulletin_boardX/Panel"]
+margin_left = 10.0
+margin_right = 50.0
+margin_bottom = 40.0
+
+[connection signal="body_entered" from="." to="bulletin_boardX" method="_on_Bulletin_Board_body_entered"]
+[connection signal="body_exited" from="." to="bulletin_boardX" method="_on_Bulletin_Board_body_exited"]
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
+[connection signal="body_entered" from="Area" to="bulletin_boardX" method="_on_Area_body_entered"]
+[connection signal="body_entered" from="Area" to="bulletin_boardX/TimerII,X" method="_on_Area_body_entered"]
 [connection signal="body_exited" from="Area" to="." method="_on_Area_body_exited"]
+[connection signal="body_exited" from="Area" to="bulletin_boardX" method="_on_Area_body_exited"]
+[connection signal="body_exited" from="Area" to="bulletin_boardX/TimerII,X" method="_on_Area_body_exited"]
+[connection signal="timeout" from="bulletin_boardX/TimerII,X" to="bulletin_boardX" method="_on_Timer_timeout"]
+[connection signal="pressed" from="bulletin_boardX/Panel/Button/Button" to="bulletin_boardX" method="_on_Button_pressed"]
+[connection signal="pressed" from="bulletin_boardX/Panel/Button/Button" to="bulletin_boardX/TimerII,X" method="_on_Button_pressed"]
+[connection signal="pressed" from="bulletin_boardX/Panel/Button2/Button2" to="bulletin_boardX" method="_on_Button2_pressed"]
+[connection signal="pressed" from="bulletin_boardX/Panel/Button2/Button2" to="bulletin_boardX/TimerII,X" method="_on_Button2_pressed"]

@@ -58,7 +58,7 @@ func _physics_process(delta):
 
 	if active_dialogue == 1:
 		Lx.text = "?????"
-		NQx.text = "Student"
+		NQx.text = "StudentI"
 		TQx.show()
 		NQx.show()
 		Px.show()
@@ -70,7 +70,7 @@ func _physics_process(delta):
 		TQx.show()
 		NQx.show()
 		Px.show()
-		IDx.hide()
+		IDx.show()
 
 	if active_dialogue == 3:
 		Lx.text = "I gueeesss sooo, yuck"
@@ -101,3 +101,6 @@ func _on_StudentI_body_entered(body):
 
 func _on_StudentI_body_exited(body):
 	pass # Replace with function body.
+
+func _on_Button2_pressed():
+	active_dialogue = active_dialogue+1

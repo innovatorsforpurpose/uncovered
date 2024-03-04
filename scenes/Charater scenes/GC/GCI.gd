@@ -55,7 +55,7 @@ func _physics_process(delta):
 		TQx.show()
 		NQx.show()
 		Px.show()
-		IDx.hide()
+		IDx.show()
 		IEx.show()
 
 	if active_dialogue == 1:
@@ -96,3 +96,6 @@ func _on_GC_area_entered(area):
 
 func _on_GC_area_exited(area):
 	pass # Replace with function body.
+
+func _on_Button2_pressed():
+	active_dialogue = active_dialogue+1

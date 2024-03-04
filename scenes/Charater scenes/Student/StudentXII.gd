@@ -53,7 +53,7 @@ func _physics_process(delta):
 		TQx.show()
 		NQx.show()
 		Px.show()
-		IDx.hide()
+		IDx.show()
 		IEx.show()
 
 	if active_dialogue == 1:
@@ -62,7 +62,7 @@ func _physics_process(delta):
 		TQx.show()
 		NQx.show()
 		Px.show()
-		IDx.show()
+		IDx.hide()
 
 	if active_dialogue == 2:
 		Lx.text = "Very disappointing man, I feel hate in you."
@@ -70,7 +70,7 @@ func _physics_process(delta):
 		TQx.show()
 		NQx.show()
 		Px.show()
-		IDx.hide()
+		IDx.show()
 
 	if active_dialogue == 3:
 		Lx.text = "I hope one day you will have more love in you man."
@@ -78,7 +78,7 @@ func _physics_process(delta):
 		TQx.show()
 		NQx.show()
 		Px.show()
-		IDx.hide()
+		IDx.show()
 
 	if active_dialogue == 4:
 		Lx.text = "..cries.."
@@ -103,6 +103,9 @@ func _on_Area_body_exited(body):
 
 func _on_Button_pressed():
 	 active_dialogue = 5
+
+func _on_Button2_pressed():
+	 active_dialogue = active_dialogue+1
 
 func _on_StudentII_body_entered(body):
 	print("Working")
