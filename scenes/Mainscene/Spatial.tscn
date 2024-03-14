@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://Scenes/Charater scenes/Mentor/Mentor/Mentor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Components/basement/basement project.tscn" type="PackedScene" id=2]
@@ -34,6 +34,7 @@
 [ext_resource path="res://dev_sabrina/hallnimation/hallwayhopeful1.tscn" type="PackedScene" id=32]
 [ext_resource path="res://Components/basement/Basement_Door.tscn" type="PackedScene" id=33]
 [ext_resource path="res://Arcives.tscn" type="PackedScene" id=34]
+[ext_resource path="res://characters/Zach/zach3dfixedfixedithink.glb" type="PackedScene" id=35]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -219,22 +220,22 @@ transform = Transform( 0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.5, -25.3264, 12.968, 10 )
 transform = Transform( 0.308545, 0, -0.380152, 0, 0.475, 0, 0.361144, 0, 0.324784, -42.1676, 13.0428, -8.58389 )
 
 [node name="Student" parent="Node2D/Enviroment" instance=ExtResource( 9 )]
-transform = Transform( 0.4675, 0, 0, 0, 0.44, 0, 0, 0, 0.45, -20.5819, 12.9289, -6.10306 )
+transform = Transform( 0.4675, 0, 0, 0, 0.44, 0, 0, 0, 0.45, -18.8819, 12.9289, -6.10306 )
 
 [node name="StudentI" parent="Node2D/Enviroment" instance=ExtResource( 16 )]
-transform = Transform( 0.4675, 0, 0, 0, 0.496062, 0, 0, 0, 0.45, -20.5415, 13.0862, -0.105466 )
+transform = Transform( 0.4675, 0, 0, 0, 0.496062, 0, 0, 0, 0.45, -18.5415, 13.0862, 2.99453 )
 
 [node name="StudentII" parent="Node2D/Enviroment" instance=ExtResource( 7 )]
-transform = Transform( 0.45125, 0, 0, 0, 0.45125, 0, 0, 0, 0.5, -30.6004, 13.0076, -6.41473 )
+transform = Transform( 0.45125, 0, 0, 0, 0.45125, 0, 0, 0, 0.5, -33.7004, 13.0076, -6.41473 )
 
 [node name="Bulletin Board" parent="Node2D/Enviroment" instance=ExtResource( 20 )]
 transform = Transform( -0.390375, 0, -0.315051, 0, 0.501647, 0, 0.315051, 0, -0.390375, -15.4112, 14.0179, -7.41339 )
 
 [node name="Bully" parent="Node2D/Enviroment" instance=ExtResource( 14 )]
-transform = Transform( 0.475, 0, 0, 0, 0.475, 0, 0, 0, 0.5, -28.41, 13.048, -3.21564 )
+transform = Transform( 0.475, 0, 0, 0, 0.475, 0, 0, 0, 0.5, -33.21, 13.048, 1.68436 )
 
 [node name="Zach" parent="Node2D" instance=ExtResource( 12 )]
-transform = Transform( 4.58861, 0, 0, 0, 2.6161, 0, 0, 0, 0.5, -25.4414, 6.6995, -31.2895 )
+transform = Transform( 0.817346, 0, 0, 0, 0.52322, 0, 0, 0, 0.0875, -25.4414, 6.6995, -31.2895 )
 
 [node name="Knob4" parent="." instance=ExtResource( 4 )]
 transform = Transform( 0.266818, 0, 0, 0, 0.271882, 0, 0, 0, 0.123206, -26.6037, 1.6175, -41.1731 )
@@ -284,6 +285,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.31459, -13.0618, 7.12501, -19.4
 
 [node name="Arcives" parent="." instance=ExtResource( 34 )]
 
+[node name="zach3dfixedfixedithink" parent="." instance=ExtResource( 35 )]
+transform = Transform( -0.2, 0, 1.74846e-08, 0, 0.2, 0, -1.74846e-08, 0, -0.2, -22.3533, 6.6898, -32.0819 )
+
 [connection signal="body_entered" from="Door1/Hallway_Door" to="Knob1" method="_on_Hallway_Door_body_entered"]
 [connection signal="ready" from="Door1/Hallway_Door/DialoguePlayer" to="Door1/Hallway_Door/DialoguePlayer" method="_on_Dialogueplayer_ready"]
 [connection signal="body_entered" from="Door1/Area" to="Knob1" method="_on_Area_body_entered"]
@@ -291,7 +295,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.31459, -13.0618, 7.12501, -19.4
 [connection signal="input_event" from="MCSRevengeTransport/CSGSphere/Area" to="MCSRevengeTransport" method="_on_Area_input_event"]
 [connection signal="timeout" from="Timer" to="Knob1" method="_on_Timer_timeout"]
 [connection signal="body_entered" from="Node2D/Enviroment/Student" to="MCSRevengeTransport" method="_on_Student_body_entered"]
-[connection signal="body_exited" from="Node2D/Enviroment/Student" to="Node2D/Enviroment/Student" method="_on_Student_body_exited"]
 [connection signal="body_exited" from="Node2D/Enviroment/StudentI" to="Node2D/Enviroment/StudentI" method="_on_StudentI_body_exited"]
 [connection signal="body_exited" from="Node2D/Enviroment/Bulletin Board" to="Node2D/Enviroment/Bulletin Board" method="_on_Bulletin_Board_body_exited"]
 [connection signal="body_entered" from="Node2D/Zach" to="Node2D/Enviroment/MC" method="_on_Zach_body_entered"]

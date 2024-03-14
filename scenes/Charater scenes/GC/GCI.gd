@@ -25,6 +25,7 @@ func toggle_the_player(on):
 
 func _on_Area_body_entered(body):
 	if body.name == "MC":
+		visible = true
 		currently_colliding = true
 		toggle_the_player(false)
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)

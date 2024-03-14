@@ -2,7 +2,6 @@ extends Area
 
 var currently_colliding = false
 
-
 func _ready():
 	visible = true
 

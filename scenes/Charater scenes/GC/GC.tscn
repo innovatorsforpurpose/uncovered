@@ -59,7 +59,7 @@ __meta__ = {
 transform = Transform( 0.933597, 0, 0, 0, 1.40411, 0, 0, 0, 0.882052, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
-transform = Transform( 3.44507, 0, 0, 0, 2.96484, 0, 0, 0, 4.19548, 0, 0, 0 )
+transform = Transform( 5, 0, 0, 0, 3, 0, 0, 0, 6, 0, 0, 0 )
 shape = SubResource( 2 )
 __meta__ = {
 "_editor_description_": "														"

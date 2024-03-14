@@ -19,7 +19,6 @@ func _on_Area_body_entered(body):
 func _on_Area_body_exited(_body):
 	currently_colliding = false
 
-
 func _on_Timer_timeout():
 	count = count+1
 	if count == 3:

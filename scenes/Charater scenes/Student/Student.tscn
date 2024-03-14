@@ -14,7 +14,7 @@
 points = PoolVector3Array( -1, -1, -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, -1, 1, 1, 1, -1, -1, -1, -1, 1, -1, 1, -1 )
 
 [sub_resource type="BoxShape" id=2]
-extents = Vector3( 1, 1, 2.22794 )
+extents = Vector3( 1, 1, 1.00304 )
 
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 1, 0, 0, 0 )
@@ -55,7 +55,7 @@ __meta__ = {
 transform = Transform( 0.182794, 0, 0, 0, 1.39869, 0, 0, 0, 0.171282, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
-transform = Transform( 8.27899, 0, 0, 0, 2.86226, 0, 0, 0, 3.86788, 0, 0, 0 )
+transform = Transform( 15, 0, 0, 0, 3, 0, 0, 0, 11, 0, 0, 0 )
 shape = SubResource( 2 )
 
 [node name="StudentX" type="Control" parent="."]
@@ -65,7 +65,7 @@ rect_pivot_offset = Vector2( -822, 1045 )
 script = ExtResource( 3 )
 
 [node name="Timer" type="Timer" parent="StudentX"]
-wait_time = 0.244
+wait_time = 2.7
 script = ExtResource( 5 )
 
 [node name="Panel" type="Panel" parent="StudentX"]
@@ -205,6 +205,7 @@ __meta__ = {
 
 [connection signal="area_entered" from="." to="StudentX" method="_on_Student_area_entered"]
 [connection signal="area_exited" from="." to="StudentX" method="_on_Student_area_exited"]
+[connection signal="body_exited" from="." to="." method="_on_Student_body_exited"]
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
 [connection signal="body_entered" from="Area" to="StudentX" method="_on_Area_body_entered"]
 [connection signal="body_entered" from="Area" to="StudentX/Timer" method="_on_Area_body_entered"]

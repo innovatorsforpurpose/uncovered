@@ -24,6 +24,7 @@ func _on_StudentII_body_exited(_body):
 	dialogue_player = get_node_or_null("DialoguePlayer")
 	if dialogue_player:
 		dialogue_player.reset()
+
 func _process(_delta):
 	if len(get_overlapping_bodies()) == 0:
 		dialogue_player = get_node_or_null("DialoguePlayer")
@@ -45,12 +46,17 @@ func _physics_process(_delta):
 			velocity = velocity.normalized() * speed
 	# transform.origin += velocity
 
+func toggle_the_player(on):
+	var player = get_tree().get_root().find_node("MC", true, false)
+	if player:
+		player.set_active(on)
 
 func _on_Area_body_entered(body):
-
 	if body.name == "MC":
 		currently_colliding = true
-
+		toggle_the_player(false)
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		Input.is_action_just_pressed("game_usage")
 
 func _on_Area_body_exited(_body):
 	currently_colliding = false

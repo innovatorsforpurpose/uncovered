@@ -59,7 +59,7 @@ aabb = AABB( -2.5984, -5.15716, -5.62185, 5.19682, 10.3143, 11.2437 )
 transform = Transform( 0.333123, 0, 0, 0, 2.14562, 0, 0, 0, 0.680386, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
-transform = Transform( 5.33598, 0, 0, 0, 2.86226, 0, 0, 0, 3.86788, 0, 0, 0 )
+transform = Transform( 13, 0, 0, 0, 3, 0, 0, 0, 4, 0, 0, 0 )
 shape = SubResource( 3 )
 
 [node name="bulletin_boardX" type="Control" parent="."]

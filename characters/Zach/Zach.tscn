@@ -29,7 +29,7 @@ __meta__ = {
 transform = Transform( 0.2, 0, 0, 0, 1.75, 0, 0, 0, 0.2, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
-transform = Transform( 18.5036, 0, 0, 0, 2.50048, 0, 0, 0, 18.5036, 0, 0, 0 )
+transform = Transform( 15, 0, 0, 0, 3, 0, 0, 0, 5, 0, 0, 0 )
 shape = SubResource( 2 )
 __meta__ = {
 "_editor_description_": "														"
@@ -169,8 +169,15 @@ __meta__ = {
 
 [node name="Timer" type="Timer" parent="."]
 process_mode = 0
-wait_time = 3.5
+wait_time = 6.6
 script = ExtResource( 8 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 3.70072, 0, 0, 0, 4.37584, 0, 0, 0, 3.70072, 0, 0, 0 )
+shape = SubResource( 2 )
+__meta__ = {
+"_editor_description_": "														"
+}
 
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
 [connection signal="body_entered" from="Area" to="Zach" method="_on_Area_body_entered"]
