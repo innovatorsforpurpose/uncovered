@@ -28,6 +28,11 @@ config/icon="res://scenes/oldscenes/images/icons/icon.png"
 
 default_bus_layout=""
 
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+
 [gdnative]
 
 singletons=[ "res://workspaces/dev_Uri/GraphicDesign/addons/godot-git-plugin/git_api.gdnlib" ]
