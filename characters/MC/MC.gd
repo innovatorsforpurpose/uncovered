@@ -11,6 +11,8 @@ var velocity = Vector3.ZERO
 var sprintspeed = 10
 var flag = 1
 var initial_position
+var count = 0
+
 func _ready():
 	initial_position = get_global_transform().origin
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -58,3 +60,10 @@ func set_active(active):
 	set_physics_process(active)
 	set_process(active)
 	set_process_input(active)
+
+
+func _on_Zach_body_entered(body):
+	pass
+
+func _on_Timer2_timeout():
+	count = count+1

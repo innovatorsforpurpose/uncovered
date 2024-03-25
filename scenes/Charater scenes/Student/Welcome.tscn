@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://adnan/WelcomeText.gd" type="Script" id=1]
 [ext_resource path="res://assets/fonts/Cairo/new_dynamicfont.tres" type="DynamicFont" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Image file/Path3.png" type="Texture" id=6]
 [ext_resource path="res://Image file/g2.svg" type="Texture" id=7]
 [ext_resource path="res://Image file/drawing.svg.svg" type="Texture" id=8]
+[ext_resource path="res://assets/fonts/battlenet/new_dynamicfont.tres" type="DynamicFont" id=9]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 1 )
@@ -26,7 +27,6 @@ autostart = true
 script = ExtResource( 3 )
 
 [node name="Node2D" type="Node2D" parent="."]
-visible = false
 
 [node name="Instructions" type="MarginContainer" parent="Node2D"]
 anchor_right = 1.0
@@ -102,8 +102,14 @@ texture = ExtResource( 8 )
 region_rect = Rect2( -1027.25, 0, 4533.08, 1378.64 )
 
 [node name="Label" type="Label" parent="Control_1/Panel"]
-margin_right = 886.0
-margin_bottom = 196.0
+margin_left = 228.0
+margin_top = 23.0
+margin_right = 836.0
+margin_bottom = 146.0
+custom_fonts/font = ExtResource( 9 )
+text = "ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE..............."
+autowrap = true
+clip_text = true
 
 [node name="Panel2" type="Panel" parent="Control_1"]
 margin_left = 8.0
@@ -119,8 +125,14 @@ texture = ExtResource( 6 )
 region_rect = Rect2( 1.24512, 0, 15806.4, 4496.51 )
 
 [node name="Label" type="Label" parent="Control_1/Panel2"]
-margin_right = 40.0
-margin_bottom = 14.0
+margin_left = 41.0
+margin_top = -11.0
+margin_right = 749.0
+margin_bottom = 114.0
+custom_fonts/font = ExtResource( 9 )
+text = "ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE..............."
+autowrap = true
+clip_text = true
 
 [node name="Panel3" type="Panel" parent="Control_1"]
 margin_right = 40.0
@@ -139,8 +151,17 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Control_1/Panel3"]
-margin_right = 40.0
-margin_bottom = 14.0
+margin_left = 368.0
+margin_top = 427.0
+margin_right = 976.0
+margin_bottom = 552.0
+custom_fonts/font = ExtResource( 9 )
+text = "ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE..............."
+autowrap = true
+clip_text = true
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Control_1"]
 margin_left = 630.0

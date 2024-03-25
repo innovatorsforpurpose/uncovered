@@ -1,32 +1,16 @@
-extends Area
-var currently_colliding = false
-var dialogue_player = null
+extends Node
 
-func _input(event):
-	if event.is_action_pressed("game_usage") and currently_colliding:
-		find_and_use_dialogue()
-		#print("in_area_Laura")
-		#print(currently_colliding)
 
-	
+# Declare member variables here. Examples:
+# var a = 2
+# var b = "text"
 
-func find_and_use_dialogue():
-	var dialogue_player = get_node_or_null("DialoguePlayer")
-	if dialogue_player:
-		dialogue_player.next_line()
-func _on_Laura_body_exited(_body):
-	var dialogue_player = get_node_or_null("DialoguePlayer")
-	if dialogue_player:
-		dialogue_player.reset()
-func _process(_delta):
-	if len(get_overlapping_bodies()) == 0:
-		var dialogue_player = get_node_or_null("DialoguePlayer")
-		if dialogue_player:
-			dialogue_player.reset()
 
-func _on_Area_body_entered(body):
-	if body.name == "MC":
-		currently_colliding = true
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
 
-func _on_Area_body_exited(_body):
-	currently_colliding = false
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass

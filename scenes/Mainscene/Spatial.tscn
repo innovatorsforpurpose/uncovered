@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://Scenes/Charater scenes/Mentor/Mentor/Mentor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Components/basement/basement project.tscn" type="PackedScene" id=2]
@@ -11,9 +11,10 @@
 [ext_resource path="res://Scenes/Charater scenes/Student/Student.tscn" type="PackedScene" id=9]
 [ext_resource path="res://characters/MC/MC.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Components/Classroom L1/Classroom.fbx" type="PackedScene" id=11]
-[ext_resource path="res://Scenes/Charater scenes/Laura/Laura.tscn" type="PackedScene" id=12]
+[ext_resource path="res://characters/Zach/Zach.tscn" type="PackedScene" id=12]
 [ext_resource path="res://assets/objectsall/Large objects/Door/Door I.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/Charater scenes/Student/Bully.tscn" type="PackedScene" id=14]
+[ext_resource path="res://playerinterface.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/Charater scenes/Student/StudentI.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Components/Dialogue/Dialogue.tscn" type="PackedScene" id=17]
 [ext_resource path="res://scenes/transitionobjects/transitionobject/Transition_Object2.gd" type="Script" id=18]
@@ -32,6 +33,7 @@
 [ext_resource path="res://Components/Office/OFFICE.tscn" type="PackedScene" id=31]
 [ext_resource path="res://dev_sabrina/hallnimation/hallwayhopeful1.tscn" type="PackedScene" id=32]
 [ext_resource path="res://Components/basement/Basement_Door.tscn" type="PackedScene" id=33]
+[ext_resource path="res://Arcives.tscn" type="PackedScene" id=34]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -213,23 +215,12 @@ transform = Transform( 1, 0, 0, 0, 1.41956, 0, 0, 0, 1, -25.4217, 12.2963, 14.67
 [node name="Mentor" parent="Node2D/Enviroment" instance=ExtResource( 1 )]
 transform = Transform( 0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.5, -25.3264, 12.968, 10 )
 
-[node name="DialoguePlayer" parent="Node2D/Enviroment/Mentor" instance=ExtResource( 17 )]
-follow_viewport_enable = true
-dialogue_file = "res://scenes/Charater scenes/Mentor/Mc/Mc.json"
-
 [node name="GC" parent="Node2D/Enviroment" instance=ExtResource( 6 )]
 transform = Transform( 0.308545, 0, -0.380152, 0, 0.475, 0, 0.361144, 0, 0.324784, -42.1676, 13.0428, -8.58389 )
 
 [node name="DialoguePlayer" parent="Node2D/Enviroment/GC" instance=ExtResource( 17 )]
 follow_viewport_enable = true
 dialogue_file = "res://scenes/Charater scenes/GC/GC/GC.json"
-
-[node name="Laura" parent="Node2D/Enviroment" instance=ExtResource( 12 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -23.6691, 12.8397, -16.1462 )
-
-[node name="DialoguePlayer" parent="Node2D/Enviroment/Laura" instance=ExtResource( 17 )]
-follow_viewport_enable = true
-dialogue_file = "res://scenes/Charater scenes/Laura/Laura/Laura.json"
 
 [node name="Student" parent="Node2D/Enviroment" instance=ExtResource( 9 )]
 transform = Transform( 0.4675, 0, 0, 0, 0.44, 0, 0, 0, 0.45, -20.5819, 12.9289, -6.10306 )
@@ -266,6 +257,9 @@ transform = Transform( 0.475, 0, 0, 0, 0.475, 0, 0, 0, 0.5, -28.41, 13.048, -3.2
 follow_viewport_enable = true
 dialogue_file = "res://Scenes/Charater scenes/Student/jsons/Bully.json"
 
+[node name="Zach" parent="Node2D" instance=ExtResource( 12 )]
+transform = Transform( 4.58861, 0, 0, 0, 2.6161, 0, 0, 0, 0.5, -25.4414, 6.6995, -31.2895 )
+
 [node name="Knob4" parent="." instance=ExtResource( 4 )]
 transform = Transform( 0.266818, 0, 0, 0, 0.271882, 0, 0, 0, 0.123206, -26.6037, 1.6175, -41.1731 )
 visible = false
@@ -287,6 +281,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -42.7721, 5.98089, -13.6491 )
 transform = Transform( 1.42428, 0, 0, 0, 0.960988, 0, 0, 0, 2.5481, -1.08552, 7.52099, -20.8106 )
 
 [node name="Welcome" parent="." instance=ExtResource( 30 )]
+visible = false
 
 [node name="hallwayhopeful" parent="." instance=ExtResource( 32 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.396, 5.26514, -53.0685 )
@@ -309,18 +304,18 @@ __meta__ = {
 [node name="Door I" parent="." instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.31459, -13.0618, 7.12501, -19.4886 )
 
+[node name="playerinterface" parent="." instance=ExtResource( 15 )]
+
+[node name="Arcives" parent="." instance=ExtResource( 34 )]
+
 [connection signal="body_entered" from="Door1/Hallway_Door" to="Knob1" method="_on_Hallway_Door_body_entered"]
 [connection signal="ready" from="Door1/Hallway_Door/DialoguePlayer" to="Door1/Hallway_Door/DialoguePlayer" method="_on_Dialogueplayer_ready"]
 [connection signal="body_entered" from="Door1/Area" to="Knob1" method="_on_Area_body_entered"]
 [connection signal="timeout" from="MCSRevengeTransport/BossBattleTimer" to="MCSRevengeTransport" method="_on_Timer_timeout"]
 [connection signal="input_event" from="MCSRevengeTransport/CSGSphere/Area" to="MCSRevengeTransport" method="_on_Area_input_event"]
 [connection signal="timeout" from="Timer" to="Knob1" method="_on_Timer_timeout"]
-[connection signal="body_entered" from="Node2D/Enviroment/Mentor" to="Node2D/Enviroment/Mentor/DialoguePlayer" method="_on_Mentor_body_entered"]
-[connection signal="ready" from="Node2D/Enviroment/Mentor/DialoguePlayer" to="Node2D/Enviroment/Mentor/DialoguePlayer" method="_on_Dialogueplayer_ready"]
 [connection signal="body_entered" from="Node2D/Enviroment/GC" to="Node2D/Enviroment/GC/DialoguePlayer" method="_on_GC_body_entered"]
 [connection signal="ready" from="Node2D/Enviroment/GC/DialoguePlayer" to="Node2D/Enviroment/GC/DialoguePlayer" method="_on_Dialogueplayer_ready"]
-[connection signal="body_entered" from="Node2D/Enviroment/Laura" to="Node2D/Enviroment/Laura/DialoguePlayer" method="_on_Laura_body_entered"]
-[connection signal="ready" from="Node2D/Enviroment/Laura/DialoguePlayer" to="Node2D/Enviroment/Laura/DialoguePlayer" method="_on_Dialogueplayer_ready"]
 [connection signal="body_entered" from="Node2D/Enviroment/Student" to="MCSRevengeTransport" method="_on_Student_body_entered"]
 [connection signal="body_entered" from="Node2D/Enviroment/Student" to="Node2D/Enviroment/Student/DialoguePlayer" method="_on_Student_body_entered"]
 [connection signal="body_exited" from="Node2D/Enviroment/Student" to="Node2D/Enviroment/Student" method="_on_Student_body_exited"]
@@ -334,5 +329,5 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.31459, -13.0618, 7.12501, -19.4
 [connection signal="body_entered" from="Node2D/Enviroment/Bulletin Board" to="Node2D/Enviroment/Bulletin Board/DialoguePlayer" method="_on_Bulletin_Board_body_entered"]
 [connection signal="body_exited" from="Node2D/Enviroment/Bulletin Board" to="Node2D/Enviroment/Bulletin Board" method="_on_Bulletin_Board_body_exited"]
 [connection signal="ready" from="Node2D/Enviroment/Bulletin Board/DialoguePlayer" to="Node2D/Enviroment/Bulletin Board/DialoguePlayer" method="_on_Dialogueplayer_ready"]
-[connection signal="body_entered" from="Node2D/Enviroment/Bully" to="Node2D/Enviroment/Mentor/DialoguePlayer" method="_on_Bully_body_entered"]
 [connection signal="ready" from="Node2D/Enviroment/Bully/DialoguePlayer" to="Node2D/Enviroment/Bully/DialoguePlayer" method="_on_Dialogueplayer_ready"]
+[connection signal="body_entered" from="Node2D/Zach" to="Node2D/Enviroment/MC" method="_on_Zach_body_entered"]
