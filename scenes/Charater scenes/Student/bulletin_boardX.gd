@@ -93,7 +93,7 @@ func _on_Button_pressed():
 
 func _on_Bulletin_Board_body_entered(body):
 	#print("Working")
-
+	pass
 func _on_Bulletin_Board_body_exited(body):
 	pass # Replace with function body.
 

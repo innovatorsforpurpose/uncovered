@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/headmasterjudygrant.png-dd67a903d15f1883a6ddf41ad1e4f194.stex"
+path="res://.import/headmasterjudygrant.png-7de942c6f264b6a52d14cf102175eb31.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Image file/Characters/headmasterjudygrant.png"
-dest_files=[ "res://.import/headmasterjudygrant.png-dd67a903d15f1883a6ddf41ad1e4f194.stex" ]
+source_file="res://characters/Judy Grant/headmasterjudygrant.png"
+dest_files=[ "res://.import/headmasterjudygrant.png-7de942c6f264b6a52d14cf102175eb31.stex" ]
 
 [params]
 

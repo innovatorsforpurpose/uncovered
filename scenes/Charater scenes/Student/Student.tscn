@@ -5,9 +5,9 @@
 [ext_resource path="res://Scenes/Charater scenes/Student/StudentX.gd" type="Script" id=3]
 [ext_resource path="res://assets/fonts/battlenet/new_dynamicfont.tres" type="DynamicFont" id=4]
 [ext_resource path="res://Scenes/Charater scenes/Student/Timer.gd" type="Script" id=5]
-[ext_resource path="res://Image file/drive-download-20240125T224344Z-001/textdesign-05.png" type="Texture" id=6]
-[ext_resource path="res://Image file/drive-download-20240125T224344Z-001/textdesign-04.png" type="Texture" id=7]
-[ext_resource path="res://Image file/Hallwayyy 2.png" type="Texture" id=8]
+[ext_resource path="res://Image file/textdesign-05.png" type="Texture" id=6]
+[ext_resource path="res://Image file/textdesign-04.png" type="Texture" id=7]
+[ext_resource path="res://Image file/Hallway_2.png" type="Texture" id=8]
 [ext_resource path="res://Image file/janitor_002.png" type="Texture" id=9]
 [ext_resource path="res://Scenes/Charater scenes/Student/PanelI.gd" type="Script" id=10]
 

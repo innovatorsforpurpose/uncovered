@@ -7,7 +7,7 @@ func _on_Zach_body_entered(body):
 		currently_colliding = true
 
 	if currently_colliding == true:
-		print("workingIII")
+		#print("workingIII")
 		start()
 
 func _on_Area_body_entered(body):
@@ -15,14 +15,14 @@ func _on_Area_body_entered(body):
 		currently_colliding = true
 
 	if currently_colliding == true:
-		print("workingI")
+		#print("workingI")
 		start()
 
 var count = 1
 
 func _on_WelcomeTimer_timeout():
 	count = count+1
-	print("count",count)
+	#print("count",count)
 	if count == 18:
 		stop()
 
@@ -31,12 +31,12 @@ func _on_Area_body_exited(body):
 	currently_colliding = false
 
 	if currently_colliding == false:
-		print("workingII")
+		#print("workingII")
 		stop()
 
 
 func _on_Zach_body_exited(body):
 	currently_colliding = false
 	if currently_colliding == false:
-		print("workingII")
+		#print("workingII")
 		stop()

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/janitor_redo.png-d5264801964ecba502ad409ff6474506.stex"
+path="res://.import/textdesign-05.png-59340bd113988e3b3477c647a39bcfaf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Image file/Characters/janitor_redo.png"
-dest_files=[ "res://.import/janitor_redo.png-d5264801964ecba502ad409ff6474506.stex" ]
+source_file="res://Image file/textdesign-05.png"
+dest_files=[ "res://.import/textdesign-05.png-59340bd113988e3b3477c647a39bcfaf.stex" ]
 
 [params]
 

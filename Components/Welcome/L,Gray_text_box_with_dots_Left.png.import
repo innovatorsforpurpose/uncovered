@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/emyrevised.png-a938ae00f27921eb5f02cc7ae2b5b59b.stex"
+path="res://.import/L,Gray_text_box_with_dots_Left.png-1af313fdcb9154eeda6e24267e2284fa.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Image file/Characters/emyrevised.png"
-dest_files=[ "res://.import/emyrevised.png-a938ae00f27921eb5f02cc7ae2b5b59b.stex" ]
+source_file="res://Components/Welcome/L,Gray_text_box_with_dots_Left.png"
+dest_files=[ "res://.import/L,Gray_text_box_with_dots_Left.png-1af313fdcb9154eeda6e24267e2284fa.stex" ]
 
 [params]
 

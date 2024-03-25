@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/textdesign-05.png-8e1866fce82b8a4180988d5212881d79.stex"
+path="res://.import/Office_background.png-0e2c29f0c87ec5cea010e3e4f5a4e61c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Image file/drive-download-20240125T224344Z-001/textdesign-05.png"
-dest_files=[ "res://.import/textdesign-05.png-8e1866fce82b8a4180988d5212881d79.stex" ]
+source_file="res://Image file/Office_background.png"
+dest_files=[ "res://.import/Office_background.png-0e2c29f0c87ec5cea010e3e4f5a4e61c.stex" ]
 
 [params]
 

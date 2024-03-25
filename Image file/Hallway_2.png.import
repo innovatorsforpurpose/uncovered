@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Screenshot 2023-12-11 at 4.19.11 PM.png-e3bdacd5602ab9a6296c2308971c7c1a.stex"
+path="res://.import/Hallway_2.png-aeef14e35275352616f29007bd4770ac.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Image file/Screenshot 2023-12-11 at 4.19.11 PM.png"
-dest_files=[ "res://.import/Screenshot 2023-12-11 at 4.19.11 PM.png-e3bdacd5602ab9a6296c2308971c7c1a.stex" ]
+source_file="res://Image file/Hallway_2.png"
+dest_files=[ "res://.import/Hallway_2.png-aeef14e35275352616f29007bd4770ac.stex" ]
 
 [params]
 

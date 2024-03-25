@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/path2.png-b648b2b8649071c50930640bf715787c.stex"
+path="res://.import/emyrevised.png-47e8681649a99748422c422781982d12.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Image file/path2.png"
-dest_files=[ "res://.import/path2.png-b648b2b8649071c50930640bf715787c.stex" ]
+source_file="res://characters/Emy/emyrevised.png"
+dest_files=[ "res://.import/emyrevised.png-47e8681649a99748422c422781982d12.stex" ]
 
 [params]
 

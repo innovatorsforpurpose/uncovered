@@ -1,10 +1,10 @@
 [gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Old L1 code.gd" type="Script" id=1]
-[ext_resource path="res://Image file/drive-download-20240125T224344Z-001/textdesign-04.png" type="Texture" id=2]
+[ext_resource path="res://Image file/textdesign-04.png" type="Texture" id=2]
 [ext_resource path="res://assets/fonts/battlenet/new_dynamicfont.tres" type="DynamicFont" id=3]
-[ext_resource path="res://Image file/drive-download-20240125T224344Z-001/textdesign-05.png" type="Texture" id=4]
-[ext_resource path="res://Image file/Characters/zackh_002.png" type="Texture" id=5]
+[ext_resource path="res://Image file/textdesign-05.png" type="Texture" id=4]
+[ext_resource path="res://characters/Zach/zackh_002.png" type="Texture" id=5]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 1, 1, 1, 1 )

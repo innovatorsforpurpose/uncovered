@@ -4,10 +4,10 @@
 [ext_resource path="res://workspaces/Dev_BA/janitor.glb" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Charater scenes/GC/GCI.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/Charater scenes/GC/Timer2.gd" type="Script" id=4]
-[ext_resource path="res://Image file/drive-download-20240125T224344Z-001/textdesign-04.png" type="Texture" id=5]
-[ext_resource path="res://Image file/drive-download-20240125T224344Z-001/textdesign-05.png" type="Texture" id=6]
+[ext_resource path="res://Image file/textdesign-04.png" type="Texture" id=5]
+[ext_resource path="res://Image file/textdesign-05.png" type="Texture" id=6]
 [ext_resource path="res://assets/fonts/battlenet/new_dynamicfont.tres" type="DynamicFont" id=7]
-[ext_resource path="res://Image file/office-Recovered.png" type="Texture" id=8]
+[ext_resource path="res://Image file/Office_background.png" type="Texture" id=8]
 [ext_resource path="res://Image file/janitor_002.png" type="Texture" id=9]
 
 [sub_resource type="ConvexPolygonShape" id=1]

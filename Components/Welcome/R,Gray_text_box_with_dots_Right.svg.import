@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/textdesign-04.png-a5c9a07cd1bdd332bab0d5853c9e2ab1.stex"
+path="res://.import/R,Gray_text_box_with_dots_Right.svg-449b18c5dddca590fae30e9707c6e01b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Image file/drive-download-20240125T224344Z-001/textdesign-04.png"
-dest_files=[ "res://.import/textdesign-04.png-a5c9a07cd1bdd332bab0d5853c9e2ab1.stex" ]
+source_file="res://Components/Welcome/R,Gray_text_box_with_dots_Right.svg"
+dest_files=[ "res://.import/R,Gray_text_box_with_dots_Right.svg-449b18c5dddca590fae30e9707c6e01b.stex" ]
 
 [params]
 
