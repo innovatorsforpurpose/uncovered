@@ -92,7 +92,7 @@ func _on_Button_pressed():
 	 active_dialogue = 3
 
 func _on_Bulletin_Board_body_entered(body):
-	print("Working")
+	#print("Working")
 
 func _on_Bulletin_Board_body_exited(body):
 	pass # Replace with function body.

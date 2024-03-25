@@ -26,18 +26,19 @@ func toggle_the_player(on):
 func _on_Area_body_entered(body):
 	if body.name == "MC":
 		body.immobile = true
-		print("body.immobile")
-		print(body.immobile)
+		#print("body.immobile")
+		#print(body.immobile)
 		currently_colliding = true
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		Input.is_action_just_pressed("game_usage")
-		print("WorkingIL")
+		#print("WorkingIL")
+		var player = get_node("/root/RootScene/Node2D/Enviroment/MC")
+		player.immobile = true
 
 func _on_Timer_timeout():
 	if currently_colliding == true:
 		active_dialogue = active_dialogue+1
-		var player = get_node("/root/RootScene/Node2D/Enviroment/MC")
-		player.immobile = true
+
 
 func _physics_process(delta):
 	if  active_dialogue == 0 and currently_colliding == false:
@@ -108,8 +109,6 @@ func _physics_process(delta):
 		Px.hide()
 		IDx.hide()
 		IEx.hide()
-		var player = get_node("/root/RootScene/Node2D/Enviroment/MC")
-		player.immobile = false
 
 func _on_Area_body_exited(body):
 	visible = false

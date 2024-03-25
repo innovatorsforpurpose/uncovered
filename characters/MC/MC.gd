@@ -30,7 +30,7 @@ func get_input():
 		gravity = Vector3.DOWN * 98 
 	var vy = velocity.y
 	velocity = Vector3()
-	print(immobile)
+	#print(immobile)
 	if not immobile:
 		if Input.is_action_pressed("move_forward"):
 			velocity += -transform.basis.z * speed

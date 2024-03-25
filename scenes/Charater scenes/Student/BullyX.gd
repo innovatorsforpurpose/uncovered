@@ -135,7 +135,7 @@ func _on_Button2_pressed():
 	 active_dialogue = active_dialogue+1
 
 func _on_Bully_body_entered(body):
-	print("Working")
-
+	#print("Working")
+	pass
 func _on_Bully_body_exited(body):
 	pass # Replace with function body.
