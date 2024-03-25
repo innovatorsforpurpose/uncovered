@@ -1,7 +1,7 @@
 extends Node
 
-const PLAYER_SPEED = 7
-const PICKUP_DELAY = 10
+const PLAYER_SPEED = 100
+const PICKUP_DELAY = 1
 
 const GRID_LENGTH = 5
 const GRID_MARGIN = 15
