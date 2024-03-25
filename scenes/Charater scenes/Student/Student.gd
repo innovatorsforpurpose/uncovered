@@ -8,10 +8,7 @@ var currently_colliding = false
 var dialogue_player = null
 
 func _input(event):
-	if event.is_action_pressed("game_usage") and currently_colliding:
-		#print("in_area_Student")
-		#print(currently_colliding)
-		pass
+	pass
 
 func _physics_process(_delta):
 	if target == 0 and path.size() == 0:

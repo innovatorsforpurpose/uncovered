@@ -25,6 +25,7 @@ func toggle_the_player(on):
 
 func _on_Area_body_entered(body):
 	if body.name == "MC":
+		body.immobile = true
 		currently_colliding = true
 		toggle_the_player(false)
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
@@ -88,6 +89,8 @@ func _physics_process(delta):
 		Px.hide()
 		IDx.hide()
 		IEx.hide()
+		var player = get_node("/root/RootScene/Node2D/Enviroment/MC")
+		player.immobile = false
 
 func _on_Area_body_exited(body):
 	visible = false
@@ -97,7 +100,8 @@ func _on_Button_pressed():
 	 active_dialogue = 4
 
 func _on_StudentI_body_entered(body):
-	print("Working")
+	#print("Working")
+	pass
 
 func _on_StudentI_body_exited(body):
 	pass # Replace with function body.

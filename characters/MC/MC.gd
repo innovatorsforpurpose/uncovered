@@ -14,11 +14,12 @@ var initial_position
 var count = 0
 var check = 1
 var player = true
-export var immobile = false
+export(bool) var immobile
 
 func _ready():
 	initial_position = get_global_transform().origin
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	immobile = false
 	
 func get_input():
 	if Input.is_action_pressed("shift"):

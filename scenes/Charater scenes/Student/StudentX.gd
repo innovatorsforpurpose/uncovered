@@ -26,14 +26,18 @@ func toggle_the_player(on):
 func _on_Area_body_entered(body):
 	if body.name == "MC":
 		body.immobile = true
+		print("body.immobile")
+		print(body.immobile)
 		currently_colliding = true
-		toggle_the_player(false)
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		Input.is_action_just_pressed("game_usage")
+		print("WorkingIL")
 
 func _on_Timer_timeout():
 	if currently_colliding == true:
 		active_dialogue = active_dialogue+1
+		var player = get_node("/root/RootScene/Node2D/Enviroment/MC")
+		player.immobile = true
 
 func _physics_process(delta):
 	if  active_dialogue == 0 and currently_colliding == false:
@@ -118,7 +122,8 @@ func _on_Button2_pressed():
 	 active_dialogue = active_dialogue+1
 
 func _on_Student_area_entered(area):
-	print("Working")
+	#print("Working")
+	pass
 
 func _on_Student_area_exited(area):
 	pass # Replace with function body.

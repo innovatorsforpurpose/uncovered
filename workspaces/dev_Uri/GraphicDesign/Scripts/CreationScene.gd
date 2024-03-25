@@ -6,7 +6,6 @@ onready var settings = get_node("/root/CreationScene/Settings")
 onready var square = get_node("/root/CreationScene/GridSquare")
 
 func _ready():
-	print("visiable")
 	call_deferred("create_grid")
 	call_deferred("place_symbols")
 
