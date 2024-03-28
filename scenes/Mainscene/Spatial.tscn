@@ -159,7 +159,6 @@ script = ExtResource( 28 )
 transform = Transform( 1.40378, 0, 0, 0, 3.30962, 0, 0, 0, 2.71476, -39.4922, -8.91187, 29.4487 )
 
 [node name="Area" type="Area" parent="MCSRevengeTransport/CSGSphere"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="MCSRevengeTransport/CSGSphere/Area"]
 shape = SubResource( 8 )

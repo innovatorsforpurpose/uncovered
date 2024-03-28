@@ -7,8 +7,8 @@
 [ext_resource path="res://Scenes/Charater scenes/Student/Timer.gd" type="Script" id=5]
 [ext_resource path="res://Image file/textdesign-05.png" type="Texture" id=6]
 [ext_resource path="res://Image file/textdesign-04.png" type="Texture" id=7]
-[ext_resource path="res://Image file/Hallway_2.png" type="Texture" id=8]
-[ext_resource path="res://Image file/janitor_002.png" type="Texture" id=9]
+[ext_resource path="res://Components/Hallway/Hallway_2.png" type="Texture" id=8]
+[ext_resource path="res://characters/janitor/janitor_002.png" type="Texture" id=9]
 [ext_resource path="res://Scenes/Charater scenes/Student/PanelI.gd" type="Script" id=10]
 
 [sub_resource type="ConvexPolygonShape" id=1]

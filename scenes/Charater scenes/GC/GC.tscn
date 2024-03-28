@@ -7,8 +7,8 @@
 [ext_resource path="res://Image file/textdesign-04.png" type="Texture" id=5]
 [ext_resource path="res://Image file/textdesign-05.png" type="Texture" id=6]
 [ext_resource path="res://assets/fonts/battlenet/new_dynamicfont.tres" type="DynamicFont" id=7]
-[ext_resource path="res://Image file/Office_background.png" type="Texture" id=8]
-[ext_resource path="res://Image file/janitor_002.png" type="Texture" id=9]
+[ext_resource path="res://Components/Office/Office_background.png" type="Texture" id=8]
+[ext_resource path="res://characters/janitor/janitor_002.png" type="Texture" id=9]
 
 [sub_resource type="ConvexPolygonShape" id=1]
 points = PoolVector3Array( -1, -1, -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, -1, 1, 1, 1, -1, -1, -1, -1, 1, -1, 1, -1 )
