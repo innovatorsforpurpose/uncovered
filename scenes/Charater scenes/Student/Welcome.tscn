@@ -81,6 +81,7 @@ and start over.
 (avoid walls though)"
 
 [node name="Control_1" type="Control" parent="."]
+visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 4 )

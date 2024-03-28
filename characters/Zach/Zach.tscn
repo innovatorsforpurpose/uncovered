@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://characters/Zach/Zach.gd" type="Script" id=1]
+[ext_resource path="res://Image file/Hallwayyy 2.png" type="Texture" id=2]
 [ext_resource path="res://Control_1.gd" type="Script" id=3]
 [ext_resource path="res://Image file/drive-download-20240125T224344Z-001/textdesign-04.png" type="Texture" id=4]
 [ext_resource path="res://assets/fonts/battlenet/new_dynamicfont.tres" type="DynamicFont" id=5]
@@ -13,8 +14,9 @@
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 1, 0, 0, 0 )
 
-[sub_resource type="StyleBoxFlat" id=4]
-bg_color = Color( 1, 1, 1, 1 )
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 2070, 1430 )
 
 [node name="Zach" type="Area"]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
@@ -44,6 +46,7 @@ margin_left = 60.0
 margin_top = 440.0
 margin_right = 100.0
 margin_bottom = 480.0
+rect_pivot_offset = Vector2( 192, -343 )
 custom_styles/panel = SubResource( 3 )
 
 [node name="BackBoard" type="Panel" parent="Zach/Panel"]
@@ -129,6 +132,41 @@ self_modulate = Color( 1, 1, 1, 0 )
 margin_right = 100.0
 margin_bottom = 50.0
 
+[node name="Button2" type="NinePatchRect" parent="Zach/Panel"]
+margin_left = 859.0
+margin_top = -368.0
+margin_right = 959.0
+margin_bottom = -318.0
+texture = ExtResource( 4 )
+region_rect = Rect2( 67.1929, 18.5056, 295.511, 48.545 )
+patch_margin_left = 1
+patch_margin_right = 2
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="Zach/Panel/Button2"]
+margin_left = 6.0
+margin_top = 7.0
+margin_right = 96.0
+margin_bottom = 38.0
+custom_colors/font_color = Color( 0.721569, 0.886275, 0.823529, 1 )
+custom_fonts/font = ExtResource( 5 )
+text = "Skip+1>"
+autowrap = true
+clip_text = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Button2" type="Button" parent="Zach/Panel/Button2"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_right = 100.0
+margin_bottom = 50.0
+__meta__ = {
+"_editor_description_": ""
+}
+
 [node name="Timer" type="Timer" parent="."]
 process_mode = 0
 wait_time = 3.5
@@ -141,4 +179,6 @@ script = ExtResource( 8 )
 [connection signal="body_exited" from="Area" to="Timer" method="_on_Area_body_exited"]
 [connection signal="pressed" from="Zach/Panel/Button/Button" to="Zach" method="_on_Button_pressed"]
 [connection signal="pressed" from="Zach/Panel/Button/Button" to="Timer" method="_on_Button_pressed"]
+[connection signal="pressed" from="Zach/Panel/Button2/Button2" to="Zach" method="_on_Button2_pressed"]
+[connection signal="pressed" from="Zach/Panel/Button2/Button2" to="Timer" method="_on_Button2_pressed"]
 [connection signal="timeout" from="Timer" to="Zach" method="_on_Timer_timeout"]

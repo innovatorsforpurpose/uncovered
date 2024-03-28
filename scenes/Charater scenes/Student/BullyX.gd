@@ -10,7 +10,6 @@ onready var IEx = $Panel/BackBoard
 var currently_colliding = false
 var active_dialogue = 0
 var move = true
-var velocity = 10
 var player = true
 
 func _ready():
@@ -43,38 +42,38 @@ func _physics_process(delta):
 		active_dialogue = active_dialogue+1
 
 	elif Input.is_action_just_pressed("game_usageI") and currently_colliding == true:
-		active_dialogue = 10
+		active_dialogue = 5
 
 	elif active_dialogue == 0 and currently_colliding == true:
 		visible = true 
 
 	if active_dialogue == 0:
-		Lx.text = "I hate it here. It's so boring!"
+		Lx.text = "You are the new student right?"
+		NQx.text = "Bully"
+		TQx.show()
+		NQx.show()
+		Px.show()
+		IDx.show()
+		IEx.show()
+
+	if active_dialogue == 1:
+		Lx.text = "Yes"
 		NQx.text = "You"
 		TQx.show()
 		NQx.show()
 		Px.show()
 		IDx.hide()
-		IEx.show()
 
-	if active_dialogue == 1:
-		Lx.text = "You've been saying that all morning, since mom woke you up."
-		NQx.text = "MentorI"
+	if active_dialogue == 2:
+		Lx.text = "We should hack the school and take control over it"
+		NQx.text = "Bully"
 		TQx.show()
 		NQx.show()
 		Px.show()
 		IDx.show()
 
-	if active_dialogue == 2:
-		Lx.text = "I promise it won't be that bad."
-		NQx.text = "MentorI"
-		TQx.show()
-		NQx.show()
-		Px.show()
-		IDx.hide()
-
 	if active_dialogue == 3:
-		Lx.text = "Even so, school IS NOT FOR ME!!"
+		Lx.text = "That sounds great, but I have an issue with my brother"
 		NQx.text = "You"
 		TQx.show()
 		NQx.show()
@@ -82,54 +81,38 @@ func _physics_process(delta):
 		IDx.hide()
 
 	if active_dialogue == 4:
-		Lx.text = "I'm tooooo OLD FOR THIS!!!!"
+		Lx.text = "So what?"
+		NQx.text = "Bully"
+		TQx.show()
+		NQx.show()
+		Px.show()
+		IDx.show()
+
+	if active_dialogue == 5:
+		Lx.text = "If I disrespect him I will be a shameful child"
 		NQx.text = "You"
 		TQx.show()
 		NQx.show()
 		Px.show()
 		IDx.hide()
 
-	if active_dialogue == 5:
-		Lx.text = "If you're too old for this, than what am I?"
-		NQx.text = "MentorI"
-		TQx.show()
-		NQx.show()
-		Px.show()
-		IDx.show()
-
 	if active_dialogue == 6:
-		Lx.text = "Besides, why are you complaining?"
-		NQx.text = "MentorI"
+		Lx.text = "So good luck with that"
+		NQx.text = "You"
 		TQx.show()
 		NQx.show()
 		Px.show()
-		IDx.show()
+		IDx.hide()
 
 	if active_dialogue == 7:
-		Lx.text = "you just got here."
-		NQx.text = "MentorI"
+		Lx.text = "Bu,Bu,But...."
+		NQx.text = "Bully"
 		TQx.show()
 		NQx.show()
 		Px.show()
 		IDx.show()
 
 	if active_dialogue == 8:
-		Lx.text = "Let your elderly brother give you a little tour."
-		NQx.text = "MentorI"
-		TQx.show()
-		NQx.show()
-		Px.show()
-		IDx.show()
-
-	if active_dialogue == 9:
-		Lx.text = "I know this place like the back of my hand."
-		NQx.text = "MentorI"
-		TQx.show()
-		NQx.show()
-		Px.show()
-		IDx.show()
-
-	if active_dialogue == 10:
 		visible = false
 		toggle_the_player(true)
 		Lx.hide()
@@ -137,14 +120,19 @@ func _physics_process(delta):
 		Px.hide()
 		IDx.hide()
 		IEx.hide()
-		velocity = 10
 
 func _on_Area_body_exited(body):
 	visible = false
 	currently_colliding = false
 
 func _on_Button_pressed():
-	 active_dialogue = 10
+	 active_dialogue = 8
 
 func _on_Button2_pressed():
 	 active_dialogue = active_dialogue+1
+
+func _on_Bully_body_entered(body):
+	print("Working")
+
+func _on_Bully_body_exited(body):
+	pass # Replace with function body.
