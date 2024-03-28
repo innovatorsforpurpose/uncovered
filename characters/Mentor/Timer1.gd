@@ -14,7 +14,6 @@ func _on_Area_body_entered(body):
 			count = 10
 		elif Input.is_action_just_pressed("game_usage") and currently_colliding == true:
 			count = count+1
-		
 
 var count = 1
 
@@ -23,7 +22,6 @@ func _on_WelcomeTimer_timeout():
 	#print("count",count)
 	if count == 10:
 		stop()
-
 
 func _on_Area_body_exited(body):
 	currently_colliding = false
