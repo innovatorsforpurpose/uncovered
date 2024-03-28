@@ -26,9 +26,8 @@ func toggle_the_player(on):
 
 func _on_Area_body_entered(body):
 	if body.name == "MC":
-		body.immobile = true
+		body.immobile = false
 		currently_colliding = true
-		toggle_the_player(false)
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		Input.is_action_just_pressed("game_usage")
 
@@ -200,8 +199,6 @@ func _physics_process(delta):
 		IDx.hide()
 		IEx.hide()
 		velocity = 10
-		var player = get_node("/root/RootScene/Node2D/Enviroment/MC")
-		player.immobile = false
 
 func _on_Area_body_exited(body):
 	visible = false

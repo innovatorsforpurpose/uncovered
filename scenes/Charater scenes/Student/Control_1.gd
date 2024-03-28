@@ -15,19 +15,19 @@ func _on_WelcomeTimer_timeout():
 
 func _ready():
 	Back.hide()
-	print("Back.hidden", !Back.visible)
+	#print("Back.hidden", !Back.visible)
 	Panel1.hide()
-	print("Panel1.hidden", !Panel1.visible)
+	#print("Panel1.hidden", !Panel1.visible)
 	Panel2.hide()
-	print("Panel2.hidden", !Panel2.visible)
+	#print("Panel2.hidden", !Panel2.visible)
 	Panel3.hide()
-	print("Panel3.hidden", !Panel3.visible)
+	#print("Panel3.hidden", !Panel3.visible)
 	ID1.hide()
-	print("ID1.hidden", !ID1.visible)
+	#print("ID1.hidden", !ID1.visible)
 	ID2.hide()
-	print("ID2.hidden", !ID2.visible)
+	#print("ID2.hidden", !ID2.visible)
 	ID3.hide()
-	print("ID3.hidden", !ID3.visible)
+	#print("ID3.hidden", !ID3.visible)
 
 func _physics_process(delta):
 	if active_dialogue == 1:

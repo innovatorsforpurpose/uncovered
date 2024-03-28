@@ -10,7 +10,8 @@ var count = 0
 var PathI = 0
 func _input(event):
 	if event.is_action_pressed("game_usage") and currently_colliding:
-		print("functions")
+		#print("functions")
+		pass
 
 func _on_Timer_timeout():
 	count = count+1	

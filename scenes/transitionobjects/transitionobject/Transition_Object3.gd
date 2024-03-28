@@ -14,9 +14,9 @@ func _on_Area_input_event(_camera, event, _position, _normal, _shape_idx):
 	if event is InputEventMouseButton:
 		if event.button_index ==BUTTON_LEFT and event.pressed == true:
 			$CSGSphere.visible = false
-			# print("I am here sir i have done it ")
-			get_node("/root/RootScene/Basement_doorI/AnimationPlayer").play("open")
-			get_node("/root/RootScene/Timer").start(300000)
+			print("I am here sir i have done it ")
+			get_node("/root/RootScene/Door1/AnimationPlayer").play("open")
+			get_node("/root/RootScene/Timer").start(3)
 
 
 func _on_Timer_timeout():

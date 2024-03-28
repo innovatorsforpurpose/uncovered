@@ -32,7 +32,7 @@
 [ext_resource path="res://Components/Office/OFFICE.tscn" type="PackedScene" id=31]
 [ext_resource path="res://dev_sabrina/hallnimation/hallwayhopeful1.tscn" type="PackedScene" id=32]
 [ext_resource path="res://Components/basement/Basement_Door.tscn" type="PackedScene" id=33]
-[ext_resource path="res://Arcives.tscn" type="PackedScene" id=34]
+[ext_resource path="res://scenes/oldscenes/Arcives.tscn" type="PackedScene" id=34]
 [ext_resource path="res://characters/Zach/zach3dfixedfixedithink.glb" type="PackedScene" id=35]
 
 [sub_resource type="Animation" id=1]
@@ -98,7 +98,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="SphereShape" id=8]
-radius = 0.967927
+radius = 2.13055
 
 [sub_resource type="SpatialMaterial" id=10]
 albedo_texture = ExtResource( 3 )
@@ -128,6 +128,7 @@ anims/RESET = SubResource( 1 )
 anims/open = SubResource( 2 )
 
 [node name="Area" type="Area" parent="Door1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.2553, 0, 21.6728 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Door1/Area"]
 shape = SubResource( 9 )
@@ -158,12 +159,10 @@ script = ExtResource( 28 )
 transform = Transform( 1.40378, 0, 0, 0, 3.30962, 0, 0, 0, 2.71476, -39.4922, -8.91187, 29.4487 )
 
 [node name="Area" type="Area" parent="MCSRevengeTransport/CSGSphere"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="MCSRevengeTransport/CSGSphere/Area"]
 shape = SubResource( 8 )
-
-[node name="Camera" type="Camera" parent="MCSRevengeTransport"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.98928 )
 
 [node name="Knob1" parent="." instance=ExtResource( 4 )]
 transform = Transform( -8.85853e-09, 0, -0.103299, 0, 0.192188, 0, 0.20266, 0, -4.51534e-09, -22.4892, 7.13856, -42.1672 )
@@ -238,7 +237,6 @@ transform = Transform( 0.817346, 0, 0, 0, 0.52322, 0, 0, 0, 0.0875, -25.4414, 6.
 
 [node name="Knob4" parent="." instance=ExtResource( 4 )]
 transform = Transform( 0.266818, 0, 0, 0, 0.271882, 0, 0, 0, 0.123206, -26.6037, 1.6175, -41.1731 )
-visible = false
 script = ExtResource( 21 )
 
 [node name="Whiteboard" parent="." instance=ExtResource( 23 )]
