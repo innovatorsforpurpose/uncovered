@@ -35,8 +35,8 @@ func next_line():
 	$NinePatchRect/Message.text = dialogues[current_dialogue_id]['text']
 	$NinePatchRect.visible = true
 	current_dialogue_id += 1
-	print(len(dialogues))
-	print(current_dialogue_id)
+	#print(len(dialogues))
+	#print(current_dialogue_id)
 	if  current_dialogue_id >= len(dialogues):
 		current_dialogue_id = len(dialogues) - 1
 		$Timer.start()
