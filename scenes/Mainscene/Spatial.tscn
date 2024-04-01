@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://characters/Mentor/Mentor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Components/basement/basement project.tscn" type="PackedScene" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://characters/Zach/Zach.tscn" type="PackedScene" id=12]
 [ext_resource path="res://assets/objectsall/Large objects/Door/Door I.tscn" type="PackedScene" id=13]
 [ext_resource path="res://characters/Bully/Bully.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/Mainscene/CSGSphere.gd" type="Script" id=15]
 [ext_resource path="res://characters/StudentI/StudentI.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Components/Dialogue/Dialogue.tscn" type="PackedScene" id=17]
 [ext_resource path="res://scenes/transitionobjects/transitionobject/Transition_Object2.gd" type="Script" id=18]
@@ -157,6 +158,7 @@ script = ExtResource( 28 )
 
 [node name="CSGSphere" type="CSGSphere" parent="MCSRevengeTransport"]
 transform = Transform( 1.40378, 0, 0, 0, 3.30962, 0, 0, 0, 2.71476, -39.4922, -8.91187, 29.4487 )
+script = ExtResource( 15 )
 
 [node name="Area" type="Area" parent="MCSRevengeTransport/CSGSphere"]
 
@@ -164,7 +166,7 @@ transform = Transform( 1.40378, 0, 0, 0, 3.30962, 0, 0, 0, 2.71476, -39.4922, -8
 shape = SubResource( 8 )
 
 [node name="Knob1" parent="." instance=ExtResource( 4 )]
-transform = Transform( -8.85853e-09, 0, -0.103299, 0, 0.192188, 0, 0.20266, 0, -4.51534e-09, -22.4892, 7.13856, -42.1672 )
+transform = Transform( -8.85853e-09, 0, -0.103299, 0, 0.192188, 0, 0.20266, 0, -4.51534e-09, -22.4892, 7.13856, -42.2097 )
 script = ExtResource( 18 )
 
 [node name="Knob3" parent="." instance=ExtResource( 4 )]
