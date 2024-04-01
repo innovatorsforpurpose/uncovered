@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Classroom_hallway_main_dead_end_door.fbx-4d28dc37b305849e0296f8e2ae32f29e.scn"
+path="res://.import/Classroom_hallway_main_dead_end_door.fbx-a8bd82d6aa48eeac6919ba9e06c7d9c8.scn"
 
 [deps]
 
-source_file="res://scenes/Charater scenes/Student/Classroom_hallway_main_dead_end_door.fbx"
-dest_files=[ "res://.import/Classroom_hallway_main_dead_end_door.fbx-4d28dc37b305849e0296f8e2ae32f29e.scn" ]
+source_file="res://Components/Hallway/Scenes/Classroom_hallway_main_dead_end_door.fbx"
+dest_files=[ "res://.import/Classroom_hallway_main_dead_end_door.fbx-a8bd82d6aa48eeac6919ba9e06c7d9c8.scn" ]
 
 [params]
 

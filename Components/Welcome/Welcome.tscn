@@ -2,7 +2,7 @@
 
 [ext_resource path="res://adnan/WelcomeText.gd" type="Script" id=1]
 [ext_resource path="res://assets/fonts/Cairo/new_dynamicfont.tres" type="DynamicFont" id=2]
-[ext_resource path="res://scenes/Charater scenes/Student/Control_1.gd" type="Script" id=4]
+[ext_resource path="res://Components/Control_1.gd" type="Script" id=4]
 [ext_resource path="res://Components/Welcome/L,Gray_text_box_with_dots_Left.png" type="Texture" id=5]
 [ext_resource path="res://Components/Welcome/Gray_text_box.png" type="Texture" id=6]
 [ext_resource path="res://Components/Welcome/R,Gray_text_box_with_dots_Right.svg" type="Texture" id=7]

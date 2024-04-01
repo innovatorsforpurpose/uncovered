@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Scenes/Charater scenes/Student/IDesk.gd" type="Script" id=1]
-[ext_resource path="res://assets/objectsall/Large objects/tables/Material_053.material" type="Material" id=2]
+[ext_resource path="res://assets/objectsall/Large objects/tables/Material_053.material" type="Material" id=1]
+[ext_resource path="res://Scenes/Charater scenes/Student/IDesk.gd" type="Script" id=2]
 
 [sub_resource type="ConvexPolygonShape" id=1]
 points = PoolVector3Array( -1, -1, -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, -1, 1, 1, 1, -1, -1, -1, -1, 1, -1, 1, -1 )
@@ -15,7 +15,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 276,
-"material": ExtResource( 2 ),
+"material": ExtResource( 1 ),
 "name": "Material.053",
 "primitive": 4,
 "skeleton_aabb": [  ],
@@ -27,7 +27,7 @@ extents = Vector3( 1, 1, 2.22794 )
 
 [node name="IDesk" type="Area"]
 transform = Transform( 0.70742, 0, 0, 0, 0.70742, 0, 0, 0, 0.70742, 0, 0, 0 )
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 
 [node name="StaticBody" type="StaticBody" parent="."]
 transform = Transform( -1.46473e-08, 0, 1.70037, 0, 0.2468, 0, -0.580905, 0, -1.28849e-07, 0, 0, 0 )

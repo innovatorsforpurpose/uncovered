@@ -1,9 +1,9 @@
 [gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://Scenes/Charater scenes/Student/Bulletin Board.gd" type="Script" id=1]
+[ext_resource path="res://Components/atrium/assets/Bulletin board/Bulletin Board.gd" type="Script" id=1]
 [ext_resource path="res://materialassests/Material_077.material" type="Material" id=2]
-[ext_resource path="res://Scenes/Charater scenes/Student/bulletin_boardX.gd" type="Script" id=3]
-[ext_resource path="res://Scenes/Charater scenes/Student/TimerII,X.gd" type="Script" id=4]
+[ext_resource path="res://Components/atrium/assets/Bulletin board/bulletin_boardX.gd" type="Script" id=3]
+[ext_resource path="res://Components/atrium/assets/Bulletin board/TimerII,X.gd" type="Script" id=4]
 [ext_resource path="res://Image file/textdesign-04.png" type="Texture" id=5]
 [ext_resource path="res://Image file/textdesign-05.png" type="Texture" id=6]
 [ext_resource path="res://assets/fonts/battlenet/new_dynamicfont.tres" type="DynamicFont" id=7]
