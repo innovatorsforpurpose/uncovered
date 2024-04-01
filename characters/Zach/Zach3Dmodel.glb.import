@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/zach3dfixedfixedithink.glb-2a0548daeee6660ddbfbbf038722e063.scn"
+path="res://.import/Zach3Dmodel.glb-a3e92add63863418f0ff11261acf186b.scn"
 
 [deps]
 
-source_file="res://characters/Zach/zach3dfixedfixedithink.glb"
-dest_files=[ "res://.import/zach3dfixedfixedithink.glb-2a0548daeee6660ddbfbbf038722e063.scn" ]
+source_file="res://characters/Zach/Zach3Dmodel.glb"
+dest_files=[ "res://.import/Zach3Dmodel.glb-a3e92add63863418f0ff11261acf186b.scn" ]
 
 [params]
 

@@ -33,7 +33,7 @@
 [ext_resource path="res://dev_sabrina/hallnimation/hallwayhopeful1.tscn" type="PackedScene" id=32]
 [ext_resource path="res://Components/basement/Basement_Door.tscn" type="PackedScene" id=33]
 [ext_resource path="res://scenes/oldscenes/Arcives.tscn" type="PackedScene" id=34]
-[ext_resource path="res://characters/Zach/zach3dfixedfixedithink.glb" type="PackedScene" id=35]
+[ext_resource path="res://characters/Zach/Zach3Dmodel.glb" type="PackedScene" id=35]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
