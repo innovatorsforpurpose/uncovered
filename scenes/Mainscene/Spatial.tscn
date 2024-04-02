@@ -1,7 +1,7 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://Scenes/Charater scenes/Mentor/Mentor/Mentor.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Components/basement/basement project.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Door.new/Door-new.glb" type="PackedScene" id=2]
 [ext_resource path="res://Components/Grass textrue.jpeg" type="Texture" id=3]
 [ext_resource path="res://scenes/transitionobjects/transitionobject/Transition_Object.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Components/Office/mainscenes/office-3.tscn" type="PackedScene" id=5]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Scenes/Charater scenes/Laura/Laura.tscn" type="PackedScene" id=12]
 [ext_resource path="res://assets/objectsall/Large objects/Door/Door I.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/Charater scenes/Student/Bully.tscn" type="PackedScene" id=14]
+[ext_resource path="res://basement2/darkness.sim2glb.glb" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/Charater scenes/Student/StudentI.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Components/Dialogue/Dialogue.tscn" type="PackedScene" id=17]
 [ext_resource path="res://scenes/transitionobjects/transitionobject/Transition_Object2.gd" type="Script" id=18]
@@ -32,6 +33,9 @@
 [ext_resource path="res://Components/Office/OFFICE.tscn" type="PackedScene" id=31]
 [ext_resource path="res://dev_sabrina/hallnimation/hallwayhopeful1.tscn" type="PackedScene" id=32]
 [ext_resource path="res://Components/basement/Basement_Door.tscn" type="PackedScene" id=33]
+[ext_resource path="res://basement2/basement2.glb" type="PackedScene" id=34]
+[ext_resource path="res://BASEMENT_DOOR/BASEMENT_DOOR.glb" type="PackedScene" id=35]
+[ext_resource path="res://collisiontest.tscn" type="PackedScene" id=36]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -109,7 +113,7 @@ extents = Vector3( 95.2636, 10.2224, 62.9712 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0466938, 6.2102, 18.9819 )
 
 [node name="BASEMENT_HALLWAY" parent="." instance=ExtResource( 19 )]
-transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -51.4, 2.55354, -84.0596 )
+transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -44.4, 2.55354, -59.0596 )
 
 [node name="Door1" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.06532, -22.7066, 6.612, -43.6508 )
@@ -198,9 +202,6 @@ transform = Transform( 1.37612, 0, 0, 0, 1.00371, 0, 0, 0, 1.35421, -42.1194, 7.
 
 [node name="Basement_Door2" parent="." instance=ExtResource( 33 )]
 transform = Transform( -1, 0, -1.58187e-07, 0, 1.41482, 0, 1.50996e-07, 0, -1.04763, -28.9453, 1.40871, -29.7088 )
-
-[node name="BASEMENT" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.9858, 0.53457, -50.8628 )
 
 [node name="Node2D" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00904, 0 )
@@ -307,7 +308,22 @@ __meta__ = {
 }
 
 [node name="Door I" parent="." instance=ExtResource( 13 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.31459, -13.0618, 7.12501, -19.4886 )
+transform = Transform( 0.999948, -0.0102275, 0, 0.0102275, 0.999948, 0, 0, 0, 1.31459, -13.0618, 7.12501, -19.4886 )
+
+[node name="Door-new" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0, 0, -1, 0, 1, 0, 1, 0, 0, -28, -8, -38.982 )
+
+[node name="BASEMENT_DOOR" parent="." instance=ExtResource( 35 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -25, -8, -36.387 )
+
+[node name="collisiontest" parent="." instance=ExtResource( 36 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.658, 5.18303, -13.5794 )
+
+[node name="basement2" parent="." instance=ExtResource( 34 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 5, -54 )
+
+[node name="darknesssim2glb" parent="basement2" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, 4 )
 
 [connection signal="body_entered" from="Door1/Hallway_Door" to="Knob1" method="_on_Hallway_Door_body_entered"]
 [connection signal="ready" from="Door1/Hallway_Door/DialoguePlayer" to="Door1/Hallway_Door/DialoguePlayer" method="_on_Dialogueplayer_ready"]
