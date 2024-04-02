@@ -1,4 +1,4 @@
-extends Sprite
+extends ParallaxLayer
 
 
 # Declare member variables here. Examples:
@@ -7,10 +7,11 @@ extends Sprite
 
 
 # Called when the node enters the scene tree for the first time.
-func _ready():
-	self.texture=ResourceLoader.load("res://Minigame_2_res/Txtrs/Backdrops/Frame 1.png")
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(_delta):
+	self.position = get_local_mouse_position() * 0.02
+	
+	
+	
+	
+func fade_black_to(area):
+	pass

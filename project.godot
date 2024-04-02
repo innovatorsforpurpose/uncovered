@@ -30,6 +30,7 @@ default_bus_layout=""
 
 [display]
 
+window/size/height=578
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
