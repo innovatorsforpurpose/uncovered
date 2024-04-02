@@ -1,26 +1,25 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Components/Hallway/assets/Hallway_Door.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Components/basement/AnimationPlayerkjhgjg.gd" type="Script" id=2]
 [ext_resource path="res://scenes/transitionobjects/transitionobject/Transition_Object.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/transitionobjects/transitionobject/Transition_Object3.gd" type="Script" id=4]
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id=4]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("Classroom_HALLWAY_door:translation")
+tracks/0/path = NodePath(".:rotation_degrees")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray(  ),
-"transitions": PoolRealArray(  ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [  ]
+"values": [ Vector3( 0, 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=5]
 resource_name = "open"
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rotation_degrees")
@@ -46,9 +45,8 @@ extents = Vector3( 0.323067, 1, 0.900654 )
 transform = Transform( 1, 0, 0, 0, 0.7, 0, 0, 0, 1, 0.00915527, 0.414001, 1.377 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Door1"]
-anims/RESET = SubResource( 1 )
-anims/open = SubResource( 2 )
-script = ExtResource( 2 )
+anims/RESET = SubResource( 4 )
+anims/open = SubResource( 5 )
 
 [node name="Transition_Object" parent="Door1" instance=ExtResource( 3 )]
 transform = Transform( 0.12129, 0, 0, 0, 0.251866, 0, 0, 0, 0.165473, -0.0261015, 0.407867, 1.38322 )
@@ -62,5 +60,3 @@ transform = Transform( -0.070418, 0, -0.997518, 0, 1, 0, 0.997518, 0, -0.070418,
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
 transform = Transform( 8.23006, 0, 0, 0, 1.64363, 0, 0, 0, 2.86173, 0.159647, 0.492354, 0.802732 )
 shape = SubResource( 3 )
-
-[connection signal="body_shape_entered" from="Area" to="Door1/AnimationPlayer" method="_on_Area_body_shape_entered"]

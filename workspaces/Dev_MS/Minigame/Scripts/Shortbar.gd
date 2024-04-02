@@ -4,15 +4,18 @@ extends Sprite
 
 
 func _on_Area2D_body_entered(body):
-	visible = true
+
+	if not body.name == "greendrag":
+		pass
+	if body.name == "greendrag":
+		visible = true 
 	if body.name == "greendrag":
 		get_node("/root/RootScene/OFFICE/Node2D").greenline = true
-	get_node("/root/RootScene/OFFICE/Node2D")._on_green_area_body_entered()
-
+	if body.name == "greendrag":
+		get_node("/root/RootScene/OFFICE/Node2D")._on_green_area_body_entered()
 
 func _on_Area2D_body_exited(_body):
-	 visible = false
-
+	 pass
 
 func _on_Blue_area_body_entered(_body):
 	pass # Replace with function body.

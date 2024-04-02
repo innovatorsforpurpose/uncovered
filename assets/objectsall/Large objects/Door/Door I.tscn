@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Components/basement/AnimationPlayerkjhgjg.gd" type="Script" id=1]
+[ext_resource path="res://Components/basement/AnimationPlayer.gd" type="Script" id=1]
 [ext_resource path="res://assets/objectsall/Large objects/Door/End-Atrium-Door.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/objectsall/Large objects/Door/Open_knob.tscn" type="PackedScene" id=5]
 

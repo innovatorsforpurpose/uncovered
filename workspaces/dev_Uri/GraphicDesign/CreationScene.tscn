@@ -132,6 +132,10 @@ margin_bottom = 454.0
 text = "Back"
 script = ExtResource( 27 )
 
+[node name="Timer" type="Timer" parent="GoBackButton"]
+wait_time = 0.5
+one_shot = true
+
 [node name="GridSquare" type="MeshInstance2D" parent="."]
 position = Vector2( 42, -35 )
 scale = Vector2( 50, 50 )
@@ -217,4 +221,5 @@ texture = ExtResource( 25 )
 
 [connection signal="pressed" from="ResetCanvasButton" to="ResetCanvasButton" method="click"]
 [connection signal="pressed" from="GoBackButton" to="GoBackButton" method="click"]
+[connection signal="timeout" from="GoBackButton/Timer" to="GoBackButton" method="_on_Timer_timeout"]
 [connection signal="pressed" from="GoalHolder/StaticBody2D/SubmitButton" to="GoalHolder/StaticBody2D/SubmitButton" method="click"]
