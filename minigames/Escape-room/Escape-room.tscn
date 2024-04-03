@@ -1,15 +1,18 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=23 format=2]
 
+[ext_resource path="res://minigames/Escape-room/Cabinets-puzzle2.tscn" type="PackedScene" id=1]
+[ext_resource path="res://minigames/Escape-room/Door_display.tscn" type="PackedScene" id=2]
 [ext_resource path="res://minigames/Escape-room/Minigame1_inv.tres" type="Theme" id=3]
 [ext_resource path="res://minigames/Escape-room/Escape-room_res/Txtrs/Backdrops/Frame 1.png" type="Texture" id=4]
 [ext_resource path="res://minigames/Escape-room/grid-scale.tres" type="Animation" id=5]
-[ext_resource path="res://minigames/Escape-room/DoorLock.gd" type="Script" id=6]
-[ext_resource path="res://minigames/Escape-room/Cabinet.gd" type="Script" id=7]
-[ext_resource path="res://minigames/Escape-room/Inventory.gd" type="Script" id=8]
+[ext_resource path="res://minigames/Escape-room/scripts/DoorLock.gd" type="Script" id=6]
+[ext_resource path="res://minigames/Escape-room/scripts/Cabinet.gd" type="Script" id=7]
+[ext_resource path="res://minigames/Escape-room/scripts/Inventory.gd" type="Script" id=8]
 [ext_resource path="res://minigames/Escape-room/Escape-room_res/Txtrs/UI assets/inventorybackpackclosed.png" type="Texture" id=9]
 [ext_resource path="res://minigames/Escape-room/Escape-room_res/Txtrs/UI assets/inventorybackpackopen.png" type="Texture" id=10]
+[ext_resource path="res://minigames/Escape-room/scripts/BackButton.gd" type="Script" id=11]
 [ext_resource path="res://minigames/Escape-room/Escape-room_res/Txtrs/UI assets/escaperoominventory.png" type="Texture" id=12]
-[ext_resource path="res://minigames/Escape-room/Background.gd" type="Script" id=14]
+[ext_resource path="res://minigames/Escape-room/scripts/Background.gd" type="Script" id=14]
 
 [sub_resource type="StyleBoxTexture" id=3]
 texture = ExtResource( 10 )
@@ -40,16 +43,6 @@ tracks/0/keys = {
 "values": [ Vector2( 1.47694, 1.47694 ) ]
 }
 
-[sub_resource type="StyleBoxEmpty" id=15]
-
-[sub_resource type="StyleBoxEmpty" id=16]
-
-[sub_resource type="StyleBoxEmpty" id=7]
-
-[sub_resource type="StyleBoxEmpty" id=8]
-
-[sub_resource type="StyleBoxEmpty" id=17]
-
 [sub_resource type="StyleBoxEmpty" id=19]
 
 [sub_resource type="StyleBoxEmpty" id=20]
@@ -59,20 +52,13 @@ tracks/0/keys = {
 [sub_resource type="GDScript" id=22]
 script/source = "extends Label
 
+export var room = \"NaN\"
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = \"text\"
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	var room = \"Front\"
+	
 	self.text = (\"In room: (\" + room + \")\")
 "
 
@@ -86,6 +72,12 @@ smoothing_enabled = true
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+margin_right = 1042.0
+margin_bottom = 622.0
+color = Color( 0, 0, 0, 0 )
 
 [node name="Backpack" type="Button" parent="."]
 margin_left = 23.0
@@ -216,46 +208,36 @@ playback_process_mode = 0
 anims/RESET = SubResource( 18 )
 anims/grid-scale = ExtResource( 5 )
 
-[node name="Timer" type="Timer" parent="Backpack"]
-
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+[node name="Front" type="ParallaxBackground" parent="."]
 offset = Vector2( 510.562, 310.396 )
 transform = Transform2D( 1, 0, 0, 1, 510.562, 310.396 )
 follow_viewport_enable = true
 scroll_limit_begin = Vector2( 1, 2 )
 scroll_limit_end = Vector2( -1, -2 )
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Front"]
 script = ExtResource( 14 )
 
-[node name="Background" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+[node name="Background" type="Sprite" parent="Front/ParallaxLayer"]
 scale = Vector2( 0.558039, 0.558039 )
 texture = ExtResource( 4 )
 
-[node name="ColorRect" type="ColorRect" parent="ParallaxBackground/ParallaxLayer"]
-margin_left = -520.562
-margin_top = -298.396
-margin_right = 521.438
-margin_bottom = 323.604
-color = Color( 0, 0, 0, 0 )
-
-[node name="CabinetButton" type="Button" parent="ParallaxBackground/ParallaxLayer"]
-modulate = Color( 0, 0, 0, 0 )
-margin_left = -266.562
-margin_top = -152.396
+[node name="CabinetButton" type="Button" parent="Front/ParallaxLayer"]
+modulate = Color( 1, 1, 1, 0.670588 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -277.562
+margin_top = -158.396
 margin_right = 73.438
-margin_bottom = -63.396
-custom_styles/hover = SubResource( 15 )
-custom_styles/pressed = SubResource( 16 )
-custom_styles/focus = SubResource( 7 )
-custom_styles/disabled = SubResource( 8 )
-custom_styles/normal = SubResource( 17 )
+margin_bottom = -59.396
 script = ExtResource( 7 )
 __meta__ = {
 "_editor_description_": "Brings the player closer to the cabenit in the front section of the room [IN DEV]"
 }
 
-[node name="DoorLock" type="Button" parent="ParallaxBackground/ParallaxLayer"]
+[node name="DoorLock" type="Button" parent="Front/ParallaxLayer"]
 margin_left = -413.562
 margin_top = -47.396
 margin_right = -338.562
@@ -274,9 +256,20 @@ rect_scale = Vector2( 2.30836, 2.30836 )
 text = "In room: ()"
 script = SubResource( 22 )
 
+[node name="Cabenits-p2" parent="." instance=ExtResource( 1 )]
+visible = false
+
+[node name="Door" parent="." instance=ExtResource( 2 )]
+visible = false
+
 [node name="Button" type="Button" parent="."]
-margin_right = 12.0
-margin_bottom = 20.0
+margin_left = 31.0
+margin_top = 460.0
+margin_right = 128.0
+margin_bottom = 557.0
+script = ExtResource( 11 )
 
 [connection signal="pressed" from="Backpack" to="Backpack" method="_on_Backpack_pressed"]
-[connection signal="pressed" from="ParallaxBackground/ParallaxLayer/CabinetButton" to="ParallaxBackground/ParallaxLayer/CabinetButton" method="_on_CabinetButton_pressed"]
+[connection signal="pressed" from="Front/ParallaxLayer/CabinetButton" to="Front/ParallaxLayer/CabinetButton" method="_on_CabinetButton_pressed"]
+[connection signal="pressed" from="Front/ParallaxLayer/DoorLock" to="Front/ParallaxLayer/DoorLock" method="_on_DoorLock_pressed"]
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]

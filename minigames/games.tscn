@@ -325,11 +325,9 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Instructions/MarginContainer"]
-margin_left = -1.0
-margin_top = 33.0
-margin_right = 220.0
-margin_bottom = 95.0
-rect_scale = Vector2( 1.55, 1.55 )
+margin_top = 52.0
+margin_right = 378.0
+margin_bottom = 83.0
 custom_fonts/font = ExtResource( 17 )
 text = "  Drag and drop the circles in the right area 
   to repair the PC!"
