@@ -1,13 +1,14 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://characters/Zach/Zach.gd" type="Script" id=1]
-[ext_resource path="res://Components/Hallway/Hallway_2.png" type="Texture" id=2]
-[ext_resource path="res://characters/Zach/Control_1.gd" type="Script" id=3]
-[ext_resource path="res://Image file/textdesign-04.png" type="Texture" id=4]
-[ext_resource path="res://assets/fonts/battlenet/new_dynamicfont.tres" type="DynamicFont" id=5]
+[ext_resource path="res://characters/Zach/Control_1.gd" type="Script" id=2]
+[ext_resource path="res://characters/Zach/zackh_002.png" type="Texture" id=3]
+[ext_resource path="res://Components/Hallway/Hallway_2.png" type="Texture" id=4]
+[ext_resource path="res://Image file/textdesign-04.png" type="Texture" id=5]
 [ext_resource path="res://Image file/textdesign-05.png" type="Texture" id=6]
-[ext_resource path="res://characters/Zach/zackh_002.png" type="Texture" id=7]
-[ext_resource path="res://characters/Zach/Timer.gd" type="Script" id=8]
+[ext_resource path="res://characters/Zach/Timer.gd" type="Script" id=7]
+[ext_resource path="res://assets/fonts/battlenet/new_dynamicfont.tres" type="DynamicFont" id=8]
+[ext_resource path="res://characters/Zach/Zach3Dmodel.glb" type="PackedScene" id=9]
 
 [sub_resource type="BoxShape" id=2]
 
@@ -15,7 +16,7 @@
 bg_color = Color( 1, 0, 0, 0 )
 
 [sub_resource type="StyleBoxTexture" id=4]
-texture = ExtResource( 2 )
+texture = ExtResource( 4 )
 region_rect = Rect2( 0, 0, 2070, 1430 )
 
 [node name="Zach" type="Area"]
@@ -39,7 +40,7 @@ __meta__ = {
 margin_right = 40.0
 margin_bottom = 40.0
 rect_pivot_offset = Vector2( -822, 1045 )
-script = ExtResource( 3 )
+script = ExtResource( 2 )
 
 [node name="Panel" type="Panel" parent="Zach"]
 margin_left = 60.0
@@ -65,7 +66,7 @@ margin_top = -344.0
 margin_right = 910.0
 margin_bottom = -1.00003
 rect_scale = Vector2( 1.16993, 2.2377 )
-texture = ExtResource( 7 )
+texture = ExtResource( 3 )
 __meta__ = {
 "_editor_description_": ""
 }
@@ -80,7 +81,7 @@ region_rect = Rect2( 37.764, 71.282, 941.108, 205.582 )
 margin_top = -70.0
 margin_right = 410.0
 margin_bottom = -20.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 region_rect = Rect2( 67.45, 15.688, 293, 55 )
 
 [node name="Label" type="Label" parent="Zach/Panel/NinePatchRect2"]
@@ -89,7 +90,7 @@ margin_top = 11.0
 margin_right = 234.0
 margin_bottom = 41.0
 custom_colors/font_color = Color( 0.721569, 0.886275, 0.823529, 1 )
-custom_fonts/font = ExtResource( 5 )
+custom_fonts/font = ExtResource( 8 )
 autowrap = true
 clip_text = true
 
@@ -99,7 +100,7 @@ margin_top = 19.0
 margin_right = 747.0
 margin_bottom = 100.0
 custom_colors/font_color = Color( 0.701961, 0.878431, 0.811765, 1 )
-custom_fonts/font = ExtResource( 5 )
+custom_fonts/font = ExtResource( 8 )
 autowrap = true
 clip_text = true
 
@@ -108,7 +109,7 @@ margin_left = 858.0
 margin_top = -425.0
 margin_right = 958.0
 margin_bottom = -375.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 region_rect = Rect2( 67.1929, 18.5056, 295.511, 48.545 )
 patch_margin_left = 1
 patch_margin_right = 2
@@ -119,7 +120,7 @@ margin_top = 9.0
 margin_right = 95.0
 margin_bottom = 40.0
 custom_colors/font_color = Color( 0.721569, 0.886275, 0.823529, 1 )
-custom_fonts/font = ExtResource( 5 )
+custom_fonts/font = ExtResource( 8 )
 text = "Skip >"
 autowrap = true
 clip_text = true
@@ -137,7 +138,7 @@ margin_left = 859.0
 margin_top = -368.0
 margin_right = 959.0
 margin_bottom = -318.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 region_rect = Rect2( 67.1929, 18.5056, 295.511, 48.545 )
 patch_margin_left = 1
 patch_margin_right = 2
@@ -151,7 +152,7 @@ margin_top = 7.0
 margin_right = 96.0
 margin_bottom = 38.0
 custom_colors/font_color = Color( 0.721569, 0.886275, 0.823529, 1 )
-custom_fonts/font = ExtResource( 5 )
+custom_fonts/font = ExtResource( 8 )
 text = "Skip+1>"
 autowrap = true
 clip_text = true
@@ -170,7 +171,7 @@ __meta__ = {
 [node name="Timer" type="Timer" parent="."]
 process_mode = 0
 wait_time = 6.6
-script = ExtResource( 8 )
+script = ExtResource( 7 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 3.70072, 0, 0, 0, 4.37584, 0, 0, 0, 3.70072, 0, 0, 0 )
@@ -178,6 +179,9 @@ shape = SubResource( 2 )
 __meta__ = {
 "_editor_description_": "														"
 }
+
+[node name="Zach3Dmodel" parent="." instance=ExtResource( 9 )]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 2, 0 )
 
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
 [connection signal="body_entered" from="Area" to="Zach" method="_on_Area_body_entered"]
