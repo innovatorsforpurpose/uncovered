@@ -25,8 +25,22 @@ func _on_Area_input_event(camera, event, position, normal, shape_idx):
 		if event.button_index ==BUTTON_LEFT and event.pressed == true:
 			$CSGSphere.visible = false
 			print("I am here sir i have done it ")
-			get_node("/root/RootScene/Door1/AnimationPlayer").play("open")
-			get_node("/root/RootScene/MCSRevengeTransport/BossBattleTimer").start(2)
+			
+			var root_node = get_node('/root')
+			var first_child = root_node.get_children()[0]
+			var animation_player_path = ''
+			var boss_battle_timer_path = ''
+			if first_child.name == 'RootScene':
+				animation_player_path = '/root/RootScene/Door1/AnimationPlayer'
+				boss_battle_timer_path = '/root/RootScene/MCSRevengeTransport/BossBattleTimer'
+			else:
+				animation_player_path = '/root/Basement_Door/Door1/AnimationPlayer'
+				boss_battle_timer_path = false
+				
+			get_node(animation_player_path).play("open")
+			
+			if boss_battle_timer_path:
+				get_node(boss_battle_timer_path).start(2)
 
 func _on_Timer_timeout():
 	#print("transition")

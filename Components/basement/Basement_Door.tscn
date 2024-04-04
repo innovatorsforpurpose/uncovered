@@ -52,11 +52,13 @@ anims/open = SubResource( 5 )
 transform = Transform( 0.12129, 0, 0, 0, 0.251866, 0, 0, 0, 0.165473, -0.0261015, 0.407867, 1.38322 )
 script = ExtResource( 4 )
 
+[node name="Area" type="Area" parent="Door1"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Door1/Area"]
+transform = Transform( 8.23006, 0, 0, 0, 1.64363, 0, 0, 0, 0.990424, 0.159647, 0.492354, 0.802732 )
+shape = SubResource( 3 )
+
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -0.070418, 0, -0.997518, 0, 1, 0, 0.997518, 0, -0.070418, -2.15153, 0, 0.656528 )
 
-[node name="Area" type="Area" parent="."]
-
-[node name="CollisionShape" type="CollisionShape" parent="Area"]
-transform = Transform( 8.23006, 0, 0, 0, 1.64363, 0, 0, 0, 2.86173, 0.159647, 0.492354, 0.802732 )
-shape = SubResource( 3 )
+[connection signal="body_entered" from="Door1/Area" to="Door1/Transition_Object" method="_on_Area_body_entered"]
