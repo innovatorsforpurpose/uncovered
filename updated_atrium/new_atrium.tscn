@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=2]
-
-[ext_resource path="res://updated_atrium/atrium.glb" type="PackedScene" id=1]
-
-[node name="Spatial" type="Spatial"]
-
-[node name="atrium" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0879616, 0, -27.9291 )

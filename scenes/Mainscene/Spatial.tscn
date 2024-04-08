@@ -1,10 +1,10 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://Scenes/Charater scenes/Mentor/Mentor/Mentor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Components/basement/basement project.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Components/Grass textrue.jpeg" type="Texture" id=3]
 [ext_resource path="res://scenes/transitionobjects/transitionobject/Transition_Object.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Components/Office/mainscenes/office-3.tscn" type="PackedScene" id=5]
+[ext_resource path="res://office_abdullahi/office_abdullahi.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Charater scenes/GC/GC.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Charater scenes/Student/StudentII.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/objectsall/Large objects/chairsdesks/classroom_chairs_and_Desks.fbx" type="PackedScene" id=8]
@@ -12,25 +12,21 @@
 [ext_resource path="res://characters/MC/MC.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Components/Classroom L1/Classroom.fbx" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Charater scenes/Laura/Laura.tscn" type="PackedScene" id=12]
-[ext_resource path="res://assets/objectsall/Large objects/Door/Door I.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/Charater scenes/Student/Bully.tscn" type="PackedScene" id=14]
+[ext_resource path="res://updated_atrium/atrium.glb" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/Charater scenes/Student/StudentI.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Components/Dialogue/Dialogue.tscn" type="PackedScene" id=17]
-[ext_resource path="res://scenes/transitionobjects/transitionobject/Transition_Object2.gd" type="Script" id=18]
 [ext_resource path="res://Components/Hallway/Classroom_HALLWAY.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Scenes/Charater scenes/Student/Bulletin Board.tscn" type="PackedScene" id=20]
 [ext_resource path="res://scenes/transitionobjects/transitionobject/Transition_Object3.gd" type="Script" id=21]
-[ext_resource path="res://Components/atrium/Atrium.tscn" type="PackedScene" id=22]
+[ext_resource path="res://secret_room/secret room.glb" type="PackedScene" id=22]
 [ext_resource path="res://assets/objectsall/Large objects/whiteboards/Whiteboard.fbx" type="PackedScene" id=23]
-[ext_resource path="res://assets/objectsall/Large objects/Door/Hallway Door.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Components/Classroom L1/classroom_teacher_Desk.fbx" type="PackedScene" id=25]
-[ext_resource path="res://Components/Hallway/atrium_dead_end.tscn" type="PackedScene" id=26]
 [ext_resource path="res://packs/Text.fbx" type="PackedScene" id=27]
 [ext_resource path="res://minigames/designclass/Transition_Object_BossBattle.gd" type="Script" id=28]
-[ext_resource path="res://scenes/Charater scenes/Student/Hallway_Door.tscn" type="PackedScene" id=29]
 [ext_resource path="res://scenes/Charater scenes/Student/Welcome.tscn" type="PackedScene" id=30]
 [ext_resource path="res://Components/Office/OFFICE.tscn" type="PackedScene" id=31]
-[ext_resource path="res://dev_sabrina/hallnimation/hallwayhopeful1.tscn" type="PackedScene" id=32]
+[ext_resource path="res://hallway_abdullahi/Abdullahi.tscn" type="PackedScene" id=32]
 [ext_resource path="res://Components/basement/Basement_Door.tscn" type="PackedScene" id=33]
 
 [sub_resource type="Animation" id=1]
@@ -114,13 +110,6 @@ transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -51.4, 
 [node name="Door1" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.06532, -22.7066, 6.612, -43.6508 )
 
-[node name="Hallway_Door" parent="Door1" instance=ExtResource( 29 )]
-transform = Transform( 0.430264, 0, 0, 0, 1, 0, 0, 0, 1.05, 0.200001, 0.524379, 1.38 )
-
-[node name="DialoguePlayer" parent="Door1/Hallway_Door" instance=ExtResource( 17 )]
-follow_viewport_enable = true
-dialogue_file = "res://scenes/Charater scenes/Student/jsons/Door tutorial.json"
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Door1"]
 anims/RESET = SubResource( 1 )
 anims/open = SubResource( 2 )
@@ -137,14 +126,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.5682, 6.612, -53.8644 )
 anims/RESET = SubResource( 3 )
 anims/open = SubResource( 4 )
 
-[node name="Classroom_HALLWAY_door" parent="Door2" instance=ExtResource( 24 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0191231, 0.414001, 1.03893 )
-
 [node name="Door3" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.6063, 6.612, -66.8241 )
-
-[node name="Classroom_HALLWAY_door" parent="Door3" instance=ExtResource( 24 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.05266, 0.0496426, 0.414001, 3.744 )
 
 [node name="MCSRevengeTransport" type="Spatial" parent="."]
 transform = Transform( 0.128424, 0, 0, 0, 0.10088, 0, 0, 0, 0.103299, -32.6436, 7.72239, -24.4908 )
@@ -153,22 +136,26 @@ script = ExtResource( 28 )
 [node name="BossBattleTimer" type="Timer" parent="MCSRevengeTransport"]
 
 [node name="CSGSphere" type="CSGSphere" parent="MCSRevengeTransport"]
-transform = Transform( 1.40378, 0, 0, 0, 3.30962, 0, 0, 0, 2.71476, -39.4922, -8.91187, 29.4487 )
+transform = Transform( 1.40378, 0, 0, 0, 3.30962, 0, 0, 0, 2.71476, -2418.54, -11.6283, 2943.93 )
+visible = false
 
 [node name="Area" type="Area" parent="MCSRevengeTransport/CSGSphere"]
 
 [node name="CollisionShape" type="CollisionShape" parent="MCSRevengeTransport/CSGSphere/Area"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -118.711, 0, 0 )
 shape = SubResource( 8 )
+
+[node name="office_abdullahi" parent="MCSRevengeTransport/CSGSphere" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1688.42, -4.09224, -45.6306 )
+
+[node name="office_abdullahi2" parent="MCSRevengeTransport/CSGSphere" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1638.13, -4.09221, 26.2398 )
 
 [node name="Camera" type="Camera" parent="MCSRevengeTransport"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.98928 )
 
-[node name="Knob1" parent="." instance=ExtResource( 4 )]
-transform = Transform( -8.85853e-09, 0, -0.103299, 0, 0.192188, 0, 0.20266, 0, -4.51534e-09, -22.4892, 7.13856, -42.1672 )
-script = ExtResource( 18 )
-
 [node name="Knob3" parent="." instance=ExtResource( 4 )]
-transform = Transform( -5.61359e-09, 0, -0.103299, 0, 0.138535, 0, 0.118936, 0, -4.18175e-09, -22.5651, 7.01692, -63.0788 )
+transform = Transform( -5.61359e-09, 0, -0.103299, 0, 0.138535, 0, 0.118936, 0, -4.18175e-09, -10.0911, 7.01692, -63.0788 )
 script = ExtResource( 21 )
 
 [node name="Timer" type="Timer" parent="."]
@@ -177,7 +164,7 @@ script = ExtResource( 21 )
 transform = Transform( 1, 0, 0, 0, 0.021, 0, 0, 0, 0.691089, -24.7082, 4.99893, 1.80147 )
 
 [node name="CSGBox" type="CSGBox" parent="Floor"]
-transform = Transform( 112.455, 0, -4.37114e-06, 0, -0.472, 0, 9.83113e-06, 0, 50, 10, 15, 0.029 )
+transform = Transform( 112.455, 0, -4.37114e-06, 0, -0.472, 0, 9.83113e-06, 0, 50, 10, -0.523621, 0.0290012 )
 material = SubResource( 10 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Floor"]
@@ -185,16 +172,13 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.82414, -1.45746, -1.71461 )
 shape = SubResource( 7 )
 
 [node name="Classroom" parent="." instance=ExtResource( 11 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.0215, 6.65417, -38.6718 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.4862, 6.43209, -35.2966 )
 
 [node name="classroom_chairs_and_Desks" parent="." instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5868, 6.90973, -40.1345 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5868, 6.10003, -38.1055 )
 
 [node name="classroom_teacher_Desk" parent="." instance=ExtResource( 25 )]
-transform = Transform( 0.998921, 0.00336558, -0.0463115, -0.0034327, 0.999993, -0.00136941, 0.0463066, 0.00152693, 0.998926, -17.3227, 6.20063, -34.0485 )
-
-[node name="office-3" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1.37612, 0, 0, 0, 1.00371, 0, 0, 0, 1.35421, -42.1194, 7.60737, -20.8393 )
+transform = Transform( 0.998921, 0.00336558, -0.0463115, -0.0034327, 0.999993, -0.00136941, 0.0463066, 0.00152693, 0.998926, -17.3227, 5.9728, -33.095 )
 
 [node name="Basement_Door2" parent="." instance=ExtResource( 33 )]
 transform = Transform( -1, 0, -1.58187e-07, 0, 1.41482, 0, 1.50996e-07, 0, -1.04763, -28.9453, 1.40871, -29.7088 )
@@ -208,7 +192,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00904, 0 )
 [node name="Enviroment" type="CanvasLayer" parent="Node2D"]
 
 [node name="MC" parent="Node2D/Enviroment" instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1.41956, 0, 0, 0, 1, -25.2079, 12.7115, 15.9889 )
+transform = Transform( 1, 0, 0, 0, 1.41956, 0, 0, 0, 1, -25.2079, 14.5842, 15.9889 )
 
 [node name="Mentor" parent="Node2D/Enviroment" instance=ExtResource( 1 )]
 transform = Transform( 0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.5, -25.3264, 12.968, 10 )
@@ -253,7 +237,7 @@ follow_viewport_enable = true
 dialogue_file = "res://Scenes/Charater scenes/Student/jsons/StudentII.json"
 
 [node name="Bulletin Board" parent="Node2D/Enviroment" instance=ExtResource( 20 )]
-transform = Transform( -0.390375, 0, -0.315051, 0, 0.501647, 0, 0.315051, 0, -0.390375, -15.4112, 14.0179, -7.41339 )
+transform = Transform( -0.390375, 0, -0.315051, 0, 0.501647, 0, 0.315051, 0, -0.390375, -0.106916, 14.0179, 9.30505 )
 
 [node name="DialoguePlayer" parent="Node2D/Enviroment/Bulletin Board" instance=ExtResource( 17 )]
 follow_viewport_enable = true
@@ -272,27 +256,12 @@ visible = false
 script = ExtResource( 21 )
 
 [node name="Whiteboard" parent="." instance=ExtResource( 23 )]
-transform = Transform( 0.999963, 0, 0.00863927, 0, 1, 0, -0.00863927, 0, 0.999963, -17.416, 7.99107, -31.8914 )
-
-[node name="Atrium" parent="." instance=ExtResource( 22 )]
-transform = Transform( 1.42934, 0, 0, 0, 1, 0, 0, 0, 1.40018, -25.324, 6.47473, -19.7845 )
-__meta__ = {
-"_editor_description_": ""
-}
+transform = Transform( 0.999963, 0, 0.00863927, 0, 1, 0, -0.00863927, 0, 0.999963, -17.416, 7.32393, -28.5888 )
 
 [node name="Text" parent="." instance=ExtResource( 27 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -42.7721, 5.98089, -13.6491 )
 
-[node name="atrium_dead_end" parent="." instance=ExtResource( 26 )]
-transform = Transform( 1.42428, 0, 0, 0, 0.960988, 0, 0, 0, 2.5481, -1.08552, 7.52099, -20.8106 )
-
 [node name="Welcome" parent="." instance=ExtResource( 30 )]
-
-[node name="hallwayhopeful" parent="." instance=ExtResource( 32 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.396, 5.26514, -53.0685 )
-__meta__ = {
-"_editor_description_": ""
-}
 
 [node name="Basement_Door" parent="." instance=ExtResource( 33 )]
 transform = Transform( -1, 0, -1.58187e-07, 0, 1.42076, 0, 1.50996e-07, 0, -1.04763, -28.8578, 1.41948, -5.21096 )
@@ -301,20 +270,25 @@ transform = Transform( -1, 0, -1.58187e-07, 0, 1.42076, 0, 1.50996e-07, 0, -1.04
 transform = Transform( 1.16249, 0, 0, 0, 1.38602, 0, 0, 0, 1.03559, -33.3841, 0.470384, -18.8539 )
 
 [node name="Basement_Door3" parent="." instance=ExtResource( 33 )]
-transform = Transform( -0.430264, 0, -1.7951e-07, 0, 1.26893, 0, 6.49681e-08, 0, -1.18884, -37.7212, 6.30637, -19.8202 )
+transform = Transform( -0.430264, 0, -1.7951e-07, 0, 1.26893, 0, 6.49681e-08, 0, -1.18884, -33.9196, 6.00786, -19.3755 )
 __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="Door I" parent="." instance=ExtResource( 13 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.31459, -13.0618, 7.12501, -19.4886 )
+[node name="atrium" parent="." instance=ExtResource( 15 )]
+transform = Transform( 0.999104, 0, 0.042329, 0, 1, 0, -0.042329, 0, 0.999104, -26.0815, 5.13851, -45.6517 )
 
-[connection signal="body_entered" from="Door1/Hallway_Door" to="Knob1" method="_on_Hallway_Door_body_entered"]
-[connection signal="ready" from="Door1/Hallway_Door/DialoguePlayer" to="Door1/Hallway_Door/DialoguePlayer" method="_on_Dialogueplayer_ready"]
-[connection signal="body_entered" from="Door1/Area" to="Knob1" method="_on_Area_body_entered"]
+[node name="secret room" parent="." instance=ExtResource( 22 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -53.5296, 5.40701, -47.1632 )
+
+[node name="Abdullahi" parent="." instance=ExtResource( 32 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.6074, 5.38017, -46.1977 )
+
+[node name="office_abdullahi" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.3191, 5.19916, -46.8134 )
+
 [connection signal="timeout" from="MCSRevengeTransport/BossBattleTimer" to="MCSRevengeTransport" method="_on_Timer_timeout"]
 [connection signal="input_event" from="MCSRevengeTransport/CSGSphere/Area" to="MCSRevengeTransport" method="_on_Area_input_event"]
-[connection signal="timeout" from="Timer" to="Knob1" method="_on_Timer_timeout"]
 [connection signal="body_entered" from="Node2D/Enviroment/Mentor" to="Node2D/Enviroment/Mentor/DialoguePlayer" method="_on_Mentor_body_entered"]
 [connection signal="ready" from="Node2D/Enviroment/Mentor/DialoguePlayer" to="Node2D/Enviroment/Mentor/DialoguePlayer" method="_on_Dialogueplayer_ready"]
 [connection signal="body_entered" from="Node2D/Enviroment/GC" to="Node2D/Enviroment/GC/DialoguePlayer" method="_on_GC_body_entered"]
