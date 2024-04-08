@@ -28,6 +28,7 @@ func _on_Area_input_event(camera, event, position, normal, shape_idx):
 
 func _on_Timer_timeout():
 	#print("transition")
+	get_node("/root/RootScene/Door1/AnimationPlayer").play("RESET")
 	var success = ProjectSettings.load_resource_pack("res://packs/UncoveredMinigame.zip")
 	if success:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)

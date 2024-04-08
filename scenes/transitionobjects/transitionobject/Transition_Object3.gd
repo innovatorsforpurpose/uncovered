@@ -31,10 +31,8 @@ func _on_Area_input_event(camera, event, position, normal, shape_idx):
 			var animation_player_path = ''
 			var boss_battle_timer_path = ''
 			if first_child.name == 'RootScene':
-				animation_player_path = '/root/RootScene/Door1/AnimationPlayer'
 				boss_battle_timer_path = '/root/RootScene/MCSRevengeTransport/BossBattleTimer'
 			else:
-				animation_player_path = '/root/Basement_Door/Door1/AnimationPlayer'
 				boss_battle_timer_path = false
 				
 			get_node(animation_player_path).play("open")
@@ -50,6 +48,8 @@ func _on_Timer_timeout():
 	else:
 		print("could not load uncovered minigame")
 
-
 func _on_Area_body_entered(body):
-	pass # Replace with function body.
+	if body.name == "MC":
+		pass
+	else:
+		pass

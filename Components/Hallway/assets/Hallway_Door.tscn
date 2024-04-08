@@ -29,6 +29,16 @@ func _process(_delta):
 		dialogue_player = get_node_or_null(\"Dialogueplayer\")
 		if dialogue_player:
 			dialogue_player.reset()
+
+
+func _on_Area_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+	if body.name == \"MC\":
+		get_node(\"/root/RootScene/Door2II/AnimationPlayer\").play(\"open\")	
+
+
+func _on_Area_body_shape_exited(body_rid, body, body_shape_index, local_shape_index):
+	if body.name == \"MC\":
+		get_node(\"/root/RootScene/Door2II/AnimationPlayer\").play(\"RESET\")	
 "
 
 [sub_resource type="ArrayMesh" id=1]
@@ -55,7 +65,7 @@ transform = Transform( 0.430264, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 script = SubResource( 7 )
 
 [node name="door#2005" type="MeshInstance" parent="."]
-transform = Transform( 0.024998, 24, 5.8136e-07, 0, -1.04907e-06, 13.3, 13, -0.0461501, -1.11791e-09, 0, 0, 0 )
+transform = Transform( 0, 24, 0, 0, 0, 13.3, 13, 0, 0, 0, 0, 0 )
 mesh = SubResource( 1 )
 skeleton = NodePath("")
 
