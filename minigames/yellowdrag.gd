@@ -22,12 +22,6 @@ func _on_KinematicBody2D_mouse_exited():
 	dragReady = false
 	get_node("../..").yellowdrag = false
 
-func _on_Area2D_body_entered(_body):
-	print("hello")
-
-
-
-
 func _on_yellow_area_body_entered(body):
 	# This makes the yellow dot drop when in correct area
 	if Input.is_action_pressed("click") and body.name == "yellowdrag":

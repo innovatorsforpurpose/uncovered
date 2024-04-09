@@ -18,5 +18,4 @@ shape = SubResource( 1 )
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.16302 )
 
-[connection signal="body_entered" from="CSGSphere/Area" to="." method="_on_Area_body_entered"]
 [connection signal="input_event" from="CSGSphere/Area" to="." method="_on_Area_input_event"]

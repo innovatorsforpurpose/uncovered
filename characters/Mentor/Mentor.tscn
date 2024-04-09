@@ -257,11 +257,8 @@ self_modulate = Color( 1, 1, 1, 0 )
 margin_right = 100.0
 margin_bottom = 50.0
 
-[connection signal="body_exited" from="." to="." method="_on_Mentor_body_exited"]
-[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
 [connection signal="body_entered" from="Area" to="MentorI" method="_on_Area_body_entered"]
 [connection signal="body_entered" from="Area" to="MentorI/Timer1" method="_on_Area_body_entered"]
-[connection signal="body_exited" from="Area" to="." method="_on_Area_body_exited"]
 [connection signal="body_exited" from="Area" to="MentorI" method="_on_Area_body_exited"]
 [connection signal="body_exited" from="Area" to="MentorI/Timer1" method="_on_Area_body_exited"]
 [connection signal="timeout" from="MentorI/Timer1" to="." method="_on_Timer_timeout"]

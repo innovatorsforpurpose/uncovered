@@ -21,6 +21,3 @@ func _on_Area2D_body_entered(body):
 		get_node("/root/RootScene/OFFICE/Node2D")._on_green_area_body_entered()
 	
 	print("Zone Entered")
-	
-func _on_Area2D_body_exited(body):
-	pass

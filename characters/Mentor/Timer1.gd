@@ -1,6 +1,7 @@
 extends Timer
 
 var currently_colliding = false
+var count = 1
 
 func _on_Area_body_entered(body):
 	if body.name == "MC":
@@ -15,8 +16,6 @@ func _on_Area_body_entered(body):
 		elif Input.is_action_just_pressed("game_usage") and currently_colliding == true:
 			count = count+1
 
-var count = 1
-
 func _on_WelcomeTimer_timeout():
 	count = count+1
 	#print("count",count)
@@ -29,6 +28,7 @@ func _on_Area_body_exited(body):
 	if currently_colliding == false:
 		#print("workingII")
 		stop()
+
 func _physics_process(delta):
 	if Input.is_action_just_pressed("game_usage") and currently_colliding == true:
 		count = count+1

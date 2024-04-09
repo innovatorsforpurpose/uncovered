@@ -146,6 +146,8 @@ func _physics_process(delta):
 func _on_Area_body_exited(body):
 	visible = false
 	currently_colliding = false
+	if body.name == "MC":
+		body.immobile = false
 
 func _on_Button_pressed():
 	 active_dialogue = 10

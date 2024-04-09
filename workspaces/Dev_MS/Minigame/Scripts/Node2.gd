@@ -33,11 +33,6 @@ func _on_red_area_body_entered(_body):
 	
 	pass # Replace with function body.
 
-
-func _on_yellow_area_body_entered(_body):
-	pass # Replace with function body.
-
-
 func _on_Area_body_shape_entered(_body_rid, _body, _body_shape_index, _local_shape_index):
 
 	pass # Replace with function body.
