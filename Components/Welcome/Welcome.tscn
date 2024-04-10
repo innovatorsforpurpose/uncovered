@@ -106,7 +106,7 @@ margin_top = 23.0
 margin_right = 836.0
 margin_bottom = 146.0
 custom_fonts/font = ExtResource( 9 )
-text = "ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE..............."
+text = "Welcome to  uncover, if you want to skip text press T"
 autowrap = true
 clip_text = true
 
@@ -129,7 +129,7 @@ margin_top = -11.0
 margin_right = 749.0
 margin_bottom = 114.0
 custom_fonts/font = ExtResource( 9 )
-text = "ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE..............."
+text = "Otherwise our game has a bunch of minigames instore for others to explore."
 autowrap = true
 clip_text = true
 
@@ -155,7 +155,7 @@ margin_top = 427.0
 margin_right = 976.0
 margin_bottom = 552.0
 custom_fonts/font = ExtResource( 9 )
-text = "ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE..............."
+text = "Have fun!"
 autowrap = true
 clip_text = true
 __meta__ = {
