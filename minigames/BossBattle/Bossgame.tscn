@@ -52,19 +52,16 @@ extents = Vector2( 50.5, 162.75 )
 [node name="Bosspath" type="Path2D" parent="."]
 position = Vector2( 334, -205 )
 rotation = -0.000443217
-scale = Vector2( 1, 1 )
 curve = SubResource( 8 )
 script = ExtResource( 7 )
 
 [node name="Bosspathfollow" type="PathFollow2D" parent="Bosspath"]
 position = Vector2( 2606.44, 1273.16 )
 rotation = -0.33204
-scale = Vector2( 1, 1 )
 
 [node name="Boss" type="KinematicBody2D" parent="Bosspath"]
 position = Vector2( 1380.35, 1477.61 )
 rotation = 0.000443217
-scale = Vector2( 1, 1 )
 script = ExtResource( 2 )
 
 [node name="Bossskin" type="Sprite" parent="Bosspath/Boss"]

@@ -30,7 +30,7 @@ func _on_Area_input_event(camera, event, position, normal, shape_idx):
 
 
 func _on_Timer_timeout():
-	#print("transition")
+	print("transition")
 	var success = true# ProjectSettings.load_resource_pack("res://packs/UncoveredMinigame.zip")
 	if success:
 		return get_tree().change_scene("res://minigames/BossBattle/Bossgame_.tscn")

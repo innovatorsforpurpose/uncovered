@@ -8,16 +8,17 @@ func _on_Dialogueplayer_ready():
 var dialogues = []
 var current_dialogue_id = -1
 var is_dialogue_active = false
+var player_ready = false
 
 func _ready():
 	play()
 	$NinePatchRect.visible = false
 
 func play():
-	if is_dialogue_active:
+	if is_dialogue_active and player_ready:
 		return
 	dialogues = load_dialogue()
-	#print(dialogues)
+	#print("working")
 	if dialogues == null:
 		return
 	is_dialogue_active = true
@@ -34,8 +35,8 @@ func next_line():
 	$NinePatchRect/Message.text = dialogues[current_dialogue_id]['text']
 	$NinePatchRect.visible = true
 	current_dialogue_id += 1
-	print(len(dialogues))
-	print(current_dialogue_id)
+	#print(len(dialogues))
+	#print(current_dialogue_id)
 	if  current_dialogue_id >= len(dialogues):
 		current_dialogue_id = len(dialogues) - 1
 		$Timer.start()
@@ -58,6 +59,7 @@ func load_dialogue():
 
 func _on_Timer_timeout():
 	is_dialogue_active = false
+
 func toggle_the_player(on):
 	var player = get_tree().get_root().find_node("MC", true, false)
 	if player:
