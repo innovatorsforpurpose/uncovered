@@ -53,12 +53,12 @@ var designs = [["Heart","Heart","NONE","Heart","Heart",
 
 var returned_pos = Vector2()
 
-func create_design(name: String, square: MeshInstance2D):
+func create_design(name: String, square2: MeshInstance2D):
 	if name != "NONE":
 		var symbol = get_node("/root/CreationScene/Symbols/"+name+"Symbol").duplicate()
 		symbol.visible = true
 		symbol.scale /= reduction_scale
-		symbol.position = square.position
+		symbol.position = square2.position
 		symbol.z_index = -20
 		holder.add_child(symbol)
 

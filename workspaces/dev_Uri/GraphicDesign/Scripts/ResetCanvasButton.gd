@@ -3,7 +3,7 @@ extends Button
 onready var player = get_node("/root/CreationScene/PlayerBody")
 onready var scene = get_node("/root/CreationScene")
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_key_pressed(KEY_R):
 		clear_canvas()
 

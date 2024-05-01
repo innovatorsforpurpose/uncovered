@@ -14,7 +14,7 @@ var left_size = Vector2()
 
 var clones = {}
 
-func _process(delta):
+func _process(_delta):
 	var velocity = Vector2.ZERO
 	if Input.is_key_pressed(KEY_UP):
 		rotation_degrees = 0
@@ -88,7 +88,6 @@ func move_grabbed(var pos: String):
 	grabbed_left.rotation_degrees = rotation
 
 func grab(left: bool, collision: KinematicCollision2D):
-	var reduction_scale = goals.reduction_scale
 	# If grabbed right has no children, it means it's empty.
 	if grabbed_right.get_child_count() != 0 and !left and right_timer == 0:
 		grabbed_right.scale *= 2

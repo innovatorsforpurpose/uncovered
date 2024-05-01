@@ -12,16 +12,16 @@ var last_time = 0
 
 # Checks if the current canvas is equal to the one the player is checking
 func click():
-	var score = 0
+	var score_value = 0
 	var total = 0
 	for id in goals.designs[design]:
 		total += 1
 		if total in player.clones.keys():
 			var actual = player.clones[total].get_children()[1].id
-			if id == player.clones[total].get_children()[1].id:
-				score += 1
+			if id == actual:
+				score_value += 1
 		elif id == "NONE":
-			score += 1
+			score_value += 1
 	main.remove_child(goals.holders[design])
 	goals.holders.erase(design)
 	total = goals.holders.size()
@@ -33,10 +33,10 @@ func click():
 	if goals.holders.size()==0:
 		completed_label.visible = true
 	goals.last_time = goals.time*1000
-	goals.last_score = score
+	goals.last_score = score_value
 	goals.last_score -= goals.time/7
 	if goals.last_score < 0:
-		goals.last_score == 0
+		goals.last_score = 0
 	goals.total_score += goals.last_score
 	update_score()
 
