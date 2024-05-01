@@ -11,7 +11,6 @@ var currently_colliding = false
 var active_dialogue = 0
 var move = true
 var velocity = 10
-var player = true
 
 func _ready():
 	pass
@@ -29,13 +28,12 @@ func _on_Area_body_entered(body):
 		body.immobile = false
 		currently_colliding = true
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		Input.is_action_just_pressed("game_usage")
 
 func _on_Timer_timeout():
 	if currently_colliding == true:
 		active_dialogue = active_dialogue+1
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if  active_dialogue == 0 and currently_colliding == false:
 		visible = false
 
@@ -200,7 +198,7 @@ func _physics_process(delta):
 		IEx.hide()
 		velocity = 10
 
-func _on_Area_body_exited(body):
+func _on_Area_body_exited(_body):
 	visible = false
 	currently_colliding = false
 

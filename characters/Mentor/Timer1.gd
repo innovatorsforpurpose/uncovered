@@ -22,14 +22,14 @@ func _on_WelcomeTimer_timeout():
 	if count == 10:
 		stop()
 
-func _on_Area_body_exited(body):
+func _on_Area_body_exited(_body):
 	currently_colliding = false
 
 	if currently_colliding == false:
 		#print("workingII")
 		stop()
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if Input.is_action_just_pressed("game_usage") and currently_colliding == true:
 		count = count+1
 	if Input.is_action_just_pressed("game_usageI") and currently_colliding == true:

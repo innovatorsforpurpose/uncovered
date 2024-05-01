@@ -13,7 +13,6 @@ var flag = 1
 var initial_position
 var count = 0
 var check = 1
-var player = true
 export(bool) var immobile
 
 func _ready():
@@ -74,7 +73,7 @@ func set_active(active):
 	set_process_input(active)
 
 
-func _on_Zach_body_entered(body):
+func _on_Zach_body_entered(_body):
 	pass
 
 func _on_Timer2_timeout():

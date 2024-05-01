@@ -29,7 +29,7 @@ func _ready():
 	ID3.hide()
 	#print("ID3.hidden", !ID3.visible)
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if active_dialogue == 1:
 		Back.show()
 		ID1.hide()

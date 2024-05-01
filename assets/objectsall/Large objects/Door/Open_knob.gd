@@ -24,5 +24,5 @@ func _on_Timer_timeout():
 	pass
 
 
-func _on_Area_body_entered(body):
+func _on_Area_body_entered(_body):
 	pass # Replace with function body.
