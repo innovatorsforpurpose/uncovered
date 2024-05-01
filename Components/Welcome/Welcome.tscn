@@ -265,7 +265,7 @@ bg_color = Color( 0, 0, 0, 0 )
 script = ExtResource( 1 )
 
 [node name="WelcomeTimer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 3.0
 autostart = true
 
 [node name="Node2D" type="Node2D" parent="."]
@@ -332,61 +332,56 @@ script = ExtResource( 4 )
 margin_right = 1024.0
 margin_bottom = 600.0
 
-[node name="Panel" type="Panel" parent="Control_1"]
-visible = false
+[node name="PanelXI" type="Panel" parent="Control_1"]
 margin_left = 135.0
 margin_top = 15.0
 margin_right = 1023.0
 margin_bottom = 217.0
 
-[node name="NinePatchRect" type="NinePatchRect" parent="Control_1/Panel"]
+[node name="NinePatchRect" type="NinePatchRect" parent="Control_1/PanelXI"]
 margin_right = 884.0
 margin_bottom = 174.0
 texture = ExtResource( 8 )
 region_rect = Rect2( -1027.25, 0, 4533.08, 1378.64 )
 
-[node name="Label" type="Label" parent="Control_1/Panel"]
+[node name="Label" type="Label" parent="Control_1/PanelXI"]
 margin_left = 228.0
 margin_top = 23.0
 margin_right = 836.0
 margin_bottom = 146.0
 custom_fonts/font = ExtResource( 9 )
-text = "'where are you'"
 align = 1
 autowrap = true
 clip_text = true
 
-[node name="Panel2" type="Panel" parent="Control_1"]
-visible = false
+[node name="PanelXII" type="Panel" parent="Control_1"]
 margin_left = 8.0
 margin_top = 236.0
 margin_right = 921.0
 margin_bottom = 393.0
 
-[node name="NinePatchRect" type="NinePatchRect" parent="Control_1/Panel2"]
+[node name="NinePatchRect" type="NinePatchRect" parent="Control_1/PanelXII"]
 margin_top = -28.0
 margin_right = 779.0
 margin_bottom = 139.0
 texture = ExtResource( 6 )
 region_rect = Rect2( 1.24512, 0, 15806.4, 4496.51 )
 
-[node name="Label" type="Label" parent="Control_1/Panel2"]
+[node name="Label" type="Label" parent="Control_1/PanelXII"]
 margin_left = 40.0
 margin_top = -11.0
 margin_right = 749.0
 margin_bottom = 114.0
 custom_fonts/font = ExtResource( 9 )
-text = "'I'm getting dressed'"
 align = 1
 autowrap = true
 clip_text = true
 
-[node name="Panel3" type="Panel" parent="Control_1"]
-visible = false
+[node name="PanelXIIV" type="Panel" parent="Control_1"]
 margin_right = 40.0
 margin_bottom = 40.0
 
-[node name="NinePatchRect" type="NinePatchRect" parent="Control_1/Panel3"]
+[node name="NinePatchRect" type="NinePatchRect" parent="Control_1/PanelXIIV"]
 margin_left = 132.0
 margin_top = 391.0
 margin_right = 1018.0
@@ -398,15 +393,13 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="Label" type="Label" parent="Control_1/Panel3"]
+[node name="Label" type="Label" parent="Control_1/PanelXIIV"]
 margin_left = 368.0
 margin_top = 427.0
 margin_right = 976.0
 margin_bottom = 552.0
 custom_fonts/font = ExtResource( 9 )
-text = "'ok im outside'
-'r u ready for ur first dya??'
-'day*'
+text = "
 "
 align = 1
 autowrap = true
@@ -415,14 +408,13 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="Panel4" type="Panel" parent="Control_1"]
-visible = false
+[node name="PanelXIV" type="Panel" parent="Control_1"]
 margin_left = 2.0
 margin_top = 39.0
 margin_right = 807.0
 margin_bottom = 208.0
 
-[node name="NinePatchRect" type="NinePatchRect" parent="Control_1/Panel4"]
+[node name="NinePatchRect" type="NinePatchRect" parent="Control_1/PanelXIV"]
 margin_left = 17.0
 margin_top = -5.0
 margin_right = 796.0
@@ -430,213 +422,46 @@ margin_bottom = 162.0
 texture = ExtResource( 6 )
 region_rect = Rect2( 1.24512, 0, 15806.4, 4496.51 )
 
-[node name="Label" type="Label" parent="Control_1/Panel4"]
+[node name="Label" type="Label" parent="Control_1/PanelXIV"]
 margin_left = 31.0
 margin_top = 6.0
 margin_right = 740.0
 margin_bottom = 131.0
 custom_fonts/font = ExtResource( 9 )
-text = "\"I'm nervous!\""
 align = 1
 autowrap = true
 clip_text = true
 
-[node name="Panel5" type="Panel" parent="Control_1"]
-visible = false
+[node name="PanelXV" type="Panel" parent="Control_1"]
 margin_left = 138.0
 margin_top = 202.0
 margin_right = 1026.0
 margin_bottom = 385.0
 
-[node name="NinePatchRect" type="NinePatchRect" parent="Control_1/Panel5"]
+[node name="NinePatchRect" type="NinePatchRect" parent="Control_1/PanelXV"]
 margin_right = 884.0
 margin_bottom = 174.0
 texture = ExtResource( 8 )
 region_rect = Rect2( -1027.25, 0, 4533.08, 1378.64 )
 
-[node name="Label" type="Label" parent="Control_1/Panel5"]
+[node name="Label" type="Label" parent="Control_1/PanelXV"]
 margin_left = 228.0
 margin_top = 23.0
 margin_right = 836.0
 margin_bottom = 146.0
 custom_fonts/font = ExtResource( 9 )
-text = "'hold on i left my 7 aligatoraids at my place'
-'brb'"
 align = 1
 autowrap = true
 clip_text = true
 
-[node name="Panel8" type="Panel" parent="Control_1"]
-visible = false
-margin_top = 416.0
-margin_right = 805.0
-margin_bottom = 583.0
-rect_pivot_offset = Vector2( 641, 93 )
-
-[node name="NinePatchRect" type="NinePatchRect" parent="Control_1/Panel8"]
-visible = false
-margin_left = 13.0
-margin_top = -15.0
-margin_right = 792.0
-margin_bottom = 152.0
-texture = ExtResource( 6 )
-region_rect = Rect2( 1.24512, 0, 15806.4, 4496.51 )
-
-[node name="Label" type="Label" parent="Control_1/Panel8"]
-visible = false
-margin_left = 31.0
-margin_top = -5.0
-margin_right = 740.0
-margin_bottom = 120.0
-custom_fonts/font = ExtResource( 9 )
-text = "\"Seriously?...\""
-align = 1
-autowrap = true
-clip_text = true
-
-[node name="Panel9" type="Panel" parent="Control_1"]
-visible = false
-margin_left = 124.0
-margin_top = 11.0
-margin_right = 1012.0
-margin_bottom = 194.0
-rect_pivot_offset = Vector2( -96, 260 )
-
-[node name="NinePatchRect" type="NinePatchRect" parent="Control_1/Panel9"]
-margin_right = 884.0
-margin_bottom = 174.0
-texture = ExtResource( 8 )
-region_rect = Rect2( -1027.25, 0, 4533.08, 1378.64 )
-
-[node name="Label" type="Label" parent="Control_1/Panel9"]
-margin_left = 228.0
-margin_top = 23.0
-margin_right = 836.0
-margin_bottom = 146.0
-custom_fonts/font = ExtResource( 9 )
-text = "'I'm allowed to get thirsty ok'"
-align = 1
-autowrap = true
-clip_text = true
-
-[node name="Panel10" type="Panel" parent="Control_1"]
-visible = false
-margin_left = 6.0
-margin_top = 213.0
-margin_right = 811.0
-margin_bottom = 382.0
-rect_pivot_offset = Vector2( 641, 93 )
-
-[node name="NinePatchRect" type="NinePatchRect" parent="Control_1/Panel10"]
-margin_left = 13.0
-margin_top = -15.0
-margin_right = 792.0
-margin_bottom = 152.0
-texture = ExtResource( 6 )
-region_rect = Rect2( 1.24512, 0, 15806.4, 4496.51 )
-
-[node name="Label" type="Label" parent="Control_1/Panel10"]
-margin_left = 34.0
-margin_top = -4.0
-margin_right = 743.0
-margin_bottom = 121.0
-custom_fonts/font = ExtResource( 9 )
-text = "'There's like... water...'"
-align = 1
-autowrap = true
-clip_text = true
-
-[node name="Panel11" type="Panel" parent="Control_1"]
-visible = false
-margin_left = 126.0
-margin_top = 398.0
-margin_right = 1014.0
-margin_bottom = 581.0
-rect_pivot_offset = Vector2( -96, 260 )
-
-[node name="NinePatchRect" type="NinePatchRect" parent="Control_1/Panel11"]
-margin_right = 884.0
-margin_bottom = 174.0
-texture = ExtResource( 8 )
-region_rect = Rect2( -1027.25, 0, 4533.08, 1378.64 )
-
-[node name="Label" type="Label" parent="Control_1/Panel11"]
-margin_left = 228.0
-margin_top = 23.0
-margin_right = 836.0
-margin_bottom = 146.0
-custom_fonts/font = ExtResource( 9 )
-text = "'eww no'
-'plus im right next door ill be back in like 2 seconds'
-"
-align = 1
-autowrap = true
-clip_text = true
-
-[node name="Panel12" type="Panel" parent="Control_1"]
-visible = false
-margin_left = 10.0
-margin_top = 29.0
-margin_right = 815.0
-margin_bottom = 198.0
-rect_pivot_offset = Vector2( 641, 93 )
-
-[node name="NinePatchRect" type="NinePatchRect" parent="Control_1/Panel12"]
-margin_left = 13.0
-margin_top = -15.0
-margin_right = 792.0
-margin_bottom = 152.0
-texture = ExtResource( 6 )
-region_rect = Rect2( 1.24512, 0, 15806.4, 4496.51 )
-
-[node name="Label" type="Label" parent="Control_1/Panel12"]
-margin_left = 34.0
-margin_top = -4.0
-margin_right = 743.0
-margin_bottom = 121.0
-custom_fonts/font = ExtResource( 9 )
-text = "
-\"Where do I even go?? My schedule is so confusing...\""
-align = 1
-autowrap = true
-clip_text = true
-
-[node name="Panel13" type="Panel" parent="Control_1"]
-visible = false
-margin_left = 133.0
-margin_top = 195.0
-margin_right = 1021.0
-margin_bottom = 378.0
-rect_pivot_offset = Vector2( -96, 260 )
-
-[node name="NinePatchRect" type="NinePatchRect" parent="Control_1/Panel13"]
-margin_right = 884.0
-margin_bottom = 174.0
-texture = ExtResource( 8 )
-region_rect = Rect2( -1027.25, 0, 4533.08, 1378.64 )
-
-[node name="Label" type="Label" parent="Control_1/Panel13"]
-margin_left = 228.0
-margin_top = 23.0
-margin_right = 836.0
-margin_bottom = 146.0
-custom_fonts/font = ExtResource( 9 )
-text = "\"ill show u around when we get there\" ...
-'I'm outside where are you'
-"
-align = 1
-autowrap = true
-clip_text = true
-
-[node name="Panel14" type="Panel" parent="Control_1"]
-visible = false
+[node name="PanelXVI" type="Panel" parent="Control_1"]
 margin_left = -1.0
 margin_top = 415.0
 margin_right = 804.0
 margin_bottom = 584.0
 rect_pivot_offset = Vector2( 641, 93 )
 
-[node name="NinePatchRect" type="NinePatchRect" parent="Control_1/Panel14"]
+[node name="NinePatchRect" type="NinePatchRect" parent="Control_1/PanelXVI"]
 margin_left = 13.0
 margin_top = -15.0
 margin_right = 792.0
@@ -644,7 +469,7 @@ margin_bottom = 152.0
 texture = ExtResource( 6 )
 region_rect = Rect2( 1.24512, 0, 15806.4, 4496.51 )
 
-[node name="Label" type="Label" parent="Control_1/Panel14"]
+[node name="Label" type="Label" parent="Control_1/PanelXVI"]
 margin_left = 34.0
 margin_top = -4.0
 margin_right = 743.0
@@ -762,7 +587,6 @@ anims/Fade = SubResource( 2 )
 anims/RESET = SubResource( 3 )
 
 [node name="Panel" type="Panel" parent="."]
-visible = false
 margin_right = 1028.0
 margin_bottom = 599.0
 custom_styles/panel = SubResource( 4 )
