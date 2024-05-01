@@ -15,9 +15,10 @@ func _on_Button_pressed():
 	var Cabinets = get_node("/root/Node2D/Cabenits-p2")
 	var Door = get_node("/root/Node2D/Door")
 	var computer = get_node("/root/Node2D/Computer")
+	var tablet = get_node("/root/Node2D/Tablet")
 	if background_prev.visible == false:
 		Cabinets.hide()
 		Door.hide()
 		computer.hide()
+		tablet.hide()
 		background_prev.show()
-
