@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://adnan/WelcomeText.gd" type="Script" id=1]
 [ext_resource path="res://assets/fonts/Cairo/new_dynamicfont.tres" type="DynamicFont" id=2]
@@ -17,11 +17,255 @@ border_width_right = 10
 border_width_bottom = 10
 border_color = Color( 1, 1, 1, 1 )
 
+[sub_resource type="Animation" id=5]
+resource_name = "fadeI"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control_1/NinePatchRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.2, 0.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "fadeII"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control_1/NinePatchRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "fadeI"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control_1/NinePatchRect2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.2, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "fadeII"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control_1/NinePatchRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "fadeI"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control_1/NinePatchRect3:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.2, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "fadeII"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control_1/NinePatchRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=27]
+resource_name = "fadeI"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control_1/NinePatchRect4:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=28]
+resource_name = "fadeII"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control_1/NinePatchRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=43]
+resource_name = "fadeI"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control_1/NinePatchRect5:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.2, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=44]
+resource_name = "fadeII"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control_1/NinePatchRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=41]
+resource_name = "fadeI"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control_1/NinePatchRect6:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=42]
+resource_name = "fadeII"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control_1/NinePatchRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "Fade"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel:custom_styles/panel:bg_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3.6, 4.3, 5.2, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0.639216 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Panel:custom_styles/panel:bg_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ) ]
+}
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0, 0, 0, 0 )
+
 [node name="Welcome" type="CanvasLayer"]
 script = ExtResource( 1 )
 
 [node name="WelcomeTimer" type="Timer" parent="."]
-wait_time = 3.5
+wait_time = 2.0
 autostart = true
 
 [node name="Node2D" type="Node2D" parent="."]
@@ -89,6 +333,7 @@ margin_right = 1024.0
 margin_bottom = 600.0
 
 [node name="Panel" type="Panel" parent="Control_1"]
+visible = false
 margin_left = 135.0
 margin_top = 15.0
 margin_right = 1023.0
@@ -106,11 +351,13 @@ margin_top = 23.0
 margin_right = 836.0
 margin_bottom = 146.0
 custom_fonts/font = ExtResource( 9 )
-text = "ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE..............."
+text = "'where are you'"
+align = 1
 autowrap = true
 clip_text = true
 
 [node name="Panel2" type="Panel" parent="Control_1"]
+visible = false
 margin_left = 8.0
 margin_top = 236.0
 margin_right = 921.0
@@ -124,16 +371,18 @@ texture = ExtResource( 6 )
 region_rect = Rect2( 1.24512, 0, 15806.4, 4496.51 )
 
 [node name="Label" type="Label" parent="Control_1/Panel2"]
-margin_left = 41.0
+margin_left = 40.0
 margin_top = -11.0
 margin_right = 749.0
 margin_bottom = 114.0
 custom_fonts/font = ExtResource( 9 )
-text = "ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE..............."
+text = "'I'm getting dressed'"
+align = 1
 autowrap = true
 clip_text = true
 
 [node name="Panel3" type="Panel" parent="Control_1"]
+visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 
@@ -155,44 +404,367 @@ margin_top = 427.0
 margin_right = 976.0
 margin_bottom = 552.0
 custom_fonts/font = ExtResource( 9 )
-text = "ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE,ERROR.EXE..............."
+text = "'ok im outside'
+'r u ready for ur first dya??'
+'day*'
+"
+align = 1
 autowrap = true
 clip_text = true
 __meta__ = {
 "_editor_description_": ""
 }
 
+[node name="Panel4" type="Panel" parent="Control_1"]
+visible = false
+margin_left = 2.0
+margin_top = 39.0
+margin_right = 807.0
+margin_bottom = 208.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control_1/Panel4"]
+margin_left = 17.0
+margin_top = -5.0
+margin_right = 796.0
+margin_bottom = 162.0
+texture = ExtResource( 6 )
+region_rect = Rect2( 1.24512, 0, 15806.4, 4496.51 )
+
+[node name="Label" type="Label" parent="Control_1/Panel4"]
+margin_left = 31.0
+margin_top = 6.0
+margin_right = 740.0
+margin_bottom = 131.0
+custom_fonts/font = ExtResource( 9 )
+text = "\"I'm nervous!\""
+align = 1
+autowrap = true
+clip_text = true
+
+[node name="Panel5" type="Panel" parent="Control_1"]
+visible = false
+margin_left = 138.0
+margin_top = 202.0
+margin_right = 1026.0
+margin_bottom = 385.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control_1/Panel5"]
+margin_right = 884.0
+margin_bottom = 174.0
+texture = ExtResource( 8 )
+region_rect = Rect2( -1027.25, 0, 4533.08, 1378.64 )
+
+[node name="Label" type="Label" parent="Control_1/Panel5"]
+margin_left = 228.0
+margin_top = 23.0
+margin_right = 836.0
+margin_bottom = 146.0
+custom_fonts/font = ExtResource( 9 )
+text = "'hold on i left my 7 aligatoraids at my place'
+'brb'"
+align = 1
+autowrap = true
+clip_text = true
+
+[node name="Panel8" type="Panel" parent="Control_1"]
+visible = false
+margin_top = 416.0
+margin_right = 805.0
+margin_bottom = 583.0
+rect_pivot_offset = Vector2( 641, 93 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control_1/Panel8"]
+visible = false
+margin_left = 13.0
+margin_top = -15.0
+margin_right = 792.0
+margin_bottom = 152.0
+texture = ExtResource( 6 )
+region_rect = Rect2( 1.24512, 0, 15806.4, 4496.51 )
+
+[node name="Label" type="Label" parent="Control_1/Panel8"]
+visible = false
+margin_left = 31.0
+margin_top = -5.0
+margin_right = 740.0
+margin_bottom = 120.0
+custom_fonts/font = ExtResource( 9 )
+text = "\"Seriously?...\""
+align = 1
+autowrap = true
+clip_text = true
+
+[node name="Panel9" type="Panel" parent="Control_1"]
+visible = false
+margin_left = 124.0
+margin_top = 11.0
+margin_right = 1012.0
+margin_bottom = 194.0
+rect_pivot_offset = Vector2( -96, 260 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control_1/Panel9"]
+margin_right = 884.0
+margin_bottom = 174.0
+texture = ExtResource( 8 )
+region_rect = Rect2( -1027.25, 0, 4533.08, 1378.64 )
+
+[node name="Label" type="Label" parent="Control_1/Panel9"]
+margin_left = 228.0
+margin_top = 23.0
+margin_right = 836.0
+margin_bottom = 146.0
+custom_fonts/font = ExtResource( 9 )
+text = "'I'm allowed to get thirsty ok'"
+align = 1
+autowrap = true
+clip_text = true
+
+[node name="Panel10" type="Panel" parent="Control_1"]
+visible = false
+margin_left = 6.0
+margin_top = 213.0
+margin_right = 811.0
+margin_bottom = 382.0
+rect_pivot_offset = Vector2( 641, 93 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control_1/Panel10"]
+margin_left = 13.0
+margin_top = -15.0
+margin_right = 792.0
+margin_bottom = 152.0
+texture = ExtResource( 6 )
+region_rect = Rect2( 1.24512, 0, 15806.4, 4496.51 )
+
+[node name="Label" type="Label" parent="Control_1/Panel10"]
+margin_left = 34.0
+margin_top = -4.0
+margin_right = 743.0
+margin_bottom = 121.0
+custom_fonts/font = ExtResource( 9 )
+text = "'There's like... water...'"
+align = 1
+autowrap = true
+clip_text = true
+
+[node name="Panel11" type="Panel" parent="Control_1"]
+visible = false
+margin_left = 126.0
+margin_top = 398.0
+margin_right = 1014.0
+margin_bottom = 581.0
+rect_pivot_offset = Vector2( -96, 260 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control_1/Panel11"]
+margin_right = 884.0
+margin_bottom = 174.0
+texture = ExtResource( 8 )
+region_rect = Rect2( -1027.25, 0, 4533.08, 1378.64 )
+
+[node name="Label" type="Label" parent="Control_1/Panel11"]
+margin_left = 228.0
+margin_top = 23.0
+margin_right = 836.0
+margin_bottom = 146.0
+custom_fonts/font = ExtResource( 9 )
+text = "'eww no'
+'plus im right next door ill be back in like 2 seconds'
+"
+align = 1
+autowrap = true
+clip_text = true
+
+[node name="Panel12" type="Panel" parent="Control_1"]
+visible = false
+margin_left = 10.0
+margin_top = 29.0
+margin_right = 815.0
+margin_bottom = 198.0
+rect_pivot_offset = Vector2( 641, 93 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control_1/Panel12"]
+margin_left = 13.0
+margin_top = -15.0
+margin_right = 792.0
+margin_bottom = 152.0
+texture = ExtResource( 6 )
+region_rect = Rect2( 1.24512, 0, 15806.4, 4496.51 )
+
+[node name="Label" type="Label" parent="Control_1/Panel12"]
+margin_left = 34.0
+margin_top = -4.0
+margin_right = 743.0
+margin_bottom = 121.0
+custom_fonts/font = ExtResource( 9 )
+text = "
+\"Where do I even go?? My schedule is so confusing...\""
+align = 1
+autowrap = true
+clip_text = true
+
+[node name="Panel13" type="Panel" parent="Control_1"]
+visible = false
+margin_left = 133.0
+margin_top = 195.0
+margin_right = 1021.0
+margin_bottom = 378.0
+rect_pivot_offset = Vector2( -96, 260 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control_1/Panel13"]
+margin_right = 884.0
+margin_bottom = 174.0
+texture = ExtResource( 8 )
+region_rect = Rect2( -1027.25, 0, 4533.08, 1378.64 )
+
+[node name="Label" type="Label" parent="Control_1/Panel13"]
+margin_left = 228.0
+margin_top = 23.0
+margin_right = 836.0
+margin_bottom = 146.0
+custom_fonts/font = ExtResource( 9 )
+text = "\"ill show u around when we get there\" ...
+'I'm outside where are you'
+"
+align = 1
+autowrap = true
+clip_text = true
+
+[node name="Panel14" type="Panel" parent="Control_1"]
+visible = false
+margin_left = -1.0
+margin_top = 415.0
+margin_right = 804.0
+margin_bottom = 584.0
+rect_pivot_offset = Vector2( 641, 93 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control_1/Panel14"]
+margin_left = 13.0
+margin_top = -15.0
+margin_right = 792.0
+margin_bottom = 152.0
+texture = ExtResource( 6 )
+region_rect = Rect2( 1.24512, 0, 15806.4, 4496.51 )
+
+[node name="Label" type="Label" parent="Control_1/Panel14"]
+margin_left = 34.0
+margin_top = -4.0
+margin_right = 743.0
+margin_bottom = 121.0
+custom_fonts/font = ExtResource( 9 )
+text = "'I'm tying my shoes'
+... 'Okay omw'
+"
+align = 1
+autowrap = true
+clip_text = true
+
 [node name="NinePatchRect" type="NinePatchRect" parent="Control_1"]
-margin_left = 630.0
-margin_top = 55.0
-margin_right = 833.0
-margin_bottom = 139.0
-rect_pivot_offset = Vector2( -325, 257 )
+modulate = Color( 1, 1, 1, 0.961489 )
+margin_left = 595.0
+margin_top = 58.0
+margin_right = 798.0
+margin_bottom = 142.0
+rect_pivot_offset = Vector2( 186, 65 )
 texture = ExtResource( 7 )
 region_rect = Rect2( 0, 0, 3473.16, 1639.47 )
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Control_1/NinePatchRect"]
+root_node = NodePath("../../..")
+anims/fadeI = SubResource( 5 )
+anims/fadeII = SubResource( 6 )
 
 [node name="NinePatchRect2" type="NinePatchRect" parent="Control_1"]
 margin_left = 268.0
 margin_top = 247.0
 margin_right = 471.0
 margin_bottom = 331.0
-rect_pivot_offset = Vector2( -325, 257 )
+rect_pivot_offset = Vector2( 93, -47 )
 texture = ExtResource( 5 )
 region_rect = Rect2( -26.9524, 0, 3443.58, 1444.87 )
 __meta__ = {
 "_editor_description_": ""
 }
 
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Control_1/NinePatchRect2"]
+root_node = NodePath("../../..")
+anims/fadeI = SubResource( 13 )
+anims/fadeII = SubResource( 14 )
+
 [node name="NinePatchRect3" type="NinePatchRect" parent="Control_1"]
 margin_left = 617.0
 margin_top = 446.0
 margin_right = 820.0
 margin_bottom = 530.0
-rect_pivot_offset = Vector2( -325, 257 )
+rect_pivot_offset = Vector2( 139, -17 )
 texture = ExtResource( 7 )
 region_rect = Rect2( 0, 0, 3473.16, 1639.47 )
 __meta__ = {
 "_editor_description_": ""
 }
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Control_1/NinePatchRect3"]
+root_node = NodePath("../../..")
+anims/fadeI = SubResource( 15 )
+anims/fadeII = SubResource( 16 )
+
+[node name="NinePatchRect4" type="NinePatchRect" parent="Control_1"]
+margin_left = 265.0
+margin_top = 57.0
+margin_right = 468.0
+margin_bottom = 141.0
+rect_pivot_offset = Vector2( 93, -47 )
+texture = ExtResource( 5 )
+region_rect = Rect2( -26.9524, 0, 3443.58, 1444.87 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Control_1/NinePatchRect4"]
+root_node = NodePath("../../..")
+anims/fadeI = SubResource( 27 )
+anims/fadeII = SubResource( 28 )
+
+[node name="NinePatchRect5" type="NinePatchRect" parent="Control_1"]
+margin_left = 616.0
+margin_top = 237.0
+margin_right = 819.0
+margin_bottom = 321.0
+rect_pivot_offset = Vector2( 139, -17 )
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 3473.16, 1639.47 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Control_1/NinePatchRect5"]
+root_node = NodePath("../../..")
+anims/fadeI = SubResource( 43 )
+anims/fadeII = SubResource( 44 )
+
+[node name="NinePatchRect6" type="NinePatchRect" parent="Control_1"]
+margin_left = 281.0
+margin_top = 448.0
+margin_right = 484.0
+margin_bottom = 532.0
+rect_pivot_offset = Vector2( 93, -47 )
+texture = ExtResource( 5 )
+region_rect = Rect2( -26.9524, 0, 3443.58, 1444.87 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Control_1/NinePatchRect6"]
+root_node = NodePath("../../..")
+anims/fadeI = SubResource( 41 )
+anims/fadeII = SubResource( 42 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Fade = SubResource( 2 )
+anims/RESET = SubResource( 3 )
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+margin_right = 1028.0
+margin_bottom = 599.0
+custom_styles/panel = SubResource( 4 )
 
 [connection signal="timeout" from="WelcomeTimer" to="Control_1" method="_on_WelcomeTimer_timeout"]

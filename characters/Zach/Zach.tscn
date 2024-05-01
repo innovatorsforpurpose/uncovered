@@ -24,7 +24,6 @@ region_rect = Rect2( 0, 0, 2070, 1430 )
 points = PoolVector3Array( -1, -1, -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, -1, 1, 1, 1, -1, -1, -1, -1, 1, -1, 1, -1 )
 
 [node name="Zach" type="Area"]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
 script = ExtResource( 1 )
 __meta__ = {
 "_editor_description_": ""

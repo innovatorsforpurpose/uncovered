@@ -51,7 +51,7 @@ func _physics_process(delta):
 
 
 	if active_dialogue == 0:
-		Lx.text = "Zach and I make our way through the doors and into the dimly lit school corridors."
+		Lx.text = "Zach and I made it to the school"
 		NQx.hide()
 		TQx.hide()
 		Px.show()
@@ -59,7 +59,7 @@ func _physics_process(delta):
 		IEx.show()
 
 	if active_dialogue == 1:
-		Lx.text = "Welcome to our amazing school!"
+		Lx.text = "Hey man you made it to my great school!"
 		NQx.text = "Zach"
 		TQx.show()
 		NQx.show()
@@ -67,7 +67,8 @@ func _physics_process(delta):
 		IDx.show()
 
 	if active_dialogue == 2:
-		Lx.text = "We both look around at the worn-out school corridor before looking back at each other."
+		Lx.text = "Are you kidding me?!"
+		NQx.text = "you"
 		NQx.hide()
 		TQx.hide()
 		Px.show()
@@ -105,23 +106,15 @@ func _physics_process(delta):
 		IDx.hide()
 
 	if active_dialogue == 7:
-		Lx.text = "Are you looking for someone?"
+		Lx.text = "Wait but what about a tour"
 		NQx.text = "you"
 		TQx.show()
 		NQx.show()
 		Px.show()
 		IDx.hide()
 
-	if active_dialogue == 8:
-		Lx.text = "Huh? Oh.. more like avoiding someone."
-		NQx.text = "Zach"
-		TQx.show()
-		NQx.show()
-		Px.show()
-		IDx.show()
-
 	if active_dialogue == 9:
-		Lx.text = "If Mrs. Grant catches me outside of class again, I don't think I'll hear the end of it"
+		Lx.text = "Fine but it has to be short."
 		NQx.text = "Zach"
 		TQx.show()
 		NQx.show()
@@ -129,83 +122,19 @@ func _physics_process(delta):
 		IDx.show()
 
 	if active_dialogue == 10:
-		Lx.text = "Mrs. Grant?"
-		NQx.text = "you"
-		TQx.show()
-		NQx.show()
-		Px.show()
-		IDx.hide()
-
-	if active_dialogue == 11:
-		Lx.text = "Yeah, the principal. That lady hates my guts for some reason."
-		NQx.text = "Zach"
-		TQx.show()
-		NQx.show()
-		Px.show()
-		IDx.show()
-
-	if active_dialogue == 12:
-		Lx.text = "We both turn to the sound of footsteps off into the distance."
-		NQx.hide()
-		TQx.hide()
-		Px.show()
-		IDx.hide()
-
-	if active_dialogue == 13:
-		Lx.text = "... anyways, It was nice chatting with you but I gotta blast!"
-		NQx.text = "Zach"
-		TQx.show()
-		NQx.show()
-		Px.show()
-		IDx.show()
-
-	if active_dialogue == 14:
-		Lx.text = "Wait but what about-"
-		NQx.text = "you"
-		TQx.show()
-		NQx.show()
-		Px.show()
-		IDx.hide()
-
-	if active_dialogue == 15:
-		Lx.text = "..."
-		NQx.text = "you"
-		TQx.show()
-		NQx.show()
-		Px.show()
-		IDx.hide()
-
-	if active_dialogue == 16:
-		Lx.text = "The tour,"
-		NQx.text = "you"
-		TQx.show()
-		NQx.show()
-		Px.show()
-		IDx.hide()
-
-	if active_dialogue == 17:
-		Lx.text = "Guess It's up to me to find my own classes."
-		NQx.text = "you"
-		TQx.show()
-		NQx.show()
-		Px.show()
-		IDx.hide()
-
-	if active_dialogue == 18:
 		visible = false
 		Lx.hide()
 		NQx.hide()
 		Px.hide()
 		IDx.hide()
 		IEx.hide()
-		velocity = 10
 
 func _on_Area_body_exited(body):
 	visible = false
 	currently_colliding = false
 
 func _on_Button_pressed():
-	 active_dialogue = 18
+	 active_dialogue = 10
 
 func _on_Button2_pressed():
 	 active_dialogue = active_dialogue+1
