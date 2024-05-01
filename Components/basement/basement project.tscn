@@ -8,11 +8,12 @@
 [ext_resource path="res://Components/basement/hiii.glb" type="PackedScene" id=6]
 [ext_resource path="res://workspaces/adnan/CanvasLayer.gd" type="Script" id=7]
 [ext_resource path="res://workspaces/adnan/go to vent text.gd" type="Script" id=8]
-[ext_resource path="res://minigames/BossBattle/material.material" type="Material" id=9]
+[ext_resource path="res://minigames/BossBattle/Material.material" type="Material" id=9]
 [ext_resource path="res://workspaces/adnan/ColorRect.gd" type="Script" id=10]
 [ext_resource path="res://workspaces/adnan/Conversation.gd" type="Script" id=11]
 [ext_resource path="res://workspaces/Dev_MS/Minigame/Assets/battlenet.ttf" type="DynamicFontData" id=12]
 [ext_resource path="res://Components/basement/Basement_Door.tscn" type="PackedScene" id=13]
+
 
 [sub_resource type="BoxShape" id=11]
 extents = Vector3( 4.85664, 2, 0.574707 )

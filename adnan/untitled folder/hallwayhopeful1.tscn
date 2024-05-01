@@ -11,7 +11,7 @@
 [ext_resource path="res://Components/Office/Material_006.material" type="Material" id=9]
 [ext_resource path="res://adnan/untitled folder/art/wall col.png" type="Texture" id=10]
 [ext_resource path="res://adnan/untitled folder/art/2blocksmoon.png" type="Texture" id=11]
-[ext_resource path="res://BASEMENT_DOOR/Material.material" type="Material" id=12]
+[ext_resource path="res://BASEMENT_DOOR/material.material" type="Material" id=12]
 [ext_resource path="res://adnan/untitled folder/art/floorUnc.png" type="Texture" id=13]
 [ext_resource path="res://adnan/untitled folder/art/floorfallunc.png" type="Texture" id=14]
 [ext_resource path="res://Material_013.material" type="Material" id=15]
@@ -43,6 +43,7 @@
 [ext_resource path="res://Material_002.material" type="Material" id=41]
 [ext_resource path="res://adnan/untitled folder/Camera.gd" type="Script" id=42]
 [ext_resource path="res://adnan/untitled folder/AnimationPlayer.gd" type="Script" id=43]
+
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "hallwayhopeful_Cube003"

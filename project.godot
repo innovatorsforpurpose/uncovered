@@ -8,16 +8,6 @@
 
 config_version=4
 
-_global_script_classes=[ {
-"base": "",
-"class": "GitAPI",
-"language": "NativeScript",
-"path": "res://workspaces/dev_Uri/GraphicDesign/addons/godot-git-plugin/git_api.gdns"
-} ]
-_global_script_class_icons={
-"GitAPI": ""
-}
-
 [application]
 
 config/name="ifp_uncover"
@@ -30,7 +20,7 @@ default_bus_layout=""
 
 [gdnative]
 
-singletons=[ "res://workspaces/dev_Uri/GraphicDesign/addons/godot-git-plugin/git_api.gdnlib" ]
+singletons=[  ]
 
 [gui]
 
