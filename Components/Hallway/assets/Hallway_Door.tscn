@@ -55,11 +55,12 @@ transform = Transform( 0.430264, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 script = SubResource( 7 )
 
 [node name="door#2005" type="MeshInstance" parent="."]
-transform = Transform( 0.0248949, 12.7007, 2.77637e-06, 3.85836e-07, -3.02809e-06, 13.3085, 12.9465, -0.0244219, 0, 0, 0, 0 )
+transform = Transform( 0.024998, 24, 5.8136e-07, 0, -1.04907e-06, 13.3, 13, -0.0461501, -1.11791e-09, 0, 0, 0 )
 mesh = SubResource( 1 )
 skeleton = NodePath("")
 
 [node name="StaticBody" type="StaticBody" parent="."]
+transform = Transform( 0.0172484, 0, 0, 0, 1.19595, 0, 0, 0, 0.267158, 0, 0, -0.412656 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="StaticBody"]
 transform = Transform( 0.0257025, 0, 0, 0, 2.68939, 0, 0, 0, 1.93518, 0.181193, 0.275924, -0.56013 )
@@ -69,7 +70,7 @@ shape = SubResource( 5 )
 transform = Transform( 9.2771, 0, 0, 0, 3.76369, 0, 0, 0, 3.5271, 0, 0, -0.701232 )
 
 [node name="CollisionShape1" type="CollisionShape" parent="."]
-transform = Transform( 9.65171, 0, 0, 0, 2.27036, 0, 0, 0, 3.58444, 0, 0, -0.577325 )
+transform = Transform( 4.79546, 0, 0, 0, 2.27036, 0, 0, 0, 0.946047, 0, 0, -0.577323 )
 shape = SubResource( 6 )
 
 [connection signal="body_exited" from="." to="." method="_on_Hallway_Door_body_exited"]

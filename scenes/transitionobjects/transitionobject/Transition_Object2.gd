@@ -33,7 +33,8 @@ func _on_Timer_timeout():
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		get_tree().change_scene("res://Scenes/CreationScene.tscn")
 	else:
-		print("could not load uncovered minigame")
+		#print("could not load uncovered minigame")
+		pass
 
 func _on_Hallway_Door_body_entered(body):
 	if body.name == "MC":

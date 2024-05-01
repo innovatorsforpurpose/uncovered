@@ -26,3 +26,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.705438, -0.386913 )
 current = true
 fov = 53.4731
 size = 20.0
+
+[connection signal="child_entered_tree" from="CollisionShape" to="." method="_on_CollisionShape_child_entered_tree"]
+[connection signal="child_exiting_tree" from="CollisionShape" to="." method="_on_CollisionShape_child_exiting_tree"]
