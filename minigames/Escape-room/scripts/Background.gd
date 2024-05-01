@@ -13,5 +13,13 @@ func _process(_delta):
 	
 	
 	
-func fade_black_to(area):
+func fade_black_to(_area):
 	pass
+
+
+
+	
+
+
+func _on_Computer_pressed():
+	pass # Replace with function body.

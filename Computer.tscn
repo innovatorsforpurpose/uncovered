@@ -1,41 +1,15 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Shoes.material" type="Material" id=1]
-[ext_resource path="res://Material_006.material" type="Material" id=2]
+[ext_resource path="res://minigames/Escape-room/Escape-room_res/Txtrs/close ups/puzzle 2/computer with question.png" type="Texture" id=1]
+[ext_resource path="res://minigames/Escape-room/scripts/Background.gd" type="Script" id=2]
 
-[sub_resource type="CubeMesh" id=1]
-size = Vector3( 0.5, 0.3, 0.01 )
+[node name="ParallaxBackground" type="ParallaxBackground"]
+offset = Vector2( 510.562, 288.972 )
+transform = Transform2D( 1, 0, 0, 1, 510.562, 288.972 )
 
-[sub_resource type="CubeMesh" id=2]
-size = Vector3( 0.5, 0.3, 0.01 )
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+script = ExtResource( 2 )
 
-[sub_resource type="BoxShape" id=3]
-extents = Vector3( 0.205746, 0.198333, 0.135898 )
-
-[sub_resource type="CubeMesh" id=4]
-size = Vector3( 0.4, 0.25, 0 )
-
-[node name="Computer" type="Spatial"]
-
-[node name="StaticBody" type="StaticBody" parent="."]
-
-[node name="MeshInstance" type="MeshInstance" parent="StaticBody"]
-transform = Transform( 1, 0, 0, 0, 0.00157077, 0.999999, 0, -0.999999, 0.00157077, 0, 0.299548, 0 )
-mesh = SubResource( 1 )
-material/0 = ExtResource( 2 )
-
-[node name="MeshInstance2" type="MeshInstance" parent="StaticBody"]
-transform = Transform( 1, 0, 0, 0, 0.994874, 0.101126, 0, -0.101126, 0.994874, 0, 0.45257, -0.149733 )
-mesh = SubResource( 2 )
-skeleton = NodePath("../MeshInstance")
-material/0 = ExtResource( 2 )
-
-[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0779462, 0.421033, -0.128487 )
-shape = SubResource( 3 )
-
-[node name="MeshInstance3" type="MeshInstance" parent="StaticBody"]
-transform = Transform( 1, 0, 0, 0, -0.995516, -0.0945949, 0, 0.0945949, -0.995516, 0, 0.456478, -0.143725 )
-mesh = SubResource( 4 )
-skeleton = NodePath("../MeshInstance")
-material/0 = ExtResource( 1 )
+[node name="Sprite" type="Sprite" parent="ParallaxLayer"]
+scale = Vector2( 1.126, 1.126 )
+texture = ExtResource( 1 )
