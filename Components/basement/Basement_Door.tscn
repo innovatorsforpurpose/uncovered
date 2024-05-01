@@ -49,7 +49,7 @@ anims/RESET = SubResource( 4 )
 anims/open = SubResource( 5 )
 
 [node name="Transition_Object" parent="Door1" instance=ExtResource( 3 )]
-transform = Transform( 0.12129, 0, 0, 0, 0.251866, 0, 0, 0, 0.165473, -0.0261015, 0.407867, 1.38322 )
+transform = Transform( 0.12129, 0, 0, 0, 0.251866, 0, 0, 0, 0.165473, -0.198285, 0.407867, 1.38322 )
 script = ExtResource( 4 )
 
 [node name="Area" type="Area" parent="Door1"]
