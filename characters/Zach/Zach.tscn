@@ -30,7 +30,7 @@ __meta__ = {
 }
 
 [node name="Area" type="Area" parent="."]
-transform = Transform( 1.81747, 0, 0, 0, 4.071, 0, 0, 0, 1, 4.60523, 0, 0 )
+transform = Transform( 0.500088, 0, 0, 0, 1.66417, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
 transform = Transform( 15, 0, 0, 0, 3, 0, 0, 0, 5, 0, 0, 0 )
@@ -177,7 +177,7 @@ wait_time = 6.6
 script = ExtResource( 7 )
 
 [node name="Zach2" type="StaticBody" parent="."]
-transform = Transform( 3.70072, 0, 0, 0, 4.37584, 0, 0, 0, 3.70072, 2.65877, 0, 0 )
+transform = Transform( 3.70072, 0, 0, 0, 3.02436, 0, 0, 0, 3.70072, 0, 0, 0 )
 __meta__ = {
 "_editor_description_": ""
 }
@@ -196,7 +196,6 @@ __meta__ = {
 }
 
 [node name="Zach3Dmodel" parent="." instance=ExtResource( 9 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
 
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
 [connection signal="body_entered" from="Area" to="Zach" method="_on_Area_body_entered"]
