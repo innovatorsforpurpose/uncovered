@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://characters/MC/MC.gd" type="Script" id=1]
+[ext_resource path="res://characters/MC/MeshInstance.gd" type="Script" id=2]
 
 [sub_resource type="BoxShape" id=1]
 
@@ -18,6 +19,9 @@ transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.0171986, -9.53674e-07,
 layers = 65
 mesh = SubResource( 2 )
 skeleton = NodePath("")
+script = ExtResource( 2 )
+
+[node name="Area" type="Area" parent="MeshInstance"]
 
 [node name="CameraPivot" type="Spatial" parent="."]
 
@@ -26,6 +30,14 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.16447, -0.386913 )
 current = true
 fov = 53.4731
 size = 20.0
+
+[node name="Area" type="Area" parent="."]
+
+[node name="Area2" type="Area" parent="."]
+
+[node name="Area3" type="Area" parent="."]
+
+[node name="Area4" type="Area" parent="."]
 
 [connection signal="child_entered_tree" from="CollisionShape" to="." method="_on_CollisionShape_child_entered_tree"]
 [connection signal="child_exiting_tree" from="CollisionShape" to="." method="_on_CollisionShape_child_exiting_tree"]
