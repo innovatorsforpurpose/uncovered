@@ -31,6 +31,7 @@ func _on_Timer_timeout():
 	get_node("/root/RootScene/Door1/AnimationPlayer").play("RESET")
 	var success = ProjectSettings.load_resource_pack("res://packs/UncoveredMinigame.zip")
 	if success:
+		pass
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		get_tree().change_scene("res://Scenes/CreationScene.tscn")
 	else:

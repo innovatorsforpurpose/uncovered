@@ -12,6 +12,10 @@ var active_dialogue = 0
 var move = true
 var velocity = 10
 var player = true
+var Enter = false
+var slope = 0
+
+
 
 func _ready():
 	pass
@@ -26,14 +30,17 @@ func toggle_the_player(on):
 
 func _on_Area_body_entered(body):
 	if body.name == "MC":
-		body.immobile = false
+		body.immobile = true
 		currently_colliding = true
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		Input.is_action_just_pressed("game_usage")
+	elif active_dialogue == 10 and currently_colliding == true:
+		body.immobile = false
 
 func _on_Timer_timeout():
 	if currently_colliding == true:
 		active_dialogue = active_dialogue+1
+		currently_colliding == false
 
 func _physics_process(delta):
 	if  active_dialogue == 0 and currently_colliding == false:
@@ -41,9 +48,13 @@ func _physics_process(delta):
 
 	elif Input.is_action_just_pressed("game_usage") and currently_colliding == true:
 		active_dialogue = active_dialogue+1
+		slope = slope + 1
+		if slope == 10:
+			Enter = true
 
-	elif Input.is_action_just_pressed("game_usage") and currently_colliding == true:
-		active_dialogue = 18
+	elif Input.is_action_just_pressed("game_usageI") and currently_colliding == true:
+		active_dialogue = 10
+		Enter = true
 
 	elif active_dialogue == 0 and currently_colliding == true:
 		visible = true 
@@ -128,6 +139,7 @@ func _physics_process(delta):
 		Px.hide()
 		IDx.hide()
 		IEx.hide()
+		Enter = true
 
 func _on_Area_body_exited(body):
 	visible = false
@@ -138,3 +150,5 @@ func _on_Button_pressed():
 
 func _on_Button2_pressed():
 	 active_dialogue = active_dialogue+1
+
+
