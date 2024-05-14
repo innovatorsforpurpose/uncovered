@@ -10,12 +10,8 @@ onready var IEx = $Panel/BackBoard
 var currently_colliding = false
 var active_dialogue = 0
 var move = true
-var velocity = 10
+var velocity = 9
 var player = true
-var Enter = false
-var slope = 0
-
-
 
 func _ready():
 	pass
@@ -28,38 +24,23 @@ func toggle_the_player(on):
 	if player:
 		player.set_active(on)
 
-func _on_Area_body_entered(body):
-	if body.name == "MC":
-		body.immobile = true
-		currently_colliding = true
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		Input.is_action_just_pressed("game_usage")
-	elif active_dialogue == 10 and currently_colliding == true:
-		body.immobile = false
+	elif Input.is_action_just_pressed("game_usage") and currently_colliding == true:
+		active_dialogue = active_dialogue+1
+
+	elif Input.is_action_just_pressed("game_usageI") and currently_colliding == true:
+		active_dialogue = 9
+
+	elif active_dialogue == 0 and currently_colliding == true:
+		visible = true 
 
 func _on_Timer_timeout():
 	if currently_colliding == true:
 		active_dialogue = active_dialogue+1
 		currently_colliding == false
+	if active_dialogue >= 9:
+		active_dialogue = 9
 
-func _physics_process(delta):
-	if  active_dialogue == 0 and currently_colliding == false:
-		visible = false
-
-	elif Input.is_action_just_pressed("game_usage") and currently_colliding == true:
-		active_dialogue = active_dialogue+1
-		slope = slope + 1
-		if slope == 10:
-			Enter = true
-
-	elif Input.is_action_just_pressed("game_usageI") and currently_colliding == true:
-		active_dialogue = 10
-		Enter = true
-
-	elif active_dialogue == 0 and currently_colliding == true:
-		visible = true 
-
-
+func _physics_process(_delta):
 
 	if active_dialogue == 0:
 		Lx.text = "Zach and I made it to the school"
@@ -124,7 +105,7 @@ func _physics_process(delta):
 		Px.show()
 		IDx.hide()
 
-	if active_dialogue == 9:
+	if active_dialogue == 8:
 		Lx.text = "Fine but it has to be short."
 		NQx.text = "Zach"
 		TQx.show()
@@ -132,21 +113,20 @@ func _physics_process(delta):
 		Px.show()
 		IDx.show()
 
-	if active_dialogue == 10:
+	if active_dialogue == 9:
 		visible = false
 		Lx.hide()
 		NQx.hide()
 		Px.hide()
 		IDx.hide()
 		IEx.hide()
-		Enter = true
 
 func _on_Area_body_exited(body):
 	visible = false
 	currently_colliding = false
 
 func _on_Button_pressed():
-	 active_dialogue = 10
+	 active_dialogue = 9
 
 func _on_Button2_pressed():
 	 active_dialogue = active_dialogue+1

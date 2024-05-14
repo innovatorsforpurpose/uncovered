@@ -173,7 +173,7 @@ __meta__ = {
 
 [node name="Timer" type="Timer" parent="."]
 process_mode = 0
-wait_time = 6.6
+wait_time = 0.571
 script = ExtResource( 7 )
 
 [node name="Zach2" type="StaticBody" parent="."]
@@ -197,6 +197,7 @@ __meta__ = {
 
 [node name="Zach3Dmodel" parent="." instance=ExtResource( 9 )]
 
+[connection signal="tree_entered" from="." to="." method="_on_Zach_tree_entered"]
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
 [connection signal="body_entered" from="Area" to="Zach" method="_on_Area_body_entered"]
 [connection signal="body_entered" from="Area" to="Timer" method="_on_Area_body_entered"]

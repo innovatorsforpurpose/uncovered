@@ -327,4 +327,5 @@ Make sure Rotation mode is in Oriented"
 [connection signal="timeout" from="MCSRevengeTransport/BossBattleTimer" to="MCSRevengeTransport" method="_on_Timer_timeout"]
 [connection signal="input_event" from="MCSRevengeTransport/CSGSphere/Area" to="MCSRevengeTransport" method="_on_Area_input_event"]
 [connection signal="area_entered" from="Zach" to="Archive/Path/PathFollow" method="_on_Zach_area_entered"]
+[connection signal="area_exited" from="Zach" to="Zach" method="_on_Zach_area_exited"]
 [connection signal="child_entered_tree" from="Archive/Path/PathFollow" to="Zach" method="_on_PathFollow_child_entered_tree"]
