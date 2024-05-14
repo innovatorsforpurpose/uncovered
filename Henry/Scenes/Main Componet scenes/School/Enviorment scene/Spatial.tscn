@@ -4,7 +4,7 @@
 [ext_resource path="res://entities/Objects/Classroom/Classroom_levelblockout_csstart.glb" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Charater scenes/GC/GC.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Charater scenes/Mentor/Mentor/Mentor.tscn" type="PackedScene" id=4]
-[ext_resource path="res://MC/MC.tscn" type="PackedScene" id=5]
+[ext_resource path="res://MC/player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Dialogue/Dialogue/Dialogue.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Charater scenes/Laura/Laura.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Charater scenes/Student/Student.tscn" type="PackedScene" id=8]
@@ -34,7 +34,6 @@ shape = SubResource( 1 )
 [node name="MeshInstance" type="MeshInstance" parent="Ground"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
 mesh = SubResource( 2 )
-material/0 = null
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( -1, -8.74228e-08, 4.37114e-08, 4.37114e-08, 1.91069e-15, 1, -8.74228e-08, 1, 1.91069e-15, 0, 21.009, 0 )

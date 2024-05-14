@@ -125,7 +125,7 @@ rect_pivot_offset = Vector2( -822, 1045 )
 script = ExtResource( 9 )
 
 [node name="Timer1" type="Timer" parent="MentorI"]
-wait_time = 2.7
+wait_time = 0.074
 script = ExtResource( 1 )
 
 [node name="Panel" type="Panel" parent="MentorI"]
@@ -261,6 +261,8 @@ margin_bottom = 50.0
 [connection signal="body_entered" from="Area" to="MentorI/Timer1" method="_on_Area_body_entered"]
 [connection signal="body_exited" from="Area" to="MentorI" method="_on_Area_body_exited"]
 [connection signal="body_exited" from="Area" to="MentorI/Timer1" method="_on_Area_body_exited"]
+[connection signal="focus_exited" from="MentorI" to="." method="_on_MentorI_focus_exited"]
+[connection signal="visibility_changed" from="MentorI" to="." method="_on_MentorI_visibility_changed"]
 [connection signal="timeout" from="MentorI/Timer1" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="MentorI/Timer1" to="MentorI" method="_on_Timer_timeout"]
 [connection signal="pressed" from="MentorI/Panel/Button2/Button2" to="." method="_on_Button2_pressed"]
