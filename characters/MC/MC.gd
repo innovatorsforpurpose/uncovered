@@ -15,6 +15,7 @@ var count = 0
 var check = 1
 var player = true
 export(bool) var immobile
+var Zangchi = true
 
 func _ready():
 	initial_position = get_global_transform().origin
@@ -72,10 +73,6 @@ func set_active(active):
 	set_physics_process(active)
 	set_process(active)
 	set_process_input(active)
-
-
-func _on_Zach_body_entered(body):
-	pass
 
 func _on_Timer2_timeout():
 	count = count+1

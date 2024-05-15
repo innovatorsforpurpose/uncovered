@@ -33,7 +33,7 @@ __meta__ = {
 transform = Transform( 0.500088, 0, 0, 0, 1.66417, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
-transform = Transform( 15, 0, 0, 0, 3, 0, 0, 0, 5, 0, 0, 0 )
+transform = Transform( 20.8098, 0, 0, 0, 3, 0, 0, 0, 9.56232, 0, 0, 0 )
 shape = SubResource( 2 )
 __meta__ = {
 "_editor_description_": "														"
@@ -173,7 +173,7 @@ __meta__ = {
 
 [node name="Timer" type="Timer" parent="."]
 process_mode = 0
-wait_time = 0.571
+wait_time = 2.7
 script = ExtResource( 7 )
 
 [node name="Zach2" type="StaticBody" parent="."]
@@ -197,14 +197,19 @@ __meta__ = {
 
 [node name="Zach3Dmodel" parent="." instance=ExtResource( 9 )]
 
+[connection signal="area_entered" from="." to="." method="_on_Zach_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_Zach_body_entered"]
 [connection signal="tree_entered" from="." to="." method="_on_Zach_tree_entered"]
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
 [connection signal="body_entered" from="Area" to="Zach" method="_on_Area_body_entered"]
 [connection signal="body_entered" from="Area" to="Timer" method="_on_Area_body_entered"]
 [connection signal="body_exited" from="Area" to="Zach" method="_on_Area_body_exited"]
 [connection signal="body_exited" from="Area" to="Timer" method="_on_Area_body_exited"]
+[connection signal="script_changed" from="Zach" to="." method="_on_Zach_script_changed"]
 [connection signal="pressed" from="Zach/Panel/Button/Button" to="Zach" method="_on_Button_pressed"]
 [connection signal="pressed" from="Zach/Panel/Button/Button" to="Timer" method="_on_Button_pressed"]
 [connection signal="pressed" from="Zach/Panel/Button2/Button2" to="Zach" method="_on_Button2_pressed"]
 [connection signal="pressed" from="Zach/Panel/Button2/Button2" to="Timer" method="_on_Button2_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="Timer" to="Zach" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer" to="Timer" method="_on_Timer_timeout"]
