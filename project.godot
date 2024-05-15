@@ -18,10 +18,6 @@ config/icon="res://scenes/oldscenes/images/icons/icon.png"
 
 default_bus_layout=""
 
-[autoload]
-
-Debug="*res://minigames/Escape-room/scripts/Debug.gd"
-
 [display]
 
 window/size/height=578

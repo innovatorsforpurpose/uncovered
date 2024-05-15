@@ -9,20 +9,15 @@ extends ParallaxLayer
 # Called when the node enters the scene tree for the first time.
 func _process(_delta):
 	self.position = get_local_mouse_position() * 0.02
-	
-	
-	
-	
-func fade_black_to(_area):
-	pass
 
 
-
-	
-
-
-func _on_Computer_pressed():
-	pass # Replace with function body.
-
-
-
+func _on_LineEdit_text_entered(new_text):
+	print(new_text)
+	if new_text == "Washington" or new_text == "washington":
+		$Sprite.texture = load("res://minigames/Escape-room/Escape-room_res/Txtrs/close ups/puzzle 2/computer correct.png")
+		$LineEdit.editable = false
+		$LineEdit.hide()
+	else:
+		$Sprite.texture = load("res://minigames/Escape-room/Escape-room_res/Txtrs/close ups/puzzle 2/computer incorrect.png")
+		$LineEdit.editable = false
+		$LineEdit.hide()

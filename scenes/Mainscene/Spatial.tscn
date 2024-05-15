@@ -224,6 +224,7 @@ transform = Transform( 0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.5, -25.3264, 12.968, 10 )
 transform = Transform( 0.308545, 0, -0.380152, 0, 0.475, 0, 0.361144, 0, 0.324784, -42.1676, 13.0428, -8.58389 )
 
 [node name="Node2D@Enviroment@Laura@DialoguePlayer" parent="." instance=ExtResource( 17 )]
+visible = false
 follow_viewport_enable = true
 dialogue_file = "res://scenes/Charater scenes/Laura/Laura/Laura.json"
 
