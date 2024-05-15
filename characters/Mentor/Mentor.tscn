@@ -125,7 +125,7 @@ rect_pivot_offset = Vector2( -822, 1045 )
 script = ExtResource( 9 )
 
 [node name="Timer1" type="Timer" parent="MentorI"]
-wait_time = 0.074
+wait_time = 2.7
 script = ExtResource( 1 )
 
 [node name="Panel" type="Panel" parent="MentorI"]
