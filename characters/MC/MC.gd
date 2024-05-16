@@ -15,7 +15,9 @@ var count = 0
 var check = 1
 var player = true
 export(bool) var immobile
-var Zangchi = true
+var Zangchi = false
+var target = 0
+var path = []
 
 func _ready():
 	initial_position = get_global_transform().origin
@@ -54,7 +56,26 @@ func _physics_process(delta):
 	velocity += gravity * delta
 	get_input()
 	velocity = move_and_slide(velocity, Vector3.UP)
-	#if jump and is_on_floor():
+	if target == 1 and path.size() == 0 and toggle_the_player(false):
+		path = [Vector3(-25,6.57,-21), Vector3(-45,6.57,-21),Vector3(-45,6.57,-28)]
+	if path.size() > 0:
+		velocity = Vector3(path[0].x - transform.origin.x, path[0].y - transform.origin.y, path[0].z - transform.origin.z)
+		var distance =  velocity.length()
+		if distance <= speed:
+			target = 0
+			path = path.slice(1,path.size())
+			velocity = Vector3(0,0,0)
+			if velocity == Vector3(0,0,0) and path == path.slice(1,path.size()):
+				target = 2
+		else:
+			velocity = velocity.normalized() * speed
+	transform.origin += velocity
+	
+	if target == 2:
+		path = [Vector3(-45,6.57,-28)]
+		target = 3
+		
+		#if jump and is_on_floor():
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
 		if event.relative.x > 0:
@@ -76,3 +97,8 @@ func set_active(active):
 
 func _on_Timer2_timeout():
 	count = count+1
+
+func _on_Zach_body_entered(body):
+	if body.name == "MC":
+		target = 1
+		toggle_the_player(false)
