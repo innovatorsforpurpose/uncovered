@@ -21,21 +21,25 @@ func move_and_slide():
 	pass
 
 func toggle_the_player(on):
-	if body.name == "MC":
-		
+	var player = get_tree().get_root().find_node("MC", true, false)
+	if player:
+		player.set_active(on)
 
 func _on_Area_body_entered(body):
 	if body.name == "MC":
-		
+		toggle_the_player(false)
 		currently_colliding = true
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		Input.is_action_just_pressed("game_usage")
 
 	elif Input.is_action_just_pressed("game_usage") and currently_colliding == true:
 		active_dialogue = active_dialogue+1
+		if active_dialogue == Xr:
+			toggle_the_player(true)
 
 	elif Input.is_action_just_pressed("game_usageI") and currently_colliding == true:
 		active_dialogue = Xr
+		toggle_the_player(true)
 
 func _on_Timer_timeout():
 
@@ -135,17 +139,18 @@ func _physics_process(_delta):
 		IDx.hide()
 		IEx.hide()
 		visible = false
-		immobile = false
+		toggle_the_player(true)
 
 func _on_Area_body_exited(body):
 	currently_colliding = false
 
 func _on_Button_pressed():
 	active_dialogue = Xr 
-	immobile = false
+	toggle_the_player(true)
+
 func _on_Button2_pressed():
 	active_dialogue = active_dialogue+1
 	if active_dialogue == Xr:
-		immobile = false
+		toggle_the_player(true)
 
 
