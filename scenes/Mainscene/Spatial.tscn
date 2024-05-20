@@ -250,7 +250,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00904, 0 )
 [node name="Enviroment" type="CanvasLayer" parent="Node2D"]
 
 [node name="MC" parent="Node2D/Enviroment" instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1.41956, 0, 0, 0, 1, -25.2079, 12.7115, 20.67 )
+transform = Transform( 1, 0, 0, 0, 1.41956, 0, 0, 0, 1, -25.1081, 12.4748, 23.1219 )
 
 [node name="Knob4" parent="." instance=ExtResource( 4 )]
 transform = Transform( 0.266818, 0, 0, 0, 0.271882, 0, 0, 0, 0.123206, -26.6037, 1.6175, -41.1731 )

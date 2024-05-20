@@ -6,7 +6,7 @@ onready var TQx = $Panel/NinePatchRect2
 onready var NQx = $Panel/NinePatchRect2/Label
 onready var IQx = $Panel/Backtext
 onready var IEx = $Panel/BackBoard
-onready var Xr = 11
+onready var Xr = 10
 
 var currently_colliding = false
 var active_dialogue = 0
@@ -26,20 +26,19 @@ func toggle_the_player(on):
 		player.set_active(on)
 
 func _on_Area_body_entered(body):
-	if body.name == "MC":
+	if body.name == "MC": 
 		toggle_the_player(false)
 		currently_colliding = true
+		print(currently_colliding)
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		Input.is_action_just_pressed("game_usage")
+		active_dialogue = 1
+	else:
+		currently_colliding = false
+		pass
 
-	elif Input.is_action_just_pressed("game_usage") and currently_colliding == true:
-		active_dialogue = active_dialogue+1
-		if active_dialogue == Xr:
-			toggle_the_player(true)
-
-	elif Input.is_action_just_pressed("game_usageI") and currently_colliding == true:
-		active_dialogue = Xr
-		toggle_the_player(true)
+func _on_Area_body_exited(body):
+	if body.name == "MC": 
+		currently_colliding = false
 
 func _on_Timer_timeout():
 
@@ -51,7 +50,16 @@ func _on_Timer_timeout():
 
 func _physics_process(_delta):
 	
-	if active_dialogue == 0 and currently_colliding == true:
+	if Input.is_action_just_pressed("game_usage") and currently_colliding == true:
+		active_dialogue = active_dialogue + 1
+		if active_dialogue == Xr:
+			toggle_the_player(true)
+
+	elif Input.is_action_just_pressed("game_usageI") and currently_colliding == true:
+		active_dialogue = Xr
+		toggle_the_player(true)
+
+	if currently_colliding == false:
 		pass
 
 	if active_dialogue == 0:
@@ -141,8 +149,7 @@ func _physics_process(_delta):
 		visible = false
 		toggle_the_player(true)
 
-func _on_Area_body_exited(body):
-	currently_colliding = false
+
 
 func _on_Button_pressed():
 	active_dialogue = Xr 
@@ -152,5 +159,3 @@ func _on_Button2_pressed():
 	active_dialogue = active_dialogue+1
 	if active_dialogue == Xr:
 		toggle_the_player(true)
-
-

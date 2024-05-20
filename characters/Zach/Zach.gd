@@ -11,23 +11,26 @@ var PathI = 0
 var Xr = 10
 
 func _input(event):
-	if event.is_action_pressed("game_usage") and currently_colliding:
+	if event.is_action_pressed("game_usage") and currently_colliding == true:
 		pass
 
 func _on_Timer_timeout():
 	count = count+1
 
-	if Input.is_action_just_pressed("game_usage") and currently_colliding == true:
-		count = count+1
-
-	elif Input.is_action_just_pressed("game_usageI") and currently_colliding == true:
-		count = Xr
-
-	elif count >= Xr:
-		target = 1
 
 func _physics_process(_delta):
+	if Input.is_action_just_pressed("game_usage"):
+		count = count+1
 
+	elif Input.is_action_just_pressed("game_usageI"):
+		count = Xr
+		print("count", count)
+		print("Xr", Xr)
+
+	elif count >= Xr:
+
+		target = 1
+#	print(target)
 	if target == 1 and path.size() == 0:
 		path = [Vector3(-25,6.57,-21), Vector3(-45,6.57,-21),Vector3(-45,6.57,-28)]
 	if path.size() > 0:
