@@ -10,6 +10,16 @@ var count = 0
 var PathI = 0
 var Xr = 10
 
+func _on_Area_body_entered(body):
+	if body.name == "MC": 
+		currently_colliding = true
+		print(currently_colliding)
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		count = 1
+	else:
+		currently_colliding = false
+		pass
+
 func _input(event):
 	if event.is_action_pressed("game_usage") and currently_colliding == true:
 		pass
@@ -17,20 +27,24 @@ func _input(event):
 func _on_Timer_timeout():
 	count = count+1
 
-
 func _physics_process(_delta):
+	
+	print(currently_colliding)
+
+	if currently_colliding == false and count == 0:
+		return
+#	print(target)
 	if Input.is_action_just_pressed("game_usage"):
 		count = count+1
 
-	elif Input.is_action_just_pressed("game_usageI"):
-		count = Xr
-		print("count", count)
-		print("Xr", Xr)
+	if Input.is_action_just_pressed("game_usageI"):
+		count = Xr+1
+		print(currently_colliding)
+		print(path)
 
-	elif count >= Xr:
-
+	if count >= Xr:
 		target = 1
-#	print(target)
+
 	if target == 1 and path.size() == 0:
 		path = [Vector3(-25,6.57,-21), Vector3(-45,6.57,-21),Vector3(-45,6.57,-28)]
 	if path.size() > 0:
@@ -49,6 +63,14 @@ func _physics_process(_delta):
 	if target == 2:
 		path = [Vector3(-45,6.57,-28)]
 		target = 3
-		
+
 #	if target == 3 and path.size() == 0:
 #		pass
+
+func _on_Button_pressed():
+	count = Xr 
+
+func _on_Button2_pressed():
+	count = count + 1
+	if count >= Xr:
+		count = Xr

@@ -7,7 +7,6 @@ onready var NQx = $Panel/NinePatchRect2/Label
 onready var IQx = $Panel/Backtext
 onready var IEx = $Panel/BackBoard
 onready var Xr = 10
-
 var currently_colliding = false
 var active_dialogue = 0
 var move = true
@@ -148,8 +147,7 @@ func _physics_process(_delta):
 		IEx.hide()
 		visible = false
 		toggle_the_player(true)
-
-
+		_on_Button2_pressed()
 
 func _on_Button_pressed():
 	active_dialogue = Xr 

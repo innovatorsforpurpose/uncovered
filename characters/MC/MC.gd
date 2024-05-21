@@ -54,27 +54,8 @@ func _physics_process(delta):
 	velocity += gravity * delta
 	get_input()
 	velocity = move_and_slide(velocity, Vector3.UP)
-
 	if target == 1:
-		path = [Vector3(-25,12.75,-2), Vector3(-42,12.75,-2),Vector3(-42,12.75,-12)]
-		if path.size() > 0:
-			velocity = Vector3(path[0].x - transform.origin.x, path[0].y - transform.origin.y, path[0].z - transform.origin.z)
-			var distance =  velocity.length()
-			if distance <= speed:
-				target = 0
-				path = path.slice(1,path.size())
-				velocity = Vector3(0,0,0)
-				if velocity == Vector3(0,0,0) and path == path.slice(1,path.size()):
-					target = 2
-			else:
-				velocity = velocity.normalized() * speed
-		transform.origin += velocity
-
-	if target == 2:
-		path = []
-		target = 3
-
-		#if jump and is_on_floor():
+		auto_move()
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
 		if event.relative.x > 0:
@@ -98,4 +79,25 @@ func _on_Timer2_timeout():
 	count = count+1
 
 func _on_Zach_body_entered(body):
-	pass
+	target = 1
+
+func auto_move():
+	path = [Vector3(-25,12.75,-2), Vector3(-42,12.75,-2),Vector3(-42,12.75,-12)]
+	if path.size() > 0:
+		velocity = Vector3(path[0].x - transform.origin.x, path[0].y - transform.origin.y, path[0].z - transform.origin.z)
+		var distance =  velocity.length()
+		if distance <= speed:
+			target = 0
+			path = path.slice(1,path.size())
+			velocity = Vector3(0,0,0)
+			if velocity == Vector3(0,0,0) and path == path.slice(1,path.size()):
+				target = 2
+		else:
+			velocity = velocity.normalized() * speed
+	transform.origin += velocity
+
+	if target == 2:
+		path = []
+		target = 3
+
+		#if jump and is_on_floor():

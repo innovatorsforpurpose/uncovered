@@ -482,6 +482,34 @@ align = 1
 autowrap = true
 clip_text = true
 
+[node name="PanelXVII" type="Panel" parent="Control_1"]
+margin_left = -1.0
+margin_top = 415.0
+margin_right = 804.0
+margin_bottom = 584.0
+rect_pivot_offset = Vector2( 641, 93 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control_1/PanelXVII"]
+margin_left = 13.0
+margin_top = -15.0
+margin_right = 792.0
+margin_bottom = 152.0
+texture = ExtResource( 6 )
+region_rect = Rect2( 1.24512, 0, 15806.4, 4496.51 )
+
+[node name="Label" type="Label" parent="Control_1/PanelXVII"]
+margin_left = 34.0
+margin_top = -4.0
+margin_right = 743.0
+margin_bottom = 121.0
+custom_fonts/font = ExtResource( 9 )
+text = "'I'm tying my shoes'
+... 'Okay omw'
+"
+align = 1
+autowrap = true
+clip_text = true
+
 [node name="NinePatchRect" type="NinePatchRect" parent="Control_1"]
 modulate = Color( 1, 1, 1, 0.961489 )
 margin_left = 595.0
