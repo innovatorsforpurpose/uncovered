@@ -8,3 +8,7 @@ func _ready():
 	if randi() % 2 == 0:
 		Item = ItemClass.instance()
 		add_child(Item)
+
+
+func _on_Panel_mouse_entered():
+	pass # Replace with function body.

@@ -26,3 +26,5 @@ margin_left = 826.0
 margin_top = 359.0
 margin_right = 1004.0
 margin_bottom = 519.0
+
+[connection signal="pressed" from="ParallaxLayer/GearBox" to="ParallaxLayer" method="_on_GearBox_pressed"]

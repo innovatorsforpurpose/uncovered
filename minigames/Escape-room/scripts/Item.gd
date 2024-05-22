@@ -13,6 +13,7 @@ func _ready():
 	else: 
 		$TextureRect.texture = load("res://minigames/Escape-room/Escape-room_res/Txtrs/UI assets/Button_blu.png")
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	pass

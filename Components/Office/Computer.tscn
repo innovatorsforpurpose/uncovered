@@ -6,6 +6,7 @@
 [sub_resource type="StyleBoxEmpty" id=1]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
+layer = -50
 offset = Vector2( 510.562, 288.972 )
 transform = Transform2D( 1, 0, 0, 1, 510.562, 288.972 )
 

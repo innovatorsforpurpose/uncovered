@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://minigames/Escape-room/Cabinets-puzzle2.tscn" type="PackedScene" id=1]
 [ext_resource path="res://minigames/Escape-room/Tablet.tscn" type="PackedScene" id=2]
@@ -8,7 +8,10 @@
 [ext_resource path="res://minigames/Escape-room/scripts/DoorLock.gd" type="Script" id=6]
 [ext_resource path="res://minigames/Escape-room/scripts/Cabinet.gd" type="Script" id=7]
 [ext_resource path="res://minigames/Escape-room/scripts/TabletButton.gd" type="Script" id=8]
+[ext_resource path="res://minigames/Escape-room/GearBox.tscn" type="PackedScene" id=9]
+[ext_resource path="res://minigames/Escape-room/BackSide.tscn" type="PackedScene" id=10]
 [ext_resource path="res://minigames/Escape-room/scripts/BackButton.gd" type="Script" id=11]
+[ext_resource path="res://minigames/Escape-room/scripts/BackSide.gd" type="Script" id=12]
 [ext_resource path="res://minigames/Escape-room/scripts/Background.gd" type="Script" id=14]
 
 [sub_resource type="StreamTexture" id=23]
@@ -96,6 +99,12 @@ margin_right = 302.0
 margin_bottom = 152.0
 script = ExtResource( 8 )
 
+[node name="Button2" type="Button" parent="."]
+margin_left = 288.0
+margin_top = 511.0
+margin_right = 714.0
+margin_bottom = 562.0
+
 [node name="Button" type="Button" parent="."]
 modulate = Color( 0.921569, 1, 0, 1 )
 margin_left = 31.0
@@ -119,8 +128,18 @@ visible = false
 offset = Vector2( 510.562, 311.406 )
 transform = Transform2D( 1, 0, 0, 1, 510.562, 311.406 )
 
+[node name="Back" parent="." instance=ExtResource( 10 )]
+visible = false
+script = ExtResource( 12 )
+
+[node name="GearBox" parent="." instance=ExtResource( 9 )]
+visible = false
+
 [connection signal="pressed" from="Front/ParallaxLayer/CabinetButton" to="Front/ParallaxLayer/CabinetButton" method="_on_CabinetButton_pressed"]
 [connection signal="pressed" from="Front/ParallaxLayer/DoorLock" to="Front/ParallaxLayer/DoorLock" method="_on_DoorLock_pressed"]
 [connection signal="pressed" from="Front/ParallaxLayer/ComputerButton" to="Front/ParallaxLayer/ComputerButton" method="_on_Computer_pressed"]
 [connection signal="pressed" from="Front/ParallaxLayer/TabletButton" to="Front/ParallaxLayer/TabletButton" method="_on_TabletButton_pressed"]
+[connection signal="pressed" from="Button2" to="Back" method="_on_Button_pressed"]
 [connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
+
+[editable path="GearBox"]

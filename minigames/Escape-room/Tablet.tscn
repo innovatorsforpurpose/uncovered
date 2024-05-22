@@ -4,6 +4,7 @@
 [ext_resource path="res://minigames/Escape-room/Escape-room_res/Txtrs/close ups/puzzle 3/Untitled_Artwork 47.png" type="Texture" id=2]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
+layer = -50
 offset = Vector2( 510.562, 288.972 )
 transform = Transform2D( 1, 0, 0, 1, 510.562, 288.972 )
 
