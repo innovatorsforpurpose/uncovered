@@ -12,12 +12,12 @@ export var yellowline = false
 
 
 func _on_green_area_body_entered():
-	print(blueline)
-	print(greenline)
-	print(yellowline)
-	print(redline)
+	# print(blueline)
+	# print(greenline)
+	# print(yellowline)
+	# print(redline)
 	if blueline and redline and greenline and yellowline:
-		print("done")
+		# print("done")
 		get_node("winner").visible = true
 		
 

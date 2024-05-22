@@ -17,7 +17,7 @@ var count = 1
 
 func _on_WelcomeTimer_timeout():
 	count = count+1
-	#print("count",count)
+	## print("count",count)
 	if count == 5:
 		stop()
 
@@ -25,7 +25,7 @@ func _on_Area_body_exited(body):
 	currently_colliding = false
 
 	if currently_colliding == false:
-		#print("workingII")
+		## print("workingII")
 		stop()
 
 func _physics_process(delta):

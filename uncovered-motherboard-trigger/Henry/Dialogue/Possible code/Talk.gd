@@ -13,7 +13,7 @@ func load_dialogue():
 		file.open(dialogue_file, file.READ)
 		return parse_json(file.get_as_text())
 		
-	# print (file.file_exists(dialogue_file))
+	# # print (file.file_exists(dialogue_file))
 func speak(): 
 	return
 	# text box pops up. 

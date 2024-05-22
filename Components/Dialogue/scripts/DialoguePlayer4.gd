@@ -19,7 +19,7 @@ func play():
 	if is_dialogue_active:
 		return
 	dialogues = load_dialogue()
-	#print(dialogues)
+	## print(dialogues)
 	if dialogues == null:
 		return
 	is_dialogue_active = true
@@ -31,8 +31,8 @@ func reset():
 	current_dialogue_id = -1
 
 func next_line():
-	# print("line")
-	# print(current_dialogue_id)
+	# # print("line")
+	# # print(current_dialogue_id)
 	toggle_the_player(false)
 
 	current_dialogue_id += 1	
@@ -52,9 +52,9 @@ func next_line():
 
 func load_dialogue():
 	var file = File.new()
-	print(dialogue_file)
+	# print(dialogue_file)
 	if file.file_exists(dialogue_file):
-		#print_debug("filename:" + dialogue_file)
+		## print_debug("filename:" + dialogue_file)
 		var err = file.open(dialogue_file, file.READ)
 		if err != OK:
 			return

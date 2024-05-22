@@ -23,10 +23,10 @@ func _physics_process(delta):
 	get_input()
 	
 	var position = global_translation
-	#print(position)
+	## print(position)
 	position.x = position.x + x_movement
 	position.z = position.z + z_movement
-	#print(position)
-	#print("")
+	## print(position)
+	## print("")
 	
 	set_global_translation(position)

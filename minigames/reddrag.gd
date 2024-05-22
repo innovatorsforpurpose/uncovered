@@ -9,7 +9,7 @@ func _physics_process(_delta):
 	if Input.is_action_pressed("click") and dragReady:
 		myClickPos = get_global_mouse_position()
 		#myDistance = get_position()- myClickPos
-		#print(myDistance)
+		## print(myDistance)
 	if Input.is_action_pressed("click") and dragReady and not completed:
 		set_position(get_global_mouse_position())
 

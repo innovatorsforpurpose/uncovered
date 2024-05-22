@@ -13,27 +13,27 @@ func _ready():
 	pass
 	
 func _process(delta):
-	# print("im here asfafs")
+	# # print("im here asfafs")
 	motion.y += GRAVITY
 	if motion.y > MAXFALLSPEED:
-		# print("im hereee")
+		# # print("im hereee")
 		motion.y = MAXFALLSPEED
 		
 		motion.x = clamp(motion.x, -MAXSPEED, MAXSPEED)
 		
 		
 	if Input.is_action_pressed("right"):
-		# print("im here1")
+		# # print("im here1")
 		motion.x += ACCELERATION
 	elif Input.is_action_pressed("left"):
-		# print("im here2")
+		# # print("im here2")
 		motion.x -= ACCELERATION 
 	else:
-		# print("im here3")
+		# # print("im here3")
 		motion.x = lerp(motion.x, 0, 0.2)
 		
 	if is_on_floor():
-		# print("im here")
+		# # print("im here")
 		if Input.is_action_pressed("jump"):
 			motion.y = -JUMP
 	

@@ -5,7 +5,7 @@ var angular_speed = PI
 
 
 func _ready():
-	# print("Ready")
+	# # print("Ready")
 	pass
 
 func _process(delta):

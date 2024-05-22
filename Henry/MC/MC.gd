@@ -30,7 +30,7 @@ func _physics_process(delta):
 
 func set_active(active):
 	player_active = active
-	# print(player_active)
+	# # print(player_active)
 	set_physics_process(active)
 	set_process(active)
 	set_process_input(active)

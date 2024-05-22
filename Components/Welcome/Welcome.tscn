@@ -1,7 +1,8 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://adnan/WelcomeText.gd" type="Script" id=1]
 [ext_resource path="res://assets/fonts/Cairo/new_dynamicfont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Components/Welcome/Button.gd" type="Script" id=3]
 [ext_resource path="res://Components/Control_1.gd" type="Script" id=4]
 [ext_resource path="res://Components/Welcome/L,Gray_text_box_with_dots_Left.png" type="Texture" id=5]
 [ext_resource path="res://Components/Welcome/Gray_text_box.png" type="Texture" id=6]
@@ -263,6 +264,9 @@ bg_color = Color( 0, 0, 0, 0 )
 
 [node name="Welcome" type="CanvasLayer"]
 script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "Press Shift + Q to skip intro dialogue"
+}
 
 [node name="WelcomeTimer" type="Timer" parent="."]
 wait_time = 3.0
@@ -482,6 +486,32 @@ align = 1
 autowrap = true
 clip_text = true
 
+[node name="PanelXVII" type="Panel" parent="Control_1"]
+margin_left = 101.0
+margin_top = 20.0
+margin_right = 906.0
+margin_bottom = 189.0
+rect_pivot_offset = Vector2( 641, 93 )
+
+[node name="Label" type="Label" parent="Control_1/PanelXVII"]
+margin_left = 6.0
+margin_top = 9.0
+margin_right = 715.0
+margin_bottom = 134.0
+rect_scale = Vector2( 1.12128, 1.18505 )
+custom_fonts/font = ExtResource( 9 )
+align = 1
+autowrap = true
+clip_text = true
+
+[node name="Button" type="Button" parent="Control_1/PanelXVII"]
+margin_left = 338.0
+margin_top = 143.0
+margin_right = 440.0
+margin_bottom = 163.0
+text = "Press T 2 times to close"
+script = ExtResource( 3 )
+
 [node name="NinePatchRect" type="NinePatchRect" parent="Control_1"]
 modulate = Color( 1, 1, 1, 0.961489 )
 margin_left = 595.0
@@ -591,4 +621,6 @@ margin_right = 1028.0
 margin_bottom = 599.0
 custom_styles/panel = SubResource( 4 )
 
+[connection signal="timeout" from="WelcomeTimer" to="." method="_on_WelcomeTimer_timeout"]
 [connection signal="timeout" from="WelcomeTimer" to="Control_1" method="_on_WelcomeTimer_timeout"]
+[connection signal="pressed" from="Control_1/PanelXVII/Button" to="." method="_on_Button_pressed"]

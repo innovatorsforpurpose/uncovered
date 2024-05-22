@@ -14,7 +14,7 @@ func find_and_use_dialogue():
 	dialogue_player = get_node_or_null("Dialogueplayer")
 	if dialogue_player:
 		if not dialogue_player.next_line():
-			# print("now changing target")
+			# # print("now changing target")
 			target = 1
 			
 
@@ -34,7 +34,7 @@ func _physics_process(_delta):
 	if path.size() > 0:
 		velocity = Vector3(path[0].x - transform.origin.x, path[0].y - transform.origin.y, path[0].z - transform.origin.z)
 		var distance =  velocity.length()
-		# print(distance)
+		# # print(distance)
 		if distance <= speed:
 			target = 1 
 			path = path.slice(1,path.size())

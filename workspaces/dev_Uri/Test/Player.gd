@@ -12,7 +12,7 @@ var leftDirection = -1
 var rightDirection = 1
 
 func _ready():
-	# print("Ready")
+	# # print("Ready")
 	pass
 
 func _process(delta):
@@ -33,7 +33,7 @@ func _process(delta):
 
 	if Input.is_action_pressed("ui_select"):
 		speed += acceleration
-		# print(speed)
+		# # print(speed)
 	
 	var velocity = Vector2.ZERO
 	velocity = Vector2.UP.rotated(rotation) * speed

@@ -14,7 +14,7 @@ func _process(delta):
 	framecount += 1
 	if framecount%60 == 0:
 		seconds += 1
-		print(str(seconds))
+		# print(str(seconds))
 	"""
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
@@ -24,13 +24,13 @@ func _on_Area_input_event(camera, event, position, normal, shape_idx):
 	if event is InputEventMouseButton:
 		if event.button_index ==BUTTON_LEFT and event.pressed == true:
 			$CSGSphere.visible = false
-			print("I am here sir i have done it ")
+			# print("I am here sir i have done it ")
 			get_node("/root/RootScene/Door1/AnimationPlayer").play("open")
 			get_node("/root/RootScene/MCSRevengeTransport/BossBattleTimer").start(2)
 
 
 func _on_Timer_timeout():
-	print("transition")
+	# print("transition")
 	var success = true# ProjectSettings.load_resource_pack("res://packs/UncoveredMinigame.zip")
 	if success:
 		return get_tree().change_scene("res://minigames/BossBattle/Bossgame_.tscn")

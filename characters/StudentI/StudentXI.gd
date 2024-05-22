@@ -100,7 +100,7 @@ func _on_Button_pressed():
 	 active_dialogue = 4
 
 func _on_StudentI_body_entered(body):
-	#print("Working")
+	## print("Working")
 	pass
 
 func _on_StudentI_body_exited(body):

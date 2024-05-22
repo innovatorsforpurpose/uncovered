@@ -95,7 +95,7 @@ func _on_Button_pressed():
 
 
 func _on_GC_area_entered(area):
-	#print("Working")
+	## print("Working")
 	pass
 
 func _on_GC_area_exited(area):
