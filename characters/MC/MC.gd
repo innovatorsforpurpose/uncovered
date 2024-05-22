@@ -24,10 +24,10 @@ func _ready():
 func get_input():
 	if Input.is_action_pressed("shift"):
 		speed = sprintspeed
-		gravity = Vector3.DOWN * 98
+		#gravity = Vector3.DOWN * 98
 	else:
 		speed = walkspeed
-		gravity = Vector3.DOWN * 98 
+		#gravity = Vector3.DOWN * 98 
 	var vy = velocity.y
 	velocity = Vector3()
 	#print(immobile)

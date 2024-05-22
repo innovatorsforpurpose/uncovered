@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://scenes/Mainscene/PathFollow.gd" type="Script" id=1]
 [ext_resource path="res://Door.new/Door-new.glb" type="PackedScene" id=2]
@@ -8,12 +8,11 @@
 [ext_resource path="res://characters/GC/GC.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Components/atrium/Newatrium.glb" type="PackedScene" id=7]
 [ext_resource path="res://assets/objectsall/Large objects/chairsdesks/classroom_chairs_and_Desks.fbx" type="PackedScene" id=8]
-[ext_resource path="res://Newhallway/Newhallway.tscn" type="PackedScene" id=9]
 [ext_resource path="res://characters/MC/MC.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Components/Classroom L1/Classroom.fbx" type="PackedScene" id=11]
 [ext_resource path="res://characters/Zach/Zach.tscn" type="PackedScene" id=12]
 [ext_resource path="res://assets/objectsall/Large objects/Door/Door I.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Newhallway/Newhallway.gd" type="Script" id=14]
+[ext_resource path="res://Components/basement/basementholecol.glb" type="PackedScene" id=15]
 [ext_resource path="res://darkness_simulator.glb" type="PackedScene" id=16]
 [ext_resource path="res://Components/Dialogue/Dialogue.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Components/Hallway/Classroom_HALLWAY.tscn" type="PackedScene" id=19]
@@ -274,7 +273,7 @@ transform = Transform( 1.42428, 0, 0, 0, 0.960988, 0, 0, 0, 2.5481, -1.08552, 7.
 [node name="Welcome" parent="." instance=ExtResource( 30 )]
 
 [node name="hallwayhopeful" parent="." instance=ExtResource( 32 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -41.396, 5.26514, -53.0685 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.2015, 5.26514, -52.4975 )
 __meta__ = {
 "_editor_description_": ""
 }
@@ -289,7 +288,7 @@ transform = Transform( 0.999948, -0.0102275, 0, 0.0102275, 0.999948, 0, 0, 0, 1.
 transform = Transform( 0, 0, -1, 0, 1, 0, 1, 0, 0, -28, -8, -38.982 )
 
 [node name="BASEMENT_DOOR" parent="." instance=ExtResource( 35 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -24.0008, -8.35183, -36.7048 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -24.8503, -11.9436, -35.6511 )
 
 [node name="Zach" parent="." instance=ExtResource( 12 )]
 transform = Transform( -0.169994, -4.38021e-09, 1.67219e-06, -4.36933e-09, 0.17, -8.94573e-11, -1.51619e-06, -8.24327e-11, -0.169999, -25, 6.571, -9.627 )
@@ -313,12 +312,11 @@ Make sure Rotation mode is in Oriented"
 [node name="Newatrium" parent="." instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.2144, 5.7898, -48.921 )
 
-[node name="Newhallway" parent="." instance=ExtResource( 9 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.2227, 5.66702, -49.09 )
-script = ExtResource( 14 )
-
 [node name="darkness_simulator" parent="." instance=ExtResource( 16 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.9489, 4.88382, -48.975 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.4411, 4.88382, -48.975 )
+
+[node name="basementholecol" parent="." instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.64898, 1.07483, -53.1824 )
 
 [connection signal="body_shape_entered" from="Door2II/Area" to="Door2II/Hallway_Door" method="_on_Area_body_shape_entered"]
 [connection signal="body_shape_exited" from="Door2II/Area" to="Door2II/Hallway_Door" method="_on_Area_body_shape_exited"]
