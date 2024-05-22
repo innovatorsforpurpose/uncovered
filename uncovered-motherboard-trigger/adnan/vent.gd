@@ -8,10 +8,10 @@ extends CanvasLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	# print($NinePatchRect)
+	# # print($NinePatchRect)
 	$InstructionsBackground.visible = false
 	var n = get_node("/root/RootScene/BASEMENT/ColorRect")
-	# print(n)
+	# # print(n)
 	get_node("/root/RootScene/BASEMENT/ColorRect").visible = false
 	pass # Replace with function body.
 

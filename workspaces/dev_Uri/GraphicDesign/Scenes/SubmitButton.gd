@@ -29,7 +29,7 @@ func click():
 		if holder > design:
 			goals.holders[holder].position.x -= (((settings.GRID_SQUARE_MARGIN/goals.reduction_scale)*settings.GRID_LENGTH)+(settings.GRID_MARGIN/goals.reduction_scale)*3)
 		total -= 1
-	# print(goals.holders)
+	# # print(goals.holders)
 	if goals.holders.size()==0:
 		completed_label.visible = true
 	goals.last_time = goals.time*1000

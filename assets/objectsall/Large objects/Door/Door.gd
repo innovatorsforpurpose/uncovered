@@ -8,14 +8,14 @@ var dialogue_player = null
 func _input(event):
 	if event.is_action_pressed("game_usage") and currently_colliding:
 		find_and_use_dialogue()
-		#print("in_area_Door")
-		#print(currently_colliding)
+		## print("in_area_Door")
+		## print(currently_colliding)
 
 func find_and_use_dialogue():
 	dialogue_player = get_node_or_null("DialoguePlayer")
 	if dialogue_player:
 		if not dialogue_player.next_line():
-			# print("now changing target")
+			# # print("now changing target")
 			target = 0
 
 func _on_Door_tree_exited():

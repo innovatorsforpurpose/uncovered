@@ -8,14 +8,14 @@ var jump_impulse = 15
 var spin = 0.05
 var velocity = Vector3.ZERO
 #var jump = false
-var sprintspeed = 10
+var s# printspeed = 10
 var flag = 1
 var initial_position
 func _ready():
 	initial_position = get_global_transform().origin
 func get_input():
 	if Input.is_action_pressed("shift"):
-		speed = sprintspeed
+		speed = s# printspeed
 		gravity = Vector3.DOWN * 98
 	else:
 		speed = walkspeed
@@ -52,7 +52,7 @@ func _unhandled_input(event):
 			rotate_y(-lerp(0, spin, event.relative.x/12.5))
 func set_active(active):
 	player_active = active
-	#print(player_active)
+	## print(player_active)
 	set_physics_process(active)
 	set_process(active)
 	set_process_input(active)

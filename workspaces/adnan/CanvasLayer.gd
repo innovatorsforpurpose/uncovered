@@ -8,10 +8,10 @@ extends Area
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#print($NinePatchRect)
+	## print($NinePatchRect)
 	#$InstructionsBackground.visible = false
 	var _n = get_node("/root/RootScene/BASEMENT/ColorRect")
-	#print(n)
+	## print(n)
 	get_node("/root/RootScene/BASEMENT/ColorRect").visible = false
 	pass # Replace with function body.
 
@@ -23,10 +23,10 @@ func _process(_delta):
 var instructions_shown = false
 
 func _on_Area_body_entered(body):
-	#print("Instructions Shown")
-	#print(instructions_shown)
+	## print("Instructions Shown")
+	## print(instructions_shown)
 	if body.name == "MC" and instructions_shown == false:
-		#print("got here")
+		## print("got here")
 		instructions_shown = true
 		get_node("/root/RootScene/BASEMENT/ColorRect").visible = true
 		get_node("/root/RootScene/BASEMENT/ColorRect/ColorRectTimer/").start(3)

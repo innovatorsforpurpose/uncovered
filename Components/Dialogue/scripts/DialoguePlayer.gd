@@ -18,7 +18,7 @@ func play():
 	if is_dialogue_active and player_ready:
 		return
 	dialogues = load_dialogue()
-	#print("working")
+	## print("working")
 	if dialogues == null:
 		return
 	is_dialogue_active = true
@@ -35,8 +35,8 @@ func next_line():
 	$NinePatchRect/Message.text = dialogues[current_dialogue_id]['text']
 	$NinePatchRect.visible = true
 	current_dialogue_id += 1
-	#print(len(dialogues))
-	#print(current_dialogue_id)
+	## print(len(dialogues))
+	## print(current_dialogue_id)
 	if  current_dialogue_id >= len(dialogues):
 		current_dialogue_id = len(dialogues) - 1
 		$Timer.start()
@@ -50,7 +50,7 @@ func next_line():
 func load_dialogue():
 	var file = File.new()
 	if file.file_exists(dialogue_file):
-		#print_debug("filename:" + dialogue_file)
+		## print_debug("filename:" + dialogue_file)
 		var err = file.open(dialogue_file, file.READ)
 		if err != OK:
 			return

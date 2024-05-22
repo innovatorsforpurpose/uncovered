@@ -16,7 +16,7 @@ var counter = 1
 func _process(delta):
 	
 	if Input.is_action_just_pressed("game_usage") and counter < 8:
-		print (counter)
+		# print (counter)
 		get_node("/root/RootScene/BASEMENT/Converstaion/Node2D/Instructions/MarginContainer/HBoxContainer/Label" + str(counter)).visible = false
 		get_node("/root/RootScene/BASEMENT/Converstaion/Node2D/Instructions/MarginContainer/HBoxContainer/Label" + str(counter + 1)).visible = true
 		counter += 1

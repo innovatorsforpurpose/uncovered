@@ -10,7 +10,7 @@ var count = 0
 var PathI = 0
 func _input(event):
 	if event.is_action_pressed("game_usage") and currently_colliding:
-		#print("functions")
+		## print("functions")
 		pass
 
 func _on_Timer_timeout():
@@ -40,7 +40,7 @@ func _physics_process(_delta):
 		PathI = 0
 		velocity = Vector3(path[0].x - transform.origin.x, path[0].y - transform.origin.y, path[0].z - transform.origin.z)
 		var distance =  velocity.length()
-		#print(distance)
+		## print(distance)
 		if distance <= speed:
 			target = 0 
 			path = path.slice(1,path.size())

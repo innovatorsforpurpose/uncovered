@@ -14,7 +14,7 @@ func find_and_use_dialogue():
 	var dialogue_player = get_node_or_null("Dialogueplayer")
 	if dialogue_player:
 		if not dialogue_player.next_line():
-			# print("now changing target")
+			# # print("now changing target")
 			target = 0
 
 func _on_Bulletin_Board_body_exited(body):

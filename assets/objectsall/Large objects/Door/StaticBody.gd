@@ -12,7 +12,7 @@ func find_and_use_dialogue():
 	dialogue_player = get_node_or_null("Dialogueplayer")
 	if dialogue_player:
 		if not dialogue_player.next_line():
-			# print("now changing target")
+			# # print("now changing target")
 			target = 1
 			
 func _on_Door_body_exited(_body):

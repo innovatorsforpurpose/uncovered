@@ -28,7 +28,7 @@ func _on_Area_body_entered(body):
 	if body.name == "MC": 
 		toggle_the_player(false)
 		currently_colliding = true
-		print(currently_colliding)
+		# print(currently_colliding)
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		active_dialogue = 1
 	else:

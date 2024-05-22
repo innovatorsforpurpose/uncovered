@@ -6,10 +6,10 @@ var jump_speed = 10
 var spin = 0.05
 var velocity = Vector3.ZERO
 var jump = false
-var sprintspeed = 10
+var s# printspeed = 10
 func get_input():
 	if Input.is_action_pressed("shift"):
-		speed = sprintspeed
+		speed = s# printspeed
 		gravity = Vector3.DOWN * 15
 	else:
 		speed = walkspeed

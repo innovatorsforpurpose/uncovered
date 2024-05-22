@@ -31,7 +31,7 @@ func _on_Area_body_entered(body):
 		toggle_the_player(false)
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		Input.is_action_just_pressed("game_usage")
-		#print("WorkingXL")
+		## print("WorkingXL")
 
 func _on_Timer_timeout():
 	if currently_colliding == true:

@@ -7,7 +7,7 @@ export (int) var speed = 100
 func _physics_process(delta):
 	time = time + delta
 	time += delta
-	# print(time)
+	# # print(time)
 	time = int(time)
 	# every two seconds
 	

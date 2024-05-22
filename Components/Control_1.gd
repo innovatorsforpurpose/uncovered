@@ -7,6 +7,7 @@ onready var LxIIV = $PanelXIIV/Label
 onready var LxIV = $PanelXIV/Label
 onready var LxV = $PanelXV/Label
 onready var LxVI = $PanelXVI/Label
+onready var LxVII = $PanelXVII/Label
 onready var PanelXI = $PanelXI
 onready var PanelXII = $PanelXII
 onready var PanelXIIV = $PanelXIIV
@@ -22,7 +23,8 @@ onready var ID5 = $NinePatchRect5
 onready var ID6 = $NinePatchRect6
 
 
-var active_dialogue = 0 
+var active_dialogue = 0
+var count = 0 
 
 func _on_WelcomeTimer_timeout():
 
@@ -114,7 +116,7 @@ func _physics_process(delta):
 		PanelXVII.hide()
 
 	elif active_dialogue == 3:
-		LxI.hide()
+		LxI.show()
 		LxII.hide()
 		LxIIV.hide()
 		LxIV.hide()
@@ -127,7 +129,7 @@ func _physics_process(delta):
 		ID5.hide()
 		ID6.hide()
 		Back.show()
-		PanelXI.hide()
+		PanelXI.show()
 		PanelXII.hide()
 		PanelXIIV.hide()
 		PanelXIV.hide()
@@ -137,7 +139,7 @@ func _physics_process(delta):
 
 	elif active_dialogue == 4:
 		LxII.text = "I’m getting dressed. (you)"
-		LxI.hide()
+		LxI.show()
 		LxII.show()
 		LxIIV.hide()
 		LxIV.hide()
@@ -150,7 +152,7 @@ func _physics_process(delta):
 		ID5.hide()
 		ID6.hide()
 		Back.show()
-		PanelXI.hide()
+		PanelXI.show()
 		PanelXII.show()
 		PanelXIIV.hide()
 		PanelXIV.hide()
@@ -159,8 +161,8 @@ func _physics_process(delta):
 		PanelXVII.hide()
 
 	elif active_dialogue == 5:
-		LxI.hide()
-		LxII.hide()
+		LxI.show()
+		LxII.show()
 		LxIIV.hide()
 		LxIV.hide()
 		LxV.hide()
@@ -172,8 +174,8 @@ func _physics_process(delta):
 		ID5.hide()
 		ID6.hide()
 		Back.show()
-		PanelXI.hide()
-		PanelXII.hide()
+		PanelXI.show()
+		PanelXII.show()
 		PanelXIIV.hide()
 		PanelXIV.hide()
 		PanelXV.hide()
@@ -182,8 +184,8 @@ func _physics_process(delta):
 
 	elif active_dialogue == 6:
 		LxIIV.text = "Ok im outside. r u ready for ur first dya? day* (Zach)"
-		LxI.hide()
-		LxII.hide()
+		LxI.show()
+		LxII.show()
 		LxIIV.show()
 		LxIV.hide()
 		LxV.hide()
@@ -195,8 +197,8 @@ func _physics_process(delta):
 		ID5.hide()
 		ID6.hide()
 		Back.show()
-		PanelXI.hide()
-		PanelXII.hide()
+		PanelXI.show()
+		PanelXII.show()
 		PanelXIIV.show()
 		PanelXIV.hide()
 		PanelXV.hide()
@@ -252,7 +254,7 @@ func _physics_process(delta):
 		LxI.hide()
 		LxII.hide()
 		LxIIV.hide()
-		LxIV.hide()
+		LxIV.show()
 		LxV.hide()
 		LxVI.hide()
 		ID1.hide()
@@ -265,7 +267,7 @@ func _physics_process(delta):
 		PanelXI.hide()
 		PanelXII.hide()
 		PanelXIIV.hide()
-		PanelXIV.hide()
+		PanelXIV.show()
 		PanelXV.hide()
 		PanelXVI.hide()
 		PanelXVII.hide()
@@ -275,7 +277,7 @@ func _physics_process(delta):
 		LxI.hide()
 		LxII.hide()
 		LxIIV.hide()
-		LxIV.hide()
+		LxIV.show()
 		LxV.show()
 		LxVI.hide()
 		ID1.hide()
@@ -288,7 +290,7 @@ func _physics_process(delta):
 		PanelXI.hide()
 		PanelXII.hide()
 		PanelXIIV.hide()
-		PanelXIV.hide()
+		PanelXIV.show()
 		PanelXV.show()
 		PanelXVI.hide()
 		PanelXVII.hide()
@@ -297,8 +299,8 @@ func _physics_process(delta):
 		LxI.hide()
 		LxII.hide()
 		LxIIV.hide()
-		LxIV.hide()
-		LxV.hide()
+		LxIV.show()
+		LxV.show()
 		LxVI.hide()
 		ID1.hide()
 		ID2.hide()
@@ -310,8 +312,8 @@ func _physics_process(delta):
 		PanelXI.hide()
 		PanelXII.hide()
 		PanelXIIV.hide()
-		PanelXIV.hide()
-		PanelXV.hide()
+		PanelXIV.show()
+		PanelXV.show()
 		PanelXVI.hide()
 		PanelXVII.hide()
 
@@ -320,8 +322,8 @@ func _physics_process(delta):
 		LxI.hide()
 		LxII.hide()
 		LxIIV.hide()
-		LxIV.hide()
-		LxV.hide()
+		LxIV.show()
+		LxV.show()
 		LxVI.show()
 		ID1.hide()
 		ID2.hide()
@@ -333,8 +335,8 @@ func _physics_process(delta):
 		PanelXI.hide()
 		PanelXII.hide()
 		PanelXIIV.hide()
-		PanelXIV.hide()
-		PanelXV.hide()
+		PanelXIV.show()
+		PanelXV.show()
 		PanelXVI.show()
 		PanelXVII.hide()
 
@@ -384,7 +386,7 @@ func _physics_process(delta):
 		PanelXVII.hide()
 
 	elif active_dialogue == 15:
-		LxI.hide()
+		LxI.show()
 		LxII.hide()
 		LxIIV.hide()
 		LxIV.hide()
@@ -397,7 +399,7 @@ func _physics_process(delta):
 		ID5.hide()
 		ID6.hide()
 		Back.show()
-		PanelXI.hide()
+		PanelXI.show()
 		PanelXII.hide()
 		PanelXIIV.hide()
 		PanelXIV.hide()
@@ -407,7 +409,7 @@ func _physics_process(delta):
 
 	elif active_dialogue == 16:
 		LxII.text = "There's like… water… (you)"
-		LxI.hide()
+		LxI.show()
 		LxII.show()
 		LxIIV.hide()
 		LxIV.hide()
@@ -420,7 +422,7 @@ func _physics_process(delta):
 		ID5.hide()
 		ID6.hide()
 		Back.show()
-		PanelXI.hide()
+		PanelXI.show()
 		PanelXII.show()
 		PanelXIIV.hide()
 		PanelXIV.hide()
@@ -429,8 +431,8 @@ func _physics_process(delta):
 		PanelXVII.hide()
 
 	elif active_dialogue == 17:
-		LxI.hide()
-		LxII.hide()
+		LxI.show()
+		LxII.show()
 		LxIIV.hide()
 		LxIV.hide()
 		LxV.hide()
@@ -442,8 +444,8 @@ func _physics_process(delta):
 		ID5.hide()
 		ID6.hide()
 		Back.show()
-		PanelXI.hide()
-		PanelXII.hide()
+		PanelXI.show()
+		PanelXII.show()
 		PanelXIIV.hide()
 		PanelXIV.hide()
 		PanelXV.hide()
@@ -452,8 +454,8 @@ func _physics_process(delta):
 
 	elif active_dialogue == 18:
 		LxIIV.text = "Eww no. Plus I'm right next door ill be back in like 2 seconds (Zach)"
-		LxI.hide()
-		LxII.hide()
+		LxI.show()
+		LxII.show()
 		LxIIV.show()
 		LxIV.hide()
 		LxV.hide()
@@ -465,8 +467,8 @@ func _physics_process(delta):
 		ID5.hide()
 		ID6.hide()
 		Back.show()
-		PanelXI.hide()
-		PanelXII.hide()
+		PanelXI.show()
+		PanelXII.show()
 		PanelXIIV.show()
 		PanelXIV.hide()
 		PanelXV.hide()
@@ -522,7 +524,7 @@ func _physics_process(delta):
 		LxI.hide()
 		LxII.hide()
 		LxIIV.hide()
-		LxIV.hide()
+		LxIV.show()
 		LxV.hide()
 		LxVI.hide()
 		ID1.hide()
@@ -535,7 +537,7 @@ func _physics_process(delta):
 		PanelXI.hide()
 		PanelXII.hide()
 		PanelXIIV.hide()
-		PanelXIV.hide()
+		PanelXIV.show()
 		PanelXV.hide()
 		PanelXVI.hide()
 		PanelXVII.hide()
@@ -545,7 +547,7 @@ func _physics_process(delta):
 		LxI.hide()
 		LxII.hide()
 		LxIIV.hide()
-		LxIV.hide()
+		LxIV.show()
 		LxV.show()
 		LxVI.hide()
 		ID1.hide()
@@ -558,7 +560,7 @@ func _physics_process(delta):
 		PanelXI.hide()
 		PanelXII.hide()
 		PanelXIIV.hide()
-		PanelXIV.hide()
+		PanelXIV.show()
 		PanelXV.show()
 		PanelXVI.hide()
 		PanelXVII.hide()
@@ -590,8 +592,8 @@ func _physics_process(delta):
 		LxI.hide()
 		LxII.hide()
 		LxIIV.hide()
-		LxIV.hide()
-		LxV.hide()
+		LxIV.show()
+		LxV.show()
 		LxVI.show()
 		ID1.hide()
 		ID2.hide()
@@ -603,8 +605,8 @@ func _physics_process(delta):
 		PanelXI.hide()
 		PanelXII.hide()
 		PanelXIIV.hide()
-		PanelXIV.hide()
-		PanelXV.hide()
+		PanelXIV.show()
+		PanelXV.show()
 		PanelXVI.show()
 		PanelXVII.hide()
 
@@ -632,7 +634,7 @@ func _physics_process(delta):
 		get_node("/root/RootScene/Welcome/AnimationPlayer").play("Fade")
 
 	elif active_dialogue == 26:
-
+		LxVII.text = "Controls - A(right),D(left),W(forward),S(backward), Q(release mouse pointer), T(open,close and speed up conversations)" 
 		Back.hide()
 		LxI.hide()
 		LxII.hide()
@@ -653,5 +655,3 @@ func _physics_process(delta):
 		PanelXV.hide()
 		PanelXVI.hide()
 		PanelXVII.show()
-		if Input.is_action_just_pressed("game_usage"):
-			PanelXVII.hide()

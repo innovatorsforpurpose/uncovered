@@ -19,7 +19,7 @@ func _on_Area_body_exited(body):
 	currently_colliding = false
 
 	if currently_colliding == false:
-		#print("workingII")
+		## print("workingII")
 		stop()
 
 func _physics_process(delta):

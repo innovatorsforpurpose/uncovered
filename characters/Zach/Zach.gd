@@ -13,7 +13,7 @@ var Xr = 10
 func _on_Area_body_entered(body):
 	if body.name == "MC": 
 		currently_colliding = true
-		print(currently_colliding)
+		# print(currently_colliding)
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		count = 1
 	else:
@@ -29,18 +29,18 @@ func _on_Timer_timeout():
 
 func _physics_process(_delta):
 	
-	print(currently_colliding)
+	# print(currently_colliding)
 
 	if currently_colliding == false and count == 0:
 		return
-#	print(target)
+#	# print(target)
 	if Input.is_action_just_pressed("game_usage"):
 		count = count+1
 
 	if Input.is_action_just_pressed("game_usageI"):
 		count = Xr+1
-		print(currently_colliding)
-		print(path)
+		# print(currently_colliding)
+		# print(path)
 
 	if count >= Xr:
 		target = 1
