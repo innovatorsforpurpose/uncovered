@@ -5,10 +5,7 @@
 [ext_resource path="res://Components/Grass textrue.jpeg" type="Texture" id=3]
 [ext_resource path="res://scenes/transitionobjects/transitionobject/Transition_Object.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Components/Office/mainscenes/office-3.tscn" type="PackedScene" id=5]
-
-[ext_resource path="res://characters/GC/GC.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Components/atrium/Newatrium.glb" type="PackedScene" id=7]
-
 [ext_resource path="res://assets/objectsall/Large objects/chairsdesks/classroom_chairs_and_Desks.fbx" type="PackedScene" id=8]
 [ext_resource path="res://characters/MC/MC.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Components/Classroom L1/Classroom.fbx" type="PackedScene" id=11]
@@ -150,7 +147,7 @@ transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -44.4, 
 transform = Transform( 0, 0, 1.13496, 0, 1, 0, 0, 0, 0.304112, -37.7925, 6.468, -19.8537 )
 
 [node name="Hallway_Door" parent="Door2II" instance=ExtResource( 29 )]
-transform = Transform( -0.426414, 0, 0.159363, 0, 0.887204, 0, -0.04624, 0, -0.997321, -0.0732126, 0.386963, -1.35533 )
+transform = Transform( -1.2625e-05, 0, -0.000272301, 0, 0.887204, 0, -3.38287e-06, 0, -7.2963e-05, 0.000882745, 0.386963, 0.000236511 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Door2II"]
 anims/RESET = SubResource( 13 )
@@ -205,7 +202,7 @@ script = ExtResource( 28 )
 [node name="BossBattleTimer" type="Timer" parent="MCSRevengeTransport"]
 
 [node name="CSGSphere" type="CSGSphere" parent="MCSRevengeTransport"]
-transform = Transform( 1.40378, 0, 0, 0, 3.30962, 0, 0, 0, 2.71476, -39.4922, -8.91187, 29.4487 )
+transform = Transform( 1.40378, 0, 0, 0, 3.30962, 0, 0, 0, 2.71476, -39.4922, -34.5722, 62.6274 )
 
 [node name="Area" type="Area" parent="MCSRevengeTransport/CSGSphere"]
 
@@ -242,7 +239,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5868, 6.90973, -40.1345 )
 transform = Transform( 0.998921, 0.00336558, -0.0463115, -0.0034327, 0.999993, -0.00136941, 0.0463066, 0.00152693, 0.998926, -17.3227, 6.20063, -34.0485 )
 
 [node name="office-3" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1.37612, 0, 0, 0, 1.00371, 0, 0, 0, 1.35421, -38.6599, 7.91558, -24.0454 )
+transform = Transform( 1.37612, 0, 0, 0, 1.00371, 0, 0, 0, 1.35421, -38.6599, 7.82585, -24.0454 )
 
 [node name="Basement_Door2" parent="." instance=ExtResource( 33 )]
 transform = Transform( -1, 0, -1.58187e-07, 0, 1.41482, 0, 1.50996e-07, 0, -1.04763, -28.9453, 1.40871, -29.7088 )
@@ -267,7 +264,7 @@ transform = Transform( 0.999963, 0, 0.00863927, 0, 1, 0, -0.00863927, 0, 0.99996
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -42.7721, 5.98089, -13.6491 )
 
 [node name="atrium_dead_end" parent="." instance=ExtResource( 26 )]
-transform = Transform( 1.42428, 0, 0, 0, 0.960988, 0, 0, 0, 2.5481, -1.08552, 7.52099, -20.8106 )
+transform = Transform( 1.42428, 0, 0, 0, 0.960988, 0, 0, 0, 2.5481, -4.30164, 7.6406, -23.0697 )
 
 [node name="Welcome" parent="." instance=ExtResource( 30 )]
 
@@ -281,7 +278,7 @@ __meta__ = {
 transform = Transform( 1.16249, 0, 0, 0, 1.38602, 0, 0, 0, 1.03559, -33.3841, 0.470384, -18.8539 )
 
 [node name="Door I" parent="." instance=ExtResource( 13 )]
-transform = Transform( 0.999948, -0.0102275, 0, 0.0102275, 0.999948, 0, 0, 0, 1.31459, -13.0618, 7.12501, -19.4886 )
+transform = Transform( 0.999948, -0.0102275, 0, 0.00932967, 0.912166, 0, 0, 0, 1.18436, -16.2779, 7.12501, -22.7796 )
 
 [node name="Door-new" parent="." instance=ExtResource( 2 )]
 transform = Transform( 0, 0, -1, 0, 1, 0, 1, 0, 0, -28, -8, -38.982 )
@@ -290,7 +287,7 @@ transform = Transform( 0, 0, -1, 0, 1, 0, 1, 0, 0, -28, -8, -38.982 )
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -24.8503, -11.9436, -35.6511 )
 
 [node name="Zach" parent="." instance=ExtResource( 12 )]
-transform = Transform( -0.169994, 0, -1.48618e-08, 0, 0.17, 0, 1.48613e-08, 0, -0.169999, -23.242, 6.571, -9.86406 )
+transform = Transform( -0.169994, 0, -1.48618e-08, 0, 0.17, 0, 1.48613e-08, 0, -0.169999, -24.1141, 6.87607, -14.8064 )
 
 [node name="Archive" type="Spatial" parent="."]
 

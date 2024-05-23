@@ -6,6 +6,7 @@ var count = 1
 
 func _on_Area_body_entered(body):
 	if body.name == "MC":
+		var count = 1
 		currently_colliding = true
 
 	if currently_colliding == true:

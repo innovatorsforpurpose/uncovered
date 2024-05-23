@@ -269,7 +269,7 @@ __meta__ = {
 }
 
 [node name="WelcomeTimer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 1.7
 autostart = true
 
 [node name="Node2D" type="Node2D" parent="."]
