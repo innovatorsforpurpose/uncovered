@@ -12,6 +12,7 @@ var active_dialogue = 0
 var move = true
 var velocity = 9
 var player = true
+var target = 0
 export(bool) var immobile
 func _ready():
 	pass
@@ -139,7 +140,7 @@ func _physics_process(_delta):
 		Px.show()
 		IDx.show()
 
-	if active_dialogue >= 10:
+	if active_dialogue == 10:
 		Lx.hide()
 		NQx.hide()
 		Px.hide()
@@ -148,12 +149,19 @@ func _physics_process(_delta):
 		visible = false
 		toggle_the_player(true)
 		_on_Button2_pressed()
+		target = 1
+
+	if target == 1 and active_dialogue == 0:
+		pass
 
 func _on_Button_pressed():
 	active_dialogue = Xr 
 	toggle_the_player(true)
+	target = 1
 
 func _on_Button2_pressed():
 	active_dialogue = active_dialogue+1
+	target = 1
 	if active_dialogue == Xr:
 		toggle_the_player(true)
+
