@@ -1,14 +1,13 @@
 extends Button
 
 onready var background_prev = get_node("/root/Node2D/Front")
-
 var is_front = false
 
 func _process(_delta):
-	if background_prev.visible == true:
-		hide()
-	else:
+	if background_prev.visible == false && get_node("/root/Node2D/Back").visible == false:
 		show()
+	else:
+		hide()
 
 
 func _on_Button_pressed():

@@ -1,25 +1,15 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://minigames/Escape-room/Cabinets-puzzle2.tscn" type="PackedScene" id=1]
 [ext_resource path="res://minigames/Escape-room/Tablet.tscn" type="PackedScene" id=2]
 [ext_resource path="res://minigames/Escape-room/Door_display.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Components/Office/Computer.tscn" type="PackedScene" id=4]
-[ext_resource path="res://minigames/Escape-room/scripts/Computer.gd" type="Script" id=5]
-[ext_resource path="res://minigames/Escape-room/scripts/DoorLock.gd" type="Script" id=6]
-[ext_resource path="res://minigames/Escape-room/scripts/Cabinet.gd" type="Script" id=7]
-[ext_resource path="res://minigames/Escape-room/scripts/TabletButton.gd" type="Script" id=8]
+[ext_resource path="res://minigames/Escape-room/Front.tscn" type="PackedScene" id=5]
 [ext_resource path="res://minigames/Escape-room/GearBox.tscn" type="PackedScene" id=9]
 [ext_resource path="res://minigames/Escape-room/BackSide.tscn" type="PackedScene" id=10]
 [ext_resource path="res://minigames/Escape-room/scripts/BackButton.gd" type="Script" id=11]
 [ext_resource path="res://minigames/Escape-room/scripts/BackSide.gd" type="Script" id=12]
-[ext_resource path="res://minigames/Escape-room/scripts/Background.gd" type="Script" id=14]
-
-[sub_resource type="StreamTexture" id=23]
-flags = 4
-load_path = "res://.import/Frame 1.png-c58a0a8ff8792698c380ea275679e891.stex"
-
-[sub_resource type="StyleBoxFlat" id=24]
-bg_color = Color( 1, 1, 1, 0.196078 )
+[ext_resource path="res://minigames/Escape-room/Backpack-btn.tscn" type="PackedScene" id=13]
 
 [node name="Node2D" type="Node2D"]
 
@@ -32,80 +22,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="ColorRect" type="ColorRect" parent="."]
-visible = false
-margin_right = 1042.0
-margin_bottom = 622.0
-color = Color( 0, 0, 0, 0 )
-__meta__ = {
-"_edit_lock_": true
-}
+[node name="Front" parent="." instance=ExtResource( 5 )]
 
-[node name="Front" type="ParallaxBackground" parent="."]
-offset = Vector2( 510.562, 310.396 )
-transform = Transform2D( 1, 0, 0, 1, 510.562, 310.396 )
-follow_viewport_enable = true
-scroll_limit_begin = Vector2( 1, 2 )
-scroll_limit_end = Vector2( -1, -2 )
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="Front"]
-script = ExtResource( 14 )
-
-[node name="Background" type="Sprite" parent="Front/ParallaxLayer"]
-scale = Vector2( 0.558039, 0.558039 )
-texture = SubResource( 23 )
-
-[node name="CabinetButton" type="Button" parent="Front/ParallaxLayer"]
-modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -276.562
-margin_top = -159.396
-margin_right = 74.438
-margin_bottom = -60.396
-custom_styles/hover = SubResource( 24 )
-script = ExtResource( 7 )
-__meta__ = {
-"_editor_description_": "Brings the player closer to the cabenit in the front section of the room [IN DEV]"
-}
-
-[node name="DoorLock" type="Button" parent="Front/ParallaxLayer"]
-modulate = Color( 1, 1, 1, 0 )
-margin_left = -412.562
-margin_top = -47.396
-margin_right = -337.562
-margin_bottom = 184.604
-script = ExtResource( 6 )
-
-[node name="ComputerButton" type="Button" parent="Front/ParallaxLayer"]
-modulate = Color( 1, 1, 1, 0.403922 )
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -29.562
-margin_top = -6.396
-margin_right = 29.438
-margin_bottom = 28.604
-script = ExtResource( 5 )
-
-[node name="TabletButton" type="Button" parent="Front/ParallaxLayer"]
-modulate = Color( 1, 1, 1, 0.184314 )
-margin_left = 153.0
-margin_top = 17.0
-margin_right = 302.0
-margin_bottom = 152.0
-script = ExtResource( 8 )
-
-[node name="Button2" type="Button" parent="."]
+[node name="TurnBtn" type="Button" parent="."]
 margin_left = 288.0
 margin_top = 511.0
 margin_right = 714.0
 margin_bottom = 562.0
+text = "Turn Around ->"
 
-[node name="Button" type="Button" parent="."]
+[node name="BackBtn" type="Button" parent="."]
 modulate = Color( 0.921569, 1, 0, 1 )
 margin_left = 31.0
 margin_top = 460.0
@@ -135,11 +61,14 @@ script = ExtResource( 12 )
 [node name="GearBox" parent="." instance=ExtResource( 9 )]
 visible = false
 
-[connection signal="pressed" from="Front/ParallaxLayer/CabinetButton" to="Front/ParallaxLayer/CabinetButton" method="_on_CabinetButton_pressed"]
-[connection signal="pressed" from="Front/ParallaxLayer/DoorLock" to="Front/ParallaxLayer/DoorLock" method="_on_DoorLock_pressed"]
-[connection signal="pressed" from="Front/ParallaxLayer/ComputerButton" to="Front/ParallaxLayer/ComputerButton" method="_on_Computer_pressed"]
-[connection signal="pressed" from="Front/ParallaxLayer/TabletButton" to="Front/ParallaxLayer/TabletButton" method="_on_TabletButton_pressed"]
-[connection signal="pressed" from="Button2" to="Back" method="_on_Button_pressed"]
-[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
+[node name="Inv" parent="." instance=ExtResource( 13 )]
+margin_left = 13.0
+margin_top = 31.0
+margin_right = 348.0
+margin_bottom = 392.0
+rect_scale = Vector2( 0.471753, 0.471753 )
+
+[connection signal="pressed" from="TurnBtn" to="Back" method="_on_Button_pressed"]
+[connection signal="pressed" from="BackBtn" to="BackBtn" method="_on_Button_pressed"]
 
 [editable path="GearBox"]

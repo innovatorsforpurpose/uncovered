@@ -9,6 +9,15 @@ func _ready():
 		Item = ItemClass.instance()
 		add_child(Item)
 
+func pickFromSlot():
+	remove_child(Item)
+	var inventoryNode = find_parent("Inventory")
+	inventoryNode.add_child(Item)
+	Item = null
 
-func _on_Panel_mouse_entered():
-	pass # Replace with function body.
+func putIntoSlot(new_item):
+	Item = new_item
+	Item.position = Vector2(0,0)
+	var inventoryNode = find_parent("Inventory")
+	inventoryNode.remove_child(Item)
+	add_child(Item)
