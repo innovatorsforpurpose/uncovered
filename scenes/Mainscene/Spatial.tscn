@@ -287,7 +287,7 @@ transform = Transform( 0, 0, -1, 0, 1, 0, 1, 0, 0, -28, -8, -38.982 )
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -24.8503, -11.9436, -37.1928 )
 
 [node name="Zach" parent="." instance=ExtResource( 12 )]
-transform = Transform( -7.43027e-09, 0, -0.169999, 0, 0.17, 0, 0.169985, 0, -7.43089e-09, -24, 6.63, -15.1076 )
+transform = Transform( -7.43027e-09, 0, -0.169999, 0, 0.17, 0, 0.169985, 0, -7.43089e-09, -24.5393, 6.63, -15.1076 )
 
 [node name="Archive" type="Spatial" parent="."]
 
