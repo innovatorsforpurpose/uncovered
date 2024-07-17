@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/leverthing.png-0b883a6f399d7be7d3d09747522fb152.stex"
+path="res://.import/Key_Small-Icon.png-527b2a41fad932cabc0b6c1986de860a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minigames/Escape-room/Escape-room_res/Txtrs/inventory items/puzzle 4/leverthing.png"
-dest_files=[ "res://.import/leverthing.png-0b883a6f399d7be7d3d09747522fb152.stex" ]
+source_file="res://minigames/Escape-room/Key_Small-Icon.png"
+dest_files=[ "res://.import/Key_Small-Icon.png-527b2a41fad932cabc0b6c1986de860a.stex" ]
 
 [params]
 

@@ -18,6 +18,11 @@ config/icon="res://scenes/oldscenes/images/icons/icon.png"
 
 default_bus_layout=""
 
+[autoload]
+
+PlayerInventory="*res://minigames/Escape-room/scripts/PlayerInventory.gd"
+JsonData="*res://minigames/Escape-room/scripts/JSONData.gd"
+
 [display]
 
 window/size/height=578

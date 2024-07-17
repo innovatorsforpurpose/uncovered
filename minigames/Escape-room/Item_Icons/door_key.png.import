@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Button_blu.png-b5035875598c1cccd704584f057b129a.stex"
+path="res://.import/door_key.png-8e35aa0190d6d82a04fcaba9f07cb0ee.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minigames/Escape-room/Escape-room_res/Txtrs/UI assets/Button_blu.png"
-dest_files=[ "res://.import/Button_blu.png-b5035875598c1cccd704584f057b129a.stex" ]
+source_file="res://minigames/Escape-room/Item_Icons/door_key.png"
+dest_files=[ "res://.import/door_key.png-8e35aa0190d6d82a04fcaba9f07cb0ee.stex" ]
 
 [params]
 

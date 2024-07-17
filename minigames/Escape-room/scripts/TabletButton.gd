@@ -7,5 +7,5 @@ func _ready():
 
 func _on_TabletButton_pressed():
 	get_node("/root/Node2D/Front").hide()
-	get_node("/root/Node2D/Button2").hide()
+	get_node("/root/Node2D/PlayerGUI/TurnBtn").hide()
 	puzzle2d.show()

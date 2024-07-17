@@ -28,7 +28,7 @@ scale = Vector2( 0.558039, 0.558039 )
 texture = SubResource( 23 )
 
 [node name="CabinetButton" type="Button" parent="ParallaxLayer"]
-modulate = Color( 1, 1, 1, 0.160784 )
+modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5

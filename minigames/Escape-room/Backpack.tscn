@@ -24,7 +24,7 @@ custom_constants/vseparation = 18
 custom_constants/hseparation = 22
 columns = 3
 
-[node name="Panel" type="Panel" parent="GridContainer"]
+[node name="Panel1" type="Panel" parent="GridContainer"]
 self_modulate = Color( 1, 1, 1, 0 )
 margin_right = 125.0
 margin_bottom = 125.0

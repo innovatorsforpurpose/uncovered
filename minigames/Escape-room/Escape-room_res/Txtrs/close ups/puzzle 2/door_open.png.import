@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cog2.png-d104db8d40a47a45109364fd42ed8830.stex"
+path="res://.import/door_open.png-577be268f43499f3bf02c9c1f1bcfeb9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minigames/Escape-room/Escape-room_res/Txtrs/inventory items/puzzle 4/cog2.png"
-dest_files=[ "res://.import/cog2.png-d104db8d40a47a45109364fd42ed8830.stex" ]
+source_file="res://minigames/Escape-room/Escape-room_res/Txtrs/close ups/puzzle 2/door_open.png"
+dest_files=[ "res://.import/door_open.png-577be268f43499f3bf02c9c1f1bcfeb9.stex" ]
 
 [params]
 

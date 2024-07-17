@@ -1,13 +1,14 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://minigames/Escape-room/Escape-room_res/Txtrs/UI assets/inventorybackpackopen.png" type="Texture" id=1]
 [ext_resource path="res://minigames/Escape-room/scripts/Inv_Anim.gd" type="Script" id=2]
 [ext_resource path="res://minigames/Escape-room/Backpack.tscn" type="PackedScene" id=3]
 [ext_resource path="res://minigames/Escape-room/grid-scale.tres" type="Animation" id=4]
 [ext_resource path="res://minigames/Escape-room/Escape-room_res/Txtrs/UI assets/inventorybackpackclosed.png" type="Texture" id=5]
+[ext_resource path="res://minigames/Escape-room/Emitter.tscn" type="PackedScene" id=6]
 
 [sub_resource type="Animation" id=1]
-length = 0.001
+length = 0.1
 tracks/0/type = "bezier"
 tracks/0/path = NodePath(".:scale:x")
 tracks/0/interp = 1
@@ -15,8 +16,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
+"points": PoolRealArray( 0.5, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.1 )
 }
 tracks/1/type = "bezier"
 tracks/1/path = NodePath(".:scale:y")
@@ -25,8 +26,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
+"points": PoolRealArray( 0.5, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.1 )
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath(".:visible")
@@ -35,26 +36,32 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.00248911 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ false ]
+"values": [ false, true ]
 }
 
 [node name="TextureButton" type="TextureButton"]
-margin_right = 335.0
-margin_bottom = 361.0
+rect_scale = Vector2( 0.472, 0.472 )
+rect_pivot_offset = Vector2( 175, 181 )
 toggle_mode = true
 texture_normal = ExtResource( 1 )
 texture_pressed = ExtResource( 5 )
+script = ExtResource( 2 )
 
 [node name="Inventory" parent="." instance=ExtResource( 3 )]
 visible = false
 position = Vector2( 175, 263 )
+scale = Vector2( 0.5, 0.5 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Inventory"]
 anims/RESET = SubResource( 1 )
 anims/grid-scale = ExtResource( 4 )
-script = ExtResource( 2 )
 
-[connection signal="toggled" from="." to="Inventory/AnimationPlayer" method="_on_TextureButton_toggled"]
+[node name="Emitter" parent="." instance=ExtResource( 6 )]
+show_behind_parent = true
+position = Vector2( 142, 185 )
+
+[connection signal="pressed" from="." to="." method="_on_TextureButton_pressed"]
+[connection signal="toggled" from="." to="." method="_on_TextureButton_toggled"]

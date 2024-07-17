@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://minigames/Escape-room/Cabinets-puzzle2.tscn" type="PackedScene" id=1]
 [ext_resource path="res://minigames/Escape-room/Tablet.tscn" type="PackedScene" id=2]
 [ext_resource path="res://minigames/Escape-room/Door_display.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Components/Office/Computer.tscn" type="PackedScene" id=4]
 [ext_resource path="res://minigames/Escape-room/Front.tscn" type="PackedScene" id=5]
+[ext_resource path="res://minigames/Escape-room/Narrative.tscn" type="PackedScene" id=6]
 [ext_resource path="res://minigames/Escape-room/GearBox.tscn" type="PackedScene" id=9]
 [ext_resource path="res://minigames/Escape-room/BackSide.tscn" type="PackedScene" id=10]
 [ext_resource path="res://minigames/Escape-room/scripts/BackButton.gd" type="Script" id=11]
@@ -18,33 +19,16 @@ position = Vector2( 514, 311 )
 scale = Vector2( 1.00632, 1.00718 )
 current = true
 smoothing_enabled = true
+smoothing_speed = 2.0
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="Front" parent="." instance=ExtResource( 5 )]
 
-[node name="TurnBtn" type="Button" parent="."]
-margin_left = 288.0
-margin_top = 511.0
-margin_right = 714.0
-margin_bottom = 562.0
-text = "Turn Around ->"
-
-[node name="BackBtn" type="Button" parent="."]
-modulate = Color( 0.921569, 1, 0, 1 )
-margin_left = 31.0
-margin_top = 460.0
-margin_right = 128.0
-margin_bottom = 557.0
-text = "BACK"
-script = ExtResource( 11 )
-
-[node name="Tablet" parent="." instance=ExtResource( 2 )]
+[node name="Back" parent="." instance=ExtResource( 10 )]
 visible = false
-
-[node name="Door" parent="." instance=ExtResource( 3 )]
-visible = false
+script = ExtResource( 12 )
 
 [node name="Cabenits-p2" parent="." instance=ExtResource( 1 )]
 visible = false
@@ -54,21 +38,48 @@ visible = false
 offset = Vector2( 510.562, 311.406 )
 transform = Transform2D( 1, 0, 0, 1, 510.562, 311.406 )
 
-[node name="Back" parent="." instance=ExtResource( 10 )]
+[node name="Door" parent="." instance=ExtResource( 3 )]
 visible = false
-script = ExtResource( 12 )
+
+[node name="Tablet" parent="." instance=ExtResource( 2 )]
+visible = false
 
 [node name="GearBox" parent="." instance=ExtResource( 9 )]
 visible = false
 
-[node name="Inv" parent="." instance=ExtResource( 13 )]
-margin_left = 13.0
-margin_top = 31.0
-margin_right = 348.0
-margin_bottom = 392.0
-rect_scale = Vector2( 0.471753, 0.471753 )
+[node name="PlayerGUI" type="CanvasLayer" parent="."]
 
-[connection signal="pressed" from="TurnBtn" to="Back" method="_on_Button_pressed"]
-[connection signal="pressed" from="BackBtn" to="BackBtn" method="_on_Button_pressed"]
+[node name="Inv" parent="PlayerGUI" instance=ExtResource( 13 )]
+margin_left = -60.0
+margin_top = -52.0
+margin_right = 275.0
+margin_bottom = 309.0
 
+[node name="BackBtn" type="Button" parent="PlayerGUI"]
+modulate = Color( 0.921569, 1, 0, 1 )
+margin_left = 31.0
+margin_top = 460.0
+margin_right = 128.0
+margin_bottom = 557.0
+text = "BACK"
+script = ExtResource( 11 )
+
+[node name="TurnBtn" type="Button" parent="PlayerGUI"]
+margin_left = 288.0
+margin_top = 511.0
+margin_right = 714.0
+margin_bottom = 562.0
+text = "Turn Around ->"
+
+[node name="Label" parent="PlayerGUI" instance=ExtResource( 6 )]
+margin_left = -20.0
+margin_top = -7.0
+margin_right = 236.0
+margin_bottom = 7.00024
+
+[connection signal="emit" from="GearBox/ParallaxLayer/Key" to="PlayerGUI/Inv" method="_on_Key_emit"]
+[connection signal="pressed" from="PlayerGUI/BackBtn" to="PlayerGUI/BackBtn" method="_on_Button_pressed"]
+[connection signal="pressed" from="PlayerGUI/TurnBtn" to="Back" method="_on_Button_pressed"]
+
+[editable path="Door"]
 [editable path="GearBox"]

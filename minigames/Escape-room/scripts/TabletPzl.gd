@@ -7,7 +7,7 @@ var is_on = false
 #	print ("NO WAAAY")
 
 func _on_Plug_pressed():
-	print("It works!")
+	get_node("/root/Node2D/PlayerGUI/Label").say("Got it!")
 	$Sprite.texture = load("res://minigames/Escape-room/Escape-room_res/Txtrs/close ups/puzzle 3/Untitled_Artwork 48.png")
 	is_on = true
 	$Plug.hide()
@@ -18,7 +18,8 @@ func _on_tabloot_pressed():
 		$tabloot.hide()
 		get_node("/root/Node2D/GearBox/ParallaxLayer/Sprite").texture = load("res://minigames/Escape-room/Escape-room_res/Txtrs/close ups/puzzle 4/open_panel_lever_turned.png")
 		$Sprite.texture = load("res://minigames/Escape-room/Escape-room_res/Txtrs/close ups/puzzle 3/Untitled_Artwork 12(Edit).png")
+		get_node("/root/Node2D/GearBox/ParallaxLayer/Key").show()
 		print("Imagine that you solved da puzzle... :o")
 	else:
-		print("It's still...")
- 
+		get_node("/root/Node2D/PlayerGUI/Label").say("It's still...")
+#		print("It's still...")
