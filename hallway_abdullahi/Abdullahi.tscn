@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://hallway_abdullahi/Material_015.material" type="Material" id=1]
 [ext_resource path="res://hallway_abdullahi/Material_021.material" type="Material" id=2]
@@ -584,6 +584,81 @@ tracks/15/keys = PoolRealArray( 0, 1, -0.75383, -0.0314025, 6.25084, 0.0157073, 
 resource_name = "door#2005"
 length = 8.5
 
+[sub_resource type="Animation" id=36]
+resource_name = "Flickering_lights"
+length = 3.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:light_energy")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 1, 1.5, 2.3, 2.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 2.0, 0.0, 2.0, 0.0, 1.0, 2.0 ]
+}
+
+[sub_resource type="Animation" id=37]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:light_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 2.0 ]
+}
+
+[sub_resource type="Animation" id=38]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:light_energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 2.0 ]
+}
+
+[sub_resource type="Animation" id=39]
+resource_name = "flickering_lights1"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:light_energy")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 2.0, 0.0, 2.0 ]
+}
+
 [node name="Abdullahi" type="Spatial"]
 
 [node name="door#2005" type="MeshInstance" parent="."]
@@ -751,3 +826,144 @@ mesh = SubResource( 32 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Animation = SubResource( 34 )
 anims/door#2005 = SubResource( 35 )
+
+[node name="SpotLight" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.134937, 0.990854, 0, -0.990854, -0.134937, -1.00024, 3.81632, 8.31883 )
+spot_range = 9.51293
+spot_angle = 36.7361
+
+[node name="SpotLight5" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.134937, 0.990854, 0, -0.990854, -0.134937, -1.00024, 3.81632, 11.61 )
+visible = false
+spot_range = 9.51293
+spot_angle = 36.7361
+
+[node name="SpotLight2" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.134937, 0.990854, 0, -0.990854, -0.134937, 0.947529, 3.81632, 8.35435 )
+spot_range = 9.51293
+spot_angle = 36.7361
+
+[node name="SpotLight3" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.134937, 0.990854, 0, -0.990854, -0.134937, 0.947529, 3.81632, 11.8301 )
+spot_range = 9.51293
+spot_angle = 36.7361
+
+[node name="SpotLight6" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.134937, 0.990854, 0, -0.990854, -0.134937, 1.0448, 3.81632, 14.5265 )
+spot_range = 9.51293
+spot_angle = 36.7361
+
+[node name="SpotLight7" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.134937, 0.990854, 0, -0.990854, -0.134937, -0.928006, 3.81632, 14.5265 )
+spot_range = 9.51293
+spot_angle = 36.7361
+
+[node name="SpotLight8" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.134937, 0.990854, 0, -0.990854, -0.134937, -1.00024, 3.81632, -1.48658 )
+spot_range = 9.51293
+spot_angle = 36.7361
+
+[node name="SpotLight9" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.134937, 0.990854, 0, -0.990854, -0.134937, -1.00024, 3.81632, 1.80462 )
+spot_range = 9.51293
+spot_angle = 36.7361
+
+[node name="SpotLight10" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.134937, 0.990854, 0, -0.990854, -0.134937, 0.947529, 3.81632, -1.45106 )
+spot_range = 9.51293
+spot_angle = 36.7361
+
+[node name="SpotLight11" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.134937, 0.990854, 0, -0.990854, -0.134937, 0.947529, 3.81632, 2.02472 )
+spot_range = 9.51293
+spot_angle = 36.7361
+
+[node name="SpotLight12" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.134937, 0.990854, 0, -0.990854, -0.134937, 1.0448, 3.81632, 4.7211 )
+spot_range = 9.51293
+spot_angle = 36.7361
+
+[node name="SpotLight13" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.134937, 0.990854, 0, -0.990854, -0.134937, -0.928006, 3.81632, 4.7211 )
+spot_range = 9.51293
+spot_angle = 36.7361
+
+[node name="SpotLight14" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.134937, 0.990854, 0, -0.990854, -0.134937, -1.00024, 3.81632, -11.1487 )
+spot_range = 9.51293
+spot_angle = 36.7361
+
+[node name="SpotLight15" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.134937, 0.990854, 0, -0.990854, -0.134937, -1.00024, 3.81632, -7.85748 )
+spot_range = 9.51293
+spot_angle = 36.7361
+
+[node name="SpotLight16" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.134937, 0.990854, 0, -0.990854, -0.134937, 0.947529, 3.81632, -11.1132 )
+spot_range = 9.51293
+spot_angle = 36.7361
+
+[node name="SpotLight17" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.134937, 0.990854, 0, -0.990854, -0.134937, 0.947529, 3.81632, -7.63738 )
+spot_range = 9.51293
+spot_angle = 36.7361
+
+[node name="SpotLight20" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.134937, 0.990854, 0, -0.990854, -0.134937, -1.00024, 3.81632, -17.3475 )
+light_color = Color( 0.870588, 0.870588, 0.639216, 1 )
+light_energy = 2.0
+spot_range = 9.51293
+spot_angle = 36.7361
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SpotLight20"]
+playback_speed = 2.58
+anims/Flickering_lights = SubResource( 36 )
+anims/RESET = SubResource( 37 )
+
+[node name="SpotLight21" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.134937, 0.990854, 0, -0.990854, -0.134937, -1.00024, 3.81632, -14.0563 )
+spot_range = 9.51293
+spot_angle = 36.7361
+
+[node name="SpotLight22" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.134937, 0.990854, 0, -0.990854, -0.134937, 0.947529, 3.81632, -17.312 )
+light_energy = 2.0
+spot_range = 9.51293
+spot_angle = 36.7361
+
+[node name="SpotLight23" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.134937, 0.990854, 0, -0.990854, -0.134937, 0.947529, 3.81632, -13.8362 )
+spot_range = 9.51293
+spot_angle = 36.7361
+
+[node name="SpotLight24" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.134937, 0.990854, 0, -0.990854, -0.134937, -0.999076, 3.81931, 17.2603 )
+spot_range = 9.51293
+spot_angle = 36.7361
+
+[node name="SpotLight26" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.134937, 0.990854, 0, -0.990854, -0.134937, 0.948692, 3.81931, 17.2958 )
+spot_range = 9.51293
+spot_angle = 36.7361
+
+[node name="SpotLight18" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.134937, 0.990854, 0, -0.990854, -0.134937, 1.0448, 3.81632, -4.941 )
+spot_range = 9.51293
+spot_angle = 36.7361
+
+[node name="SpotLight19" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.134937, 0.990854, 0, -0.990854, -0.134937, -0.928006, 3.81632, -4.941 )
+spot_range = 9.51293
+spot_angle = 36.7361
+
+[node name="SpotLight4" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.134937, 0.990854, 0, -0.990854, -0.134937, 0.947529, 3.81632, 11.8301 )
+light_color = Color( 0.839216, 0.772549, 0.572549, 1 )
+light_energy = 2.0
+spot_range = 9.51293
+spot_angle = 36.7361
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SpotLight4"]
+playback_speed = 2.5
+anims/RESET = SubResource( 38 )
+anims/flickering_lights1 = SubResource( 39 )
