@@ -12,7 +12,7 @@ func _ready():
 #	self.scale = Vector2(0.13,0.13)
 	var slots = inventory_slots.get_children()
 	for i in range(slots.size()):
-		slots[i].connect("gui_input", self, "slot_gui_input", [slots[i]])
+#		slots[i].connect("gui_input", self, "slot_gui_input", [slots[i]])
 		slots[i].slot_index = i
 	for inv_slot in inventory_slots.get_children():
 		inv_slot.connect("gui_input", self, "slot_gui_input",[inv_slot])

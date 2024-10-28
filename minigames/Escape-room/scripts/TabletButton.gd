@@ -1,11 +1,10 @@
 extends Button
 
-onready var puzzle2d = get_node("/root/Node2D/Tablet")
+onready var fade = get_node("/root/Node2D/PlayerGUI/fade")
+
 func _ready():
-	pass
+	var _tablet = self.connect("pressed",fade,"_on_TabletButton_pressed")
 
 
 func _on_TabletButton_pressed():
-	get_node("/root/Node2D/Front").hide()
-	get_node("/root/Node2D/PlayerGUI/TurnBtn").hide()
-	puzzle2d.show()
+	return

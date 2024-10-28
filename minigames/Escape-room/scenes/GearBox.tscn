@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://minigames/Escape-room/Escape-room_res/Txtrs/close ups/puzzle 4/powerboxview.png" type="Texture" id=1]
+[ext_resource path="res://minigames/Escape-room/Escape-room_res/Txtrs/close ups/puzzle 4/powerboxview (UPGR.png" type="Texture" id=1]
 [ext_resource path="res://minigames/Escape-room/scripts/Background.gd" type="Script" id=2]
 [ext_resource path="res://minigames/Escape-room/scripts/Key.gd" type="Script" id=3]
 

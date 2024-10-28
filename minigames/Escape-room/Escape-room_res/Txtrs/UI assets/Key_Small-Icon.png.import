@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Key_Small-Icon.png-527b2a41fad932cabc0b6c1986de860a.stex"
+path="res://.import/Key_Small-Icon.png-845a07c36aec6b7b4b5d99a9a31af473.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minigames/Escape-room/Key_Small-Icon.png"
-dest_files=[ "res://.import/Key_Small-Icon.png-527b2a41fad932cabc0b6c1986de860a.stex" ]
+source_file="res://minigames/Escape-room/Escape-room_res/Txtrs/UI assets/Key_Small-Icon.png"
+dest_files=[ "res://.import/Key_Small-Icon.png-845a07c36aec6b7b4b5d99a9a31af473.stex" ]
 
 [params]
 

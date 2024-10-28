@@ -1,7 +1,7 @@
 extends Panel
 
 
-var ItemClass = preload("res://minigames/Escape-room/Item.tscn")
+var ItemClass = preload("res://minigames/Escape-room/scenes/Item.tscn")
 var Item = null
 var slot_index
 func _ready():

@@ -1,10 +1,9 @@
 extends Button
 
+onready var fade = get_node("/root/Node2D/PlayerGUI/fade")
 
-onready var puzzle2c = get_node("/root/Node2D/Computer")
-
+func _ready():
+	var _pc = connect("pressed",fade,"_on_ComputerButton_pressed")
 
 func _on_Computer_pressed():
-		get_node("/root/Node2D/Front").hide()
-		get_node("/root/Node2D/PlayerGUI/TurnBtn").hide()
-		puzzle2c.show()
+	return

@@ -22,15 +22,17 @@ tracks/0/keys = {
 "update": 1,
 "values": [ true ]
 }
-tracks/1/type = "bezier"
+tracks/1/type = "value"
 tracks/1/path = NodePath("Polygon2D:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"points": PoolRealArray( 0, -0.249904, -0.852724, 0.9, 3.07099, 90, -1.7, -0.817902, 0.249998, 0.120279 ),
-"times": PoolRealArray( 0, 2 )
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 0.0507658, 9.18955 ),
+"update": 0,
+"values": [ 0.0, 90.0 ]
 }
 
 [sub_resource type="Animation" id=2]

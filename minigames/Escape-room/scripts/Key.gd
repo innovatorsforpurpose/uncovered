@@ -6,6 +6,10 @@ signal emit
 
 func _ready():
 	item_name = "Door Key"
+	var _emit = connect("emit",get_node("/root/Node2D/PlayerGUI/Inv"),"_on_Key_emit")
+
+
+	
 
 func _on_Key_pressed():
 	PlayerInventory.add_item(item_name)

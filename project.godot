@@ -22,10 +22,12 @@ default_bus_layout=""
 
 PlayerInventory="*res://minigames/Escape-room/scripts/PlayerInventory.gd"
 JsonData="*res://minigames/Escape-room/scripts/JSONData.gd"
+Global="*res://minigames/Escape-room/scripts/global.gd"
 
 [display]
 
 window/size/height=578
+window/size/always_on_top=true
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 
@@ -1287,6 +1289,16 @@ Debugger={
 game_usageI={
 "deadzone": 0.5,
 "events": [  ]
+}
+Debug_acquire_Door_Key={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":49,"unicode":0,"echo":false,"script":null)
+ ]
+}
+pause={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":80,"unicode":0,"echo":false,"script":null)
+ ]
 }
 
 [physics]

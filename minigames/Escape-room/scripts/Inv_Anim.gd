@@ -24,6 +24,6 @@ func _on_TextureButton_pressed():
 
 func _on_Key_emit():
 	var tween = create_tween()
-	$Emitter.emitting = true
+	$CPUParticles2D.emitting = true
 	tween.tween_property(self, "rect_scale", Vector2(0.5,0.5), 0.05)
 	tween.tween_property(self, "rect_scale", Vector2(0.472,0.472), 0.05)

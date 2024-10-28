@@ -3,7 +3,7 @@ extends Node2D
 const SlotClass = preload("res://minigames/Escape-room/scripts/Slot.gd")
 onready var keyhole = $GridContainer
 onready var slots = keyhole.get_children()
-signal text
+
 
 func _ready():
 #	self.scale = Vector2(0.13,0.13)

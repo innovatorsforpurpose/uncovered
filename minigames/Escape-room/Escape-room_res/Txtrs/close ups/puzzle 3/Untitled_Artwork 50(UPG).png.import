@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Key1_Small-Icon.png-4f855c65cf0d614147a3a86f87f1d921.stex"
+path="res://.import/Untitled_Artwork 50(UPG).png-a7b3f96b3670d9195daf537e224b2c68.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minigames/Escape-room/Key1_Small-Icon.png"
-dest_files=[ "res://.import/Key1_Small-Icon.png-4f855c65cf0d614147a3a86f87f1d921.stex" ]
+source_file="res://minigames/Escape-room/Escape-room_res/Txtrs/close ups/puzzle 3/Untitled_Artwork 50(UPG).png"
+dest_files=[ "res://.import/Untitled_Artwork 50(UPG).png-a7b3f96b3670d9195daf537e224b2c68.stex" ]
 
 [params]
 
