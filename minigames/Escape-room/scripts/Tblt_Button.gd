@@ -4,7 +4,6 @@ extends ColorRect
 onready var animation_player = $AnimationPlayer
 onready var audio_player = $AudioStreamPlayer
 export(int) var id = 0
-
 signal pressed(id)
 
 func _ready():

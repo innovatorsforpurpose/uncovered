@@ -1,11 +1,9 @@
 extends Node2D
 
-signal emit
-signal paused
-
 func _ready():
 	print(PlayerInventory.inventory.size())
-	var _emit = connect("emit",get_node("/root/Node2D/PlayerGUI/Inv"),"_on_Key_emit")
+	yield(get_tree().create_timer(2),"timeout")
+	get_node("PlayerGUI/Label").say("I need to escape this room!!")
 
 
 

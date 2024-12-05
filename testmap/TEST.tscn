@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://testmap/damap1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://characters/MC/MC.tscn" type="PackedScene" id=2]
+[ext_resource path="res://testmap/BOXopen2.tscn" type="PackedScene" id=3]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="damap1" parent="." instance=ExtResource( 1 )]
+transform = Transform( 3.025, 0, 0, 0, 3.025, 0, 0, 0, 3.025, 0, 0, 0 )
+
+[node name="MC" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.999256, 0, 0, 0, 0.999256, 0, 0, 0, 0.999256, 0, 0.728661, 0 )
+moving_platform_apply_velocity_on_leave = 1
+
+[node name="BOXopen3" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.788461, 0, 0.615083, 0, 1, 0, -0.615083, 0, -0.788461, 2.31521, 0.568646, -10.8136 )
+kick_force = 10.0
+kick_upward_bias = 0.4
+min_impact_force = 0.0
+
+[node name="BOXopen4" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.998625, 0, -0.0524055, 0, 1, 0, 0.0524055, 0, -0.998625, -3.88644, 0.568646, -10.7699 )
+kick_force = 10.0
+kick_upward_bias = 0.4
+min_impact_force = 0.0
