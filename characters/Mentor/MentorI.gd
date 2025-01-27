@@ -42,7 +42,7 @@ func _physics_process(_delta):
 	elif Input.is_action_just_pressed("game_usage") and currently_colliding == true:
 		active_dialogue = active_dialogue+1
 
-	elif Input.is_action_just_pressed("game_usageI") and currently_colliding == true:
+	elif Input.is_action_just_pressed("game_usage") and currently_colliding == true:
 		active_dialogue = 10
 
 	elif active_dialogue == 0 and currently_colliding == true:

@@ -7,6 +7,7 @@ var initial_position
 var count = 0
 var check = 1
 export(bool) var immobile
+export var target_pos = Vector3(0,0,0)
 
 # Start
 # Movement variables
@@ -17,7 +18,7 @@ export var gravity = 30.0
 export var jump_force = 12.0
 var velocity = Vector3.ZERO
 export var inertia = 50
-
+var door_id = 0 # determine which door to go to
 # Mouse look variables
 export var mouse_sensitivity = 0.2
 onready var camera = $CameraPivot/Camera
@@ -25,8 +26,12 @@ var camera_x_rotation = 0
 #END
 
 func _ready():
+	print("current pos: " + str(global_translation))
 	# Capture mouse for FPS camera control
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	print(get_tree().current_scene.name)
+	global_translation = Global.target_pos
+	rotation_degrees.y = Global.target_rot.y
 
 func _input(event):
 	# Handle mouse look
@@ -113,3 +118,29 @@ func _on_Zach_body_entered(_body):
 
 func _on_Timer2_timeout():
 	count = count+1
+
+
+func _on_Area_area_entered(area):
+	if area.is_in_group("scene_door"):
+		if ResourceLoader.exists(area.get_parent().destination):
+			var _error = get_tree().change_scene(area.get_parent().destination)
+			Global.target_pos = area.get_parent().target_position
+			Global.target_rot = area.get_parent().target_rot
+		else:
+			push_error("file desination '%s' does not exist" % [area.get_parent().destination])
+	elif area.is_in_group("door"):
+		if !area.lock_door:
+			do_teleport(area)
+
+func do_teleport(area):
+	for portal in get_tree().get_nodes_in_group("door"):
+		if portal != area:
+			if portal.id == area.id:
+				if !portal.lock_door:
+					area.lock_self()
+					global_translation.x = portal.global_translation.x
+					global_translation.z = portal.global_translation.z
+
+
+
+

@@ -32,7 +32,7 @@ func _on_Area_body_exited(_body):
 func _physics_process(_delta):
 	if Input.is_action_just_pressed("game_usage") and currently_colliding == true:
 		count = count+1
-	if Input.is_action_just_pressed("game_usageI"):
+	if Input.is_action_just_pressed("game_usage"):
 		count = 18
 
 func _on_Button_pressed():
